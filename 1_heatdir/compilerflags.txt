@@ -1,0 +1,196 @@
+Optimization
+------------
+
+-O1       optimize for maximum speed, but disable some optimizations which
+          increase code size for a small speed benefit
+-O2       optimize for maximum speed (DEFAULT)
+-O3       optimize for maximum speed and enable more aggressive optimizations
+          that may not improve performance on some programs
+-O        same as -O2
+-Os       enable speed optimizations, but disable some optimizations which
+          increase code size for small speed benefit 
+-O0       disable optimizations
+-Ofast    enable -O3 -no-prec-div -fp-model fast=2 optimizations
+-fno-alias
+          assume no aliasing in program
+-fno-fnalias
+          assume no aliasing within functions, but assume aliasing across calls
+-fast     enable -xHOST -ipo -no-prec-div -O3 -static -fp-model=fast=2
+          optimizations
+
+
+Code Generation
+---------------
+
+-x<code>  generate specialized code to run exclusively on processors
+          indicated by <code> as described below
+            SSE2    May generate Intel(R) SSE2 and SSE instructions for Intel
+                    processors.  Optimizes for the Intel NetBurst(R)
+                    microarchitecture.
+            SSE3    May generate Intel(R) SSE3, SSE2, and SSE instructions for
+                    Intel processors.  Optimizes for the enhanced Pentium(R) M
+                    processor microarchitecture and Intel NetBurst(R)
+                    microarchitecture.
+            SSSE3   May generate Intel(R) SSSE3, SSE3, SSE2, and SSE
+                    instructions for Intel processors.  Optimizes for the
+                    Intel(R) Core(TM) microarchitecture.
+            SSE4.1  May generate Intel(R) SSE4 Vectorizing Compiler and Media
+                    Accelerator instructions for Intel processors.  May
+                    generate Intel(R) SSSE3, SSE3, SSE2, and SSE instructions
+                    and it may optimize for Intel(R) 45nm Hi-k next generation
+                    Intel Core(TM) microarchitecture.
+            SSE4.2  May generate Intel(R) SSE4 Efficient Accelerated String
+                    and Text Processing instructions supported by Intel(R)
+                    Core(TM) i7 processors.  May generate Intel(R) SSE4
+                    Vectorizing Compiler and Media Accelerator, Intel(R) SSSE3,
+                    SSE3, SSE2, and SSE instructions and it may optimize for
+                    the Intel(R) Core(TM) processor family.
+            AVX     May generate Intel(R) Advanced Vector Extensions (Intel(R)
+                    AVX), Intel(R) SSE4.2, SSE4.1, SSSE3, SSE3,
+                    SSE2, and SSE instructions for Intel(R) processors.
+            CORE-AVX2
+                    May generate Intel(R) Advanced Vector Extensions 2
+                    (Intel(R) AVX2), Intel(R) AVX, SSE4.2, SSE4.1, SSSE3, SSE3,
+                    SSE2, and SSE instructions for Intel(R) processors.
+            CORE-AVX-I
+                    May generate Intel(R) Advanced Vector Extensions (Intel(R)
+                    AVX), including instructions in Intel(R) Core 2(TM)
+                    processors in process technology smaller than 32nm,
+                    Intel(R) SSE4.2, SSE4.1, SSSE3, SSE3, SSE2, and SSE
+                    instructions for Intel(R) processors.
+            ATOM_SSE4.2
+                    May generate MOVBE instructions for Intel(R) processors,
+                    depending on the setting of option -minstruction.
+                    May also generate Intel(R) SSE4.2, SSE3, SSE2, and SSE
+                    instructions for Intel processors. Optimizes for Intel(R)
+                    Atom(TM) processors that support Intel(R) SSE4.2 and MOVBE
+                    instructions.
+            ATOM_SSSE3
+                    May generate MOVBE instructions for Intel(R) processors,
+                    depending on the setting of option -minstruction.
+                    May also generate Intel(R) SSSE3, SSE3, SSE2, and SSE
+                    instructions for Intel processors. Optimizes for the
+                    Intel(R) Atom(TM) processor that support Intel(R) SSE
+                    and MOVBE instructions.
+            MIC-AVX512
+                    May generate Intel(R) Advanced Vector Extensions 512
+                    (Intel(R) AVX-512) Foundation instructions, Intel(R)
+                    AVX-512 Conflict Detection instructions, Intel(R) AVX-512
+                    Exponential and Reciprocal instructions, Intel(R) AVX-512
+                    Prefetch instructions for Intel(R) processors, and the
+                    instructions enabled with CORE-AVX2. Optimizes for Intel(R)
+                    processors that support Intel(R) AVX-512 instructions.
+            KNM
+                    May generate Quad Fused Multiply Add (QFMA) and Quad
+                    Virtual Neural Network Instruction (QVNNI) and the
+                    instructions enabled with MIC-AVX512. Optimizes for
+                    Intel(R) Xeon Phi(TM) product family processor code named
+                    Knights Mill.
+            CORE-AVX512
+                    May generate Intel(R) Advanced Vector Extensions 512
+                    (Intel(R) AVX-512) Foundation instructions, Intel(R)
+                    AVX-512 Conflict Detection instructions, Intel(R) AVX-512
+                    Doubleword and Quadword instructions, Intel(R) AVX-512
+                    Byte and Word instructions and Intel(R) AVX-512 Vector
+                    Length Extensions for Intel(R) processors, and the
+                    instructions enabled with CORE-AVX2. Optimizes for Intel(R)
+                    processors that support Intel(R) AVX-512 instructions.
+
+
+
+-xHost    generate instructions for the highest instruction set and processor
+          available on the compilation host machine
+
+
+-ax<code1>[,<code2>,...]
+          generate code specialized for processors specified by <codes>
+          while also generating generic IA-32 instructions.
+
+
+Interprocedural Optimization (IPO)
+----------------------------------
+
+-[no-]ip  enable(DEFAULT)/disable single-file IP optimization
+          within files
+-ipo[n]   enable multi-file IP optimization between files
+-ipo-c    generate a multi-file object file (ipo_out.o)
+-ipo-S    generate a multi-file assembly file (ipo_out.S)
+-ip-no-inlining
+          disable full and partial inlining
+-ip-no-pinlining
+          disable partial inlining
+-ipo-separate
+          create one object file for every source file (overrides -ipo[n])
+-ipo-jobs<n>
+          specify the number of jobs to be executed simultaneously during the
+          IPO link phase
+
+Optimization Reports
+--------------------
+
+-qopt-report[=n]
+          generate an optimization report. Default destination is
+          <target>.optrpt.  Levels of 0 - 5 are valid.
+          Please see documentation for additional details of
+          information provided by phase per level.
+            0   disable optimization report output
+            2   DEFAULT when enabled
+-qopt-report-file=[stdout | stderr | <file>]
+          specify the filename or output stream for the generated report
+-qopt-report-stdout
+          specify the generated report should be directed to stdout
+-qopt-report-per-object
+          specify the generated report should be directed to a .optrpt file
+          in the output directory (DEFAULT when another destination for the
+          report is not specified)
+-qopt-report-phase=<phase>[,<phase>,...]
+          specify one or more phases that reports are generated against
+-qopt-report-routine=<name>[,<name>,...]
+          restrict the report to routines containing the given name
+-qopt-report-filter=<string>
+          restricts the opt-report to specific files, routines or line
+          number ranges. Refer to the documentation for the specific
+          syntax of parameter string.
+-qopt-report-format=[text|vs]
+          specify the output format to be used for the opt-report as either
+          plain text or a format for use in the Microsoft* Visual Studio IDE
+-q[no-]opt-report-embed
+          When enabled, if an assembly file is being generated, special loop
+          info annotations will be emitted in the assembly file.  If an object
+          file/executable is being generated, these will be emitted into the
+          object file/executable for use by the Intel VTune Amplifier
+          application. Automatically enabled when symbolic debug information
+          is enabled.
+-qopt-report-help
+          display the optimization phases available for reporting
+-qopt-report-names=<keyword>
+          Specifies whether mangled or unmangled names should appear in the
+          optimization report.
+            mangled   - use mangled names
+            unmangled - use unmangled names (DEFAULT)
+-qopt-report-annotate[=<keyword>]
+          Annotate source files with optimization reports in specified format
+            html - annotate in HTML format
+            text - annotate in text format (DEFAULT)
+-qopt-report-annotate-position=<keyword>
+          Specify the site where loop related optimization reports appear in
+          the annotated source for inlined routines
+            caller - annotate at caller site
+            callee - annotate at callee site
+            both   - annotate at both caller and callee site
+-tcheck [mode]
+          enable analysis of threaded applications (requires Intel(R) Thread
+          Checker; cannot be used with compiler alone)
+            tci - instruments a program to perform a thread-count-independent
+                  analysis
+            tcd - instruments a program to perform a thread-count-dependent
+                  analysis (DEFAULT when mode is not used)
+            api - instruments a program at the api-imports level
+-tcollect[=<lib>]
+          inserts instrumentation probes calling the Intel(R) Trace Collector
+          API.  The library -l<lib> is linked in the default being -lVT
+          (requires Intel(R) Trace Collector)
+-tcollect-filter file
+          Enable or disable the instrumentation of specified functions.
+          (requires Intel(R) Trace Collector)
+

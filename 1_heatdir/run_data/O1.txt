@@ -1,0 +1,16 @@
+Resolutions       : (500, 1500, ... 4800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:   500, Time: 0.078 (0.110 GFlop => 1419.08 MFlop/s, residual 0.079613, 40 iterations)
+Resolution:  1500, Time: 0.959 (0.990 GFlop => 1032.30 MFlop/s, residual 0.238673, 40 iterations)
+Resolution:  2500, Time: 3.746 (2.750 GFlop => 734.11 MFlop/s, residual 0.397703, 40 iterations)
+Resolution:  3500, Time: 9.017 (5.390 GFlop => 597.73 MFlop/s, residual 0.556728, 40 iterations)
+Resolution:  4500, Time: 15.217 (8.910 GFlop => 585.54 MFlop/s, residual 0.715752, 40 iterations)
+  500; 0.078; 1419.078
+ 1500; 0.959; 1032.299
+ 2500; 3.746; 734.114
+ 3500; 9.017; 597.733
+ 4500; 15.217; 585.541
