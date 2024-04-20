@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#SBATCH -J heat
+
+#SBATCH -o job.out
+#SBATCH -e job.out
+
+#SBATCH --time=00:05:00
+#SBATCH --account=h039v
+#SBATCH --partition=test
+
+srun --nodes=1 --ntasks=10 --partition=test ./heat test.dat
+
