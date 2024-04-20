@@ -1,0 +1,18 @@
+-Ofast -fno-alias -xCORE-AVX512 -qopt-zmm-usage=high
+
+Resolutions       : (500, 1500, ... 4800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00
+   2: (1.00, 1.00) 1.00 0.50
+Resolution:   500, Time: 0.021 (0.110 GFlop => 5165.80 MFlop/s, residual 0.079613, 40 iterations)
+Resolution:  1500, Time: 0.280 (0.990 GFlop => 3532.21 MFlop/s, residual 0.238673, 40 iterations)
+Resolution:  2500, Time: 1.096 (2.750 GFlop => 2508.30 MFlop/s, residual 0.397703, 40 iterations)
+Resolution:  3500, Time: 2.518 (5.390 GFlop => 2140.79 MFlop/s, residual 0.556728, 40 iterations)
+Resolution:  4500, Time: 3.636 (8.910 GFlop => 2450.33 MFlop/s, residual 0.715752, 40 iterations)
+  500; 0.021; 5165.804
+ 1500; 0.280; 3532.208
+ 2500; 1.096; 2508.300
+ 3500; 2.518; 2140.789
+ 4500; 3.636; 2450.329
