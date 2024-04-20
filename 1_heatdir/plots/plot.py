@@ -53,5 +53,5 @@ ax2.set_title("Performance Variation of Best Flag Combination \n for One Node")
 
 
 plt.tight_layout()
-fig.savefig("group2_perf.pdf")
+fig.savefig("plots/group2_perf.pdf")
 plt.show()
