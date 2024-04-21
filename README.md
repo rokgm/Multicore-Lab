@@ -5,6 +5,8 @@ Group 2: Tiia Tikkala, Beatrice Picco, Rok Grgič Meško
 
 ### 1.1 Understanding the code
 * ***Show the initial performance data. The form of the graph was introduced in the meeting.***
+[Performance data graph](1_heatdir/plots/group2_perf.pdf)
+
 * ***Explain how the FLOP/s metric is measured. Which floating point operations are taken into account?*** The FLOPS are measured only within relax_jacobi.c. In each iteration, 11 flops are performed in the functions residual_jacobi and relax_jacobi. Are there ways to do this automatically? Now the 11 is hardcoded.
 
 
