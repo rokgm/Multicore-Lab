@@ -13,7 +13,7 @@ Group 2: Tiia Tikkala, Beatrice Picco, Rok Grgič Meško
 ### 1.2 Compiler options
 Measure the performance achievable with combinations of the following options "-O1", "-O2", "-O3", and "-Ofast" and "-xhost" (change CFLAGS in Makefile for that). In addition, options "-ipo" and "-fno-alias" and "-xCORE-AVX512" are useful. You can also try to use compiler pragmas such as "ivdep" (look it up!). Find the combination of flags that gives you the best performance. Measure on the login node and on the compute nodes. Use the Intel compiler.
 
-* ***What is the meaning of -ipo?*** Interprocedural optimization, improves performance in programs with frequently used small or medium function length. It analyzes the entire program. Goal is to reduce or eliminate duplicate calculations and memory inefficiencies. Examples of optimizations done with the -ipo flag are function inlining and reordering routines for more efficient usage of memory layout.
+* ***What is the meaning of -ipo?*** Interprocedural optimization, improves performance in programs with frequently used small or medium function length. It analyzes the entire program. Goal is to reduce or eliminate duplicate calculations and memory inefficiencies. Examples of optimizations done with the -ipo flag are function inlining and reordering routines for more efficient usage of memory layout. 
 * ***What is the meaning of -fno-alias?*** Assumes there is no aliasing (i.e. each memory location is only accessed by one entity within the program), which allows more aggressive optimizations, e.g. reordering memory accesses or eliminating unnecessary memory loads/stores.
 * ***What is the meaning of "ivdep"?*** Ignore assumed vector dependencies. It is a compiler pragma (so not a compiler flag). It is specified for each loop in a program separately. Normally the compiler avoids vectorization if undefined/illegal behaviour might occur, but specifying #pragma ivdep means the compiler will assume those situations are safe (e.g. loop variable value unknown at compile time). Different vectorization strategy and checks than SIMD (results are much slower for relax_jacobi in our case).
 * ***What is the meaning of "-xCORE-AVX512"?*** Optimizes for SIMD instructions for AVX512 instruction set architecture.
@@ -30,3 +30,12 @@ Measure the performance achievable with combinations of the following options "-
 ### 1.3 Batch processing
 
 ***Run the code as batch job. Does the performance differ to a run on the login node? Give a second graph. Can you think about any reason?***
+
+
+- run on same batch node using a loop/repeating code
+- zmm is for storage, not instructions
+- login and batch node with different arch (cross compiling necessary, or compiling on batch node)
+- worse performance for higher res: more memory use rather than cache
+- why is there more variation for smaller resolutions: cache warmup at beginning, for bigger res cache plays smaller role since we always go to memory
+- login node more variation: other users, compilation memory expensive operations
+- fnoalias: in this code allows to swap loops, without it the compiler assumes for crrectedness that there are dependencies
