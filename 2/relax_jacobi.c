@@ -6,6 +6,7 @@
  */
 
 #include "heat.h"
+#include <likwid-marker.h>
 
 /*
  * Residual (length of error vector)
