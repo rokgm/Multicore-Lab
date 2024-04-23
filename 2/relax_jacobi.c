@@ -6,12 +6,17 @@
  */
 
 #include "heat.h"
+
+#include <stdio.h>
+
 #include <likwid-marker.h>
+
 
 /*
  * Residual (length of error vector)
  * between current solution and next after a Jacobi step
- */
+*/
+
 double residual_jacobi(double *u, unsigned sizex, unsigned sizey) {
 	unsigned i, j;
 	double unew, diff, sum = 0.0;
@@ -27,7 +32,6 @@ double residual_jacobi(double *u, unsigned sizex, unsigned sizey) {
 			sum += diff * diff;
 		}
 	}
-
 	return sum;
 }
 
@@ -35,6 +39,10 @@ double residual_jacobi(double *u, unsigned sizex, unsigned sizey) {
  * One Jacobi iteration step
  */
 void relax_jacobi(double *u, double *utmp, unsigned sizex, unsigned sizey) {
+	LIKWID_MARKER_INIT;
+	LIKWID_MARKER_THREADINIT;
+	LIKWID_MARKER_START("Compute");
+
 	int i, j;
 
 	for (j = 1; j < sizex - 1; j++) {
@@ -53,4 +61,7 @@ void relax_jacobi(double *u, double *utmp, unsigned sizex, unsigned sizey) {
 			u[i * sizex + j] = utmp[i * sizex + j];
 		}
 	}
+
+	LIKWID_MARKER_STOP("Compute");
+	LIKWID_MARKER_CLOSE;
 }

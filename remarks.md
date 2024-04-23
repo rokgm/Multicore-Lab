@@ -1,3 +1,1 @@
 - Group number on graph.
-- More readable graphs, legend in better position.
-- Enough ticks on axis.
