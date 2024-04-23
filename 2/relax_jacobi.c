@@ -7,18 +7,9 @@
 
 #include "heat.h"
 
-#ifdef LIKWID_PERFMON
+#include <stdio.h>
+
 #include <likwid-marker.h>
-#else
-#define LIKWID_MARKER_INIT
-#define LIKWID_MARKER_THREADINIT
-#define LIKWID_MARKER_SWITCH
-#define LIKWID_MARKER_REGISTER(regionTag)
-#define LIKWID_MARKER_START(regionTag)
-#define LIKWID_MARKER_STOP(regionTag)
-#define LIKWID_MARKER_CLOSE
-#define LIKWID_MARKER_GET(regionTag, nevents, events, time, count)
-#endif
 
 
 /*
@@ -51,6 +42,7 @@ void relax_jacobi(double *u, double *utmp, unsigned sizex, unsigned sizey) {
 	LIKWID_MARKER_INIT;
 	LIKWID_MARKER_THREADINIT;
 	LIKWID_MARKER_START("Compute");
+
 	int i, j;
 
 	for (j = 1; j < sizex - 1; j++) {
@@ -69,6 +61,7 @@ void relax_jacobi(double *u, double *utmp, unsigned sizex, unsigned sizey) {
 			u[i * sizex + j] = utmp[i * sizex + j];
 		}
 	}
+
 	LIKWID_MARKER_STOP("Compute");
 	LIKWID_MARKER_CLOSE;
 }
