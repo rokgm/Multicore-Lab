@@ -1,0 +1,49 @@
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (500, 1500, ... 1000)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:   500Resolution:   500, Time: 1.407 (0.110 GFlop =>  78.19 MFlop/s, residual 0.079613, 40 iterations)
+  500; 1.407; 78.188
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.000364 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  |    1822634 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |     846148 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |     993708 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |     871501 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |       7511 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |          0 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.0004 |
+| Runtime unhalted [s] |     0.0003 |
+|      Clock [MHz]     |  2293.6019 |
+|          CPI         |     0.4642 |
+|     DP [MFLOP/s]     |  4811.8314 |
+|   AVX DP [MFLOP/s]   |          0 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |  2395.5926 |
+|   Scalar [MUOPS/s]   |    20.6463 |
+|  Vectorization ratio |    99.1455 |
++----------------------+------------+
+
