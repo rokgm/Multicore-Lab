@@ -44,7 +44,7 @@ ax1.set_xlabel("Resolution", fontsize=13)
 ax1.set_ylabel("MFlops", fontsize=13)
 mflops_plot = ax1.errorbar(resolutions, np.average(MFLOPS_5runs, axis=0),
              yerr=np.std(MFLOPS_5runs, axis=0),
-             capsize=5, fmt='.-', color='blue', label="MFlops")
+             capsize=5, fmt='.-', color='red', label="MFlops")
 
 # Set shared axis
 ax2 = ax1.twinx()
@@ -52,15 +52,15 @@ ax2.set_ylabel("L2/L3 miss ratio in %", fontsize=13)
 
 L2_plot = ax2.errorbar(resolutions, np.average(L2_miss_ratio_5runs, axis=0),
              yerr=np.std(L2_miss_ratio_5runs, axis=0),
-             capsize=5, fmt='.-', color='red', label="L2 miss ratio")
+             capsize=5, fmt='.-', color='green', label="L2 miss ratio")
 
 L3_plot = ax2.errorbar(resolutions, np.average(L3_miss_ratio_5runs, axis=0),
              yerr=np.std(L3_miss_ratio_5runs, axis=0),
-             capsize=5, fmt='.-', color='orange', label="L3 miss ratio")
+             capsize=5, fmt='.-', color='blue', label="L3 miss ratio")
 
 ax1.set_title("Group 2: LIKWID Analysis averaged over 5 runs\nCompiler Flags: -O3 -fno-alias -xhost\n")
 ax1.legend(handles=[mflops_plot, L2_plot, L3_plot], frameon=False,
            bbox_to_anchor=(1, 0.7))
 plt.tight_layout()
-plt.savefig("best.png")
+plt.savefig("2/plots/best.png")
 plt.show()
