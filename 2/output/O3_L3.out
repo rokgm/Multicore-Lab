@@ -1,0 +1,225 @@
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (500, 1500, ... 1000)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:   500Resolution:   500, Time: 1.338 (0.110 GFlop =>  82.19 MFlop/s, residual 0.079613, 40 iterations)
+  500; 1.338; 82.188
+--------------------------------------------------------------------------------
+Region Compute, Group 1: L3CACHE
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.000560 |
+|     call count    |          1 |
++-------------------+------------+
+
++--------------------------+---------+------------+
+|           Event          | Counter | HWThread 0 |
++--------------------------+---------+------------+
+|     INSTR_RETIRED_ANY    |  FIXC0  |    1021012 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |    1272081 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  |    1493640 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |      24565 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |          2 |
+|     UOPS_RETIRED_ALL     |   PMC2  |    1325988 |
++--------------------------+---------+------------+
+
++----------------------+--------------+
+|        Metric        |  HWThread 0  |
++----------------------+--------------+
+|  Runtime (RDTSC) [s] |       0.0006 |
+| Runtime unhalted [s] |       0.0005 |
+|      Clock [MHz]     |    2294.0568 |
+|          CPI         |       1.2459 |
+|    L3 request rate   |       0.0185 |
+|     L3 miss rate     | 1.508309e-06 |
+|     L3 miss ratio    |       0.0001 |
++----------------------+--------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (1500, 2500, ... 1800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  1500Resolution:  1500, Time: 1.601 (0.990 GFlop => 618.44 MFlop/s, residual 0.238673, 40 iterations)
+ 1500; 1.601; 618.438
+--------------------------------------------------------------------------------
+Region Compute, Group 1: L3CACHE
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.005362 |
+|     call count    |          1 |
++-------------------+------------+
+
++--------------------------+---------+------------+
+|           Event          | Counter | HWThread 0 |
++--------------------------+---------+------------+
+|     INSTR_RETIRED_ANY    |  FIXC0  |    8652013 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |   12247600 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  |   14377820 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |      81673 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |      65377 |
+|     UOPS_RETIRED_ALL     |   PMC2  |   11296640 |
++--------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.0054 |
+| Runtime unhalted [s] |     0.0045 |
+|      Clock [MHz]     |  2294.4710 |
+|          CPI         |     1.4156 |
+|    L3 request rate   |     0.0130 |
+|     L3 miss rate     |     0.0058 |
+|     L3 miss ratio    |     0.4446 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (2500, 3500, ... 2800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  2500Resolution:  2500, Time: 2.220 (2.750 GFlop => 1238.48 MFlop/s, residual 0.397703, 40 iterations)
+ 2500; 2.220; 1238.484
+--------------------------------------------------------------------------------
+Region Compute, Group 1: L3CACHE
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.016760 |
+|     call count    |          1 |
++-------------------+------------+
+
++--------------------------+---------+------------+
+|           Event          | Counter | HWThread 0 |
++--------------------------+---------+------------+
+|     INSTR_RETIRED_ANY    |  FIXC0  |   19560520 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |   38315010 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  |   44979080 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |      11056 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |      36447 |
+|     UOPS_RETIRED_ALL     |   PMC2  |   28980000 |
++--------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.0168 |
+| Runtime unhalted [s] |     0.0142 |
+|      Clock [MHz]     |  2294.5187 |
+|          CPI         |     1.9588 |
+|    L3 request rate   |     0.0016 |
+|     L3 miss rate     |     0.0013 |
+|     L3 miss ratio    |     0.7673 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (3500, 4500, ... 3800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  3500Resolution:  3500, Time: 3.257 (5.390 GFlop => 1655.13 MFlop/s, residual 0.556728, 40 iterations)
+ 3500; 3.257; 1655.130
+--------------------------------------------------------------------------------
+Region Compute, Group 1: L3CACHE
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.037206 |
+|     call count    |          1 |
++-------------------+------------+
+
++--------------------------+---------+------------+
+|           Event          | Counter | HWThread 0 |
++--------------------------+---------+------------+
+|     INSTR_RETIRED_ANY    |  FIXC0  |   38146020 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |   84626870 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  |   99345200 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |       8543 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |     102320 |
+|     UOPS_RETIRED_ALL     |   PMC2  |   56361170 |
++--------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.0372 |
+| Runtime unhalted [s] |     0.0314 |
+|      Clock [MHz]     |  2294.4783 |
+|          CPI         |     2.2185 |
+|    L3 request rate   |     0.0020 |
+|     L3 miss rate     |     0.0018 |
+|     L3 miss ratio    |     0.9229 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (4500, 5500, ... 4800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  4500Resolution:  4500, Time: 4.526 (8.910 GFlop => 1968.45 MFlop/s, residual 0.715752, 40 iterations)
+ 4500; 4.526; 1968.448
+--------------------------------------------------------------------------------
+Region Compute, Group 1: L3CACHE
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.061034 |
+|     call count    |          1 |
++-------------------+------------+
+
++--------------------------+---------+------------+
+|           Event          | Counter | HWThread 0 |
++--------------------------+---------+------------+
+|     INSTR_RETIRED_ANY    |  FIXC0  |   62769030 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |  139785500 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  |  164096400 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |      11294 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |     177994 |
+|     UOPS_RETIRED_ALL     |   PMC2  |   92678210 |
++--------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.0610 |
+| Runtime unhalted [s] |     0.0519 |
+|      Clock [MHz]     |  2294.4913 |
+|          CPI         |     2.2270 |
+|    L3 request rate   |     0.0020 |
+|     L3 miss rate     |     0.0019 |
+|     L3 miss ratio    |     0.9403 |
++----------------------+------------+
+

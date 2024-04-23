@@ -1,7 +1,7 @@
 # Intel compiler
 CC =  icc
 
-CFLAGS = -O2
+CFLAGS = -O3 -fno-alias -xhost
 
 MPICC = mpicc
 
