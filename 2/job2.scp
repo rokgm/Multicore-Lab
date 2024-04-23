@@ -2,6 +2,8 @@
 
 #SBATCH -J heat
 
+#SBATCH --ear=off
+
 #SBATCH -o job2.out
 #SBATCH -e job2.out
 
