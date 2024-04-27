@@ -26,14 +26,14 @@ Likwid has two measurement groups for measuring flop count: DP and DP AVX. DP AV
 Interesting remarks:
 
 **PerformanceSnapshot:**
-![PerformanceSnapshot](./vtune/snapshot.png)
+![PerformanceSnapshot](./vtune/snapshot.PNG)
 - 1% core utilisation (bc were using 1 core out of 96)
 - low IPC: check architecture
 - 25% of pipeline slots: stalling
 - full fill buffer: CPU cant keep up with the instructions
 
 **MemoryAccess:**
-![MemoryAccess](./vtune/memoryaccess.png)
+![MemoryAccess](./vtune/memoryaccess.PNG)
 - why is it using UPI and the DRAM from the socket where no cores are being used?
 - latency histogram: some loads are very high latency
 - bandwidth: much lower than max
@@ -41,7 +41,7 @@ Interesting remarks:
 - memcpy is the most CPU time function
 
 **MicroArchitecture:**
-![MicroArchitecture](./vtune/microarchitecture.png)
+![MicroArchitecture](./vtune/microarchitecture.PNG)
 - backend bound (execution, memory access)
 - vectorization only at 50% of vector capacity (due to no ZMM?)
 
