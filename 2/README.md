@@ -2,6 +2,8 @@
 
 Analyze the performance of the application with respect to the memory and cache usage. Perform all final measurements for the original code with O2 and the best flag combination (-O3 -fno-alias -xhost) for test.dat in a batch job! Groups with odd numbers should use PAPI and Groups with even numbers should use Likwid.
 
+**Vtune overhead**: CPU elapsed time 8.079, vtune 8.139
+
 - ***2.1 Provide a single diagram with the MFlop rate and the L2 and L3 missrates in percent of cache accesses for the application compiled with -O2 and -O3 -fno-alias -xhost combination. Present a table with the number of L2 and L3 cache misses in thousands for the different problem sizes.***
 
 ![Diagram with the PAPI measurements](Diagram_with_the_PAPI_measurements.png)
@@ -10,6 +12,7 @@ Analyze the performance of the application with respect to the memory and cache 
 ![Graph O3](./plots/best.png)
 
 - ***2.2 Measure the MFlop rate with the hardware counters and compare the result with the number computed in the program.***
+very similar when measured correctly (without measuring the likwid runtime)
 
 - ***2.3 Determine the processor's clock frequency with the help of the performance counters.***
 Likwid:  GHz
@@ -21,15 +24,26 @@ Likwid has two measurement groups for measuring flop count: DP and DP AVX. DP AV
 
 - ***2.5 After you measurements with PAPI or Likwid, investigate the performance of both versions with the help of vtune. Determine the overhead of running vtune data collector. Submit images of all four analysis types for 3200 resolution and 200 iterations and mark interesting aspects that you want to explain in the meeting.***
 Interesting remarks:
-- PerformanceSnapshot:
+**PerformanceSnapshot:**
 ![PerformanceSnapshot](/vtune/snapshot.png)
-- MemoryAccess:
+- 1% core utilisation (bc were using 1 core out of 96)
+- low IPC: check architecture
+- 25% of pipeline slots: stalling
+- full fill buffer: CPU cant keep up with the instructions
+**MemoryAccess:**
 ![MemoryAccess](/vtune/memoryaccess.png)
-- MicroArchitecture:
+- why is it using UPI and the DRAM from the socket where no cores are being used?
+- latency histogram: some loads are very high latency
+- bandwidth: much lower than max
+- 70% is memory bound, of whih 45% is DRAM
+- memcpy is the most CPU time function
+**MicroArchitecture:**
 ![MicroArchitecture](/vtune/microarchitecture.png)
-- Hotspots:
+- backend bound (execution, memory access)
+- vectorization only at 50% of vector capacity (due to no ZMM?)
+**Hotspots:**
 ![Hotspots](/vtune/hotspots.png)
-
+- most active function is memcpy, residual and relaxed
 
 ### Deliverables
 - Submit the two graphs and be able to discuss all the parts of the assignments. Submit one screenshot of each vtune analysis of the best version for 3200 resolution and 200 iterations and mark what you found interesting. 
