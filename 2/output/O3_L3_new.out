@@ -9,38 +9,38 @@ Algorithm         : 0 (Jacobi)
 Num. Heat sources : 2
    1: (0.00, 0.00) 1.00 1.00 
    2: (1.00, 1.00) 1.00 0.50 
-Resolution:   500Resolution:   500, Time: 1.407 (0.110 GFlop =>  78.18 MFlop/s, residual 0.079613, 40 iterations)
-  500; 1.407; 78.185
+Resolution:   500Resolution:   500, Time: 0.029 (0.110 GFlop => 3758.21 MFlop/s, residual 0.079613, 40 iterations)
+  500; 0.029; 3758.214
 --------------------------------------------------------------------------------
 Region Compute, Group 1: L3CACHE
 +-------------------+------------+
 |    Region Info    | HWThread 0 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.002052 |
+| RDTSC Runtime [s] |   0.031728 |
 |     call count    |          1 |
 +-------------------+------------+
 
 +--------------------------+---------+------------+
 |           Event          | Counter | HWThread 0 |
 +--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |    4454551 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |    4650500 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |    5459616 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |      50319 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |          2 |
-|     UOPS_RETIRED_ALL     |   PMC2  |    5332774 |
+|     INSTR_RETIRED_ANY    |  FIXC0  |   73223280 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |   64993270 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  |   76295300 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |    1043408 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |       1718 |
+|     UOPS_RETIRED_ALL     |   PMC2  |   95422040 |
 +--------------------------+---------+------------+
 
 +----------------------+--------------+
 |        Metric        |  HWThread 0  |
 +----------------------+--------------+
-|  Runtime (RDTSC) [s] |       0.0021 |
-| Runtime unhalted [s] |       0.0017 |
-|      Clock [MHz]     |    2294.4002 |
-|          CPI         |       1.0440 |
-|    L3 request rate   |       0.0094 |
-|     L3 miss rate     | 3.750393e-07 |
-|     L3 miss ratio    | 3.974484e-05 |
+|  Runtime (RDTSC) [s] |       0.0317 |
+| Runtime unhalted [s] |       0.0241 |
+|      Clock [MHz]     |    2294.5703 |
+|          CPI         |       0.8876 |
+|    L3 request rate   |       0.0110 |
+|     L3 miss rate     | 1.800423e-05 |
+|     L3 miss ratio    |       0.0016 |
 +----------------------+--------------+
 
 --------------------------------------------------------------------------------
@@ -54,38 +54,38 @@ Algorithm         : 0 (Jacobi)
 Num. Heat sources : 2
    1: (0.00, 0.00) 1.00 1.00 
    2: (1.00, 1.00) 1.00 0.50 
-Resolution:  1500Resolution:  1500, Time: 2.485 (0.990 GFlop => 398.38 MFlop/s, residual 0.238673, 40 iterations)
- 1500; 2.485; 398.376
+Resolution:  1500Resolution:  1500, Time: 0.223 (0.990 GFlop => 4433.52 MFlop/s, residual 0.238673, 40 iterations)
+ 1500; 0.223; 4433.517
 --------------------------------------------------------------------------------
 Region Compute, Group 1: L3CACHE
 +-------------------+------------+
 |    Region Info    | HWThread 0 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.025092 |
+| RDTSC Runtime [s] |   0.228507 |
 |     call count    |          1 |
 +-------------------+------------+
 
 +--------------------------+---------+------------+
 |           Event          | Counter | HWThread 0 |
 +--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |   39795060 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |   57353620 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |   67329040 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     263492 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |     123939 |
-|     UOPS_RETIRED_ALL     |   PMC2  |   47672440 |
+|     INSTR_RETIRED_ANY    |  FIXC0  |  628218100 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |  492838000 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  |  578550000 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |    2717900 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    1764884 |
+|     UOPS_RETIRED_ALL     |   PMC2  |  818859000 |
 +--------------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 0 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.0251 |
-| Runtime unhalted [s] |     0.0213 |
-|      Clock [MHz]     |  2294.5222 |
-|          CPI         |     1.4412 |
-|    L3 request rate   |     0.0081 |
-|     L3 miss rate     |     0.0026 |
-|     L3 miss ratio    |     0.3199 |
+|  Runtime (RDTSC) [s] |     0.2285 |
+| Runtime unhalted [s] |     0.1830 |
+|      Clock [MHz]     |  2294.5347 |
+|          CPI         |     0.7845 |
+|    L3 request rate   |     0.0055 |
+|     L3 miss rate     |     0.0022 |
+|     L3 miss ratio    |     0.3937 |
 +----------------------+------------+
 
 --------------------------------------------------------------------------------
@@ -99,38 +99,38 @@ Algorithm         : 0 (Jacobi)
 Num. Heat sources : 2
    1: (0.00, 0.00) 1.00 1.00 
    2: (1.00, 1.00) 1.00 0.50 
-Resolution:  2500Resolution:  2500, Time: 5.818 (2.750 GFlop => 472.65 MFlop/s, residual 0.397703, 40 iterations)
- 2500; 5.818; 472.651
+Resolution:  2500Resolution:  2500, Time: 0.885 (2.750 GFlop => 3108.86 MFlop/s, residual 0.397703, 40 iterations)
+ 2500; 0.885; 3108.862
 --------------------------------------------------------------------------------
 Region Compute, Group 1: L3CACHE
 +-------------------+------------+
 |    Region Info    | HWThread 0 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.102739 |
+| RDTSC Runtime [s] |   0.898256 |
 |     call count    |          1 |
 +-------------------+------------+
 
 +--------------------------+---------+------------+
 |           Event          | Counter | HWThread 0 |
 +--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |  110385600 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |  234606500 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |  275407900 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     634908 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |     851587 |
-|     UOPS_RETIRED_ALL     |   PMC2  |  132282600 |
+|     INSTR_RETIRED_ANY    |  FIXC0  | 1557214000 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  | 1985079000 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  | 2330315000 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     471536 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    1933281 |
+|     UOPS_RETIRED_ALL     |   PMC2  | 2171632000 |
 +--------------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 0 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.1027 |
-| Runtime unhalted [s] |     0.0871 |
-|      Clock [MHz]     |  2294.5140 |
-|          CPI         |     2.1253 |
-|    L3 request rate   |     0.0112 |
-|     L3 miss rate     |     0.0064 |
-|     L3 miss ratio    |     0.5729 |
+|  Runtime (RDTSC) [s] |     0.8983 |
+| Runtime unhalted [s] |     0.7370 |
+|      Clock [MHz]     |  2294.5600 |
+|          CPI         |     1.2748 |
+|    L3 request rate   |     0.0011 |
+|     L3 miss rate     |     0.0009 |
+|     L3 miss ratio    |     0.8039 |
 +----------------------+------------+
 
 --------------------------------------------------------------------------------
@@ -144,38 +144,38 @@ Algorithm         : 0 (Jacobi)
 Num. Heat sources : 2
    1: (0.00, 0.00) 1.00 1.00 
    2: (1.00, 1.00) 1.00 0.50 
-Resolution:  3500Resolution:  3500, Time: 10.723 (5.390 GFlop => 502.64 MFlop/s, residual 0.556728, 40 iterations)
- 3500; 10.723; 502.643
+Resolution:  3500Resolution:  3500, Time: 1.880 (5.390 GFlop => 2866.27 MFlop/s, residual 0.556728, 40 iterations)
+ 3500; 1.880; 2866.266
 --------------------------------------------------------------------------------
 Region Compute, Group 1: L3CACHE
 +-------------------+------------+
 |    Region Info    | HWThread 0 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.217424 |
+| RDTSC Runtime [s] |   1.906618 |
 |     call count    |          1 |
 +-------------------+------------+
 
 +--------------------------+---------+------------+
 |           Event          | Counter | HWThread 0 |
 +--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |  216226100 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |  496628600 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |  582999300 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     265795 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    2134480 |
-|     UOPS_RETIRED_ALL     |   PMC2  |  259126000 |
+|     INSTR_RETIRED_ANY    |  FIXC0  | 3041789000 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  | 4235520000 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  | 4972133000 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     767392 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    6492846 |
+|     UOPS_RETIRED_ALL     |   PMC2  | 4251065000 |
 +--------------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 0 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.2174 |
-| Runtime unhalted [s] |     0.1844 |
-|      Clock [MHz]     |  2294.4738 |
-|          CPI         |     2.2968 |
-|    L3 request rate   |     0.0093 |
-|     L3 miss rate     |     0.0082 |
-|     L3 miss ratio    |     0.8893 |
+|  Runtime (RDTSC) [s] |     1.9066 |
+| Runtime unhalted [s] |     1.5724 |
+|      Clock [MHz]     |  2294.5673 |
+|          CPI         |     1.3924 |
+|    L3 request rate   |     0.0017 |
+|     L3 miss rate     |     0.0015 |
+|     L3 miss ratio    |     0.8943 |
 +----------------------+------------+
 
 --------------------------------------------------------------------------------
@@ -189,38 +189,38 @@ Algorithm         : 0 (Jacobi)
 Num. Heat sources : 2
    1: (0.00, 0.00) 1.00 1.00 
    2: (1.00, 1.00) 1.00 0.50 
-Resolution:  4500Resolution:  4500, Time: 16.812 (8.910 GFlop => 529.98 MFlop/s, residual 0.715752, 40 iterations)
- 4500; 16.812; 529.977
+Resolution:  4500Resolution:  4500, Time: 3.117 (8.910 GFlop => 2858.76 MFlop/s, residual 0.715752, 40 iterations)
+ 4500; 3.117; 2858.762
 --------------------------------------------------------------------------------
 Region Compute, Group 1: L3CACHE
 +-------------------+------------+
 |    Region Info    | HWThread 0 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.354994 |
+| RDTSC Runtime [s] |   3.160580 |
 |     call count    |          1 |
 +-------------------+------------+
 
 +--------------------------+---------+------------+
 |           Event          | Counter | HWThread 0 |
 +--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |  357316600 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |  810954000 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |  951990100 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     542300 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    2995282 |
-|     UOPS_RETIRED_ALL     |   PMC2  |  428221600 |
+|     INSTR_RETIRED_ANY    |  FIXC0  | 5007965000 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  | 7026947000 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  | 8249021000 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     432864 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    9072937 |
+|     UOPS_RETIRED_ALL     |   PMC2  | 6976435000 |
 +--------------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 0 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.3550 |
-| Runtime unhalted [s] |     0.3011 |
-|      Clock [MHz]     |  2294.5693 |
-|          CPI         |     2.2696 |
-|    L3 request rate   |     0.0083 |
-|     L3 miss rate     |     0.0070 |
-|     L3 miss ratio    |     0.8467 |
+|  Runtime (RDTSC) [s] |     3.1606 |
+| Runtime unhalted [s] |     2.6087 |
+|      Clock [MHz]     |  2294.5651 |
+|          CPI         |     1.4032 |
+|    L3 request rate   |     0.0014 |
+|     L3 miss rate     |     0.0013 |
+|     L3 miss ratio    |     0.9545 |
 +----------------------+------------+
 
 --------------------------------------------------------------------------------
@@ -234,38 +234,38 @@ Algorithm         : 0 (Jacobi)
 Num. Heat sources : 2
    1: (0.00, 0.00) 1.00 1.00 
    2: (1.00, 1.00) 1.00 0.50 
-Resolution:   500Resolution:   500, Time: 1.402 (0.110 GFlop =>  78.48 MFlop/s, residual 0.079613, 40 iterations)
-  500; 1.402; 78.484
+Resolution:   500Resolution:   500, Time: 0.029 (0.110 GFlop => 3838.64 MFlop/s, residual 0.079613, 40 iterations)
+  500; 0.029; 3838.637
 --------------------------------------------------------------------------------
 Region Compute, Group 1: L3CACHE
 +-------------------+------------+
 |    Region Info    | HWThread 0 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.001973 |
+| RDTSC Runtime [s] |   0.031104 |
 |     call count    |          1 |
 +-------------------+------------+
 
 +--------------------------+---------+------------+
 |           Event          | Counter | HWThread 0 |
 +--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |    4454550 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |    4537738 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |    5326884 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |      49712 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |          2 |
-|     UOPS_RETIRED_ALL     |   PMC2  |    5329978 |
+|     INSTR_RETIRED_ANY    |  FIXC0  |   73223320 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |   63577850 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  |   74636860 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |    1082336 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |       2941 |
+|     UOPS_RETIRED_ALL     |   PMC2  |   95145250 |
 +--------------------------+---------+------------+
 
 +----------------------+--------------+
 |        Metric        |  HWThread 0  |
 +----------------------+--------------+
-|  Runtime (RDTSC) [s] |       0.0020 |
-| Runtime unhalted [s] |       0.0017 |
-|      Clock [MHz]     |    2294.5185 |
-|          CPI         |       1.0187 |
-|    L3 request rate   |       0.0093 |
-|     L3 miss rate     | 3.752361e-07 |
-|     L3 miss ratio    | 4.023012e-05 |
+|  Runtime (RDTSC) [s] |       0.0311 |
+| Runtime unhalted [s] |       0.0236 |
+|      Clock [MHz]     |    2294.5138 |
+|          CPI         |       0.8683 |
+|    L3 request rate   |       0.0114 |
+|     L3 miss rate     | 3.091063e-05 |
+|     L3 miss ratio    |       0.0027 |
 +----------------------+--------------+
 
 --------------------------------------------------------------------------------
@@ -279,38 +279,38 @@ Algorithm         : 0 (Jacobi)
 Num. Heat sources : 2
    1: (0.00, 0.00) 1.00 1.00 
    2: (1.00, 1.00) 1.00 0.50 
-Resolution:  1500Resolution:  1500, Time: 2.483 (0.990 GFlop => 398.64 MFlop/s, residual 0.238673, 40 iterations)
- 1500; 2.483; 398.638
+Resolution:  1500Resolution:  1500, Time: 0.221 (0.990 GFlop => 4485.91 MFlop/s, residual 0.238673, 40 iterations)
+ 1500; 0.221; 4485.911
 --------------------------------------------------------------------------------
 Region Compute, Group 1: L3CACHE
 +-------------------+------------+
 |    Region Info    | HWThread 0 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.025022 |
+| RDTSC Runtime [s] |   0.225913 |
 |     call count    |          1 |
 +-------------------+------------+
 
 +--------------------------+---------+------------+
 |           Event          | Counter | HWThread 0 |
 +--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |   39795060 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |   57162450 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |   67103960 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     259795 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |     125303 |
-|     UOPS_RETIRED_ALL     |   PMC2  |   47671920 |
+|     INSTR_RETIRED_ANY    |  FIXC0  |  628218100 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |  487451700 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  |  572229500 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |    3231902 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    1178340 |
+|     UOPS_RETIRED_ALL     |   PMC2  |  818375000 |
 +--------------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 0 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.0250 |
-| Runtime unhalted [s] |     0.0212 |
-|      Clock [MHz]     |  2294.5577 |
-|          CPI         |     1.4364 |
-|    L3 request rate   |     0.0081 |
-|     L3 miss rate     |     0.0026 |
-|     L3 miss ratio    |     0.3254 |
+|  Runtime (RDTSC) [s] |     0.2259 |
+| Runtime unhalted [s] |     0.1810 |
+|      Clock [MHz]     |  2294.5506 |
+|          CPI         |     0.7759 |
+|    L3 request rate   |     0.0054 |
+|     L3 miss rate     |     0.0014 |
+|     L3 miss ratio    |     0.2672 |
 +----------------------+------------+
 
 --------------------------------------------------------------------------------
@@ -324,38 +324,38 @@ Algorithm         : 0 (Jacobi)
 Num. Heat sources : 2
    1: (0.00, 0.00) 1.00 1.00 
    2: (1.00, 1.00) 1.00 0.50 
-Resolution:  2500Resolution:  2500, Time: 5.793 (2.750 GFlop => 474.68 MFlop/s, residual 0.397703, 40 iterations)
- 2500; 5.793; 474.684
+Resolution:  2500Resolution:  2500, Time: 0.880 (2.750 GFlop => 3125.65 MFlop/s, residual 0.397703, 40 iterations)
+ 2500; 0.880; 3125.653
 --------------------------------------------------------------------------------
 Region Compute, Group 1: L3CACHE
 +-------------------+------------+
 |    Region Info    | HWThread 0 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.101949 |
+| RDTSC Runtime [s] |   0.893553 |
 |     call count    |          1 |
 +-------------------+------------+
 
 +--------------------------+---------+------------+
 |           Event          | Counter | HWThread 0 |
 +--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |  110385600 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |  232328600 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |  272734000 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     627988 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |     858253 |
-|     UOPS_RETIRED_ALL     |   PMC2  |  132278300 |
+|     INSTR_RETIRED_ANY    |  FIXC0  | 1557213000 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  | 1976625000 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  | 2320390000 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     532046 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    1841771 |
+|     UOPS_RETIRED_ALL     |   PMC2  | 2176070000 |
 +--------------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 0 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.1019 |
-| Runtime unhalted [s] |     0.0863 |
-|      Clock [MHz]     |  2294.4456 |
-|          CPI         |     2.1047 |
-|    L3 request rate   |     0.0112 |
-|     L3 miss rate     |     0.0065 |
-|     L3 miss ratio    |     0.5775 |
+|  Runtime (RDTSC) [s] |     0.8936 |
+| Runtime unhalted [s] |     0.7338 |
+|      Clock [MHz]     |  2294.5597 |
+|          CPI         |     1.2693 |
+|    L3 request rate   |     0.0011 |
+|     L3 miss rate     |     0.0008 |
+|     L3 miss ratio    |     0.7759 |
 +----------------------+------------+
 
 --------------------------------------------------------------------------------
@@ -369,38 +369,38 @@ Algorithm         : 0 (Jacobi)
 Num. Heat sources : 2
    1: (0.00, 0.00) 1.00 1.00 
    2: (1.00, 1.00) 1.00 0.50 
-Resolution:  3500Resolution:  3500, Time: 10.716 (5.390 GFlop => 502.98 MFlop/s, residual 0.556728, 40 iterations)
- 3500; 10.716; 502.984
+Resolution:  3500Resolution:  3500, Time: 1.874 (5.390 GFlop => 2876.81 MFlop/s, residual 0.556728, 40 iterations)
+ 3500; 1.874; 2876.807
 --------------------------------------------------------------------------------
 Region Compute, Group 1: L3CACHE
 +-------------------+------------+
 |    Region Info    | HWThread 0 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.215349 |
+| RDTSC Runtime [s] |   1.899991 |
 |     call count    |          1 |
 +-------------------+------------+
 
 +--------------------------+---------+------------+
 |           Event          | Counter | HWThread 0 |
 +--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |  216226100 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |  491814800 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |  577349200 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     320237 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    2082763 |
-|     UOPS_RETIRED_ALL     |   PMC2  |  259128800 |
+|     INSTR_RETIRED_ANY    |  FIXC0  | 3041789000 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  | 4220874000 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  | 4954944000 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     534143 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    5842140 |
+|     UOPS_RETIRED_ALL     |   PMC2  | 4244267000 |
 +--------------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 0 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.2153 |
-| Runtime unhalted [s] |     0.1826 |
-|      Clock [MHz]     |  2294.2843 |
-|          CPI         |     2.2745 |
-|    L3 request rate   |     0.0093 |
-|     L3 miss rate     |     0.0080 |
-|     L3 miss ratio    |     0.8667 |
+|  Runtime (RDTSC) [s] |     1.9000 |
+| Runtime unhalted [s] |     1.5670 |
+|      Clock [MHz]     |  2294.4783 |
+|          CPI         |     1.3876 |
+|    L3 request rate   |     0.0015 |
+|     L3 miss rate     |     0.0014 |
+|     L3 miss ratio    |     0.9162 |
 +----------------------+------------+
 
 --------------------------------------------------------------------------------
@@ -414,38 +414,38 @@ Algorithm         : 0 (Jacobi)
 Num. Heat sources : 2
    1: (0.00, 0.00) 1.00 1.00 
    2: (1.00, 1.00) 1.00 0.50 
-Resolution:  4500Resolution:  4500, Time: 16.814 (8.910 GFlop => 529.91 MFlop/s, residual 0.715752, 40 iterations)
- 4500; 16.814; 529.908
+Resolution:  4500Resolution:  4500, Time: 3.121 (8.910 GFlop => 2854.48 MFlop/s, residual 0.715752, 40 iterations)
+ 4500; 3.121; 2854.482
 --------------------------------------------------------------------------------
 Region Compute, Group 1: L3CACHE
 +-------------------+------------+
 |    Region Info    | HWThread 0 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.356812 |
+| RDTSC Runtime [s] |   3.164966 |
 |     call count    |          1 |
 +-------------------+------------+
 
 +--------------------------+---------+------------+
 |           Event          | Counter | HWThread 0 |
 +--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |  357317000 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |  812318600 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |  953591800 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     530636 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    2998957 |
-|     UOPS_RETIRED_ALL     |   PMC2  |  428290300 |
+|     INSTR_RETIRED_ANY    |  FIXC0  | 5007963000 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  | 7044950000 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  | 8270162000 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     699797 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |   10392810 |
+|     UOPS_RETIRED_ALL     |   PMC2  | 6967079000 |
 +--------------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 0 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.3568 |
-| Runtime unhalted [s] |     0.3016 |
-|      Clock [MHz]     |  2294.5762 |
-|          CPI         |     2.2734 |
-|    L3 request rate   |     0.0082 |
-|     L3 miss rate     |     0.0070 |
-|     L3 miss ratio    |     0.8497 |
+|  Runtime (RDTSC) [s] |     3.1650 |
+| Runtime unhalted [s] |     2.6154 |
+|      Clock [MHz]     |  2294.5498 |
+|          CPI         |     1.4067 |
+|    L3 request rate   |     0.0016 |
+|     L3 miss rate     |     0.0015 |
+|     L3 miss ratio    |     0.9369 |
 +----------------------+------------+
 
 --------------------------------------------------------------------------------
@@ -459,38 +459,38 @@ Algorithm         : 0 (Jacobi)
 Num. Heat sources : 2
    1: (0.00, 0.00) 1.00 1.00 
    2: (1.00, 1.00) 1.00 0.50 
-Resolution:   500Resolution:   500, Time: 1.402 (0.110 GFlop =>  78.47 MFlop/s, residual 0.079613, 40 iterations)
-  500; 1.402; 78.470
+Resolution:   500Resolution:   500, Time: 0.029 (0.110 GFlop => 3828.48 MFlop/s, residual 0.079613, 40 iterations)
+  500; 0.029; 3828.476
 --------------------------------------------------------------------------------
 Region Compute, Group 1: L3CACHE
 +-------------------+------------+
 |    Region Info    | HWThread 0 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.001953 |
+| RDTSC Runtime [s] |   0.031164 |
 |     call count    |          1 |
 +-------------------+------------+
 
 +--------------------------+---------+------------+
 |           Event          | Counter | HWThread 0 |
 +--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |    4454550 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |    4492988 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |    5274288 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |      50105 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |          2 |
-|     UOPS_RETIRED_ALL     |   PMC2  |    5329984 |
+|     INSTR_RETIRED_ANY    |  FIXC0  |   73223330 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |   63780450 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  |   74871540 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |    1082111 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |       2348 |
+|     UOPS_RETIRED_ALL     |   PMC2  |   95145740 |
 +--------------------------+---------+------------+
 
 +----------------------+--------------+
 |        Metric        |  HWThread 0  |
 +----------------------+--------------+
-|  Runtime (RDTSC) [s] |       0.0020 |
-| Runtime unhalted [s] |       0.0017 |
-|      Clock [MHz]     |    2294.5928 |
-|          CPI         |       1.0086 |
-|    L3 request rate   |       0.0094 |
-|     L3 miss rate     | 3.752356e-07 |
-|     L3 miss ratio    | 3.991458e-05 |
+|  Runtime (RDTSC) [s] |       0.0312 |
+| Runtime unhalted [s] |       0.0237 |
+|      Clock [MHz]     |    2294.5421 |
+|          CPI         |       0.8710 |
+|    L3 request rate   |       0.0114 |
+|     L3 miss rate     | 2.467793e-05 |
+|     L3 miss ratio    |       0.0022 |
 +----------------------+--------------+
 
 --------------------------------------------------------------------------------
@@ -504,38 +504,38 @@ Algorithm         : 0 (Jacobi)
 Num. Heat sources : 2
    1: (0.00, 0.00) 1.00 1.00 
    2: (1.00, 1.00) 1.00 0.50 
-Resolution:  1500Resolution:  1500, Time: 2.549 (0.990 GFlop => 388.45 MFlop/s, residual 0.238673, 40 iterations)
- 1500; 2.549; 388.453
+Resolution:  1500Resolution:  1500, Time: 0.261 (0.990 GFlop => 3788.30 MFlop/s, residual 0.238673, 40 iterations)
+ 1500; 0.261; 3788.301
 --------------------------------------------------------------------------------
 Region Compute, Group 1: L3CACHE
 +-------------------+------------+
 |    Region Info    | HWThread 0 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.027884 |
+| RDTSC Runtime [s] |   0.266700 |
 |     call count    |          1 |
 +-------------------+------------+
 
 +--------------------------+---------+------------+
 |           Event          | Counter | HWThread 0 |
 +--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |   39795060 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |   63752340 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |   74840330 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     221697 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |     163555 |
-|     UOPS_RETIRED_ALL     |   PMC2  |   47672390 |
+|     INSTR_RETIRED_ANY    |  FIXC0  |  628218100 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |  580524200 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  |  681483800 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |    1947048 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    1581412 |
+|     UOPS_RETIRED_ALL     |   PMC2  |  818318000 |
 +--------------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 0 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.0279 |
-| Runtime unhalted [s] |     0.0237 |
-|      Clock [MHz]     |  2294.5579 |
-|          CPI         |     1.6020 |
-|    L3 request rate   |     0.0081 |
-|     L3 miss rate     |     0.0034 |
-|     L3 miss ratio    |     0.4245 |
+|  Runtime (RDTSC) [s] |     0.2667 |
+| Runtime unhalted [s] |     0.2155 |
+|      Clock [MHz]     |  2294.5815 |
+|          CPI         |     0.9241 |
+|    L3 request rate   |     0.0043 |
+|     L3 miss rate     |     0.0019 |
+|     L3 miss ratio    |     0.4482 |
 +----------------------+------------+
 
 --------------------------------------------------------------------------------
@@ -549,38 +549,38 @@ Algorithm         : 0 (Jacobi)
 Num. Heat sources : 2
    1: (0.00, 0.00) 1.00 1.00 
    2: (1.00, 1.00) 1.00 0.50 
-Resolution:  2500Resolution:  2500, Time: 5.831 (2.750 GFlop => 471.63 MFlop/s, residual 0.397703, 40 iterations)
- 2500; 5.831; 471.635
+Resolution:  2500Resolution:  2500, Time: 0.874 (2.750 GFlop => 3147.28 MFlop/s, residual 0.397703, 40 iterations)
+ 2500; 0.874; 3147.281
 --------------------------------------------------------------------------------
 Region Compute, Group 1: L3CACHE
 +-------------------+------------+
 |    Region Info    | HWThread 0 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.100521 |
+| RDTSC Runtime [s] |   0.887349 |
 |     call count    |          1 |
 +-------------------+------------+
 
 +--------------------------+---------+------------+
 |           Event          | Counter | HWThread 0 |
 +--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |  110385600 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |  230109200 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |  270129400 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     659121 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |     830875 |
-|     UOPS_RETIRED_ALL     |   PMC2  |  132272000 |
+|     INSTR_RETIRED_ANY    |  FIXC0  | 1557213000 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  | 1962524000 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  | 2303839000 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     523865 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    1942463 |
+|     UOPS_RETIRED_ALL     |   PMC2  | 2172740000 |
 +--------------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 0 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.1005 |
-| Runtime unhalted [s] |     0.0854 |
-|      Clock [MHz]     |  2294.5549 |
-|          CPI         |     2.0846 |
-|    L3 request rate   |     0.0113 |
-|     L3 miss rate     |     0.0063 |
-|     L3 miss ratio    |     0.5576 |
+|  Runtime (RDTSC) [s] |     0.8873 |
+| Runtime unhalted [s] |     0.7286 |
+|      Clock [MHz]     |  2294.5181 |
+|          CPI         |     1.2603 |
+|    L3 request rate   |     0.0011 |
+|     L3 miss rate     |     0.0009 |
+|     L3 miss ratio    |     0.7876 |
 +----------------------+------------+
 
 --------------------------------------------------------------------------------
@@ -594,38 +594,38 @@ Algorithm         : 0 (Jacobi)
 Num. Heat sources : 2
    1: (0.00, 0.00) 1.00 1.00 
    2: (1.00, 1.00) 1.00 0.50 
-Resolution:  3500Resolution:  3500, Time: 10.724 (5.390 GFlop => 502.62 MFlop/s, residual 0.556728, 40 iterations)
- 3500; 10.724; 502.618
+Resolution:  3500Resolution:  3500, Time: 1.886 (5.390 GFlop => 2858.07 MFlop/s, residual 0.556728, 40 iterations)
+ 3500; 1.886; 2858.075
 --------------------------------------------------------------------------------
 Region Compute, Group 1: L3CACHE
 +-------------------+------------+
 |    Region Info    | HWThread 0 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.214793 |
+| RDTSC Runtime [s] |   1.912371 |
 |     call count    |          1 |
 +-------------------+------------+
 
 +--------------------------+---------+------------+
 |           Event          | Counter | HWThread 0 |
 +--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |  216226100 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |  490890600 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |  576263800 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     318291 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    2082748 |
-|     UOPS_RETIRED_ALL     |   PMC2  |  259121400 |
+|     INSTR_RETIRED_ANY    |  FIXC0  | 3041789000 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  | 4249739000 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  | 4988828000 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |    1008656 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    7208962 |
+|     UOPS_RETIRED_ALL     |   PMC2  | 4239440000 |
 +--------------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 0 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.2148 |
-| Runtime unhalted [s] |     0.1822 |
-|      Clock [MHz]     |  2294.5750 |
-|          CPI         |     2.2703 |
-|    L3 request rate   |     0.0093 |
-|     L3 miss rate     |     0.0080 |
-|     L3 miss ratio    |     0.8674 |
+|  Runtime (RDTSC) [s] |     1.9124 |
+| Runtime unhalted [s] |     1.5779 |
+|      Clock [MHz]     |  2294.3123 |
+|          CPI         |     1.3971 |
+|    L3 request rate   |     0.0019 |
+|     L3 miss rate     |     0.0017 |
+|     L3 miss ratio    |     0.8773 |
 +----------------------+------------+
 
 --------------------------------------------------------------------------------
@@ -639,353 +639,128 @@ Algorithm         : 0 (Jacobi)
 Num. Heat sources : 2
    1: (0.00, 0.00) 1.00 1.00 
    2: (1.00, 1.00) 1.00 0.50 
-Resolution:  4500Resolution:  4500, Time: 16.790 (8.910 GFlop => 530.67 MFlop/s, residual 0.715752, 40 iterations)
- 4500; 16.790; 530.669
+Resolution:  4500Resolution:  4500, Time: 3.129 (8.910 GFlop => 2847.80 MFlop/s, residual 0.715752, 40 iterations)
+ 4500; 3.129; 2847.800
 --------------------------------------------------------------------------------
 Region Compute, Group 1: L3CACHE
 +-------------------+------------+
 |    Region Info    | HWThread 0 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.353388 |
+| RDTSC Runtime [s] |   3.171788 |
 |     call count    |          1 |
 +-------------------+------------+
 
 +--------------------------+---------+------------+
 |           Event          | Counter | HWThread 0 |
 +--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |  357316600 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |  807688900 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |  948157200 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     541716 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    2994524 |
-|     UOPS_RETIRED_ALL     |   PMC2  |  428224100 |
+|     INSTR_RETIRED_ANY    |  FIXC0  | 5007964000 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  | 7054419000 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  | 8281277000 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     838658 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |   10888890 |
+|     UOPS_RETIRED_ALL     |   PMC2  | 6967160000 |
 +--------------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 0 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.3534 |
-| Runtime unhalted [s] |     0.2999 |
-|      Clock [MHz]     |  2294.5738 |
-|          CPI         |     2.2604 |
-|    L3 request rate   |     0.0083 |
-|     L3 miss rate     |     0.0070 |
-|     L3 miss ratio    |     0.8468 |
-+----------------------+------------+
-
---------------------------------------------------------------------------------
-CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
-CPU type:	Intel Skylake SP processor
-CPU clock:	2.69 GHz
---------------------------------------------------------------------------------
-Resolutions       : (500, 1500, ... 800)
-Iterations        : 40
-Algorithm         : 0 (Jacobi)
-Num. Heat sources : 2
-   1: (0.00, 0.00) 1.00 1.00 
-   2: (1.00, 1.00) 1.00 0.50 
-Resolution:   500Resolution:   500, Time: 1.405 (0.110 GFlop =>  78.32 MFlop/s, residual 0.079613, 40 iterations)
-  500; 1.405; 78.319
---------------------------------------------------------------------------------
-Region Compute, Group 1: L3CACHE
-+-------------------+------------+
-|    Region Info    | HWThread 0 |
-+-------------------+------------+
-| RDTSC Runtime [s] |   0.002029 |
-|     call count    |          1 |
-+-------------------+------------+
-
-+--------------------------+---------+------------+
-|           Event          | Counter | HWThread 0 |
-+--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |    4454550 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |    4634912 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |    5441256 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |      49989 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |          2 |
-|     UOPS_RETIRED_ALL     |   PMC2  |    5330376 |
-+--------------------------+---------+------------+
-
-+----------------------+--------------+
-|        Metric        |  HWThread 0  |
-+----------------------+--------------+
-|  Runtime (RDTSC) [s] |       0.0020 |
-| Runtime unhalted [s] |       0.0017 |
-|      Clock [MHz]     |    2294.4411 |
-|          CPI         |       1.0405 |
-|    L3 request rate   |       0.0094 |
-|     L3 miss rate     | 3.752081e-07 |
-|     L3 miss ratio    | 4.000720e-05 |
-+----------------------+--------------+
-
---------------------------------------------------------------------------------
-CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
-CPU type:	Intel Skylake SP processor
-CPU clock:	2.69 GHz
---------------------------------------------------------------------------------
-Resolutions       : (1500, 2500, ... 1800)
-Iterations        : 40
-Algorithm         : 0 (Jacobi)
-Num. Heat sources : 2
-   1: (0.00, 0.00) 1.00 1.00 
-   2: (1.00, 1.00) 1.00 0.50 
-Resolution:  1500Resolution:  1500, Time: 2.444 (0.990 GFlop => 405.12 MFlop/s, residual 0.238673, 40 iterations)
- 1500; 2.444; 405.121
---------------------------------------------------------------------------------
-Region Compute, Group 1: L3CACHE
-+-------------------+------------+
-|    Region Info    | HWThread 0 |
-+-------------------+------------+
-| RDTSC Runtime [s] |   0.022964 |
-|     call count    |          1 |
-+-------------------+------------+
-
-+--------------------------+---------+------------+
-|           Event          | Counter | HWThread 0 |
-+--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |   39795060 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |   52528790 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |   61664760 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     295461 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |      87068 |
-|     UOPS_RETIRED_ALL     |   PMC2  |   47671390 |
-+--------------------------+---------+------------+
-
-+----------------------+------------+
-|        Metric        | HWThread 0 |
-+----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.0230 |
-| Runtime unhalted [s] |     0.0195 |
-|      Clock [MHz]     |  2294.5523 |
-|          CPI         |     1.3200 |
-|    L3 request rate   |     0.0080 |
-|     L3 miss rate     |     0.0018 |
-|     L3 miss ratio    |     0.2276 |
-+----------------------+------------+
-
---------------------------------------------------------------------------------
-CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
-CPU type:	Intel Skylake SP processor
-CPU clock:	2.69 GHz
---------------------------------------------------------------------------------
-Resolutions       : (2500, 3500, ... 2800)
-Iterations        : 40
-Algorithm         : 0 (Jacobi)
-Num. Heat sources : 2
-   1: (0.00, 0.00) 1.00 1.00 
-   2: (1.00, 1.00) 1.00 0.50 
-Resolution:  2500Resolution:  2500, Time: 5.817 (2.750 GFlop => 472.72 MFlop/s, residual 0.397703, 40 iterations)
- 2500; 5.817; 472.717
---------------------------------------------------------------------------------
-Region Compute, Group 1: L3CACHE
-+-------------------+------------+
-|    Region Info    | HWThread 0 |
-+-------------------+------------+
-| RDTSC Runtime [s] |   0.102258 |
-|     call count    |          1 |
-+-------------------+------------+
-
-+--------------------------+---------+------------+
-|           Event          | Counter | HWThread 0 |
-+--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |  110385600 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |  233861400 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |  274532900 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     642628 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |     844317 |
-|     UOPS_RETIRED_ALL     |   PMC2  |  132275000 |
-+--------------------------+---------+------------+
-
-+----------------------+------------+
-|        Metric        | HWThread 0 |
-+----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.1023 |
-| Runtime unhalted [s] |     0.0868 |
-|      Clock [MHz]     |  2294.5359 |
-|          CPI         |     2.1186 |
-|    L3 request rate   |     0.0112 |
-|     L3 miss rate     |     0.0064 |
-|     L3 miss ratio    |     0.5678 |
-+----------------------+------------+
-
---------------------------------------------------------------------------------
-CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
-CPU type:	Intel Skylake SP processor
-CPU clock:	2.69 GHz
---------------------------------------------------------------------------------
-Resolutions       : (3500, 4500, ... 3800)
-Iterations        : 40
-Algorithm         : 0 (Jacobi)
-Num. Heat sources : 2
-   1: (0.00, 0.00) 1.00 1.00 
-   2: (1.00, 1.00) 1.00 0.50 
-Resolution:  3500Resolution:  3500, Time: 10.715 (5.390 GFlop => 503.04 MFlop/s, residual 0.556728, 40 iterations)
- 3500; 10.715; 503.039
---------------------------------------------------------------------------------
-Region Compute, Group 1: L3CACHE
-+-------------------+------------+
-|    Region Info    | HWThread 0 |
-+-------------------+------------+
-| RDTSC Runtime [s] |   0.213996 |
-|     call count    |          1 |
-+-------------------+------------+
-
-+--------------------------+---------+------------+
-|           Event          | Counter | HWThread 0 |
-+--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |  216226100 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |  489185300 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |  574261800 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     322238 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    2073606 |
-|     UOPS_RETIRED_ALL     |   PMC2  |  259129500 |
-+--------------------------+---------+------------+
-
-+----------------------+------------+
-|        Metric        | HWThread 0 |
-+----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.2140 |
-| Runtime unhalted [s] |     0.1816 |
-|      Clock [MHz]     |  2294.5569 |
-|          CPI         |     2.2624 |
-|    L3 request rate   |     0.0092 |
-|     L3 miss rate     |     0.0080 |
-|     L3 miss ratio    |     0.8655 |
-+----------------------+------------+
-
---------------------------------------------------------------------------------
-CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
-CPU type:	Intel Skylake SP processor
-CPU clock:	2.69 GHz
---------------------------------------------------------------------------------
-Resolutions       : (4500, 5500, ... 4800)
-Iterations        : 40
-Algorithm         : 0 (Jacobi)
-Num. Heat sources : 2
-   1: (0.00, 0.00) 1.00 1.00 
-   2: (1.00, 1.00) 1.00 0.50 
-Resolution:  4500Resolution:  4500, Time: 16.819 (8.910 GFlop => 529.75 MFlop/s, residual 0.715752, 40 iterations)
- 4500; 16.819; 529.755
---------------------------------------------------------------------------------
-Region Compute, Group 1: L3CACHE
-+-------------------+------------+
-|    Region Info    | HWThread 0 |
-+-------------------+------------+
-| RDTSC Runtime [s] |   0.354216 |
-|     call count    |          1 |
-+-------------------+------------+
-
-+--------------------------+---------+------------+
-|           Event          | Counter | HWThread 0 |
-+--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |  357316600 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |  809736000 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |  950559400 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     531279 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    3004428 |
-|     UOPS_RETIRED_ALL     |   PMC2  |  428221700 |
-+--------------------------+---------+------------+
-
-+----------------------+------------+
-|        Metric        | HWThread 0 |
-+----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.3542 |
-| Runtime unhalted [s] |     0.3006 |
-|      Clock [MHz]     |  2294.5778 |
-|          CPI         |     2.2662 |
-|    L3 request rate   |     0.0083 |
-|     L3 miss rate     |     0.0070 |
-|     L3 miss ratio    |     0.8497 |
-+----------------------+------------+
-
---------------------------------------------------------------------------------
-CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
-CPU type:	Intel Skylake SP processor
-CPU clock:	2.69 GHz
---------------------------------------------------------------------------------
-Resolutions       : (500, 1500, ... 800)
-Iterations        : 40
-Algorithm         : 0 (Jacobi)
-Num. Heat sources : 2
-   1: (0.00, 0.00) 1.00 1.00 
-   2: (1.00, 1.00) 1.00 0.50 
-Resolution:   500Resolution:   500, Time: 1.400 (0.110 GFlop =>  78.56 MFlop/s, residual 0.079613, 40 iterations)
-  500; 1.400; 78.558
---------------------------------------------------------------------------------
-Region Compute, Group 1: L3CACHE
-+-------------------+------------+
-|    Region Info    | HWThread 0 |
-+-------------------+------------+
-| RDTSC Runtime [s] |   0.001965 |
-|     call count    |          1 |
-+-------------------+------------+
-
-+--------------------------+---------+------------+
-|           Event          | Counter | HWThread 0 |
-+--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |    4454551 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |    4496335 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |    5278824 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |      50057 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |          2 |
-|     UOPS_RETIRED_ALL     |   PMC2  |    5330217 |
-+--------------------------+---------+------------+
-
-+----------------------+--------------+
-|        Metric        |  HWThread 0  |
-+----------------------+--------------+
-|  Runtime (RDTSC) [s] |       0.0020 |
-| Runtime unhalted [s] |       0.0017 |
-|      Clock [MHz]     |    2294.2632 |
-|          CPI         |       1.0094 |
-|    L3 request rate   |       0.0094 |
-|     L3 miss rate     | 3.752192e-07 |
-|     L3 miss ratio    | 3.995286e-05 |
-+----------------------+--------------+
-
---------------------------------------------------------------------------------
-CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
-CPU type:	Intel Skylake SP processor
-CPU clock:	2.69 GHz
---------------------------------------------------------------------------------
-Resolutions       : (1500, 2500, ... 1800)
-Iterations        : 40
-Algorithm         : 0 (Jacobi)
-Num. Heat sources : 2
-   1: (0.00, 0.00) 1.00 1.00 
-   2: (1.00, 1.00) 1.00 0.50 
-Resolution:  1500Resolution:  1500, Time: 2.368 (0.990 GFlop => 418.11 MFlop/s, residual 0.238673, 40 iterations)
- 1500; 2.368; 418.114
---------------------------------------------------------------------------------
-Region Compute, Group 1: L3CACHE
-+-------------------+------------+
-|    Region Info    | HWThread 0 |
-+-------------------+------------+
-| RDTSC Runtime [s] |   0.022558 |
-|     call count    |          1 |
-+-------------------+------------+
-
-+--------------------------+---------+------------+
-|           Event          | Counter | HWThread 0 |
-+--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |   39795060 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |   50940460 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |   59800030 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     306820 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |      77008 |
-|     UOPS_RETIRED_ALL     |   PMC2  |   47672330 |
-+--------------------------+---------+------------+
-
-+----------------------+------------+
-|        Metric        | HWThread 0 |
-+----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.0226 |
-| Runtime unhalted [s] |     0.0189 |
-|      Clock [MHz]     |  2294.2899 |
-|          CPI         |     1.2801 |
-|    L3 request rate   |     0.0081 |
+|  Runtime (RDTSC) [s] |     3.1718 |
+| Runtime unhalted [s] |     2.6190 |
+|      Clock [MHz]     |  2294.5250 |
+|          CPI         |     1.4086 |
+|    L3 request rate   |     0.0017 |
 |     L3 miss rate     |     0.0016 |
-|     L3 miss ratio    |     0.2006 |
+|     L3 miss ratio    |     0.9285 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (500, 1500, ... 800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:   500Resolution:   500, Time: 0.029 (0.110 GFlop => 3831.94 MFlop/s, residual 0.079613, 40 iterations)
+  500; 0.029; 3831.942
+--------------------------------------------------------------------------------
+Region Compute, Group 1: L3CACHE
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.031139 |
+|     call count    |          1 |
++-------------------+------------+
+
++--------------------------+---------+------------+
+|           Event          | Counter | HWThread 0 |
++--------------------------+---------+------------+
+|     INSTR_RETIRED_ANY    |  FIXC0  |   73223300 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |   63690860 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  |   74766780 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |    1079940 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |       3223 |
+|     UOPS_RETIRED_ALL     |   PMC2  |   95145530 |
++--------------------------+---------+------------+
+
++----------------------+--------------+
+|        Metric        |  HWThread 0  |
++----------------------+--------------+
+|  Runtime (RDTSC) [s] |       0.0311 |
+| Runtime unhalted [s] |       0.0236 |
+|      Clock [MHz]     |    2294.5519 |
+|          CPI         |       0.8698 |
+|    L3 request rate   |       0.0114 |
+|     L3 miss rate     | 3.387442e-05 |
+|     L3 miss ratio    |       0.0030 |
++----------------------+--------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (1500, 2500, ... 1800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  1500Resolution:  1500, Time: 0.233 (0.990 GFlop => 4250.04 MFlop/s, residual 0.238673, 40 iterations)
+ 1500; 0.233; 4250.040
+--------------------------------------------------------------------------------
+Region Compute, Group 1: L3CACHE
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.238361 |
+|     call count    |          1 |
++-------------------+------------+
+
++--------------------------+---------+------------+
+|           Event          | Counter | HWThread 0 |
++--------------------------+---------+------------+
+|     INSTR_RETIRED_ANY    |  FIXC0  |  628218600 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |  514531600 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  |  604017100 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |    2872942 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    1134329 |
+|     UOPS_RETIRED_ALL     |   PMC2  |  818642100 |
++--------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.2384 |
+| Runtime unhalted [s] |     0.1910 |
+|      Clock [MHz]     |  2294.2841 |
+|          CPI         |     0.8190 |
+|    L3 request rate   |     0.0049 |
+|     L3 miss rate     |     0.0014 |
+|     L3 miss ratio    |     0.2831 |
 +----------------------+------------+
 
 --------------------------------------------------------------------------------
@@ -999,38 +774,38 @@ Algorithm         : 0 (Jacobi)
 Num. Heat sources : 2
    1: (0.00, 0.00) 1.00 1.00 
    2: (1.00, 1.00) 1.00 0.50 
-Resolution:  2500Resolution:  2500, Time: 5.812 (2.750 GFlop => 473.16 MFlop/s, residual 0.397703, 40 iterations)
- 2500; 5.812; 473.165
+Resolution:  2500Resolution:  2500, Time: 0.882 (2.750 GFlop => 3117.54 MFlop/s, residual 0.397703, 40 iterations)
+ 2500; 0.882; 3117.539
 --------------------------------------------------------------------------------
 Region Compute, Group 1: L3CACHE
 +-------------------+------------+
 |    Region Info    | HWThread 0 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.101412 |
+| RDTSC Runtime [s] |   0.895789 |
 |     call count    |          1 |
 +-------------------+------------+
 
 +--------------------------+---------+------------+
 |           Event          | Counter | HWThread 0 |
 +--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |  110385600 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |  232073300 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |  272434300 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     649040 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |     836451 |
-|     UOPS_RETIRED_ALL     |   PMC2  |  132272700 |
+|     INSTR_RETIRED_ANY    |  FIXC0  | 1557213000 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  | 1981336000 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  | 2325923000 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     538236 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    2057748 |
+|     UOPS_RETIRED_ALL     |   PMC2  | 2174325000 |
 +--------------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 0 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.1014 |
-| Runtime unhalted [s] |     0.0862 |
-|      Clock [MHz]     |  2294.5761 |
-|          CPI         |     2.1024 |
-|    L3 request rate   |     0.0112 |
-|     L3 miss rate     |     0.0063 |
-|     L3 miss ratio    |     0.5631 |
+|  Runtime (RDTSC) [s] |     0.8958 |
+| Runtime unhalted [s] |     0.7357 |
+|      Clock [MHz]     |  2294.2916 |
+|          CPI         |     1.2724 |
+|    L3 request rate   |     0.0012 |
+|     L3 miss rate     |     0.0009 |
+|     L3 miss ratio    |     0.7927 |
 +----------------------+------------+
 
 --------------------------------------------------------------------------------
@@ -1044,38 +819,38 @@ Algorithm         : 0 (Jacobi)
 Num. Heat sources : 2
    1: (0.00, 0.00) 1.00 1.00 
    2: (1.00, 1.00) 1.00 0.50 
-Resolution:  3500Resolution:  3500, Time: 10.707 (5.390 GFlop => 503.41 MFlop/s, residual 0.556728, 40 iterations)
- 3500; 10.707; 503.414
+Resolution:  3500Resolution:  3500, Time: 1.880 (5.390 GFlop => 2866.28 MFlop/s, residual 0.556728, 40 iterations)
+ 3500; 1.880; 2866.280
 --------------------------------------------------------------------------------
 Region Compute, Group 1: L3CACHE
 +-------------------+------------+
 |    Region Info    | HWThread 0 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.214041 |
+| RDTSC Runtime [s] |   1.906668 |
 |     call count    |          1 |
 +-------------------+------------+
 
 +--------------------------+---------+------------+
 |           Event          | Counter | HWThread 0 |
 +--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |  216226100 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |  489387100 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |  574498400 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     311757 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    2088265 |
-|     UOPS_RETIRED_ALL     |   PMC2  |  259124800 |
+|     INSTR_RETIRED_ANY    |  FIXC0  | 3041789000 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  | 4232801000 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  | 4968943000 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     379171 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    5312747 |
+|     UOPS_RETIRED_ALL     |   PMC2  | 4234041000 |
 +--------------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 0 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.2140 |
-| Runtime unhalted [s] |     0.1817 |
-|      Clock [MHz]     |  2294.5486 |
-|          CPI         |     2.2633 |
-|    L3 request rate   |     0.0093 |
-|     L3 miss rate     |     0.0081 |
-|     L3 miss ratio    |     0.8701 |
+|  Runtime (RDTSC) [s] |     1.9067 |
+| Runtime unhalted [s] |     1.5714 |
+|      Clock [MHz]     |  2294.5673 |
+|          CPI         |     1.3915 |
+|    L3 request rate   |     0.0013 |
+|     L3 miss rate     |     0.0013 |
+|     L3 miss ratio    |     0.9334 |
 +----------------------+------------+
 
 --------------------------------------------------------------------------------
@@ -1089,37 +864,262 @@ Algorithm         : 0 (Jacobi)
 Num. Heat sources : 2
    1: (0.00, 0.00) 1.00 1.00 
    2: (1.00, 1.00) 1.00 0.50 
-Resolution:  4500Resolution:  4500, Time: 16.786 (8.910 GFlop => 530.82 MFlop/s, residual 0.715752, 40 iterations)
- 4500; 16.786; 530.815
+Resolution:  4500Resolution:  4500, Time: 3.117 (8.910 GFlop => 2858.63 MFlop/s, residual 0.715752, 40 iterations)
+ 4500; 3.117; 2858.627
 --------------------------------------------------------------------------------
 Region Compute, Group 1: L3CACHE
 +-------------------+------------+
 |    Region Info    | HWThread 0 |
 +-------------------+------------+
-| RDTSC Runtime [s] |   0.354344 |
+| RDTSC Runtime [s] |   3.160248 |
 |     call count    |          1 |
 +-------------------+------------+
 
 +--------------------------+---------+------------+
 |           Event          | Counter | HWThread 0 |
 +--------------------------+---------+------------+
-|     INSTR_RETIRED_ANY    |  FIXC0  |  357316600 |
-|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |  810202700 |
-|   CPU_CLK_UNHALTED_REF   |  FIXC2  |  951108400 |
-|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     541359 |
-| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    2995476 |
-|     UOPS_RETIRED_ALL     |   PMC2  |  428221100 |
+|     INSTR_RETIRED_ANY    |  FIXC0  | 5007964000 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  | 7030080000 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  | 8252714000 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     508704 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    9016881 |
+|     UOPS_RETIRED_ALL     |   PMC2  | 6967770000 |
 +--------------------------+---------+------------+
 
 +----------------------+------------+
 |        Metric        | HWThread 0 |
 +----------------------+------------+
-|  Runtime (RDTSC) [s] |     0.3543 |
-| Runtime unhalted [s] |     0.3008 |
-|      Clock [MHz]     |  2294.5286 |
-|          CPI         |     2.2675 |
-|    L3 request rate   |     0.0083 |
-|     L3 miss rate     |     0.0070 |
-|     L3 miss ratio    |     0.8469 |
+|  Runtime (RDTSC) [s] |     3.1602 |
+| Runtime unhalted [s] |     2.6102 |
+|      Clock [MHz]     |  2294.2807 |
+|          CPI         |     1.4038 |
+|    L3 request rate   |     0.0014 |
+|     L3 miss rate     |     0.0013 |
+|     L3 miss ratio    |     0.9466 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (500, 1500, ... 800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:   500Resolution:   500, Time: 0.029 (0.110 GFlop => 3832.36 MFlop/s, residual 0.079613, 40 iterations)
+  500; 0.029; 3832.355
+--------------------------------------------------------------------------------
+Region Compute, Group 1: L3CACHE
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.031135 |
+|     call count    |          1 |
++-------------------+------------+
+
++--------------------------+---------+------------+
+|           Event          | Counter | HWThread 0 |
++--------------------------+---------+------------+
+|     INSTR_RETIRED_ANY    |  FIXC0  |   73223330 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |   63699780 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  |   74778230 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |    1078668 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |       2605 |
+|     UOPS_RETIRED_ALL     |   PMC2  |   95145730 |
++--------------------------+---------+------------+
+
++----------------------+--------------+
+|        Metric        |  HWThread 0  |
++----------------------+--------------+
+|  Runtime (RDTSC) [s] |       0.0311 |
+| Runtime unhalted [s] |       0.0236 |
+|      Clock [MHz]     |    2294.5673 |
+|          CPI         |       0.8699 |
+|    L3 request rate   |       0.0114 |
+|     L3 miss rate     | 2.737905e-05 |
+|     L3 miss ratio    |       0.0024 |
++----------------------+--------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (1500, 2500, ... 1800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  1500Resolution:  1500, Time: 0.234 (0.990 GFlop => 4223.21 MFlop/s, residual 0.238673, 40 iterations)
+ 1500; 0.234; 4223.210
+--------------------------------------------------------------------------------
+Region Compute, Group 1: L3CACHE
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.239660 |
+|     call count    |          1 |
++-------------------+------------+
+
++--------------------------+---------+------------+
+|           Event          | Counter | HWThread 0 |
++--------------------------+---------+------------+
+|     INSTR_RETIRED_ANY    |  FIXC0  |  628218100 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  |  518672200 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  |  608878000 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |    2001387 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    2362395 |
+|     UOPS_RETIRED_ALL     |   PMC2  |  818396200 |
++--------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.2397 |
+| Runtime unhalted [s] |     0.1926 |
+|      Clock [MHz]     |  2294.5199 |
+|          CPI         |     0.8256 |
+|    L3 request rate   |     0.0053 |
+|     L3 miss rate     |     0.0029 |
+|     L3 miss ratio    |     0.5414 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (2500, 3500, ... 2800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  2500Resolution:  2500, Time: 0.879 (2.750 GFlop => 3128.59 MFlop/s, residual 0.397703, 40 iterations)
+ 2500; 0.879; 3128.594
+--------------------------------------------------------------------------------
+Region Compute, Group 1: L3CACHE
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.892600 |
+|     call count    |          1 |
++-------------------+------------+
+
++--------------------------+---------+------------+
+|           Event          | Counter | HWThread 0 |
++--------------------------+---------+------------+
+|     INSTR_RETIRED_ANY    |  FIXC0  | 1557213000 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  | 1974985000 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  | 2318464000 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     746327 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    2069220 |
+|     UOPS_RETIRED_ALL     |   PMC2  | 2176724000 |
++--------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.8926 |
+| Runtime unhalted [s] |     0.7333 |
+|      Clock [MHz]     |  2294.3003 |
+|          CPI         |     1.2683 |
+|    L3 request rate   |     0.0013 |
+|     L3 miss rate     |     0.0010 |
+|     L3 miss ratio    |     0.7349 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (3500, 4500, ... 3800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  3500Resolution:  3500, Time: 1.874 (5.390 GFlop => 2876.05 MFlop/s, residual 0.556728, 40 iterations)
+ 3500; 1.874; 2876.052
+--------------------------------------------------------------------------------
+Region Compute, Group 1: L3CACHE
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   1.900544 |
+|     call count    |          1 |
++-------------------+------------+
+
++--------------------------+---------+------------+
+|           Event          | Counter | HWThread 0 |
++--------------------------+---------+------------+
+|     INSTR_RETIRED_ANY    |  FIXC0  | 3041789000 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  | 4221291000 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  | 4955432000 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     379307 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    5310367 |
+|     UOPS_RETIRED_ALL     |   PMC2  | 4242863000 |
++--------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     1.9005 |
+| Runtime unhalted [s] |     1.5671 |
+|      Clock [MHz]     |  2294.5682 |
+|          CPI         |     1.3878 |
+|    L3 request rate   |     0.0013 |
+|     L3 miss rate     |     0.0013 |
+|     L3 miss ratio    |     0.9333 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (4500, 5500, ... 4800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  4500Resolution:  4500, Time: 3.116 (8.910 GFlop => 2859.50 MFlop/s, residual 0.715752, 40 iterations)
+ 4500; 3.116; 2859.498
+--------------------------------------------------------------------------------
+Region Compute, Group 1: L3CACHE
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   3.159641 |
+|     call count    |          1 |
++-------------------+------------+
+
++--------------------------+---------+------------+
+|           Event          | Counter | HWThread 0 |
++--------------------------+---------+------------+
+|     INSTR_RETIRED_ANY    |  FIXC0  | 5007964000 |
+|   CPU_CLK_UNHALTED_CORE  |  FIXC1  | 7030979000 |
+|   CPU_CLK_UNHALTED_REF   |  FIXC2  | 8253763000 |
+|  MEM_LOAD_RETIRED_L3_HIT |   PMC0  |     548504 |
+| MEM_LOAD_RETIRED_L3_MISS |   PMC1  |    9343253 |
+|     UOPS_RETIRED_ALL     |   PMC2  | 6966968000 |
++--------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     3.1596 |
+| Runtime unhalted [s] |     2.6105 |
+|      Clock [MHz]     |  2294.3052 |
+|          CPI         |     1.4040 |
+|    L3 request rate   |     0.0014 |
+|     L3 miss rate     |     0.0013 |
+|     L3 miss ratio    |     0.9445 |
 +----------------------+------------+
 
