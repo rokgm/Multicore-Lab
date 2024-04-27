@@ -24,12 +24,14 @@ Likwid has two measurement groups for measuring flop count: DP and DP AVX. DP AV
 
 - ***2.5 After you measurements with PAPI or Likwid, investigate the performance of both versions with the help of vtune. Determine the overhead of running vtune data collector. Submit images of all four analysis types for 3200 resolution and 200 iterations and mark interesting aspects that you want to explain in the meeting.***
 Interesting remarks:
+
 **PerformanceSnapshot:**
 ![PerformanceSnapshot](/vtune/snapshot.png)
 - 1% core utilisation (bc were using 1 core out of 96)
 - low IPC: check architecture
 - 25% of pipeline slots: stalling
 - full fill buffer: CPU cant keep up with the instructions
+
 **MemoryAccess:**
 ![MemoryAccess](/vtune/memoryaccess.png)
 - why is it using UPI and the DRAM from the socket where no cores are being used?
@@ -37,10 +39,12 @@ Interesting remarks:
 - bandwidth: much lower than max
 - 70% is memory bound, of whih 45% is DRAM
 - memcpy is the most CPU time function
+
 **MicroArchitecture:**
 ![MicroArchitecture](/vtune/microarchitecture.png)
 - backend bound (execution, memory access)
 - vectorization only at 50% of vector capacity (due to no ZMM?)
+
 **Hotspots:**
 ![Hotspots](/vtune/hotspots.png)
 - most active function is memcpy, residual and relaxed
