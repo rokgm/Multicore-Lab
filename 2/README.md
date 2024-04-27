@@ -46,7 +46,7 @@ Interesting remarks:
 - vectorization only at 50% of vector capacity (due to no ZMM?)
 
 **Hotspots:**
-![Hotspots](/vtune/hotspots.png)
+![Hotspots](/vtune/hotspots.jpeg)
 - most active function is memcpy, residual and relaxed
 
 ### Deliverables
