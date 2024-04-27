@@ -9,6 +9,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include <likwid-marker.h>
+
 #include "input.h"
 #include "timing.h"
 
@@ -75,6 +77,10 @@ int main(int argc, char *argv[]) {
 
 	param.act_res = param.initial_res;
 
+	LIKWID_MARKER_INIT;
+	LIKWID_MARKER_THREADINIT;
+	LIKWID_MARKER_START("Compute");
+
 	// loop over different resolutions
 	while (1) {
 
@@ -129,6 +135,7 @@ int main(int argc, char *argv[]) {
 			// 	fprintf(stderr, "residual %f, %d iterations\n", residual, iter);
 		}
 
+
 		// Flop count after <i> iterations
 		flop = iter * 11.0 * param.act_res * param.act_res;
 		// stopping time
@@ -150,6 +157,9 @@ int main(int argc, char *argv[]) {
 		param.act_res += param.res_step_size;
 		
 	}
+
+	LIKWID_MARKER_STOP("Compute");
+	LIKWID_MARKER_CLOSE;
 
 	for (i=0;i<experiment; i++){
 		printf("%5d; %5.3f; %5.3f\n", resolution[i], time[i], floprate[i]);
