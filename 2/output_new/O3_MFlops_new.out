@@ -1,0 +1,1225 @@
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (500, 1500, ... 800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:   500Resolution:   500, Time: 1.138 (0.110 GFlop =>  96.69 MFlop/s, residual 0.079613, 40 iterations)
+  500; 1.138; 96.693
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.030154 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  |   73189380 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |   64772900 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |   76037830 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |     320051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |   27560040 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.0302 |
+| Runtime unhalted [s] |     0.0240 |
+|      Clock [MHz]     |  2294.5744 |
+|          CPI         |     0.8850 |
+|     DP [MFLOP/s]     |  3666.4997 |
+|   AVX DP [MFLOP/s]   |  3655.8832 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |   913.9721 |
+|   Scalar [MUOPS/s]   |    10.6138 |
+|  Vectorization ratio |    98.8520 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (1500, 2500, ... 1800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  1500Resolution:  1500, Time: 1.333 (0.990 GFlop => 742.87 MFlop/s, residual 0.238673, 40 iterations)
+ 1500; 1.333; 742.869
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.224634 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  |  628150100 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |  497227600 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |  583703900 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |     960051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |  247680000 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.2246 |
+| Runtime unhalted [s] |     0.1846 |
+|      Clock [MHz]     |  2294.5025 |
+|          CPI         |     0.7916 |
+|     DP [MFLOP/s]     |  4414.6386 |
+|   AVX DP [MFLOP/s]   |  4410.3644 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |  1102.5913 |
+|   Scalar [MUOPS/s]   |     4.2738 |
+|  Vectorization ratio |    99.6139 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (2500, 3500, ... 2800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  2500Resolution:  2500, Time: 2.001 (2.750 GFlop => 1374.21 MFlop/s, residual 0.397703, 40 iterations)
+ 2500; 2.001; 1374.211
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.895471 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  | 1557111000 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  | 2010913000 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  | 2360635000 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |    1600051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |  687800000 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.8955 |
+| Runtime unhalted [s] |     0.7466 |
+|      Clock [MHz]     |  2294.4026 |
+|          CPI         |     1.2914 |
+|     DP [MFLOP/s]     |  3074.1369 |
+|   AVX DP [MFLOP/s]   |  3072.3500 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |   768.0875 |
+|   Scalar [MUOPS/s]   |     1.7868 |
+|  Vectorization ratio |    99.7679 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (3500, 4500, ... 3800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  3500Resolution:  3500, Time: 3.029 (5.390 GFlop => 1779.49 MFlop/s, residual 0.556728, 40 iterations)
+ 3500; 3.029; 1779.492
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   1.922288 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  | 3041651000 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  | 4326878000 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  | 5079377000 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |    2240051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  | 1347920000 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     1.9223 |
+| Runtime unhalted [s] |     1.6063 |
+|      Clock [MHz]     |  2294.5571 |
+|          CPI         |     1.4225 |
+|     DP [MFLOP/s]     |  2805.9896 |
+|   AVX DP [MFLOP/s]   |  2804.8243 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |   701.2061 |
+|   Scalar [MUOPS/s]   |     1.1653 |
+|  Vectorization ratio |    99.8341 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (4500, 5500, ... 4800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  4500Resolution:  4500, Time: 4.305 (8.910 GFlop => 2069.63 MFlop/s, residual 0.715752, 40 iterations)
+ 4500; 4.305; 2069.627
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   3.199102 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  | 5007791000 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  | 7218198000 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  | 8473538000 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |    2880051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  | 2228040000 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     3.1991 |
+| Runtime unhalted [s] |     2.6798 |
+|      Clock [MHz]     |  2294.5406 |
+|          CPI         |     1.4414 |
+|     DP [MFLOP/s]     |  2786.7321 |
+|   AVX DP [MFLOP/s]   |  2785.8318 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |   696.4580 |
+|   Scalar [MUOPS/s]   |     0.9003 |
+|  Vectorization ratio |    99.8709 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (500, 1500, ... 800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:   500Resolution:   500, Time: 1.135 (0.110 GFlop =>  96.94 MFlop/s, residual 0.079613, 40 iterations)
+  500; 1.135; 96.939
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.029451 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  |   73189300 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |   64060200 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |   75200180 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |     320051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |   27560040 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.0295 |
+| Runtime unhalted [s] |     0.0238 |
+|      Clock [MHz]     |  2294.6059 |
+|          CPI         |     0.8753 |
+|     DP [MFLOP/s]     |  3754.0356 |
+|   AVX DP [MFLOP/s]   |  3743.1657 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |   935.7928 |
+|   Scalar [MUOPS/s]   |    10.8672 |
+|  Vectorization ratio |    98.8520 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (1500, 2500, ... 1800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  1500Resolution:  1500, Time: 1.350 (0.990 GFlop => 733.52 MFlop/s, residual 0.238673, 40 iterations)
+ 1500; 1.350; 733.516
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.241015 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  |  628149600 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |  536475600 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |  629775200 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |     960051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |  247680000 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.2410 |
+| Runtime unhalted [s] |     0.1992 |
+|      Clock [MHz]     |  2294.5804 |
+|          CPI         |     0.8541 |
+|     DP [MFLOP/s]     |  4114.5924 |
+|   AVX DP [MFLOP/s]   |  4110.6087 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |  1027.6523 |
+|   Scalar [MUOPS/s]   |     3.9834 |
+|  Vectorization ratio |    99.6139 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (2500, 3500, ... 2800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  2500Resolution:  2500, Time: 2.008 (2.750 GFlop => 1369.31 MFlop/s, residual 0.397703, 40 iterations)
+ 2500; 2.008; 1369.307
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.900841 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  | 1557110000 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  | 2022580000 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  | 2374335000 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |    1600051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |  687800000 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.9008 |
+| Runtime unhalted [s] |     0.7509 |
+|      Clock [MHz]     |  2294.4664 |
+|          CPI         |     1.2989 |
+|     DP [MFLOP/s]     |  3055.8120 |
+|   AVX DP [MFLOP/s]   |  3054.0357 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |   763.5090 |
+|   Scalar [MUOPS/s]   |     1.7762 |
+|  Vectorization ratio |    99.7679 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (3500, 4500, ... 3800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  3500Resolution:  3500, Time: 3.035 (5.390 GFlop => 1775.82 MFlop/s, residual 0.556728, 40 iterations)
+ 3500; 3.035; 1775.823
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   1.927017 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  | 3041651000 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  | 4345754000 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  | 5101537000 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |    2240051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  | 1347920000 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     1.9270 |
+| Runtime unhalted [s] |     1.6134 |
+|      Clock [MHz]     |  2294.5127 |
+|          CPI         |     1.4287 |
+|     DP [MFLOP/s]     |  2799.1036 |
+|   AVX DP [MFLOP/s]   |  2797.9411 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |   699.4853 |
+|   Scalar [MUOPS/s]   |     1.1624 |
+|  Vectorization ratio |    99.8341 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (4500, 5500, ... 4800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  4500Resolution:  4500, Time: 4.310 (8.910 GFlop => 2067.24 MFlop/s, residual 0.715752, 40 iterations)
+ 4500; 4.310; 2067.239
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   3.204211 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  | 5007791000 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  | 7233254000 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  | 8491208000 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |    2880051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  | 2228040000 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     3.2042 |
+| Runtime unhalted [s] |     2.6857 |
+|      Clock [MHz]     |  2294.2822 |
+|          CPI         |     1.4444 |
+|     DP [MFLOP/s]     |  2782.2887 |
+|   AVX DP [MFLOP/s]   |  2781.3899 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |   695.3475 |
+|   Scalar [MUOPS/s]   |     0.8988 |
+|  Vectorization ratio |    99.8709 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (500, 1500, ... 800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:   500Resolution:   500, Time: 1.136 (0.110 GFlop =>  96.81 MFlop/s, residual 0.079613, 40 iterations)
+  500; 1.136; 96.809
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.029450 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  |   73189300 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |   64070740 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |   75212710 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |     320051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |   27560040 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.0295 |
+| Runtime unhalted [s] |     0.0238 |
+|      Clock [MHz]     |  2294.5417 |
+|          CPI         |     0.8754 |
+|     DP [MFLOP/s]     |  3754.1325 |
+|   AVX DP [MFLOP/s]   |  3743.2623 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |   935.8169 |
+|   Scalar [MUOPS/s]   |    10.8675 |
+|  Vectorization ratio |    98.8520 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (1500, 2500, ... 1800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  1500Resolution:  1500, Time: 1.330 (0.990 GFlop => 744.58 MFlop/s, residual 0.238673, 40 iterations)
+ 1500; 1.330; 744.579
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.223168 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  |  628150100 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |  494097100 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |  580026300 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |     960051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |  247680000 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.2232 |
+| Runtime unhalted [s] |     0.1834 |
+|      Clock [MHz]     |  2294.5586 |
+|          CPI         |     0.7866 |
+|     DP [MFLOP/s]     |  4443.6424 |
+|   AVX DP [MFLOP/s]   |  4439.3402 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |  1109.8352 |
+|   Scalar [MUOPS/s]   |     4.3019 |
+|  Vectorization ratio |    99.6139 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (2500, 3500, ... 2800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  2500Resolution:  2500, Time: 2.008 (2.750 GFlop => 1369.32 MFlop/s, residual 0.397703, 40 iterations)
+ 2500; 2.008; 1369.317
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.899160 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  | 1557110000 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  | 2021857000 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  | 2373486000 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |    1600051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |  687800000 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.8992 |
+| Runtime unhalted [s] |     0.7506 |
+|      Clock [MHz]     |  2294.5747 |
+|          CPI         |     1.2985 |
+|     DP [MFLOP/s]     |  3061.5242 |
+|   AVX DP [MFLOP/s]   |  3059.7447 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |   764.9362 |
+|   Scalar [MUOPS/s]   |     1.7795 |
+|  Vectorization ratio |    99.7679 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (3500, 4500, ... 3800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  3500Resolution:  3500, Time: 3.032 (5.390 GFlop => 1777.58 MFlop/s, residual 0.556728, 40 iterations)
+ 3500; 3.032; 1777.584
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   1.925657 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  | 3041651000 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  | 4341812000 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  | 5096905000 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |    2240051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  | 1347920000 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     1.9257 |
+| Runtime unhalted [s] |     1.6121 |
+|      Clock [MHz]     |  2294.3100 |
+|          CPI         |     1.4275 |
+|     DP [MFLOP/s]     |  2801.0804 |
+|   AVX DP [MFLOP/s]   |  2799.9171 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |   699.9793 |
+|   Scalar [MUOPS/s]   |     1.1633 |
+|  Vectorization ratio |    99.8341 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (4500, 5500, ... 4800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  4500Resolution:  4500, Time: 4.298 (8.910 GFlop => 2072.99 MFlop/s, residual 0.715752, 40 iterations)
+ 4500; 4.298; 2072.994
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   3.191139 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  | 5007791000 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  | 7203000000 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  | 8455695000 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |    2880051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  | 2228040000 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     3.1911 |
+| Runtime unhalted [s] |     2.6741 |
+|      Clock [MHz]     |  2294.5364 |
+|          CPI         |     1.4384 |
+|     DP [MFLOP/s]     |  2793.6859 |
+|   AVX DP [MFLOP/s]   |  2792.7834 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |   698.1959 |
+|   Scalar [MUOPS/s]   |     0.9025 |
+|  Vectorization ratio |    99.8709 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (500, 1500, ... 800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:   500Resolution:   500, Time: 1.138 (0.110 GFlop =>  96.68 MFlop/s, residual 0.079613, 40 iterations)
+  500; 1.138; 96.677
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.029324 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  |   73189310 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |   64119330 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |   75268330 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |     320051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |   27560040 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.0293 |
+| Runtime unhalted [s] |     0.0238 |
+|      Clock [MHz]     |  2294.6165 |
+|          CPI         |     0.8761 |
+|     DP [MFLOP/s]     |  3770.3622 |
+|   AVX DP [MFLOP/s]   |  3759.4450 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |   939.8626 |
+|   Scalar [MUOPS/s]   |    10.9145 |
+|  Vectorization ratio |    98.8520 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (1500, 2500, ... 1800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  1500Resolution:  1500, Time: 1.364 (0.990 GFlop => 725.58 MFlop/s, residual 0.238673, 40 iterations)
+ 1500; 1.364; 725.582
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.255232 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  |  628150300 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |  565216300 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |  663517300 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |     960051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |  247680000 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.2552 |
+| Runtime unhalted [s] |     0.2098 |
+|      Clock [MHz]     |  2294.5625 |
+|          CPI         |     0.8998 |
+|     DP [MFLOP/s]     |  3885.4006 |
+|   AVX DP [MFLOP/s]   |  3881.6389 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |   970.4099 |
+|   Scalar [MUOPS/s]   |     3.7615 |
+|  Vectorization ratio |    99.6139 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (2500, 3500, ... 2800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  2500Resolution:  2500, Time: 2.006 (2.750 GFlop => 1370.76 MFlop/s, residual 0.397703, 40 iterations)
+ 2500; 2.006; 1370.757
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.897336 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  | 1557110000 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  | 2017491000 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  | 2368358000 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |    1600051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |  687800000 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.8973 |
+| Runtime unhalted [s] |     0.7490 |
+|      Clock [MHz]     |  2294.5527 |
+|          CPI         |     1.2957 |
+|     DP [MFLOP/s]     |  3067.7480 |
+|   AVX DP [MFLOP/s]   |  3065.9648 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |   766.4913 |
+|   Scalar [MUOPS/s]   |     1.7831 |
+|  Vectorization ratio |    99.7679 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (3500, 4500, ... 3800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  3500Resolution:  3500, Time: 3.028 (5.390 GFlop => 1780.13 MFlop/s, residual 0.556728, 40 iterations)
+ 3500; 3.028; 1780.133
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   1.919582 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  | 3041650000 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  | 4331446000 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  | 5084740000 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |    2240051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  | 1347920000 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     1.9196 |
+| Runtime unhalted [s] |     1.6081 |
+|      Clock [MHz]     |  2294.5336 |
+|          CPI         |     1.4240 |
+|     DP [MFLOP/s]     |  2809.9452 |
+|   AVX DP [MFLOP/s]   |  2808.7782 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |   702.1946 |
+|   Scalar [MUOPS/s]   |     1.1669 |
+|  Vectorization ratio |    99.8341 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (4500, 5500, ... 4800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  4500Resolution:  4500, Time: 4.304 (8.910 GFlop => 2070.05 MFlop/s, residual 0.715752, 40 iterations)
+ 4500; 4.304; 2070.045
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   3.198180 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  | 5007791000 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  | 7215222000 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  | 8470039000 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |    2880051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  | 2228040000 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     3.1982 |
+| Runtime unhalted [s] |     2.6787 |
+|      Clock [MHz]     |  2294.5519 |
+|          CPI         |     1.4408 |
+|     DP [MFLOP/s]     |  2787.5355 |
+|   AVX DP [MFLOP/s]   |  2786.6349 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |   696.6587 |
+|   Scalar [MUOPS/s]   |     0.9005 |
+|  Vectorization ratio |    99.8709 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (500, 1500, ... 800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:   500Resolution:   500, Time: 1.135 (0.110 GFlop =>  96.93 MFlop/s, residual 0.079613, 40 iterations)
+  500; 1.135; 96.933
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.029158 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  |   73189300 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |   63767950 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |   74859550 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |     320051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |   27560040 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.0292 |
+| Runtime unhalted [s] |     0.0237 |
+|      Clock [MHz]     |  2294.4612 |
+|          CPI         |     0.8713 |
+|     DP [MFLOP/s]     |  3791.7184 |
+|   AVX DP [MFLOP/s]   |  3780.7394 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |   945.1862 |
+|   Scalar [MUOPS/s]   |    10.9763 |
+|  Vectorization ratio |    98.8520 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (1500, 2500, ... 1800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  1500Resolution:  1500, Time: 1.349 (0.990 GFlop => 733.71 MFlop/s, residual 0.238673, 40 iterations)
+ 1500; 1.349; 733.715
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.241740 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  |  628150300 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  |  534851700 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  |  627872100 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |     960051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |  247680000 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.2417 |
+| Runtime unhalted [s] |     0.1986 |
+|      Clock [MHz]     |  2294.5085 |
+|          CPI         |     0.8515 |
+|     DP [MFLOP/s]     |  4102.2558 |
+|   AVX DP [MFLOP/s]   |  4098.2840 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |  1024.5712 |
+|   Scalar [MUOPS/s]   |     3.9714 |
+|  Vectorization ratio |    99.6139 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (2500, 3500, ... 2800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  2500Resolution:  2500, Time: 2.024 (2.750 GFlop => 1358.86 MFlop/s, residual 0.397703, 40 iterations)
+ 2500; 2.024; 1358.862
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   0.916565 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  | 1557111000 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  | 2056808000 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  | 2414515000 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |    1600051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  |  687800000 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     0.9166 |
+| Runtime unhalted [s] |     0.7636 |
+|      Clock [MHz]     |  2294.4638 |
+|          CPI         |     1.3209 |
+|     DP [MFLOP/s]     |  3003.3868 |
+|   AVX DP [MFLOP/s]   |  3001.6410 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |   750.4103 |
+|   Scalar [MUOPS/s]   |     1.7457 |
+|  Vectorization ratio |    99.7679 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (3500, 4500, ... 3800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  3500Resolution:  3500, Time: 3.045 (5.390 GFlop => 1770.03 MFlop/s, residual 0.556728, 40 iterations)
+ 3500; 3.045; 1770.034
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   1.936632 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  | 3041652000 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  | 4351042000 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  | 5107743000 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |    2240051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  | 1347920000 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     1.9366 |
+| Runtime unhalted [s] |     1.6155 |
+|      Clock [MHz]     |  2294.3128 |
+|          CPI         |     1.4305 |
+|     DP [MFLOP/s]     |  2785.2065 |
+|   AVX DP [MFLOP/s]   |  2784.0498 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |   696.0125 |
+|   Scalar [MUOPS/s]   |     1.1567 |
+|  Vectorization ratio |    99.8341 |
++----------------------+------------+
+
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Xeon(R) Platinum 8174 CPU @ 3.10GHz
+CPU type:	Intel Skylake SP processor
+CPU clock:	2.69 GHz
+--------------------------------------------------------------------------------
+Resolutions       : (4500, 5500, ... 4800)
+Iterations        : 40
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  4500Resolution:  4500, Time: 4.310 (8.910 GFlop => 2067.29 MFlop/s, residual 0.715752, 40 iterations)
+ 4500; 4.310; 2067.294
+--------------------------------------------------------------------------------
+Region Compute, Group 1: FLOPS_DP
++-------------------+------------+
+|    Region Info    | HWThread 0 |
++-------------------+------------+
+| RDTSC Runtime [s] |   3.204130 |
+|     call count    |          1 |
++-------------------+------------+
+
++------------------------------------------+---------+------------+
+|                   Event                  | Counter | HWThread 0 |
++------------------------------------------+---------+------------+
+|             INSTR_RETIRED_ANY            |  FIXC0  | 5007791000 |
+|           CPU_CLK_UNHALTED_CORE          |  FIXC1  | 7232351000 |
+|           CPU_CLK_UNHALTED_REF           |  FIXC2  | 8490149000 |
+| FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE |   PMC0  |         40 |
+|    FP_ARITH_INST_RETIRED_SCALAR_DOUBLE   |   PMC1  |    2880051 |
+| FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE |   PMC2  | 2228040000 |
+| FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE |   PMC3  |          0 |
++------------------------------------------+---------+------------+
+
++----------------------+------------+
+|        Metric        | HWThread 0 |
++----------------------+------------+
+|  Runtime (RDTSC) [s] |     3.2041 |
+| Runtime unhalted [s] |     2.6851 |
+|      Clock [MHz]     |  2294.5135 |
+|          CPI         |     1.4442 |
+|     DP [MFLOP/s]     |  2782.3591 |
+|   AVX DP [MFLOP/s]   |  2781.4602 |
+|  AVX512 DP [MFLOP/s] |          0 |
+|   Packed [MUOPS/s]   |   695.3651 |
+|   Scalar [MUOPS/s]   |     0.8989 |
+|  Vectorization ratio |    99.8709 |
++----------------------+------------+
+
