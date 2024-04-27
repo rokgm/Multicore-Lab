@@ -83,7 +83,7 @@ L3_plot = ax2.errorbar(resolutions, np.average(O3_L3_miss_rate_5runs, axis=0),
              yerr=np.std(O3_L3_miss_rate_5runs, axis=0),
              capsize=5, fmt='.-', color='blue', label="L3 miss rate")
 
-ax1.set_title("Group 2: LIKWID Analysis Averaged over 5 Runs\nCompiler Flags: -O3 -fno-alias -xhost\n")
+ax1.set_title("Group 2: LIKWID Analysis Averaged over 5 Runs with Std. Deviation\nCompiler Flags: -O3 -fno-alias -xhost\n")
 ax1.grid(True, linestyle='-.')
 ax1.legend(handles=[mflops_plot, L2_plot, L3_plot], framealpha=1,
            bbox_to_anchor=(1, 0.7))
@@ -116,7 +116,7 @@ L3_plot = ax2.errorbar(resolutions, np.average(O2_L3_miss_rate_5runs, axis=0),
              capsize=5, fmt='.-', color='blue', label="L3 miss rate")
 
 
-ax1.set_title("Group 2: LIKWID Analysis Averaged over 5 Runs\nCompiler Flags: -O2\n")
+ax1.set_title("Group 2: LIKWID Analysis Averaged over 5 Runs with Std. Deviation\nCompiler Flags: -O2\n")
 ax1.grid(True, linestyle='-.')
 ax1.legend(handles=[mflops_plot, L2_plot, L3_plot], framealpha=1,
            bbox_to_anchor=(1, 0.7))
