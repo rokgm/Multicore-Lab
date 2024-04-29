@@ -104,13 +104,25 @@ int main(int argc, char *argv[]) {
 		residual = 999999999;
 
 		iter = 0;
+
+		// Very important!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		// utemp (uhelp) must also have boundary set in first iteration.
+		for (int i = 0; i < np; i++) {
+			param.uhelp[i] = param.u[i];
+			param.uhelp[np * (np - 1) + i ] = param.u[np * (np - 1) + i ];
+		}
+		for (int i = 1; i < np - 1; i++) {
+			param.uhelp[i * np] = param.u[i * np];
+			param.uhelp[(i+1) * np - 1] = param.u[(i+1) * np - 1];
+		}
+
 		while (1) {
 
 			switch (param.algorithm) {
 
 			case 0: // JACOBI
-
-				relax_jacobi(param.u, param.uhelp, np, np);
+				
+				relax_jacobi(&param.u, &param.uhelp, np, np);
 				residual = residual_jacobi(param.u, np, np);
 				break;
 

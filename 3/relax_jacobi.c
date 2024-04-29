@@ -30,15 +30,20 @@ double residual_jacobi(double *u, unsigned sizex, unsigned sizey) {
 			sum += diff * diff;
 		}
 	}
+
+// Just for debugging
+	printf("Residual: %f\n", sum);
 	return sum;
 }
 
 /*
  * One Jacobi iteration step
  */
-void relax_jacobi(double *u, double *utmp, unsigned sizex, unsigned sizey) {
+void relax_jacobi(double **u_ptr, double **utmp_ptr, unsigned sizex, unsigned sizey) {
 
 	int i, j;
+	double* u = *u_ptr;
+	double* utmp = *utmp_ptr;
 
 	for (i = 1; i < sizey - 1; i++) {
 		for (j = 1; j < sizex - 1; j++) {		
@@ -49,7 +54,21 @@ void relax_jacobi(double *u, double *utmp, unsigned sizex, unsigned sizey) {
 		}
 	}
 
-	double* temp = utmp;
-	utmp = u;
-	u = temp;
+	// Swap the pointers, double pointer is necessary so we switch
+	// the address outside the function.
+	double* temp = *u_ptr;
+	*u_ptr = *utmp_ptr;
+	*utmp_ptr = temp;
+
+
+// Just for debugging
+	// double diff, sum = 0.0;
+
+	// for (unsigned i = 1; i < sizey - 1; i++) {
+	// 	for (unsigned j = 1; j < sizex - 1; j++) {
+	// 		diff = u[i * sizex + j] - utmp[i * sizex + j];
+	// 		sum += diff * diff;
+	// 	}
+	// }
+	// printf("Relax:    %f\n", sum);
 }
