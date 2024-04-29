@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#SBATCH -J heat
+
+#SBATCH --ear=off
+
+#SBATCH -o output/vtune.out
+#SBATCH -e output/vtune.out
+
+#SBATCH --time=00:01:00
+#SBATCH --account=h039v
+#SBATCH --partition=test
+
+module load intel-oneapi-vtune
+
+vtune -collect memory-access -call-stack-mode user-plus-one -result-dir ./VTuneData/MemoryAccess -app-working-dir . ./heat test.dat
+vtune -collect uarch-exploration -call-stack-mode user-plus-one -result-dir ./VTuneData/MicroArchitecture -app-working-dir . ./heat test.dat
+vtune -collect hotspots -call-stack-mode user-plus-one -result-dir ./VTuneData/Hotspots -app-working-dir . ./heat test.dat
+vtune -collect performance-snapshot -call-stack-mode user-plus-one -result-dir ./VTuneData/PerformanceSnapshot -app-working-dir . ./heat test.dat
+
