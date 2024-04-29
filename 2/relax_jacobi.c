@@ -39,9 +39,6 @@ double residual_jacobi(double *u, unsigned sizex, unsigned sizey) {
  * One Jacobi iteration step
  */
 void relax_jacobi(double *u, double *utmp, unsigned sizex, unsigned sizey) {
-	LIKWID_MARKER_INIT;
-	LIKWID_MARKER_THREADINIT;
-	LIKWID_MARKER_START("Compute");
 
 	int i, j;
 
@@ -62,6 +59,4 @@ void relax_jacobi(double *u, double *utmp, unsigned sizex, unsigned sizey) {
 		}
 	}
 
-	LIKWID_MARKER_STOP("Compute");
-	LIKWID_MARKER_CLOSE;
 }
