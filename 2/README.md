@@ -49,7 +49,8 @@ Interesting remarks:
 ![Hotspots](./vtune/hotspots.jpeg)
 - most active function is memcpy, residual and relaxed
 
-### Deliverables
-- Submit the two graphs and be able to discuss all the parts of the assignments. Submit one screenshot of each vtune analysis of the best version for 3200 resolution and 200 iterations and mark what you found interesting. 
-
-- Submit all graphs in png format as separate files. best.png, O2.png, snapshot.png, memoryaccess.png, microarchitecture.png, hotspots.png. Always have your group mentioned on the figure. 
+### Class notes
+- miss rate in likwid: compares to retired instructions and not references (lowers the number)
+- https://github.com/RRZE-HPC/likwid/blob/master/groups/skylake/L2CACHE.txt
+- prefetching also included in the L2_TRANS_ALL_REQUESTS count
+- 2.3 frequency of vector operations
