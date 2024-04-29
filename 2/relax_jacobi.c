@@ -9,8 +9,6 @@
 
 #include <stdio.h>
 
-#include <likwid-marker.h>
-
 
 /*
  * Residual (length of error vector)
