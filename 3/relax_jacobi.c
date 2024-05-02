@@ -39,18 +39,24 @@ double residual_jacobi(double *u, unsigned sizex, unsigned sizey) {
 /*
  * One Jacobi iteration step
  */
-void relax_jacobi(double **u_ptr, double **utmp_ptr, unsigned sizex, unsigned sizey) {
+double relax_jacobi(double **u_ptr, double **utmp_ptr, unsigned sizex, unsigned sizey) {
 
 	int i, j;
 	double* u = *u_ptr;
 	double* utmp = *utmp_ptr;
+	double unew, diff, sum = 0.0;
 
 	for (i = 1; i < sizey - 1; i++) {
 		for (j = 1; j < sizex - 1; j++) {		
-			utmp[i * sizex + j] = 0.25 * (u[i * sizex + (j - 1)] +  // left
+			unew = 0.25 * (u[i * sizex + (j - 1)] +  // left
 						u[i * sizex + (j + 1)] +  // right
 						u[(i - 1) * sizex + j] +  // top
 						u[(i + 1) * sizex + j]); // bottom
+			utmp[i * sizex + j] = unew;
+
+			// residual calculation inserted here (done on old matrix values) 
+			diff = unew - u[i * sizex + j];
+			sum += diff * diff;
 		}
 	}
 
@@ -59,6 +65,9 @@ void relax_jacobi(double **u_ptr, double **utmp_ptr, unsigned sizex, unsigned si
 	double* temp = *u_ptr;
 	*u_ptr = *utmp_ptr;
 	*utmp_ptr = temp;
+	
+	printf("Residual: %f\n", sum);
+	return sum;
 
 
 // Just for debugging
