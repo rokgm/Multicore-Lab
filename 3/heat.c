@@ -18,6 +18,56 @@ void usage(char *s) {
 	fprintf(stderr, "Usage: %s <input file> [result file]\n\n", s);
 }
 
+// Very important!!!
+// utemp (uhelp) must also have boundary set in first iteration.
+void apply_boundary(algoparam_t* param, const unsigned int np) {
+	for (int i = 0; i < np; i++) {
+		param->uhelp[i] = param->u[i];
+		param->uhelp[np * (np - 1) + i ] = param->u[np * (np - 1) + i ];
+	}
+	for (int i = 1; i < np - 1; i++) {
+		param->uhelp[i * np] = param->u[i * np];
+		param->uhelp[(i+1) * np - 1] = param->u[(i+1) * np - 1];
+	}
+}
+
+void run_iterations(algoparam_t* param, const unsigned int np, unsigned int* iter, double* residual) {
+	(*iter) = 0;
+
+	apply_boundary(param, np);
+
+	while (1) {
+
+		switch (param->algorithm) {
+
+		case 0: // JACOBI
+			
+			*residual = relax_jacobi(&param->u, &param->uhelp, np, np);
+			// residual = residual_jacobi(param->u, np, np);
+			break;
+
+		case 1: // GAUSS
+
+			relax_gauss(param->u, np, np);
+			*residual = residual_gauss(param->u, param->uhelp, np, np);
+			break;
+		}
+
+		(*iter)++;
+
+		// solution good enough ?
+		if (*residual < 0.000005)
+			break;
+
+		// max. iteration reached ? (no limit with maxiter=0)
+		if (param->maxiter > 0 && (*iter) >= param->maxiter)
+			break;
+
+		// if (iter % 100 == 0)
+		// 	fprintf(stderr, "residual %f, %d iterations\n", residual, iter);
+	}
+}
+
 int main(int argc, char *argv[]) {
 	unsigned iter;
 	FILE *infile, *resfile;
@@ -103,50 +153,7 @@ int main(int argc, char *argv[]) {
 		runtime = wtime();
 		residual = 999999999;
 
-		iter = 0;
-
-		// Very important!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-		// utemp (uhelp) must also have boundary set in first iteration.
-		for (int i = 0; i < np; i++) {
-			param.uhelp[i] = param.u[i];
-			param.uhelp[np * (np - 1) + i ] = param.u[np * (np - 1) + i ];
-		}
-		for (int i = 1; i < np - 1; i++) {
-			param.uhelp[i * np] = param.u[i * np];
-			param.uhelp[(i+1) * np - 1] = param.u[(i+1) * np - 1];
-		}
-
-		while (1) {
-
-			switch (param.algorithm) {
-
-			case 0: // JACOBI
-				
-				residual = relax_jacobi(&param.u, &param.uhelp, np, np);
-				// residual = residual_jacobi(param.u, np, np);
-				break;
-
-			case 1: // GAUSS
-
-				relax_gauss(param.u, np, np);
-				residual = residual_gauss(param.u, param.uhelp, np, np);
-				break;
-			}
-
-			iter++;
-
-			// solution good enough ?
-			if (residual < 0.000005)
-				break;
-
-			// max. iteration reached ? (no limit with maxiter=0)
-			if (param.maxiter > 0 && iter >= param.maxiter)
-				break;
-
-			// if (iter % 100 == 0)
-			// 	fprintf(stderr, "residual %f, %d iterations\n", residual, iter);
-		}
-
+		run_iterations(&param, np, &iter, &residual);
 
 		// Flop count after <i> iterations
 		flop = iter * 11.0 * param.act_res * param.act_res;
