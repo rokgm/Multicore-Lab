@@ -1,0 +1,60 @@
+Resolutions       : (3200, 4200, ... 3300)
+Iterations        : 200
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  3200Resolution:  3200, Time: 13.644 (22.528 GFlop => 1651.19 MFlop/s, residual 0.047071, 200 iterations)
+BLOCK_SIZE is 20
+ 3200; 13.644; 1651.185
+
+Resolutions       : (3200, 4200, ... 3300)
+Iterations        : 200
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  3200Resolution:  3200, Time: 10.057 (22.528 GFlop => 2239.94 MFlop/s, residual 0.047071, 200 iterations)
+BLOCK_SIZE is 50
+ 3200; 10.057; 2239.939
+
+Resolutions       : (3200, 4200, ... 3300)
+Iterations        : 200
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  3200Resolution:  3200, Time: 9.119 (22.528 GFlop => 2470.56 MFlop/s, residual 0.047071, 200 iterations)
+BLOCK_SIZE is 100
+ 3200; 9.119; 2470.557
+
+Resolutions       : (3200, 4200, ... 3300)
+Iterations        : 200
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  3200Resolution:  3200, Time: 6.060 (22.528 GFlop => 3717.45 MFlop/s, residual 0.047071, 200 iterations)
+BLOCK_SIZE is 200
+ 3200; 6.060; 3717.451
+
+Resolutions       : (3200, 4200, ... 3300)
+Iterations        : 200
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  3200Resolution:  3200, Time: 6.075 (22.528 GFlop => 3708.21 MFlop/s, residual 0.047071, 200 iterations)
+BLOCK_SIZE is 400
+ 3200; 6.075; 3708.210
+
+Resolutions       : (3200, 4200, ... 3300)
+Iterations        : 200
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  3200Resolution:  3200, Time: 5.671 (22.528 GFlop => 3972.41 MFlop/s, residual 0.047071, 200 iterations)
+BLOCK_SIZE is 800
+ 3200; 5.671; 3972.410
+

@@ -1,0 +1,45 @@
+#!/bin/bash
+
+#SBATCH -J heat
+
+#SBATCH -o job_no_blocking.out
+#SBATCH -e job_no_blocking.out
+
+#SBATCH --time=00:01:30
+#SBATCH --account=h039v
+#SBATCH --partition=test
+
+# export BLOCK_SIZE=20
+#printf "BLOCK_SIZE env set to $BLOCK_SIZE\n"
+./heat test.dat
+# printf "\n"
+
+# export BLOCK_SIZE=50
+# #printf "BLOCK_SIZE env set to $BLOCK_SIZE\n"
+# ./heat test.dat
+# printf "\n"
+
+# export BLOCK_SIZE=100
+# #printf "BLOCK_SIZE env set to $BLOCK_SIZE\n"
+# ./heat test.dat
+# printf "\n"
+
+# export BLOCK_SIZE=200
+# #printf "BLOCK_SIZE env set to $BLOCK_SIZE\n"
+# ./heat test.dat
+# printf "\n"
+
+# export BLOCK_SIZE=400
+# #printf "BLOCK_SIZE env set to $BLOCK_SIZE\n"
+# ./heat test.dat
+# printf "\n"
+
+# export BLOCK_SIZE=800
+# #printf "BLOCK_SIZE env set to $BLOCK_SIZE\n"
+# ./heat test.dat
+# printf "\n"
+
+# export BLOCK_SIZE=1600
+# #printf "BLOCK_SIZE env set to $BLOCK_SIZE\n"
+# ./heat test.dat
+# printf "\n"

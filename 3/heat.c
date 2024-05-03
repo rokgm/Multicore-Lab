@@ -31,7 +31,8 @@ void apply_boundary(algoparam_t* param, const unsigned int np) {
 	}
 }
 
-void run_iterations(algoparam_t* param, const unsigned int np, unsigned int* iter, double* residual) {
+void run_iterations(algoparam_t* param, const unsigned int np, unsigned int* iter,
+	double* residual, unsigned block_size) {
 	(*iter) = 0;
 
 	apply_boundary(param, np);
@@ -42,7 +43,7 @@ void run_iterations(algoparam_t* param, const unsigned int np, unsigned int* ite
 
 		case 0: // JACOBI
 			
-			*residual = relax_jacobi(&param->u, &param->uhelp, np, np);
+			*residual = relax_jacobi(&param->u, &param->uhelp, np, np, block_size);
 			// residual = residual_jacobi(param->u, np, np);
 			break;
 
@@ -127,6 +128,14 @@ int main(int argc, char *argv[]) {
 
 	param.act_res = param.initial_res;
 
+	char *envValue = getenv("BLOCK_SIZE");
+	unsigned block_size = 666;
+    if (envValue != NULL) {
+        block_size = atoi(envValue);
+		printf("BLOCK_SIZE is %d\n", block_size);
+    } else
+        printf("BLOCK_SIZE environment variable is not set, default is 666.\n");
+
 	// LIKWID_MARKER_INIT;
 	// LIKWID_MARKER_THREADINIT;
 	// LIKWID_MARKER_START("Compute");
@@ -153,7 +162,7 @@ int main(int argc, char *argv[]) {
 		runtime = wtime();
 		residual = 999999999;
 
-		run_iterations(&param, np, &iter, &residual);
+		run_iterations(&param, np, &iter, &residual, block_size);
 
 		// Flop count after <i> iterations
 		flop = iter * 11.0 * param.act_res * param.act_res;

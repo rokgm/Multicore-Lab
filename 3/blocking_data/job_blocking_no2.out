@@ -1,0 +1,76 @@
+Resolutions       : (3200, 4200, ... 3300)
+Iterations        : 200
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  3200
+Resolution:  3200, Time: 9.643 (22.528 GFlop => 2336.19 MFlop/s, residual 0.047071, 200 iterations)
+BLOCK_SIZE is 20
+ 3200; 9.643; 2336.191
+
+Resolutions       : (3200, 4200, ... 3300)
+Iterations        : 200
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  3200
+Resolution:  3200, Time: 7.525 (22.528 GFlop => 2993.61 MFlop/s, residual 0.047071, 200 iterations)
+BLOCK_SIZE is 50
+ 3200; 7.525; 2993.615
+
+Resolutions       : (3200, 4200, ... 3300)
+Iterations        : 200
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  3200
+Resolution:  3200, Time: 5.540 (22.528 GFlop => 4066.35 MFlop/s, residual 0.047071, 200 iterations)
+BLOCK_SIZE is 100
+ 3200; 5.540; 4066.351
+
+Resolutions       : (3200, 4200, ... 3300)
+Iterations        : 200
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  3200
+Resolution:  3200, Time: 3.543 (22.528 GFlop => 6359.15 MFlop/s, residual 0.047071, 200 iterations)
+BLOCK_SIZE is 200
+ 3200; 3.543; 6359.150
+
+Resolutions       : (3200, 4200, ... 3300)
+Iterations        : 200
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  3200
+Resolution:  3200, Time: 3.414 (22.528 GFlop => 6598.24 MFlop/s, residual 0.047071, 200 iterations)
+BLOCK_SIZE is 400
+ 3200; 3.414; 6598.237
+
+Resolutions       : (3200, 4200, ... 3300)
+Iterations        : 200
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  3200
+Resolution:  3200, Time: 3.097 (22.528 GFlop => 7275.28 MFlop/s, residual 0.047071, 200 iterations)
+BLOCK_SIZE is 800
+ 3200; 3.097; 7275.278
+
+Resolutions       : (3200, 4200, ... 3300)
+Iterations        : 200
+Algorithm         : 0 (Jacobi)
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+Resolution:  3200
+Resolution:  3200, Time: 2.965 (22.528 GFlop => 7598.66 MFlop/s, residual 0.047071, 200 iterations)
+BLOCK_SIZE is 1600
+ 3200; 2.965; 7598.663

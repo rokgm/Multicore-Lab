@@ -60,7 +60,7 @@ void relax_gauss( double *u,
 double residual_jacobi( double *u,
 			unsigned sizex, unsigned sizey );
 double relax_jacobi( double **u, double **utmp,
-		   unsigned sizex, unsigned sizey ); 
+		   const unsigned sizex, const unsigned sizey, unsigned int block_size ); 
 
 
 #endif // JACOBI_H_INCLUDED
