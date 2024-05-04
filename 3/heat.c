@@ -31,6 +31,55 @@ void apply_boundary(algoparam_t* param, const unsigned int np) {
 	}
 }
 
+/*
+ * Block u and uhelp.
+ * Blocks are stored from left to right starting at the top.
+ * Blocks are stored after each other as; example for np 13, block size 10
+ * 10*10,10*3
+ * 3*10, 3*3
+ * becomes
+ * 10*10,10*3,3*10,3*3
+ */
+void block_array(algoparam_t* param, const int np, const unsigned int block_size) {
+	if (block_size >= np) {
+		printf("Array not blocked, block size is bigger then array size.");
+		return;
+	}
+
+	double* u_blocked = (double*)calloc( sizeof(double),np*np );
+	double* uhelp_blocked = (double*)calloc( sizeof(double),np*np );
+
+	unsigned int count = 0;
+	for (unsigned int i = 1; i < np - 1; i += block_size) {
+        for (unsigned int j = 1; j < np - 1; j += block_size) {
+            // Process each block
+            for (unsigned int ii = i; ii < i + block_size && ii < np - 1; ii++) {
+                for (unsigned int jj = j; jj < j + block_size && jj < np - 1; jj++) {
+					count++;
+					u_blocked[count] = param->u[ii * np + jj];
+					uhelp_blocked[count] = param->uhelp[ii * np + jj];
+                }
+            }
+        }
+    }
+	// Swap
+	double* temp = param->u;
+	param->u = u_blocked;
+	u_blocked = temp;
+
+	temp = param->uhelp;
+	param->uhelp = uhelp_blocked;
+	uhelp_blocked = temp;
+
+	// Free memory
+	free(u_blocked);
+	free(uhelp_blocked);
+	u_blocked = 0;
+	uhelp_blocked = 0;
+
+	// TODO unblock
+}
+
 void run_iterations(algoparam_t* param, const unsigned int np, unsigned int* iter,
 	double* residual, unsigned block_size) {
 	(*iter) = 0;
