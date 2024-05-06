@@ -1,0 +1,193 @@
+-O3 -fno-alias -xhost -qopt-report5 -qopt-report-phase=par -parallel -par-threshold0 -par-num-threads=4
+
+1 THREADS
+Resolutions       : (2000, 6000, ... 6500)
+Iterations        : 50
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+
+
+Resolution: 2000
+===================
+Execution time: 0.258587
+Residual: 0.236070
+
+megaflops:  5414.0
+  flop instructions (M):  1400.000
+
+
+Resolution: 6000
+===================
+Execution time: 2.570008
+Residual: 0.708009
+
+megaflops:  4902.7
+  flop instructions (M):  12600.000
+
+
+
+
+2 THREADS
+Resolutions       : (2000, 6000, ... 6500)
+Iterations        : 50
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+
+
+Resolution: 2000
+===================
+Execution time: 0.137389
+Residual: 0.236070
+
+megaflops:  10190.0
+  flop instructions (M):  1400.000
+
+
+Resolution: 6000
+===================
+Execution time: 1.312078
+Residual: 0.708009
+
+megaflops:  9603.1
+  flop instructions (M):  12600.000
+
+
+
+
+4 THREADS
+Resolutions       : (2000, 6000, ... 6500)
+Iterations        : 50
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+
+
+Resolution: 2000
+===================
+Execution time: 0.078328
+Residual: 0.236070
+
+megaflops:  17873.5
+  flop instructions (M):  1400.000
+
+
+Resolution: 6000
+===================
+Execution time: 0.691502
+Residual: 0.708009
+
+megaflops:  18221.2
+  flop instructions (M):  12600.000
+
+
+
+8 THREADS
+Resolutions       : (2000, 6000, ... 6500)
+Iterations        : 50
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+
+
+Resolution: 2000
+===================
+Execution time: 0.042737
+Residual: 0.236070
+
+megaflops:  32758.5
+  flop instructions (M):  1400.000
+
+
+Resolution: 6000
+===================
+Execution time: 0.472711
+Residual: 0.708009
+
+megaflops:  26654.8
+  flop instructions (M):  12600.000
+
+
+
+
+16 THREADS
+Resolutions       : (2000, 6000, ... 6500)
+Iterations        : 50
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+
+
+Resolution: 2000
+===================
+Execution time: 0.025993
+Residual: 0.236070
+
+megaflops:  53860.4
+  flop instructions (M):  1400.000
+
+
+Resolution: 6000
+===================
+Execution time: 0.406836
+Residual: 0.708009
+
+megaflops:  30970.7
+  flop instructions (M):  12600.000
+
+
+
+
+32 THREADS
+Resolutions       : (2000, 6000, ... 6500)
+Iterations        : 50
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+
+
+Resolution: 2000
+===================
+Execution time: 0.009824
+Residual: 0.236070
+
+megaflops:  142507.6
+  flop instructions (M):  1400.000
+
+
+Resolution: 6000
+===================
+Execution time: 0.303416
+Residual: 0.708009
+
+megaflops:  41527.1
+  flop instructions (M):  12600.000
+
+
+
+
+48 THREADS
+Resolutions       : (2000, 6000, ... 6500)
+Iterations        : 50
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+
+
+Resolution: 2000
+===================
+Execution time: 0.006439
+Residual: 0.236070
+
+megaflops:  217426.1
+  flop instructions (M):  1400.000
+
+
+Resolution: 6000
+===================
+Execution time: 0.200211
+Residual: 0.708009
+
+megaflops:  62933.6
+  flop instructions (M):  12600.000
