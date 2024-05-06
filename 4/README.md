@@ -28,7 +28,9 @@ Manual parallelization with OpenMP
 
 **TASK 4.3.1**: Parallelize the Jacobi algorithm with OpenMP.
 Run the given problem sizes with 1, 2, 4, 8, 12, 16, 24, 32 and 48 threads. 
+
 **TASK 4.3.2**: Optimize for NUMA according to first touch allocation policy. Any other optimization possibilities? Rerun with optimized code and compare to the results above.
+
 **TASK 4.3.3**: Idenitify how to adjust the thread to core mappings and provide absolute performance and speedup comparisons between multiple assignments (at least spread and compact). Use the KMP_AFFINITY environment variable. (https://www.intel.com/content/www/us/en/develop/documentation/oneapi-dpcpp-cpp-compiler-dev-guide-and-reference/top/optimization-and-programming/openmp-support/openmp-library-support/thread-affinity-interface.html)
 
 #### Deliverable
