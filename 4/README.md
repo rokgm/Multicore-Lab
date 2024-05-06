@@ -19,7 +19,7 @@ The Intel compiler supports automatic parallelization. It is switched on with th
 
 #### Deliverable
 Provide a speedup graph for the given configurations where the x-axis is the number of threads and the y-axis the achieved speedup. Use the reported execution time for the sequential code (Assignment 4.1) as the basis for the speedup calculation. (File name: GroupN_ASS4.2.png)
-[ass4.2 graph](./plots/group2_ASS4.2.png)
+![ass4.2 graph](./plots/group2_ASS4.2.png)
 
 ### ASSIGNMENT 4.3
 For all further assignments, please use the provided optimized code taken from ASSIGNMENT 4.1 (see above).
