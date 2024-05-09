@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#SBATCH -J heat
+
+#SBATCH -o job_omp_compact.out
+#SBATCH -e job_omp_compact.out
+
+#SBATCH --time=00:05:00
+#SBATCH --account=h039v
+#SBATCH --partition=test
+
+export KMP_AFFINITY=verbose,granularity=fine,compact
+
+for threads in 1 2 4 8 16 32 48; do
+    export OMP_NUM_THREADS=$threads
+    ./heat test.dat
+done
