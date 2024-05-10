@@ -9,6 +9,8 @@ The Intel compiler supports automatic parallelization. It is switched on with th
 * Without rewriting code: optimization report tells us that loops are not optimized due to "insufficient computational work"
 * Force parallelization with compiler flag [-par-threshold0](https://www.intel.com/content/www/us/en/docs/cpp-compiler/developer-guide-reference/2021-8/par-threshold-qpar-threshold.html) (takes value between 0 and 100)
 * Specify number of threads with -par-num-threads=n
+* other option is to specify the nunber of loops done with pragma loop_count=NUM, but NUM should be known at compile time (i think), so hard to do by choosing a size in the test.dat file
+* other option is to add pragma parallel (not sure how to make it qork yet)
 
 **TASK 4.2.2**: Do performance measurements for 1, 2, 4, 8, 12, 16, 24, 32 and 48 threads on SuperMUC with the configuration in test.dat. Provide a speedup graph for the given configurations. In a speedup graph the x-axis is the number of threads and the y-axis the achieved speedup. Use the reported execution time for the given sequential code as the basis for the speedup calculation. Use a linear scale for x- and y-axis.
 
