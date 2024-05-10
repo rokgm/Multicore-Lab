@@ -1,5 +1,5 @@
 CC =  icc
-CFLAGS = -O3 -fno-alias -xhost  
+CFLAGS = -O3 -fno-alias -xhost -qopt-report5 -qopt-report-phase=par -parallel -par-threshold0 -par-num-threads=4
 
 
 all: heat 
