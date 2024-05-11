@@ -1,0 +1,7 @@
+export KMP_AFFINITY=verbose,granularity=fine,scatter
+export OMP_NUM_THREADS=4
+
+#pragma omp parallel for reduction(+: sum)
+
+#pragma omp parallel for
+before initialization

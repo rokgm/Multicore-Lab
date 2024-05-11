@@ -1,0 +1,161 @@
+Resolutions       : (2000, 6000, ... 6500)
+Iterations        : 50
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+
+
+Resolution: 2000
+===================
+Execution time: 0.243776
+Residual: 0.236070
+
+megaflops:  5743.0
+  flop instructions (M):  1400.000
+
+
+Resolution: 6000
+===================
+Execution time: 2.544038
+Residual: 0.708009
+
+megaflops:  4952.8
+  flop instructions (M):  12600.000
+Resolutions       : (2000, 6000, ... 6500)
+Iterations        : 50
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+
+
+Resolution: 2000
+===================
+Execution time: 0.180937
+Residual: 0.236070
+
+megaflops:  7737.5
+  flop instructions (M):  1400.000
+
+
+Resolution: 6000
+===================
+Execution time: 1.527977
+Residual: 0.708009
+
+megaflops:  8246.2
+  flop instructions (M):  12600.000
+Resolutions       : (2000, 6000, ... 6500)
+Iterations        : 50
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+
+
+Resolution: 2000
+===================
+Execution time: 0.108715
+Residual: 0.236070
+
+megaflops:  12877.7
+  flop instructions (M):  1400.000
+
+
+Resolution: 6000
+===================
+Execution time: 0.871051
+Residual: 0.708009
+
+megaflops:  14465.3
+  flop instructions (M):  12600.000
+Resolutions       : (2000, 6000, ... 6500)
+Iterations        : 50
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+
+
+Resolution: 2000
+===================
+Execution time: 0.070887
+Residual: 0.236070
+
+megaflops:  19749.7
+  flop instructions (M):  1400.000
+
+
+Resolution: 6000
+===================
+Execution time: 0.569373
+Residual: 0.708009
+
+megaflops:  22129.6
+  flop instructions (M):  12600.000
+Resolutions       : (2000, 6000, ... 6500)
+Iterations        : 50
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+
+
+Resolution: 2000
+===================
+Execution time: 0.045624
+Residual: 0.236070
+
+megaflops:  30685.6
+  flop instructions (M):  1400.000
+
+
+Resolution: 6000
+===================
+Execution time: 0.494432
+Residual: 0.708009
+
+megaflops:  25483.8
+  flop instructions (M):  12600.000
+Resolutions       : (2000, 6000, ... 6500)
+Iterations        : 50
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+
+
+Resolution: 2000
+===================
+Execution time: 0.080339
+Residual: 0.236070
+
+megaflops:  17426.1
+  flop instructions (M):  1400.000
+
+
+Resolution: 6000
+===================
+Execution time: 0.911072
+Residual: 0.708009
+
+megaflops:  13829.9
+  flop instructions (M):  12600.000
+Resolutions       : (2000, 6000, ... 6500)
+Iterations        : 50
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+
+
+Resolution: 2000
+===================
+Execution time: 0.074116
+Residual: 0.236070
+
+megaflops:  18889.3
+  flop instructions (M):  1400.000
+
+
+Resolution: 6000
+===================
+Execution time: 0.834821
+Residual: 0.708009
+
+megaflops:  15093.1
+  flop instructions (M):  12600.000
