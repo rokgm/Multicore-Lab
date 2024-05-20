@@ -6,8 +6,11 @@ Write a program that sends a message from node A to node B and back (a so called
 
 Determine
 
- - the startup time is the time spent to inject and extract a message to and from the network. 
- - the bandwidth (MB/s), that is the size of the message in bytes divided by the time for messages of length 20, 21 -224 bytes.
+ - the startup time is the time spent to inject and extract a message to and from the network.
+    - For large enough message, startup times increase proportional to the message size.
+ - the bandwidth (MB/s), that is the size of the message in bytes divided by the time for messages of length 2$^0$, $2^1$ -$2^24$ bytes.
+    - Across nodes:
+    For large enough message, bandwidth goes to ~11GByte/s, which is consistent with OmniPath Network stated 100 Gbit/s bandwidth.
 
 Synchronize all processes at the beginning by a barrier. To get around measurement inaccuracies, send the message multiple times and measure the aggregated time. 
 
