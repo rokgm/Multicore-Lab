@@ -21,19 +21,19 @@ double measure_pingpong(const int rank, const int repeats, const int msg_size) {
 
     MPI_Barrier(MPI_COMM_WORLD);
 
-    double start_time, end_time;
-    int ping_pong_count = 0;
+    double start_time = 0;
+	double end_time = 0;
 
 	start_time = MPI_Wtime();
-    while (ping_pong_count < repeats) {
-        if (rank == ping_pong_count % 2) {
-            ping_pong_count++;
-            MPI_Send(&ping_pong_count, 1, MPI_INT, partner_rank, 0,
-                    MPI_COMM_WORLD);
-        } else {
-            MPI_Recv(&ping_pong_count, 1, MPI_INT, partner_rank, 0,
-                    MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-        }
+    for(int _ = 0; _ < repeats; _++){
+		if (rank == 0){
+			MPI_Send(message, msg_size, MPI_CHAR, partner_rank, 0, MPI_COMM_WORLD);
+			MPI_Recv(message, msg_size, MPI_CHAR, partner_rank, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);;
+		}
+        else if (rank == 1){
+			MPI_Recv(message, msg_size, MPI_CHAR, partner_rank, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);;
+			MPI_Send(message, msg_size, MPI_CHAR, partner_rank, 0, MPI_COMM_WORLD);
+		}
     }
 	end_time = MPI_Wtime();
 
@@ -75,7 +75,7 @@ int main(int argc, char* argv[]) {
         const int msg_size = power(2, i);
         double total_time = measure_pingpong(world_rank, repeats, msg_size);
 		// Multiply by 2 as we send twice as much data. Total time also measures time
-		// to receive from the other node. Pingpong count is 2 * repeats.
+		// to receive from the other node.
 		double startup_time = total_time / (repeats * 2);
 		double bandwidth = 2 * (double)(msg_size * repeats) / total_time;
 		if (world_rank == 0)
