@@ -72,7 +72,7 @@ int main(int argc, char* argv[]) {
     	printf("%-5s  %-15s  %-20s  %-20s\n", "Rank", "Message Size (B)", "Startup Time (ms)", "Bandwidth (MB/s)");
 
     for (int i = 0; i <= 24; i++) {
-        const int msg_size = power(2, i);
+        const uint64_t msg_size = power(2, i);
         double total_time = measure_pingpong(world_rank, repeats, msg_size);
 		// Multiply by 2 as we send twice as much data. Total time also measures time
 		// to receive from the other node.
@@ -83,12 +83,12 @@ int main(int argc, char* argv[]) {
 
     }
 
-	// char processor_name[MPI_MAX_PROCESSOR_NAME];
-    // int name_len;
-    // MPI_Get_processor_name(processor_name, &name_len);
+	char processor_name[MPI_MAX_PROCESSOR_NAME];
+    int name_len;
+    MPI_Get_processor_name(processor_name, &name_len);
 
-	// MPI_Barrier(MPI_COMM_WORLD);
-    // printf("Rank %d finalized on processor: %s\n", world_rank, processor_name);
+	MPI_Barrier(MPI_COMM_WORLD);
+    printf("Rank %d finalized on processor: %s\n", world_rank, processor_name);
 
     MPI_Finalize();
     return 0;

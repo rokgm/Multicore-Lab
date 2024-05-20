@@ -2,15 +2,16 @@
 
 #SBATCH -J pingpong_job
 
-#SBATCH -o job_pingpong.out
-#SBATCH -e job_pingpong.out
+#SBATCH -o job_pingpong_one_socket.out
+#SBATCH -e job_pingpong_one_socket.out
 
 #SBATCH --time=00:05:00
 #SBATCH --account=h039v
 #SBATCH --partition=test
 
-#SBATCH --nodes=2
+#SBATCH --nodes=1
 #SBATCH --ntasks=2
+#SBATCH --ntasks-per-socket=2
 
 module load slurm_setup
 
