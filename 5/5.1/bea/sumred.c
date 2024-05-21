@@ -91,6 +91,7 @@ int main(int argc, char *argv[]){
     if (rank == 0) { printf("FINAL SUM: %d\n", local_sum); }
 
     free(array);
+    free(local_array);
     
     MPI_Finalize();
     return 0;
