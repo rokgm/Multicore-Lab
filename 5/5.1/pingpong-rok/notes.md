@@ -1,0 +1,1 @@
+Between sockets Intel Quick Path, 25.6 GB/s

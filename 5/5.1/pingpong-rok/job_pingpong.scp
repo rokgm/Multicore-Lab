@@ -2,8 +2,8 @@
 
 #SBATCH -J pingpong_job
 
-#SBATCH -o job_pingpong_one_socket.out
-#SBATCH -e job_pingpong_one_socket.out
+#SBATCH -o job_pingpong_0_1.out
+#SBATCH -e job_pingpong_0_1.out
 
 #SBATCH --time=00:05:00
 #SBATCH --account=h039v
@@ -11,10 +11,9 @@
 
 #SBATCH --nodes=1
 #SBATCH --ntasks=2
-#SBATCH --ntasks-per-socket=2
 
 module load slurm_setup
 
-export NUM_REPEATS=20
+export NUM_REPEATS=200
 
-mpiexec -n 2 -genv NUM_REPEATS $NUM_REPEATS ./pingpong
+mpiexec -n 2 -genv I_MPI_DEBUG=4 -genv I_MPI_PIN_PROCESSOR_LIST=0,1 -genv NUM_REPEATS $NUM_REPEATS ./pingpong

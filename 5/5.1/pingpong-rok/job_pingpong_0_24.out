@@ -1,0 +1,37 @@
+[0] MPI startup(): Intel(R) MPI Library, Version 2019 Update 12  Build 20210429 (id: e380127cb)
+[0] MPI startup(): Copyright (C) 2003-2021 Intel Corporation.  All rights reserved.
+[0] MPI startup(): library kind: release
+[0] MPI startup(): libfabric version: 1.11.0-impi
+[0] MPI startup(): libfabric provider: psm2
+[0] MPI startup(): Rank    Pid      Node name     Pin cpu
+[0] MPI startup(): 0       1544526  i04r11c01s09  0
+[0] MPI startup(): 1       1544527  i04r11c01s09  24
+NUM_REPEATS is 20
+Rank   Message Size (B)  Startup Time (ms)     Bandwidth (MB/s)    
+0      2^0               0.007672              0.130340            
+0      2^1               0.002066              0.967858            
+0      2^2               0.002410              1.659442            
+0      2^3               0.003141              2.547279            
+0      2^4               0.002255              7.095015            
+0      2^5               0.003007              10.640325           
+0      2^6               0.003741              17.108016           
+0      2^7               0.002964              43.184489           
+0      2^8               0.002712              94.394886           
+0      2^9               0.003443              148.703223          
+0      2^10              0.003470              295.107528          
+0      2^11              0.004047              506.081022          
+0      2^12              0.004346              942.411612          
+0      2^13              0.005235              1564.806985         
+0      2^14              0.006120              2677.164908         
+0      2^15              0.010560              3102.951944         
+0      2^16              0.017482              3748.721149         
+0      2^17              0.033682              3891.495417         
+0      2^18              0.064234              4081.110055         
+0      2^19              0.125217              4187.039354         
+0      2^20              0.280928              3732.537917         
+0      2^21              0.527971              3972.099366         
+0      2^22              0.926773              4525.706800         
+0      2^23              1.578611              5313.917279         
+0      2^24              3.025943              5544.457945         
+Rank 0 finalized on processor: i04r11c01s09
+Rank 1 finalized on processor: i04r11c01s09
