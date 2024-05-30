@@ -20,7 +20,7 @@
  * - allocate memory for matrices
  * - set boundary conditions according to configuration
  */
-int initialize( algoparam_t *param )
+int initialize( algoparam_t *param)
 {
     int i, j;
     double dist;

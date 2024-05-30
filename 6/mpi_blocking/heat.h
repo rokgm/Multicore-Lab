@@ -9,6 +9,8 @@
 
 #include <stdio.h>
 
+#define DEBUG 1
+
 // configuration
 
 typedef struct
@@ -28,6 +30,19 @@ typedef struct
     unsigned initial_res;
     unsigned res_step_size;
     unsigned visres;        // visualization resolution
+
+
+    unsigned local_size_x;      // Local size of the core part of array, excluding the overlaping areas 
+    unsigned local_size_y;      // and the boundary conditions conditions for oustide parts of domain.
+
+    unsigned local_allocated_x; // Size of the whole allocated array, including the overlaping areas
+    unsigned local_allocated_y; // and boundary conditions for oustide parts of domain.
+
+    unsigned global_start_x;     // Global position of the core part of the local array in the whole domain.
+    unsigned global_start_y;     // Excluding overlaps and boundaries of local array.
+    int rank;
+    int size;
+
   
     double *u, *uhelp;
     double *uvis;
