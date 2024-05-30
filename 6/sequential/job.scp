@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#SBATCH -J sequential
+
+#SBATCH -o output/sequential.out
+#SBATCH -e output/sequential.out
+
+#SBATCH --time=00:01:00
+#SBATCH --account=h039v
+#SBATCH --partition=test
+
+./heat test.dat
