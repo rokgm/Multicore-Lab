@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -J blocking_job
+#SBATCH -J blocking
 
 #SBATCH -o output/blocking.out
 #SBATCH -e output/blocking.out
@@ -11,13 +11,12 @@
 
 #SBATCH --nodes=1
 #SBATCH --ntasks=4
-#SBATCH --cpus-per-task=1 
 
 module load slurm_setup
 
 # Set number of nodes and tasks correctly for x,y dim!
 X_DIM=2
-Y_DIM=1
+Y_DIM=2
 
 mpiexec -n $SLURM_NTASKS \
     -genv I_MPI_DEBUG=5 \

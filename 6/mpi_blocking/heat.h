@@ -8,8 +8,7 @@
 #define JACOBI_H_INCLUDED
 
 #include <stdio.h>
-
-#define DEBUG 1
+#include <mpi.h>
 
 // configuration
 
@@ -31,20 +30,26 @@ typedef struct
     unsigned res_step_size;
     unsigned visres;        // visualization resolution
 
+    // Local size of the core local part of the array, excluding the overlaping areas 
+    // but including the boundary conditions for oustide parts of domain.
+    unsigned local_size_x;      
+    unsigned local_size_y;
 
-    unsigned local_size_x;      // Local size of the core part of array, excluding the overlaping areas 
-    unsigned local_size_y;      // and the boundary conditions conditions for oustide parts of domain.
+    // local size + 2 to include overlaps and border
+    unsigned local_allocated_x;      
+    unsigned local_allocated_y; 
 
-    unsigned local_allocated_x; // Size of the whole allocated array, including the overlaping areas
-    unsigned local_allocated_y; // and boundary conditions for oustide parts of domain.
+    // Global position of the start of the local core array in the whole domain. Excluding the overlaps/borders.
+    unsigned global_start_x;     
+    unsigned global_start_y;
 
-    unsigned global_start_x;     // Global position of the core part of the local array in the whole domain.
-    unsigned global_start_y;     // Excluding overlaps and boundaries of local array.
-    int rank;
-    int size;
-
+    // How the domain is split up: 2x2, 2x3, x×y
+    int x_dist;     
+    int y_dist;
   
+    // Alolocated part of the array, overlaping areas are included in here.
     double *u, *uhelp;
+    // TODO
     double *uvis;
 
     unsigned   numsrcs;     // number of heat sources
@@ -52,11 +57,23 @@ typedef struct
 }
 algoparam_t;
 
+typedef struct
+{
+    int world_rank;
+    int world_size;
+
+    int cart_rank;
+    // (x, y)
+    int cart_coords[2];
+    MPI_Comm comm_cart;
+}
+local_process_info;
+
 
 // function declarations
 
 // misc.c
-int initialize( algoparam_t *param );
+int initialize( algoparam_t *param, local_process_info* local_process_info );
 int finalize( algoparam_t *param );
 void write_image( FILE * f, double *u,
 		  unsigned sizex, unsigned sizey );

@@ -20,26 +20,43 @@
  * - allocate memory for matrices
  * - set boundary conditions according to configuration
  */
-int initialize( algoparam_t *param)
+int initialize( algoparam_t *param, local_process_info* local_process_info)
 {
-    int i, j;
-    double dist;
+	// Number of inner points, excluding border.
+	unsigned int np_core = param->act_res;
 
-    // total number of points (including border)
-    const int np = param->act_res + 2;
+	// Doesn't include overlaps/border.
+	int core_x_length = np_core / param->x_dist;
+	int core_y_length = np_core / param->y_dist;
+	// If x/y coordinate is smaller then the remainder of x/y split we add 1.
+	core_x_length += local_process_info->cart_coords[0] < (np_core % param->x_dist);
+	core_y_length += local_process_info->cart_coords[1] < (np_core % param->y_dist);
+
+	param->local_size_x = core_x_length;
+	param->local_size_y = core_y_length;
+	// Add overlaps/border + 2.
+	param->local_allocated_x = core_x_length + 2;
+	param->local_allocated_y = core_y_length + 2;
+
+	// Calculate start position in domain for the core/inner part.
+	// Add 1 because start of inner part of bordering arrays is at position domain(1,1).
+	param->global_start_x = 1 
+		 + local_process_info->cart_coords[0] * (np_core / param->x_dist)
+		 // If the x coord is smaller the remainder we add x coord to account for all increments in arrays to the left.
+		 + ((local_process_info->cart_coords[0] < np_core % param->x_dist)
+		 	? local_process_info->cart_coords[0] : np_core % param->x_dist);
+
+	param->global_start_y = 1 
+		 + local_process_info->cart_coords[1] * (np_core / param->y_dist)
+		 // If the y coord is smaller the remainder we add y coord to account for all increments in arrays to the left.
+		 + ((local_process_info->cart_coords[1] < np_core % param->y_dist)
+		 	? local_process_info->cart_coords[1] : np_core % param->y_dist);
 
     //
     // allocate memory
     //
-    (param->u)     = (double*)malloc( sizeof(double)* np*np );
-    (param->uhelp) = (double*)malloc( sizeof(double)* np*np );
-
-    for (i=0;i<np;i++){
-    	for (j=0;j<np;j++){
-    		param->u[i*np+j]=0;
-			param->uhelp[i*np+j]=0;
-    	}
-    }
+    (param->u)     = (double*)calloc(param->local_allocated_x * param->local_allocated_y, sizeof(double));
+    (param->uhelp) = (double*)calloc(param->local_allocated_x * param->local_allocated_y, sizeof(double));
 
     if( !(param->u) || !(param->uhelp) )
     {
@@ -47,71 +64,81 @@ int initialize( algoparam_t *param)
 	return 0;
     }
 
-    for( i=0; i<param->numsrcs; i++ )
-    {
-	/* top row */
-	for( j=0; j<np; j++ )
-	{
-	    dist = sqrt( pow((double)j/(double)(np-1) -
-			     param->heatsrcs[i].posx, 2)+
-			 pow(param->heatsrcs[i].posy, 2));
+	// includes border
+	unsigned int np = param->act_res + 2;
 
-	    if( dist <= param->heatsrcs[i].range )
-	    {
-		(param->u)[j] +=
-		    (param->heatsrcs[i].range-dist) /
-		    param->heatsrcs[i].range *
-		    param->heatsrcs[i].temp;
-	    }
-	}
+    for( int i=0; i<param->numsrcs; i++ ) {
+		/* top row */
+		if (local_process_info->cart_coords[1] == 0) {
+			for( int x = 0; x < param->local_allocated_x; x++ ) {
+				int j = x + param->global_start_x - 1;	// -1 becuase we include border/overlap
+				double dist = sqrt( pow((double)j/(double)(np-1) -
+						param->heatsrcs[i].posx, 2)+
+					pow(param->heatsrcs[i].posy, 2));
 
-	/* bottom row */
-	for( j=0; j<np; j++ )
-	{
-	    dist = sqrt( pow((double)j/(double)(np-1) -
-			     param->heatsrcs[i].posx, 2)+
-			 pow(1-param->heatsrcs[i].posy, 2));
+				if( dist <= param->heatsrcs[i].range )
+				{
+				(param->u)[x] +=
+					(param->heatsrcs[i].range - dist) /
+					param->heatsrcs[i].range *
+					param->heatsrcs[i].temp;
+				}
+			}
+		}
 
-	    if( dist <= param->heatsrcs[i].range )
-	    {
-		(param->u)[(np-1)*np+j]+=
-		    (param->heatsrcs[i].range-dist) /
-		    param->heatsrcs[i].range *
-		    param->heatsrcs[i].temp;
-	    }
-	}
+		/* bottom row */
+		if (local_process_info->cart_coords[1] == param->y_dist - 1) {
+			for( int x = 0; x < param->local_allocated_x; x++ ) {
+				int j = x + param->global_start_x - 1;	// -1 becuase we include border/overlap
+				double dist = sqrt( pow((double)j/(double)(np-1) -
+						param->heatsrcs[i].posx, 2)+
+					pow(1-param->heatsrcs[i].posy, 2));
 
-	/* leftmost column */
-	for( j=1; j<np-1; j++ )
-	{
-	    dist = sqrt( pow(param->heatsrcs[i].posx, 2)+
-			 pow((double)j/(double)(np-1) -
-			     param->heatsrcs[i].posy, 2));
+				if( dist <= param->heatsrcs[i].range )
+				{
+				(param->u)[(param->local_allocated_y - 1) * param->local_allocated_x + x] +=
+					(param->heatsrcs[i].range-dist) /
+					param->heatsrcs[i].range *
+					param->heatsrcs[i].temp;
+				}
+			}
+		}
 
-	    if( dist <= param->heatsrcs[i].range )
-	    {
-		(param->u)[ j*np ]+=
-		    (param->heatsrcs[i].range-dist) /
-		    param->heatsrcs[i].range *
-		    param->heatsrcs[i].temp;
-	    }
-	}
+		/* leftmost column; For corners will be set again (row set it already), but just easier this way. */
+		if (local_process_info->cart_coords[0] == 0) {
+			for( int y = 0; y < param->local_allocated_y; y++ ) {
+				int j = y + param->global_start_y - 1; 	// -1 becuase we include border/overlap
+				double dist = sqrt( pow(param->heatsrcs[i].posx, 2)+
+					pow((double)j/(double)(np-1) -
+						param->heatsrcs[i].posy, 2));
 
-	/* rightmost column */
-	for( j=1; j<np-1; j++ )
-	{
-	    dist = sqrt( pow(1-param->heatsrcs[i].posx, 2)+
-			 pow((double)j/(double)(np-1) -
-			     param->heatsrcs[i].posy, 2));
+				if( dist <= param->heatsrcs[i].range )
+				{
+				(param->u)[ j * param->local_allocated_x ]+=
+					(param->heatsrcs[i].range-dist) /
+					param->heatsrcs[i].range *
+					param->heatsrcs[i].temp;
+				}
+			}
+		}
 
-	    if( dist <= param->heatsrcs[i].range )
-	    {
-		(param->u)[ j*np+(np-1) ]+=
-		    (param->heatsrcs[i].range-dist) /
-		    param->heatsrcs[i].range *
-		    param->heatsrcs[i].temp;
-	    }
-	}
+		/* rightmost column */
+		if (local_process_info->cart_coords[0] == param->x_dist - 1) {
+			for( int y = 0; y < param->local_allocated_y; y++ ) {
+				int j = y + param->global_start_y - 1;	// -1 becuase we include border/overlap
+				double dist = sqrt( pow(1-param->heatsrcs[i].posx, 2)+
+					pow((double)j/(double)(np-1) -
+						param->heatsrcs[i].posy, 2));
+
+				if( dist <= param->heatsrcs[i].range )
+				{
+				(param->u)[ j * param->local_allocated_x + param->local_allocated_y - 1 ]+=
+					(param->heatsrcs[i].range-dist) /
+					param->heatsrcs[i].range *
+					param->heatsrcs[i].temp;
+				}
+			}
+		}
     }
 
     return 1;

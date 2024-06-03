@@ -18,13 +18,12 @@ double relax_jacobi( double **u1, double **utmp1,
   u=*u1;
   double unew, diff, sum=0.0;
 
-
-  for( i=1; i<sizey-1; i++ ) {
+  for( i=1; i<sizey-1; i++ ) {   // y direction in carteisan
   	int ii=i*sizex;
   	int iim1=(i-1)*sizex;
   	int iip1=(i+1)*sizex;
 #pragma ivdep
-    for( j=1; j<sizex-1; j++ ){
+    for( j=1; j<sizex-1; j++ ){   // x direction in carteisan
        unew = 0.25 * (u[ ii+(j-1) ]+
         		            u[ ii+(j+1) ]+
         		            u[ iim1+j ]+

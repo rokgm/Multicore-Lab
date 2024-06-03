@@ -1,2 +1,37 @@
-slurmstepd: error: *** JOB 3398113 ON i01r01c01s03 CANCELLED AT 2024-05-30T23:58:53 ***
-slurmstepd: error: *** JOB 3398114 ON i01r01c01s01 CANCELLED AT 2024-05-30T23:59:24 ***
+Debug
+Debug
+[0] MPI startup(): Intel(R) MPI Library, Version 2019 Update 12  Build 20210429 (id: e380127cb)
+[0] MPI startup(): Copyright (C) 2003-2021 Intel Corporation.  All rights reserved.
+[0] MPI startup(): library kind: release
+Debug
+Debug
+[0] MPI startup(): libfabric version: 1.11.0-impi
+[0] MPI startup(): libfabric provider: psm2
+[0] MPI startup(): Rank    Pid      Node name     Pin cpu
+[0] MPI startup(): 0       2639335  i01r01c02s07  {0,1,2,3,4,5,6,7,8,9,10,11,48,49,50,51,52,53,54,55,56,57,58,59}
+[0] MPI startup(): 1       2639336  i01r01c02s07  {12,13,14,15,16,17,18,19,20,21,22,23,60,61,62,63,64,65,66,67,68,69,70,71}
+[0] MPI startup(): 2       2639337  i01r01c02s07  {24,25,26,27,28,29,30,31,32,33,34,35,72,73,74,75,76,77,78,79,80,81,82,83}
+[0] MPI startup(): 3       2639338  i01r01c02s07  {36,37,38,39,40,41,42,43,44,45,46,47,84,85,86,87,88,89,90,91,92,93,94,95}
+[0] MPI startup(): I_MPI_ROOT=/dss/lrzsys/sys/spack/release/22.2.1/opt/x86_64/intel-mpi/2019.12.320-gcc-wx7cjlg/compilers_and_libraries_2020.4.320/linux/mpi
+[0] MPI startup(): I_MPI_HYDRA_PMI_CONNECT=lazy-cache
+[0] MPI startup(): I_MPI_HYDRA_TOPOLIB=hwloc
+[0] MPI startup(): I_MPI_HYDRA_IFACE=ib0
+[0] MPI startup(): I_MPI_HYDRA_BRANCH_COUNT=128
+[0] MPI startup(): I_MPI_HYDRA_BOOTSTRAP=slurm
+[0] MPI startup(): I_MPI_PIN=1
+[0] MPI startup(): I_MPI_PIN_RESPECT_CPUSET=0
+[0] MPI startup(): I_MPI_INTERNAL_MEM_POLICY=default
+[0] MPI startup(): I_MPI_EXTRA_FILESYSTEM=on
+[0] MPI startup(): I_MPI_FABRICS=shm:ofi
+[0] MPI startup(): I_MPI_PLATFORM=skx
+[0] MPI startup(): I_MPI_DEBUG=5
+world rank=0, cart rank=0, cart coord=(0,0)
+Resolutions       : (2000, 6000, ... 6500)
+Iterations        : 50
+Num. Heat sources : 2
+   1: (0.00, 0.00) 1.00 1.00 
+   2: (1.00, 1.00) 1.00 0.50 
+world rank=1, cart rank=1, cart coord=(0,1)
+world rank=2, cart rank=2, cart coord=(1,0)
+world rank=3, cart rank=3, cart coord=(1,1)
+slurmstepd: error: *** JOB 3401376 ON i01r01c01s01 CANCELLED AT 2024-06-03T12:41:20 ***
