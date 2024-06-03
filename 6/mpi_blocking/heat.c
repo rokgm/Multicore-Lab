@@ -67,7 +67,7 @@ void create_cartesian(local_process_info* local_process_info, algoparam_t* param
 	MPI_Cart_create(MPI_COMM_WORLD, ndims, dim, period, reorder, &local_process_info->comm_cart);
 	MPI_Comm_rank(local_process_info->comm_cart, &local_process_info->cart_rank);
 	MPI_Cart_coords(local_process_info->comm_cart, local_process_info->cart_rank, 2, local_process_info->cart_coords);
-#if 1
+#if 0
 	// Print cartesian rank and coordinates.
 	MPI_Barrier(MPI_COMM_WORLD);
 	printf("world rank=%d, cart rank=%d, cart coord=(%d,%d)\n", local_process_info->world_rank,
@@ -77,8 +77,6 @@ void create_cartesian(local_process_info* local_process_info, algoparam_t* param
 }
 
 int main(int argc, char *argv[]) {
-	printf("Debug\n");
-
 	local_process_info local_process_info;
 
 	MPI_Init(&argc, &argv);
@@ -122,42 +120,49 @@ int main(int argc, char *argv[]) {
 	int exp_number = 0;
 
 	// Iterate over resolutions.
-	// for (param.act_res = param.initial_res; param.act_res <= param.max_res; param.act_res = param.act_res + param.res_step_size) {
-	// 	if (param.act_res!=param.initial_res) finalize(&param);
+	for (param.act_res = param.initial_res; param.act_res <= param.max_res; param.act_res = param.act_res + param.res_step_size) {
+		if (exp_number != 0) finalize(&param);
 
 		// Each process will allocate the local array plus the overlap (data will be send to the overlap).
 		// For parts on the border of the domain, the overlap will be the boundary condition.
 		// Rank 0 will get upper left part of domain, rank 1 will get one to the rigth...
-		// if (!initialize(&param, &local_process_info)) {
-		// 	fprintf(stderr, "Error in Jacobi initialization.\n\n");
-		// 	usage(argv[0]);
-		// }
-// #if 1
-// 		// Print local array params.
-// 		MPI_Barrier(MPI_COMM_WORLD);
-// 		printf("cartesian rank %d: local x size = %d, local y size = %d, global x start = %d, global y start = %d\n",
-// 			local_process_info.cart_rank, param.local_size_x, param.local_size_y, param.global_start_x, param.global_start_y);	
-// 		MPI_Barrier(MPI_COMM_WORLD);
-// #endif
+		if (!initialize(&param, &local_process_info)) {
+			fprintf(stderr, "Error in Jacobi initialization.\n\n");
+			usage(argv[0]);
+		}
+#if 0
+		// Print local array params.
+		MPI_Barrier(MPI_COMM_WORLD);
+		printf("cart. rank %d: local x=%d, local y=%d, allocated x=%d, allocated y=%d, x start=%d, y start=%d\n",
+			local_process_info.cart_rank, param.local_size_x, param.local_size_y, param.local_allocated_x,
+             param.local_allocated_y, param.global_start_x, param.global_start_y);	
+		MPI_Barrier(MPI_COMM_WORLD);
+#endif
 
 		// Copy u to uhelp.
-		// for (int y = 0; y < param.local_allocated_y; y++) {
-		// 	for (int x = 0; x < param.local_allocated_x; x++) {
-		// 		param.uhelp[y * param.local_allocated_x + x] = param.u[y * param.local_allocated_x + x];
-		// 	}
-		// }
+		for (int y = 0; y < param.local_allocated_y; y++) {
+			for (int x = 0; x < param.local_allocated_x; x++) {
+				param.uhelp[y * param.local_allocated_x + x] = param.u[y * param.local_allocated_x + x];
+			}
+		}
 
-// #if HEAT_DEBUG		
-// 		// Print u Move to upper printing
-// 		printf("cart_rank = %d, u = \n", local_process_info.cart_rank);
-// 		for (int y = 0; y < param.local_allocated_y; y++) {
-// 			for (int x = 0; x < param.local_allocated_x; x++) {
-// 				printf("%f ", param.u[y * param.local_allocated_x + x]);
-// 			}
-// 			printf("\n");
-// 		}
-// 		MPI_Barrier(MPI_COMM_WORLD);
-// #endif
+#if 0	
+		// Print uhelp, rank by rank
+        for (int rank = 0; rank < local_process_info.world_size; rank++) {
+            MPI_Barrier(MPI_COMM_WORLD);
+            if (rank != local_process_info.cart_rank)
+                continue;
+
+            printf("cart_rank = %d, u = \n", local_process_info.cart_rank);
+            for (int y = 0; y < param.local_allocated_y; y++) {
+                for (int x = 0; x < param.local_allocated_x; x++) {
+                    printf("%f ", param.uhelp[y * param.local_allocated_x + x]);
+                }
+                printf("\n");
+            }
+        }
+		MPI_Barrier(MPI_COMM_WORLD);
+#endif
 
 		// // starting time
 		// time[exp_number] = wtime();
@@ -181,8 +186,8 @@ int main(int argc, char *argv[]) {
 		// 	printf("  flop instructions (M):  %.3lf\n", (double) param.maxiter * (np - 2) * (np - 2) * 7 / 1000000);
 		// }
 
-		// exp_number++;
-	// }
+		exp_number++;
+	}
 
 	// TODO rank 0, reduce, parallelize coarsen
     // param.uvis  = (double*)calloc( sizeof(double),
@@ -197,6 +202,7 @@ int main(int argc, char *argv[]) {
 	// free(param.uvis);
 
 	free(time);
+    finalize(&param);
 
     MPI_Finalize();
 	return 0;

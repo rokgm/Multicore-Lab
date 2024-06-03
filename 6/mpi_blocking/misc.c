@@ -28,7 +28,7 @@ int initialize( algoparam_t *param, local_process_info* local_process_info)
 	// Doesn't include overlaps/border.
 	int core_x_length = np_core / param->x_dist;
 	int core_y_length = np_core / param->y_dist;
-	// If x/y coordinate is smaller then the remainder of x/y split we add 1.
+	// If x or y coordinate is smaller then the remainder of x or y split we add 1.
 	core_x_length += local_process_info->cart_coords[0] < (np_core % param->x_dist);
 	core_y_length += local_process_info->cart_coords[1] < (np_core % param->y_dist);
 
@@ -104,7 +104,7 @@ int initialize( algoparam_t *param, local_process_info* local_process_info)
 			}
 		}
 
-		/* leftmost column; For corners will be set again (row set it already), but just easier this way. */
+		/* leftmost column; For corners will be set again (row has set it already), but just easier this way. */
 		if (local_process_info->cart_coords[0] == 0) {
 			for( int y = 0; y < param->local_allocated_y; y++ ) {
 				int j = y + param->global_start_y - 1; 	// -1 becuase we include border/overlap
@@ -114,7 +114,7 @@ int initialize( algoparam_t *param, local_process_info* local_process_info)
 
 				if( dist <= param->heatsrcs[i].range )
 				{
-				(param->u)[ j * param->local_allocated_x ]+=
+				(param->u)[ y * param->local_allocated_x ]+=
 					(param->heatsrcs[i].range-dist) /
 					param->heatsrcs[i].range *
 					param->heatsrcs[i].temp;
@@ -132,7 +132,7 @@ int initialize( algoparam_t *param, local_process_info* local_process_info)
 
 				if( dist <= param->heatsrcs[i].range )
 				{
-				(param->u)[ j * param->local_allocated_x + param->local_allocated_y - 1 ]+=
+				(param->u)[ (y + 1) * param->local_allocated_x - 1 ]+=
 					(param->heatsrcs[i].range-dist) /
 					param->heatsrcs[i].range *
 					param->heatsrcs[i].temp;
