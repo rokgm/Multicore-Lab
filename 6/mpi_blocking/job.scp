@@ -10,13 +10,13 @@
 #SBATCH --partition=test
 
 #SBATCH --nodes=1
-#SBATCH --ntasks=6
+#SBATCH --ntasks=12
 
 module load slurm_setup
 
 # Set number of nodes and tasks correctly for x,y dim!
-X_DIM=2
-Y_DIM=3
+X_DIM=3
+Y_DIM=4
 
 mpiexec -n $SLURM_NTASKS \
     -genv I_MPI_DEBUG=5 \

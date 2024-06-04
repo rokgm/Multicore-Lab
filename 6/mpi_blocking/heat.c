@@ -171,31 +171,14 @@ int main(int argc, char *argv[]) {
 
 		// TODO
 		// for (iter = 0; iter < param.maxiter; iter++) {
-		for (iter = 0; iter < 1; iter++) {
+		for (iter = 0; iter < 3; iter++) {
 			residual = relax_jacobi(&(param.u), &(param.uhelp), &local_process_info, &param);
 			if (residual<0.00000005)break;
 		}
-#if 1	
-		// Print u, rank by rank
-        for (int rank = 0; rank < local_process_info.world_size; rank++) {
-            MPI_Barrier(MPI_COMM_WORLD);
-            if (rank != local_process_info.cart_rank)
-                continue;
-
-            printf("cart_rank = %d, u = \n", local_process_info.cart_rank);
-            for (int y = 0; y < param.local_allocated_y; y++) {
-                for (int x = 0; x < param.local_allocated_x; x++) {
-                    printf("%f ", param.u[y * param.local_allocated_x + x]);
-                }
-                printf("\n");
-            }
-        }
-		MPI_Barrier(MPI_COMM_WORLD);
-#endif
 
 		time[exp_number] = wtime() - time[exp_number];
 
-		if (local_process_info.world_rank == 0) {
+		if (local_process_info.cart_rank == 0) {
 			printf("\n\nResolution: %u\n", param.act_res);
 			printf("===================\n");
 			printf("Execution time: %f\n", time[exp_number]);
