@@ -84,7 +84,7 @@ double relax_jacobi( double **u1, double **utmp1,
 {
 	double* utmp = *utmp1;
 	double* u = *u1;
-	double unew, diff, sum = 99999.0;
+	double unew, diff, sum = 0.0;
 
     exchange_boundaries(u, param, local_process_info);
 
@@ -110,7 +110,10 @@ double relax_jacobi( double **u1, double **utmp1,
 	*u1 = utmp;
 	*utmp1 = u;
 
-	return sum;
+    double global_sum;
+    MPI_Allreduce(&sum, &global_sum, 1, MPI_DOUBLE, MPI_SUM, local_process_info->comm_cart);
+
+	return global_sum;
 }
 
 

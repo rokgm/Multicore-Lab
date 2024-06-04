@@ -169,9 +169,7 @@ int main(int argc, char *argv[]) {
 		residual = 999999999;
 		np = param.act_res + 2;
 
-		// TODO
-		// for (iter = 0; iter < param.maxiter; iter++) {
-		for (iter = 0; iter < 3; iter++) {
+		for (iter = 0; iter < param.maxiter; iter++) {
 			residual = relax_jacobi(&(param.u), &(param.uhelp), &local_process_info, &param);
 			if (residual<0.00000005)break;
 		}
