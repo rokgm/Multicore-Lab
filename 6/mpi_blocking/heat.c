@@ -164,27 +164,46 @@ int main(int argc, char *argv[]) {
 		MPI_Barrier(MPI_COMM_WORLD);
 #endif
 
-		// // starting time
-		// time[exp_number] = wtime();
-		// residual = 999999999;
-		// np = param.act_res + 2;
+		// starting time
+		time[exp_number] = wtime();
+		residual = 999999999;
+		np = param.act_res + 2;
 
+		// TODO
 		// for (iter = 0; iter < param.maxiter; iter++) {
-		// 	residual = relax_jacobi(&(param.u), &(param.uhelp), np, np);
-		// 	if (residual<0.00000005)break;
-		// }
+		for (iter = 0; iter < 1; iter++) {
+			residual = relax_jacobi(&(param.u), &(param.uhelp), &local_process_info, &param);
+			if (residual<0.00000005)break;
+		}
+#if 1	
+		// Print u, rank by rank
+        for (int rank = 0; rank < local_process_info.world_size; rank++) {
+            MPI_Barrier(MPI_COMM_WORLD);
+            if (rank != local_process_info.cart_rank)
+                continue;
 
-		// time[exp_number] = wtime() - time[exp_number];
+            printf("cart_rank = %d, u = \n", local_process_info.cart_rank);
+            for (int y = 0; y < param.local_allocated_y; y++) {
+                for (int x = 0; x < param.local_allocated_x; x++) {
+                    printf("%f ", param.u[y * param.local_allocated_x + x]);
+                }
+                printf("\n");
+            }
+        }
+		MPI_Barrier(MPI_COMM_WORLD);
+#endif
 
-		// if (local_process_info.world_rank == 0) {
-		// 	printf("\n\nResolution: %u\n", param.act_res);
-		// 	printf("===================\n");
-		// 	printf("Execution time: %f\n", time[exp_number]);
-		// 	printf("Residual: %f\n\n", residual);
+		time[exp_number] = wtime() - time[exp_number];
 
-		// 	printf("megaflops:  %.1lf\n", (double) param.maxiter * (np - 2) * (np - 2) * 7 / time[exp_number] / 1000000);
-		// 	printf("  flop instructions (M):  %.3lf\n", (double) param.maxiter * (np - 2) * (np - 2) * 7 / 1000000);
-		// }
+		if (local_process_info.world_rank == 0) {
+			printf("\n\nResolution: %u\n", param.act_res);
+			printf("===================\n");
+			printf("Execution time: %f\n", time[exp_number]);
+			printf("Residual: %f\n\n", residual);
+
+			printf("megaflops:  %.1lf\n", (double) param.maxiter * (np - 2) * (np - 2) * 7 / time[exp_number] / 1000000);
+			printf("  flop instructions (M):  %.3lf\n", (double) param.maxiter * (np - 2) * (np - 2) * 7 / 1000000);
+		}
 
 		exp_number++;
 	}

@@ -30,8 +30,8 @@ typedef struct
     unsigned res_step_size;
     unsigned visres;        // visualization resolution
 
-    // Local size of the core local part of the array, excluding the overlaping areas 
-    // but including the boundary conditions for oustide parts of domain.
+    // Local size of the core local part of the array, excluding the overlapping areas 
+    // but including the boundary conditions for outside parts of domain.
     unsigned local_size_x;      
     unsigned local_size_y;
 
@@ -46,8 +46,12 @@ typedef struct
     // How the domain is split up: 2x2, 2x3, x×y
     int x_dist;     
     int y_dist;
+
+    // Buffer used for vertical communication of size local_size_y.
+    double* send_buff_y;
+    double* recv_buff_y;
   
-    // Alolocated part of the array, overlaping areas are included in here.
+    // Allocated part of the array, overlapping areas are included in here.
     double *u, *uhelp;
     // TODO
     double *uvis;
@@ -90,7 +94,7 @@ void relax_gauss( double *u,
 double residual_jacobi( double *u,
 			unsigned sizex, unsigned sizey );
 double relax_jacobi( double **u, double **utmp,
-		   unsigned sizex, unsigned sizey ); 
+		   local_process_info* local_process_info, algoparam_t* param ); 
 
 
 #endif // JACOBI_H_INCLUDED
