@@ -29,9 +29,9 @@ void exchange_boundaries(double *u, algoparam_t* param, local_process_info* loca
     MPI_Request req[8];
     MPI_Status status[8];
 
-    int rank_left, rank_right, rank_up, rank_down;
-    MPI_Cart_shift(local_process_info->comm_cart, 0, 1, &rank_left, &rank_right);
-    MPI_Cart_shift(local_process_info->comm_cart, 1, 1, &rank_up, &rank_down);
+    // int rank_left, rank_right, rank_up, rank_down;
+    // MPI_Cart_shift(local_process_info->comm_cart, 0, 1, &rank_left, &rank_right);
+    // MPI_Cart_shift(local_process_info->comm_cart, 1, 1, &rank_up, &rank_down);
 
     int local_size_x = param->local_size_x;
     int local_size_y = param->local_size_y;
@@ -44,50 +44,52 @@ void exchange_boundaries(double *u, algoparam_t* param, local_process_info* loca
 
     // Send from left to right.
     // If rank != MPI_PROC_NULL, still used so we don't unnecessarily copy buffers, won't be sent.
-    if (rank_right != MPI_PROC_NULL) {
+    if (local_process_info->rank_right != MPI_PROC_NULL) {
         int column = param->local_size_x;
         copy_to_send_buff_y(u, param->send_buff_y, param, column);
     }
-    MPI_Isend(param->send_buff_y, local_size_y, MPI_DOUBLE, rank_right, 0, local_process_info->comm_cart, &(req[0]));
-    MPI_Irecv(param->recv_buff_y, local_size_y, MPI_DOUBLE, rank_left, 0, local_process_info->comm_cart, &(req[1]));
+    
+    MPI_Isend(param->send_buff_y, local_size_y, MPI_DOUBLE, local_process_info->rank_right, 0, local_process_info->comm_cart, &(req[0]));
+    //printf("World rank %d, Cart rank %d, sending to cart rank %d", local_process_info->world_rank, local_process_info->cart_rank, local_process_info->rank_right);
+    MPI_Irecv(param->recv_buff_y, local_size_y, MPI_DOUBLE, local_process_info->rank_left, 0, local_process_info->comm_cart, &(req[1]));
 
     //MPI_Sendrecv(param->send_buff_y, local_size_y, MPI_DOUBLE, rank_right, 0, 
     //            param->recv_buff_y, local_size_y, MPI_DOUBLE, rank_left, 0, 
     //            local_process_info->comm_cart, MPI_STATUS_IGNORE);
 
     // Don't copy from an empty buffer.
-    if (rank_left != MPI_PROC_NULL) {
+    if (local_process_info->rank_left != MPI_PROC_NULL) {
         int column = 0;
         copy_from_recv_buff_y(u, param->recv_buff_y, param, 0);
     }
 
     // Send right to left.
-    if (rank_left != MPI_PROC_NULL) {
+    if (local_process_info->rank_left != MPI_PROC_NULL) {
         int column = 1;
         copy_to_send_buff_y(u, param->send_buff_y, param, column);
      }
 
-    MPI_Isend(param->send_buff_y, local_size_y, MPI_DOUBLE, rank_left, 1, local_process_info->comm_cart, &(req[2]));
-    MPI_Irecv(param->recv_buff_y, local_size_y, MPI_DOUBLE, rank_right, 1, local_process_info->comm_cart, &(req[3]));
+    MPI_Isend(param->send_buff_y, local_size_y, MPI_DOUBLE, local_process_info->rank_left, 1, local_process_info->comm_cart, &(req[2]));
+    MPI_Irecv(param->recv_buff_y, local_size_y, MPI_DOUBLE, local_process_info->rank_right, 1, local_process_info->comm_cart, &(req[3]));
 
     //MPI_Sendrecv(param->send_buff_y, local_size_y, MPI_DOUBLE, rank_left, 1, 
     //            param->recv_buff_y, local_size_y, MPI_DOUBLE, rank_right, 1, 
     //            local_process_info->comm_cart, MPI_STATUS_IGNORE);
     // Don't copy from an empty buffer.
-    if (rank_right != MPI_PROC_NULL) {
+    if (local_process_info->rank_right != MPI_PROC_NULL) {
         int column = param->local_size_x + 1;
         copy_from_recv_buff_y(u, param->recv_buff_y, param, column);
     }
 
-    MPI_Isend(&u[local_allocated_x + 1], local_size_x, MPI_DOUBLE, rank_up, 2, local_process_info->comm_cart, &(req[4]));
-    MPI_Irecv(&u[local_allocated_x * (local_allocated_y - 1) + 1], local_size_x, MPI_DOUBLE, rank_down, 2, local_process_info->comm_cart, &(req[5]));
+    MPI_Isend(&u[local_allocated_x + 1], local_size_x, MPI_DOUBLE, local_process_info->rank_up, 2, local_process_info->comm_cart, &(req[4]));
+    MPI_Irecv(&u[local_allocated_x * (local_allocated_y - 1) + 1], local_size_x, MPI_DOUBLE, local_process_info->rank_down, 2, local_process_info->comm_cart, &(req[5]));
     // Send down to up.
     //MPI_Sendrecv(&u[local_allocated_x + 1], local_size_x, MPI_DOUBLE, rank_up, 2, 
     //             &u[local_allocated_x * (local_allocated_y - 1) + 1], local_size_x, MPI_DOUBLE, rank_down, 2, 
     //             local_process_info->comm_cart, MPI_STATUS_IGNORE);
 
-    MPI_Isend(&u[local_allocated_x * (local_allocated_y - 2) + 1], local_size_x, MPI_DOUBLE, rank_down, 3, local_process_info->comm_cart, &(req[6]));
-    MPI_Irecv(&u[1], local_size_x, MPI_DOUBLE, rank_up, 3, local_process_info->comm_cart, &(req[7]));
+    MPI_Isend(&u[local_allocated_x * (local_allocated_y - 2) + 1], local_size_x, MPI_DOUBLE, local_process_info->rank_down, 3, local_process_info->comm_cart, &(req[6]));
+    MPI_Irecv(&u[1], local_size_x, MPI_DOUBLE, local_process_info->rank_up, 3, local_process_info->comm_cart, &(req[7]));
     // Send up to down.
     //MPI_Sendrecv(&u[local_allocated_x * (local_allocated_y - 2) + 1], local_size_x, MPI_DOUBLE, rank_down, 3, 
     //             &u[1], local_size_x, MPI_DOUBLE, rank_up, 3, 
@@ -95,9 +97,11 @@ void exchange_boundaries(double *u, algoparam_t* param, local_process_info* loca
 
     // This needs to go after the inner part of the relaxation has been calculated
     // Right now the functionality should be the same as blocking comms
-    MPI_Waitall(8, req, status);
+    MPI_Waitall(8, req, MPI_STATUSES_IGNORE);
 
 }
+
+
 
 // u1 is the local array, including the overlaps.
 double relax_jacobi( double **u1, double **utmp1,

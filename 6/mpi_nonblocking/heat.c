@@ -67,6 +67,12 @@ void create_cartesian(local_process_info* local_process_info, algoparam_t* param
 	MPI_Cart_create(MPI_COMM_WORLD, ndims, dim, period, reorder, &local_process_info->comm_cart);
 	MPI_Comm_rank(local_process_info->comm_cart, &local_process_info->cart_rank);
 	MPI_Cart_coords(local_process_info->comm_cart, local_process_info->cart_rank, 2, local_process_info->cart_coords);
+
+	MPI_Cart_shift(local_process_info->comm_cart, 0, 1, &local_process_info->rank_left, &local_process_info->rank_right);
+        MPI_Cart_shift(local_process_info->comm_cart, 1, 1, &local_process_info->rank_up, &local_process_info->rank_down);
+
+
+
 #if 0
 	// Print cartesian rank and coordinates.
 	MPI_Barrier(MPI_COMM_WORLD);

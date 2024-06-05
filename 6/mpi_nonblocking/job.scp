@@ -1,11 +1,11 @@
 #!/bin/bash
 
-#SBATCH -J blocking
+#SBATCH -J nonblocking
 
-#SBATCH -o output/blocking.out
-#SBATCH -e output/blocking.out
+#SBATCH -o output/nonblocking.out
+#SBATCH -e output/nonblocking.out
 
-#SBATCH --time=00:01:00
+#SBATCH --time=00:02:00
 #SBATCH --account=h039v
 #SBATCH --partition=test
 

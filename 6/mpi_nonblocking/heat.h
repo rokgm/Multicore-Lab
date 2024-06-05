@@ -70,6 +70,12 @@ typedef struct
     // (x, y)
     int cart_coords[2];
     MPI_Comm comm_cart;
+
+    int rank_left;
+    int rank_right;
+    int rank_up;
+    int rank_down;
+
 }
 local_process_info;
 
