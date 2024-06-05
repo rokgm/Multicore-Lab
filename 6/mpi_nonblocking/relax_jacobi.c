@@ -22,12 +22,11 @@ void copy_from_recv_buff_y(double *u, double *rbuf_y, algoparam_t* param, int co
 }
 
 
-void exchange_boundaries(double *u, algoparam_t* param, local_process_info* local_process_info) {
+void exchange_boundaries(double *u, algoparam_t* param, local_process_info* local_process_info, MPI_Request *req) {
     // Get the ranks of the neighboring processes
     // The cartesian communicator was initialized as non periodic, so shift over the border
     // returns MPI_PROC_NULL.
-    MPI_Request req[8];
-    MPI_Status status[8];
+    // MPI_Request req[8];
 
     // int rank_left, rank_right, rank_up, rank_down;
     // MPI_Cart_shift(local_process_info->comm_cart, 0, 1, &rank_left, &rank_right);
@@ -97,7 +96,7 @@ void exchange_boundaries(double *u, algoparam_t* param, local_process_info* loca
 
     // This needs to go after the inner part of the relaxation has been calculated
     // Right now the functionality should be the same as blocking comms
-    MPI_Waitall(8, req, MPI_STATUSES_IGNORE);
+    //MPI_Waitall(8, req, MPI_STATUSES_IGNORE);
 
 }
 
@@ -111,11 +110,17 @@ double relax_jacobi( double **u1, double **utmp1,
 	double* u = *u1;
 	double unew, diff, sum = 0.0;
 
-    exchange_boundaries(u, param, local_process_info);
+	int start_i, end_i, start_j, end_j = 0;
+
+	MPI_Request req[8];
+
+    exchange_boundaries(u, param, local_process_info, req);
 
     // Iterate over the inner parts of the local array.
     // -> iterate from 1 - local_size.
     // Local allocated size is 0 - local_size + 1.
+        if (local_process_info->rank_right == MPI_PROC_NULL && local_process_info->rank_left == MPI_PROC_NULL && local_process_info->rank_up == MPI_PROC_NULL && local_process_info->rank_down == MPI_PROC_NULL) {
+
 	for(int i = 1; i <= param->local_size_y; i++ ) {
         int ii = i * param->local_allocated_x;
         int iim1 = (i - 1) * param->local_allocated_x;
@@ -129,8 +134,115 @@ double relax_jacobi( double **u1, double **utmp1,
             diff = unew - u[ii + j];
             utmp[ii + j] = unew;
             sum += diff * diff;
+	    MPI_Waitall(8, req, MPI_STATUSES_IGNORE);
+	}
+	}
+	
+	} else {
+	printf("Made it");
+	if (local_process_info->rank_up != MPI_PROC_NULL) {
+		end_i = param->local_size_y - 1;
+	}
+	if (local_process_info->rank_down != MPI_PROC_NULL) {
+		start_i = 2;
+	}
+	if (local_process_info->rank_right != MPI_PROC_NULL) {
+		end_j = param->local_size_x - 1;
+	}
+	if (local_process_info->rank_left != MPI_PROC_NULL) {
+		start_j = 2;
+	}
+	printf("start_i %d, end_i %d, start_j %d, end_j %d", start_i, end_i, start_j, end_j);
+        for(int i = start_i; i <= end_i; i++ ) {
+        int ii = i * param->local_allocated_x;
+        int iim1 = (i - 1) * param->local_allocated_x;
+        int iip1 = (i + 1) * param->local_allocated_x;
+        #pragma ivdep
+        for(int j = start_j; j <= end_j; j++ ){
+            unew = 0.25 * (u[ii + (j-1)]+
+                            u[ii + (j+1)]+
+                            u[iim1 + j]+
+                            u[iip1 + j]);
+            diff = unew - u[ii + j];
+            utmp[ii + j] = unew;
+            sum += diff * diff;
+        }
+        }
+
+	MPI_Waitall(8, req, MPI_STATUSES_IGNORE);
+
+	if (start_i != 0) {
+	int i = 1;
+        int ii = i * param->local_allocated_x;
+        int iim1 = (i - 1) * param->local_allocated_x;
+        int iip1 = (i + 1) * param->local_allocated_x;
+        #pragma ivdep
+        for(int j = start_j; j <= end_j; j++ ){
+            unew = 0.25 * (u[ii + (j-1)]+
+                            u[ii + (j+1)]+
+                            u[iim1 + j]+
+                            u[iip1 + j]);
+            diff = unew - u[ii + j];
+            utmp[ii + j] = unew;
+            sum += diff * diff;
         }
 	}
+
+	if (end_i != 0) {
+	int i = param->local_size_y;
+        int ii = i * param->local_allocated_x;
+        int iim1 = (i - 1) * param->local_allocated_x;
+        int iip1 = (i + 1) * param->local_allocated_x;
+        #pragma ivdep
+        for(int j = start_j; j <= end_j; j++ ){
+            unew = 0.25 * (u[ii + (j-1)]+
+                            u[ii + (j+1)]+
+                            u[iim1 + j]+
+                            u[iip1 + j]);
+            diff = unew - u[ii + j];
+            utmp[ii + j] = unew;
+            sum += diff * diff;
+        }
+        }
+	
+
+	if (start_j != 0)  {
+	for(int i = 1; i <= param->local_size_y; i++ ) {
+        int ii = i * param->local_allocated_x;
+        int iim1 = (i - 1) * param->local_allocated_x;
+        int iip1 = (i + 1) * param->local_allocated_x;
+       
+        int j = 1;
+            unew = 0.25 * (u[ii + (j-1)]+
+                            u[ii + (j+1)]+
+                            u[iim1 + j]+
+                            u[iip1 + j]);
+            diff = unew - u[ii + j];
+            utmp[ii + j] = unew;
+            sum += diff * diff;
+        }
+	}
+
+	if (end_j != 0) {
+	for(int i = 1; i <= param->local_size_y; i++ ) {
+        int ii = i * param->local_allocated_x;
+        int iim1 = (i - 1) * param->local_allocated_x;
+        int iip1 = (i + 1) * param->local_allocated_x;
+       
+        int j = param->local_size_x;
+            unew = 0.25 * (u[ii + (j-1)]+
+                            u[ii + (j+1)]+
+                            u[iim1 + j]+
+                            u[iip1 + j]);
+            diff = unew - u[ii + j];
+            utmp[ii + j] = unew;
+            sum += diff * diff;
+        }
+        }
+
+	}
+
+	printf("Sum %f, diff %f", sum, diff);
 
 	*u1 = utmp;
 	*utmp1 = u;
