@@ -57,10 +57,13 @@ int initialize( algoparam_t *param, local_process_info* local_process_info)
     //
     (param->u) = (double*)calloc(param->local_allocated_x * param->local_allocated_y, sizeof(double));
     (param->uhelp) = (double*)calloc(param->local_allocated_x * param->local_allocated_y, sizeof(double));
-	(param->send_buff_y) = (double*)calloc(param->local_size_y, sizeof(double));
-	(param->recv_buff_y) = (double*)calloc(param->local_size_y, sizeof(double));
 
-    if( !(param->u) || !(param->uhelp) || !(param->send_buff_y) || !(param->recv_buff_y) )
+	(param->send_buff_y_right) = (double*)calloc(param->local_size_y, sizeof(double));
+	(param->recv_buff_y_right) = (double*)calloc(param->local_size_y, sizeof(double));
+	(param->send_buff_y_left) = (double*)calloc(param->local_size_y, sizeof(double));
+	(param->recv_buff_y_left) = (double*)calloc(param->local_size_y, sizeof(double));
+
+    if( !(param->u) || !(param->uhelp) || !(param->send_buff_y_right) || !(param->recv_buff_y_right) || !(param->send_buff_y_left)|| !(param->recv_buff_y_left) )
     {
 	fprintf(stderr, "Error: Cannot allocate memory\n");
 	return 0;
@@ -161,14 +164,25 @@ int finalize( algoparam_t *param )
 	param->uhelp = 0;
     }
 
-	if( param->recv_buff_y ) {
-	free(param->recv_buff_y);
-	param->recv_buff_y = 0;
+	if( param->recv_buff_y_right ) {
+	free(param->recv_buff_y_right);
+	param->recv_buff_y_right = 0;
     }
 
-	if( param->send_buff_y ) {
-	free(param->send_buff_y);
-	param->send_buff_y = 0;
+	if( param->recv_buff_y_left ) {
+        free(param->recv_buff_y_left);
+        param->recv_buff_y_left = 0;
+    }
+
+
+	if( param->send_buff_y_right ) {
+	free(param->send_buff_y_right);
+	param->send_buff_y_right = 0;
+    }
+
+        if( param->send_buff_y_left ) {
+        free(param->send_buff_y_left);
+        param->send_buff_y_left = 0;
     }
 
     return 1;

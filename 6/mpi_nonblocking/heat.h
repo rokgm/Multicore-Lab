@@ -48,9 +48,11 @@ typedef struct
     int y_dist;
 
     // Buffer used for vertical communication of size local_size_y.
-    double* send_buff_y;
-    double* recv_buff_y;
-  
+    double* send_buff_y_right;
+    double* send_buff_y_left;
+    double* recv_buff_y_right;
+    double* recv_buff_y_left;
+
     // Allocated part of the array, overlapping areas are included in here.
     double *u, *uhelp;
     // TODO
