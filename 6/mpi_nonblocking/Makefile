@@ -1,5 +1,5 @@
 CC =  mpicc
-CFLAGS = -O3 -fno-strict-aliasing -march=native
+CFLAGS = -O3 -fno-alias -xhost
 
 
 all: heat 
