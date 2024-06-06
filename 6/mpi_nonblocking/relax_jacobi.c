@@ -142,7 +142,7 @@ double relax_jacobi( double **u1, double **utmp1,
         sum += diff * diff;
     }
 
-    // For columns the corners should be counted again.
+    // For columns the corners should not be computed again.
     // Left column
     #pragma ivdep
     for(int i = 2; i <= param->local_size_y - 1; i++ ) {

@@ -2,22 +2,22 @@
 
 #SBATCH -J blocking
 
-#SBATCH -o output/blocking.out
-#SBATCH -e output/blocking.out
+#SBATCH -o output/nonblocking.out
+#SBATCH -e output/nonblocking.out
 
 #SBATCH --time=00:01:00
 #SBATCH --account=h039v
 #SBATCH --partition=test
 
-#SBATCH --nodes=1
-#SBATCH --ntasks=12
+#SBATCH --nodes=2
+#SBATCH --ntasks=81
 
 module load slurm_setup
 
 # Set number of nodes and tasks correctly for x,y dim!
-X_DIM=3
-Y_DIM=4
+X_DIM=9
+Y_DIM=9
 
 mpiexec -n $SLURM_NTASKS \
-    -genv I_MPI_DEBUG=5 \
+    -genv I_MPI_DEBUG=0 \
     ./heat test.dat heat.ppm $X_DIM $Y_DIM
