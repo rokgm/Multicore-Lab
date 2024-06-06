@@ -136,22 +136,36 @@ double relax_jacobi( double **u1, double **utmp1,
             sum += diff * diff;
 	    MPI_Waitall(8, req, MPI_STATUSES_IGNORE);
 	}
+	printf("Sum for no neighbours %f", sum);
+
 	}
 	
 	} else {
 	printf("Made it");
 	if (local_process_info->rank_up != MPI_PROC_NULL) {
 		end_i = param->local_size_y - 1;
+	} else {
+		end_i = param->local_size_y;
 	}
+
 	if (local_process_info->rank_down != MPI_PROC_NULL) {
 		start_i = 2;
+	} else {
+		start_i = 1;
 	}
+
 	if (local_process_info->rank_right != MPI_PROC_NULL) {
 		end_j = param->local_size_x - 1;
+	} else {
+		end_j = param->local_size_x - 1;
 	}
+
 	if (local_process_info->rank_left != MPI_PROC_NULL) {
 		start_j = 2;
+	} else {
+		start_j = 1;
 	}
+
 	printf("start_i %d, end_i %d, start_j %d, end_j %d", start_i, end_i, start_j, end_j);
         for(int i = start_i; i <= end_i; i++ ) {
         int ii = i * param->local_allocated_x;
@@ -169,9 +183,10 @@ double relax_jacobi( double **u1, double **utmp1,
         }
         }
 
+	//printf("Sum after inner iteration")
 	MPI_Waitall(8, req, MPI_STATUSES_IGNORE);
 
-	if (start_i != 0) {
+	if (start_i != 1) {
 	int i = 1;
         int ii = i * param->local_allocated_x;
         int iim1 = (i - 1) * param->local_allocated_x;
@@ -188,7 +203,7 @@ double relax_jacobi( double **u1, double **utmp1,
         }
 	}
 
-	if (end_i != 0) {
+	if (end_i != param->local_size_y) {
 	int i = param->local_size_y;
         int ii = i * param->local_allocated_x;
         int iim1 = (i - 1) * param->local_allocated_x;
@@ -206,7 +221,7 @@ double relax_jacobi( double **u1, double **utmp1,
         }
 	
 
-	if (start_j != 0)  {
+	if (start_j != 1)  {
 	for(int i = 1; i <= param->local_size_y; i++ ) {
         int ii = i * param->local_allocated_x;
         int iim1 = (i - 1) * param->local_allocated_x;
@@ -223,7 +238,7 @@ double relax_jacobi( double **u1, double **utmp1,
         }
 	}
 
-	if (end_j != 0) {
+	if (end_j != param->local_size_x) {
 	for(int i = 1; i <= param->local_size_y; i++ ) {
         int ii = i * param->local_allocated_x;
         int iim1 = (i - 1) * param->local_allocated_x;
