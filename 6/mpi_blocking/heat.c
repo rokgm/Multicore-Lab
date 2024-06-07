@@ -95,7 +95,7 @@ int main(int argc, char *argv[]) {
 	double residual;
 
 	// set the visualization resolution
-	param.visres = 5;
+	param.visres = 100;
 
 	// Set params
 	// Set 2D distribution x_dim, y_dim.
@@ -212,6 +212,7 @@ int main(int argc, char *argv[]) {
 
 	// Coarsen and write image
 	param.act_res = param.act_res - param.res_step_size;
+	param.visres = param.visres > param.act_res? param.act_res : param.visres;
 	int local_newx = (param.visres + 2) / param.x_dist + (local_process_info.cart_coords[0] < (param.visres + 2) % param.x_dist);
     int local_newy = (param.visres + 2) / param.y_dist + (local_process_info.cart_coords[1] < (param.visres + 2) % param.y_dist);
 	double *local_uvis = (double*)calloc(sizeof(double), local_newx * local_newy);
@@ -242,9 +243,9 @@ int main(int argc, char *argv[]) {
 
 	#if 0
         if (local_process_info.cart_rank == 0) {
-            for (int y = 0; y < newy; y++) {
-                for (int x = 0; x < newx; x++) {
-                    printf("%f ", param.uvis[y * newx + x]);
+            for (int y = 0; y < (param.visres + 2); y++) {
+                for (int x = 0; x < (param.visres + 2); x++) {
+                    printf("%f ", param.uvis[y * (param.visres + 2) + x]);
                 }
                 printf("\n");
             }
