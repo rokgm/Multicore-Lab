@@ -57,6 +57,7 @@ int initialize( algoparam_t *param, local_process_info* local_process_info)
     //
     (param->u) = (double*)calloc(param->local_allocated_x * param->local_allocated_y, sizeof(double));
     (param->uhelp) = (double*)calloc(param->local_allocated_x * param->local_allocated_y, sizeof(double));
+
 	(param->send_buff_y_left) = (double*)calloc(param->local_size_y, sizeof(double));
 	(param->send_buff_y_right) = (double*)calloc(param->local_size_y, sizeof(double));
 	(param->recv_buff_y_left) = (double*)calloc(param->local_size_y, sizeof(double));
@@ -257,7 +258,6 @@ void write_image( FILE * f, double *u,
     }
 }
 
-
 void coarsen(double *u, int oldx, int oldy, double *uvis, int newx, int newy, int rank) {
     int stepx = oldx / newx;
     int stepy = oldy / newy;
@@ -341,4 +341,3 @@ void receive_merge_uvis(double *local_uvis, double *global_uvis, int local_newx,
     free(local_uvis_buffers);
     free(requests);
 }
-

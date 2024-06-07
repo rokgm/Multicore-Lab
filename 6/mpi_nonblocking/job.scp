@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH -J blocking
+#SBATCH -J nonblocking
 
 #SBATCH -o output/nonblocking.out
 #SBATCH -e output/nonblocking.out

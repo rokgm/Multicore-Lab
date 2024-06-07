@@ -88,6 +88,7 @@ int initialize( algoparam_t *param, local_process_info* local_process_info );
 int finalize( algoparam_t *param );
 void write_image( FILE * f, double *u,
 		  unsigned sizex, unsigned sizey );
+
 void coarsen(double *u, int oldx, int oldy, double *uvis, int newx, int newy, int rank);
 void receive_merge_uvis(double *local_uvis, double *global_uvis, int local_newx, int local_newy, int newx, int newy,
  int world_rank, int world_size, MPI_Comm comm_cart, int x_dist, int y_dist);

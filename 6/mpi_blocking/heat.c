@@ -67,7 +67,7 @@ void create_cartesian(local_process_info* local_process_info, algoparam_t* param
 	MPI_Cart_create(MPI_COMM_WORLD, ndims, dim, period, reorder, &local_process_info->comm_cart);
 	MPI_Comm_rank(local_process_info->comm_cart, &local_process_info->cart_rank);
 	MPI_Cart_coords(local_process_info->comm_cart, local_process_info->cart_rank, 2, local_process_info->cart_coords);
-#if 0
+#if 1
 	// Print cartesian rank and coordinates.
 	MPI_Barrier(MPI_COMM_WORLD);
 	printf("world rank=%d, cart rank=%d, cart coord=(%d,%d)\n", local_process_info->world_rank,
@@ -130,7 +130,7 @@ int main(int argc, char *argv[]) {
 			fprintf(stderr, "Error in Jacobi initialization.\n\n");
 			usage(argv[0]);
 		}
-#if 0
+#if 1
 		// Print local array params.
 		MPI_Barrier(MPI_COMM_WORLD);
 		printf("cart. rank %d: local x=%d, local y=%d, allocated x=%d, allocated y=%d, x start=%d, y start=%d\n",
@@ -146,13 +146,13 @@ int main(int argc, char *argv[]) {
 			}
 		}
 
-#if 0	
+#if 0
 		// Print uhelp, rank by rank
-        for (int rank = 0; rank < local_process_info.world_size; rank++) {
-            MPI_Barrier(MPI_COMM_WORLD);
-            if (rank != local_process_info.cart_rank)
-                continue;
-
+        // for (int rank = 0; rank < local_process_info.world_size; rank++) {
+        //     MPI_Barrier(MPI_COMM_WORLD);
+        //     if (rank != local_process_info.cart_rank)
+        //         continue;
+		if (local_process_info.world_rank == 0){
             printf("cart_rank = %d, u = \n", local_process_info.cart_rank);
             for (int y = 0; y < param.local_allocated_y; y++) {
                 for (int x = 0; x < param.local_allocated_x; x++) {
@@ -161,7 +161,7 @@ int main(int argc, char *argv[]) {
                 printf("\n");
             }
         }
-		MPI_Barrier(MPI_COMM_WORLD);
+		// MPI_Barrier(MPI_COMM_WORLD);
 #endif
 
 		// starting time
@@ -189,17 +189,71 @@ int main(int argc, char *argv[]) {
 		exp_number++;
 	}
 
-	// TODO rank 0, reduce, parallelize coarsen
-    // param.uvis  = (double*)calloc( sizeof(double),
-	// 			      (param.visres+2) *
-	// 			      (param.visres+2) );
+	#if 0
+		// Print uhelp, rank by rank
+        // for (int rank = 0; rank < local_process_info.world_size; rank++) {
+        //     MPI_Barrier(MPI_COMM_WORLD);
+        //     if (rank != local_process_info.cart_rank)
+        //         continue;
+		if (local_process_info.world_rank == 0){
+            printf("cart_rank = %d, u = \n", local_process_info.cart_rank);
+            for (int y = 0; y < param.local_allocated_y; y++) {
+                for (int x = 0; x < param.local_allocated_x; x++) {
+                    printf("%f ", param.uhelp[y * param.local_allocated_x + x]);
+                }
+                printf("\n");
+            }
+        }
+		// MPI_Barrier(MPI_COMM_WORLD);
+	#endif
 
-	// param.act_res = param.act_res - param.res_step_size;
 
-	// coarsen(param.u, param.act_res + 2, param.act_res + 2, param.uvis, param.visres + 2, param.visres + 2);
 
-	// write_image(resfile, param.uvis, param.visres + 2, param.visres + 2);
-	// free(param.uvis);
+
+	// Coarsen and write image
+	param.act_res = param.act_res - param.res_step_size;
+	param.visres = param.visres > param.act_res? param.act_res : param.visres;
+	int local_newx = (param.visres + 2) / param.x_dist + (local_process_info.cart_coords[0] < (param.visres + 2) % param.x_dist);
+    int local_newy = (param.visres + 2) / param.y_dist + (local_process_info.cart_coords[1] < (param.visres + 2) % param.y_dist);
+	double *local_uvis = (double*)calloc(sizeof(double), local_newx * local_newy);
+	 coarsen(param.uhelp, param.local_allocated_x, param.local_allocated_y, local_uvis, local_newx, local_newy, local_process_info.cart_rank);
+
+	#if 0
+        if (local_process_info.cart_rank == 1) {
+            for (int y = 0; y < local_newy; y++) {
+                for (int x = 0; x < local_newx; x++) {
+                    printf("%f ", local_uvis[y * local_newx + x]);
+                }
+                printf("\n");
+            }
+        }
+    #endif
+
+	if (local_process_info.cart_rank==0) {
+		param.uvis  = (double*)calloc( sizeof(double),
+				      (param.visres+2) *
+				      (param.visres+2) );
+    	receive_merge_uvis(local_uvis, param.uvis, local_newx, local_newy, param.visres + 2, param.visres + 2, local_process_info.cart_rank, local_process_info.world_size, 
+						local_process_info.comm_cart, param.x_dist, param.y_dist);
+		// write_image(resfile, param.uvis, param.visres + 2, param.visres + 2);
+	} else {
+		MPI_Send(local_process_info.cart_coords, 2, MPI_INT, 0, 0, local_process_info.comm_cart);
+        MPI_Send(local_uvis, local_newx * local_newy, MPI_DOUBLE, 0, 0, local_process_info.comm_cart);
+	}
+
+	#if 0
+        if (local_process_info.cart_rank == 0) {
+            for (int y = 0; y < (param.visres + 2); y++) {
+                for (int x = 0; x < (param.visres + 2); x++) {
+                    printf("%f ", param.uvis[y * (param.visres + 2) + x]);
+                }
+                printf("\n");
+            }
+        }
+    #endif
+
+	if (local_process_info.cart_rank == 0) free(param.uvis);
+	free(local_uvis);
 
 	free(time);
     finalize(&param);
