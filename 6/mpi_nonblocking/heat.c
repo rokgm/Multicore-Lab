@@ -204,7 +204,7 @@ int main(int argc, char *argv[]) {
 	double *local_uvis = (double*)calloc(sizeof(double), local_newx * local_newy);
 	coarsen(param.uhelp, param.local_allocated_x, param.local_allocated_y, local_uvis, local_newx, local_newy, local_process_info.cart_rank);
 
-	#if 1
+	#if 0
         if (local_process_info.cart_rank == 1) {
             for (int y = 0; y < local_newy; y++) {
                 for (int x = 0; x < local_newx; x++) {
@@ -229,7 +229,7 @@ int main(int argc, char *argv[]) {
          local_process_info.comm_cart, &coarsen_requests[local_process_info.cart_rank]);
 	}
 
-	#if 1
+	#if 0
         if (local_process_info.cart_rank == 0) {
             for (int y = 0; y < (param.visres+2); y++) {
                 for (int x = 0; x < (param.visres+2); x++) {

@@ -19,5 +19,5 @@ X_DIM=3
 Y_DIM=4
 
 mpiexec -n $SLURM_NTASKS \
-    -genv I_MPI_DEBUG=5 \
+    -genv I_MPI_DEBUG=0 \
     ./heat test.dat heat.ppm $X_DIM $Y_DIM

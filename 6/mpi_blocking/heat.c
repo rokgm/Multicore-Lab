@@ -67,7 +67,7 @@ void create_cartesian(local_process_info* local_process_info, algoparam_t* param
 	MPI_Cart_create(MPI_COMM_WORLD, ndims, dim, period, reorder, &local_process_info->comm_cart);
 	MPI_Comm_rank(local_process_info->comm_cart, &local_process_info->cart_rank);
 	MPI_Cart_coords(local_process_info->comm_cart, local_process_info->cart_rank, 2, local_process_info->cart_coords);
-#if 1
+#if 0
 	// Print cartesian rank and coordinates.
 	MPI_Barrier(MPI_COMM_WORLD);
 	printf("world rank=%d, cart rank=%d, cart coord=(%d,%d)\n", local_process_info->world_rank,
@@ -130,7 +130,7 @@ int main(int argc, char *argv[]) {
 			fprintf(stderr, "Error in Jacobi initialization.\n\n");
 			usage(argv[0]);
 		}
-#if 1
+#if 0
 		// Print local array params.
 		MPI_Barrier(MPI_COMM_WORLD);
 		printf("cart. rank %d: local x=%d, local y=%d, allocated x=%d, allocated y=%d, x start=%d, y start=%d\n",
