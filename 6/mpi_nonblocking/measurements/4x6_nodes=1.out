@@ -7,17 +7,17 @@ Num. Heat sources : 2
 
 Resolution: 2000
 ===================
-Execution time: 0.014534
+Execution time: 0.039072
 Residual: 0.236070
 
-megaflops:  96325.9
+megaflops:  35831.3
   flop instructions (M):  1400.000
 
 
 Resolution: 6000
 ===================
-Execution time: 0.120473
+Execution time: 0.313741
 Residual: 0.708009
 
-megaflops:  104587.8
+megaflops:  40160.5
   flop instructions (M):  12600.000

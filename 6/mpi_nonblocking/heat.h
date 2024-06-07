@@ -48,11 +48,11 @@ typedef struct
     int y_dist;
 
     // Buffer used for vertical communication of size local_size_y.
-    double* send_buff_y_right;
     double* send_buff_y_left;
-    double* recv_buff_y_right;
     double* recv_buff_y_left;
-
+    double* send_buff_y_right;
+    double* recv_buff_y_right;
+  
     // Allocated part of the array, overlapping areas are included in here.
     double *u, *uhelp;
     // TODO
@@ -77,7 +77,6 @@ typedef struct
     int rank_right;
     int rank_up;
     int rank_down;
-
 }
 local_process_info;
 
@@ -89,8 +88,10 @@ int initialize( algoparam_t *param, local_process_info* local_process_info );
 int finalize( algoparam_t *param );
 void write_image( FILE * f, double *u,
 		  unsigned sizex, unsigned sizey );
-int coarsen(double *uold, unsigned oldx, unsigned oldy ,
-	    double *unew, unsigned newx, unsigned newy );
+
+void coarsen(double *u, int oldx, int oldy, double *uvis, int newx, int newy, int rank);
+void receive_merge_uvis(double *local_uvis, double *global_uvis, int local_newx, int local_newy, int newx, int newy,
+ int world_rank, int world_size, MPI_Comm comm_cart, int x_dist, int y_dist);
 
 // Gauss-Seidel: relax_gauss.c
 double residual_gauss( double *u, double *utmp,
