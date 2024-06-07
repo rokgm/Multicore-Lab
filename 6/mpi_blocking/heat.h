@@ -79,10 +79,11 @@ local_process_info;
 // misc.c
 int initialize( algoparam_t *param, local_process_info* local_process_info );
 int finalize( algoparam_t *param );
-void write_image( FILE * f, double *u,
-		  unsigned sizex, unsigned sizey );
-int coarsen(double *uold, unsigned oldx, unsigned oldy ,
-	    double *unew, unsigned newx, unsigned newy );
+void write_image( FILE *f, double *u,
+		unsigned sizex, unsigned sizey );
+void coarsen(double *local_u, int local_oldx, int local_oldy, double *local_uvis, int local_newx, int local_newy, int rank);
+void receive_merge_uvis(double *local_uvis, double *global_uvis, int local_newx, int local_newy, int newx, int newy, int world_rank, int world_size, 
+MPI_Comm comm_cart, int x_dist, int y_dist);
 
 // Gauss-Seidel: relax_gauss.c
 double residual_gauss( double *u, double *utmp,
