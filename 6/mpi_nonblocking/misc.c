@@ -257,46 +257,88 @@ void write_image( FILE * f, double *u,
     }
 }
 
-int coarsen( double *uold, unsigned oldx, unsigned oldy ,
-	     double *unew, unsigned newx, unsigned newy )
-{
-    int i, j, k, l, ii, jj;
 
-    int stopx = newx;
+void coarsen(double *u, int oldx, int oldy, double *uvis, int newx, int newy, int rank) {
+    int stepx = oldx / newx;
+    int stepy = oldy / newy;
+	int stopx = newx;
     int stopy = newy;
-    float temp;
-    float stepx = (float) oldx/(float)newx;
-    float stepy = (float)oldy/(float)newy;
 
-    if (oldx<newx){
+	if (oldx<newx){
 	 stopx=oldx;
-	 stepx=1.0;
+	 stepx=1;
     }
     if (oldy<newy){
      stopy=oldy;
-     stepy=1.0;
+     stepy=1;
     }
 
-    //printf("oldx=%d, newx=%d\n",oldx,newx);
-    //printf("oldy=%d, newy=%d\n",oldy,newy);
-    //printf("rx=%f, ry=%f\n",stepx,stepy);
-    // NOTE: this only takes the top-left corner,
-    // and doesnt' do any real coarsening
-
-    for( i=0; i<stopy; i++ ){
-       ii=stepy*i;
-       for( j=0; j<stopx; j++ ){
-          jj=stepx*j;
-          temp = 0;
-          for ( k=0; k<stepy; k++ ){
-	       	for ( l=0; l<stepx; l++ ){
-	       		if (ii+k<oldx && jj+l<oldy)
-		           temp += uold[(ii+k)*oldx+(jj+l)] ;
-	        }
-	      }
-	      unew[i*newx+j] = temp / (stepy*stepx);
-       }
+    for (int i = 0; i < stopy; i++) {
+    int ii = stepy * i;
+    for (int j = 0; j < stopx; j++) {
+        int jj = stepx * j;
+        double temp = 0.0;
+        for (int k = 0; k < stepy; k++) {
+            for (int l = 0; l < stepx; l++) {
+                if (ii + k < oldy && jj + l < oldx) {
+                    temp += u[(ii + k) * oldx + (jj + l)];
+                }
+            }
+        }
+        uvis[i * newx + j] = temp / (stepx * stepy);
     }
-
-  return 1;
+    } 
 }
+
+
+void receive_merge_uvis(double *local_uvis, double *global_uvis, int local_newx, int local_newy, int newx, int newy, int world_rank, int world_size, MPI_Comm comm_cart, int x_dist, int y_dist) {
+    MPI_Status status;
+    int src_cart_coord[2];
+    int *src_local_newx = (int *)malloc(world_size * sizeof(int));
+    int *src_local_newy = (int *)malloc(world_size * sizeof(int));
+    int *src_start_valuex = (int *)malloc(world_size * sizeof(int));
+    int *src_start_valuey = (int *)malloc(world_size * sizeof(int));
+    double **local_uvis_buffers = (double **)malloc(world_size * sizeof(double *));
+    MPI_Request *requests = (MPI_Request *)malloc(world_size * sizeof(MPI_Request));
+
+    // receive data from all ranks and compute sizes and starting points
+    for (int src_rank = 1; src_rank < world_size; src_rank++) {
+        MPI_Recv(src_cart_coord, 2, MPI_INT, src_rank, 0, comm_cart, MPI_STATUS_IGNORE);
+        src_local_newy[src_rank] = newx / x_dist + (src_cart_coord[0] < newx % x_dist);
+        src_local_newx[src_rank] = newy / y_dist + (src_cart_coord[1] < newy % y_dist);
+        src_start_valuey[src_rank] = src_cart_coord[0] * (newx / x_dist) + ((src_cart_coord[0] <= newx % x_dist) ? src_cart_coord[0] : newx % x_dist);
+        src_start_valuex[src_rank] = src_cart_coord[1] * (newy / y_dist) + ((src_cart_coord[1] <= newy % y_dist) ? src_cart_coord[1] : newy % y_dist);
+        local_uvis_buffers[src_rank] = (double *)calloc(src_local_newx[src_rank] * src_local_newy[src_rank], sizeof(double));
+        MPI_Irecv(local_uvis_buffers[src_rank], src_local_newx[src_rank] * src_local_newy[src_rank], MPI_DOUBLE, src_rank, 0, comm_cart, &requests[src_rank]);
+    }
+
+	// copy local_uvis data from rank 0 to global_uvis
+	for (int i = 0; i < local_newy; i++) {
+		for (int j = 0; j < local_newx; j++) {
+			global_uvis[i * newx + j] = local_uvis[i * local_newx + j];
+		}
+	}
+
+    // wait for all receives
+    for (int src_rank = 1; src_rank < world_size; src_rank++) {
+        MPI_Wait(&requests[src_rank], &status);
+    }
+
+    // copy received data to global_uvis
+    for (int src_rank = 1; src_rank < world_size; src_rank++) {
+        for (int i = 0; i < src_local_newy[src_rank]; i++) {
+            for (int j = 0; j < src_local_newx[src_rank]; j++) {
+                global_uvis[(i * newx) + (src_start_valuey[src_rank] * newx) + src_start_valuex[src_rank] + j] = local_uvis_buffers[src_rank][i * src_local_newx[src_rank] + j];
+            }
+        }
+        free(local_uvis_buffers[src_rank]);
+    }
+
+    free(src_local_newx);
+    free(src_local_newy);
+    free(src_start_valuex);
+    free(src_start_valuey);
+    free(local_uvis_buffers);
+    free(requests);
+}
+
