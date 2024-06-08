@@ -55,7 +55,6 @@ typedef struct
   
     // Allocated part of the array, overlapping areas are included in here.
     double *u, *uhelp;
-    // TODO
     double *uvis;
 
     unsigned   numsrcs;     // number of heat sources

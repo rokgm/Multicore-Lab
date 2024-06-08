@@ -1,5 +1,5 @@
 CC =  mpicc
-CFLAGS = -O3 -fno-alias -xhost
+CFLAGS = -O3 -fno-alias -xhost -qopenmp
 
 
 all: heat 

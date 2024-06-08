@@ -5,15 +5,15 @@ generate_slurm_script() {
     local X_DIM=$1
     local Y_DIM=$2
     local nodes=$3
-    local ntasks=$4
+    local ompthreads=$4
     local script_name=$5
 
-    output_file="measurements/${X_DIM}x${Y_DIM}_nodes=${nodes}.out"
+    output_file="measurements/${X_DIM}x${Y_DIM}_nodes=${nodes}_ompthreads=${ompthreads}.out"
 
     cat << EOF > $script_name
 #!/bin/bash
 
-#SBATCH -J non_blocking
+#SBATCH -J hybrid
 
 #SBATCH -o $output_file
 #SBATCH -e $output_file
@@ -23,15 +23,23 @@ generate_slurm_script() {
 #SBATCH --partition=test
 
 #SBATCH --nodes=$nodes
-#SBATCH --ntasks=$ntasks
+#SBATCH --ntasks=$nodes
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=$ompthreads
 
 module load slurm_setup
 
-# Set number of nodes and tasks correctly for x,y dim!
+# Set number of nodes and tasks correctly!
+# Split for node distribtion.
 X_DIM=$X_DIM
 Y_DIM=$Y_DIM
 
-mpiexec -n \$SLURM_NTASKS ./heat test.dat heat.ppm \$X_DIM \$Y_DIM
+export OMP_NUM_THREADS=$ompthreads
+export KMP_AFFINITY=granularity=fine,scatter
+
+for run in {1..5}; do
+    mpiexec -n \$SLURM_NTASKS ./heat test.dat heat.ppm \$X_DIM \$Y_DIM
+done
 EOF
 }
 
@@ -42,50 +50,22 @@ wait_for_jobs_to_finish() {
     done
 }
 
-# List of (X_DIM, Y_DIM) pairs
-# max for 4 nodes is 192 = 12 * 16
+# Split for nodes
 dim_pairs=(
-    # Go up by socket, node...
-    "1 24"
-    "1 48"
-    "1 96"
-    "1 144"
-    "1 192" 
-
-    "24 1"
-    "48 1"
-    "96 1"
-    "144 1"
-    "192 1"   
-
-    # 1 socket 
-    "4 6"
-    "6 4"
-
-    # 1 node
-    "6 8"
-    "8 6"
-
-    # 2 nodes
-    "12 8"
-    "8 12"
-
-    # 3 nodes
-    "12 12"
-
-    # 4 nodes
-    "12 16"
-    "16 12"
+    "1 2"
+    "2 1"
+    "1 3"
+    "3 1"
 )
 
 for pair in "${dim_pairs[@]}"; do
     X_DIM=$(echo $pair | cut -d' ' -f1)
     Y_DIM=$(echo $pair | cut -d' ' -f2)
-    ntasks=$((X_DIM * Y_DIM))
-    nodes=$(( (ntasks + 47) / 48 ))
-    script_name="${X_DIM}x${Y_DIM}_nodes=${nodes}.scp"
+    nodes=$((X_DIM * Y_DIM))
+    ompthreads=48
+    script_name="${X_DIM}x${Y_DIM}_nodes=${nodes}_ompthreads=${ompthreads}.scp"
 
-    generate_slurm_script $X_DIM $Y_DIM $nodes $ntasks $script_name
+    generate_slurm_script $X_DIM $Y_DIM $nodes $ompthreads $script_name
 
     sbatch $script_name
 

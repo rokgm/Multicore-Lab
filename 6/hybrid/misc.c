@@ -55,8 +55,21 @@ int initialize( algoparam_t *param, local_process_info* local_process_info)
     //
     // allocate memory
     //
-    (param->u) = (double*)calloc(param->local_allocated_x * param->local_allocated_y, sizeof(double));
-    (param->uhelp) = (double*)calloc(param->local_allocated_x * param->local_allocated_y, sizeof(double));
+
+    (param->u) = (double*)malloc(param->local_allocated_x * param->local_allocated_y * sizeof(double));
+    (param->uhelp) = (double*)malloc(param->local_allocated_x * param->local_allocated_y * sizeof(double));
+
+	// First touch allocation
+	#pragma omp parallel
+	{
+		#pragma omp for
+		for (int y = 0; y < param->local_allocated_y; y++){
+			for (int x = 0; x < param->local_allocated_x; x++){
+				param->u[y * param->local_allocated_x + x] = 0;
+				param->uhelp[y * param->local_allocated_x + x] = 0;
+			}
+		}
+	}
 
 	(param->send_buff_y_left) = (double*)calloc(param->local_size_y, sizeof(double));
 	(param->send_buff_y_right) = (double*)calloc(param->local_size_y, sizeof(double));

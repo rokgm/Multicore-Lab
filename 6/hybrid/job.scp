@@ -1,22 +1,28 @@
 #!/bin/bash
 
-#SBATCH -J nonblocking
+#SBATCH -J hybrid
 
-#SBATCH -o output/nonblocking.out
-#SBATCH -e output/nonblocking.out
+#SBATCH -o output/hybrid.out
+#SBATCH -e output/hybrid.out
 
 #SBATCH --time=00:01:00
 #SBATCH --account=h039v
 #SBATCH --partition=test
 
-#SBATCH --nodes=2
-#SBATCH --ntasks=81
+#SBATCH --nodes=4
+#SBATCH --ntasks=4
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=48
 
 module load slurm_setup
 
-# Set number of nodes and tasks correctly for x,y dim!
-X_DIM=9
-Y_DIM=9
+# Set number of nodes and tasks correctly!
+# Split for node distribtion.
+X_DIM=2
+Y_DIM=2
+
+export OMP_NUM_THREADS=48
+export KMP_AFFINITY=granularity=fine,scatter
 
 mpiexec -n $SLURM_NTASKS \
     -genv I_MPI_DEBUG=0 \
