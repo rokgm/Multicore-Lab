@@ -1,9 +1,7 @@
 /**
- * Very simple example strategy:
- * Search all possible positions reachable via one move,
- * and return the move leading to best position
+ * Minimax
  *
- * (c) 2006, Josef Weidendorfer
+ *
  */
 
 #include <stdlib.h>
@@ -26,11 +24,12 @@
  * - call finishedNode() when finishing evaluation of a tree node
  * - Use _maxDepth for strength level (maximal level searched in tree)
  */
+
 class MinimaxStrategy : public SearchStrategy
 {
 public:
     // Defines the name of the strategy
-    MinimaxStrategy() : SearchStrategy("OneLevel") {}
+    MinimaxStrategy() : SearchStrategy("Minimax", 3) {}
 
     // Factory method: just return a new instance of this class
     SearchStrategy *clone() { return new MinimaxStrategy(); }
@@ -39,26 +38,36 @@ private:
     /**
      * Implementation of the strategy.
      */
+    Move _currentBestMove;
+    int _maxDepth;
     void searchBestMove();
+    int minimax(Move m, int depth, bool maximizingPlayer);
 };
 
 void MinimaxStrategy::searchBestMove()
 {
-    // TODO: call minimax
-    int maxDepth = 5;
     Move m;
+
+    int value = minimax(m, _maxDepth, true);
 }
 
-int minimax(Move &m, int depth, bool maximizingPlayer, int maxDepth)
+int MinimaxStrategy::minimax(Move m, int depth, bool maximizingPlayer)
 {
+    int currentValue = -14999 + depth, value;
     int value;
     int eval;
     MoveList list;
 
-    if (depth == 0 || depth == maxDepth) // TODO fix condition
+    if (depth == 0) // TODO fix condition: add || game over
     {
-        playMove(m);
+        _board->playMove(m);
         value = evaluate();
+        if (value > currentValue)
+        {
+            currentValue = value;
+            _sc->foundBestMove(0, m, value); // wtf
+            _currentBestMove = m;
+        }
 
         return value;
     }
@@ -70,20 +79,22 @@ int minimax(Move &m, int depth, bool maximizingPlayer, int maxDepth)
 
         while (list.getNext(m))
         {
-            value = std::max(value, minimax(m, depth - 1, false, maxDepth));
+            value = std::max(value, minimax(m, depth - 1, false));
             return value;
         }
     }
     else
     {
         value = 15000;
+        generateMoves(list);
+
         while (list.getNext(m))
         {
-            value = std::min(value, minimax(m, depth - 1, true, maxDepth));
+            value = std::min(value, minimax(m, depth - 1, true));
             return value;
         }
     }
 }
 
-// register ourselve as a search strategy
+// register ourselves as a search strategy
 MinimaxStrategy minimaxStrategy;
