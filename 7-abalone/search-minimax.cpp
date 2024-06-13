@@ -39,18 +39,53 @@ private:
     /**
      * Implementation of the strategy.
      */
+    Variation _pv;
+    bool _inPV;
+    Move _currentBestMove;
+    int _currentMaxDepth;
+
     void searchBestMove();
+    int minimax(int depth, bool maximizingPlayer)
+
 };
 
 void MinimaxStrategy::searchBestMove()
 {
-    // TODO: call minimax
-    int maxDepth = 5;
-    Move m;
+    _pv.clear(_maxDepth);
+    _currentBestMove.type = Move::none;
+    _currentMaxDepth=1;
+    int currentValue = 0;
+    bool maximizingPlayer = true;
+
+    /* iterative deepening loop done in recursion */
+    currentValue = minimax(0, maximizingPlayer);
+
+    /* stop searching if a win position is found */
+    if (currentValue > 14900 || currentValue < -14900)
+        _stopSearch = true;
+
+    // // /* Don't break out if we haven't found a move */  idk
+    // if (_currentBestMove.type == Move::none)
+    //     _stopSearch = false;
+    if (_stopSearch) break;
+    _currentMaxDepth++;
+
+    maximizingPlayer ? false : true; // switch to min or max
+    
+    _bestMove = _currentBestMove;
+
+
+    // // TODO: call minimax
+    // int maxDepth = 5;
+    // Move m;
 }
 
-int minimax(Move &m, int depth, bool maximizingPlayer, int maxDepth)
+int MinimaxStrategy::minimax(int depth, bool maximizingPlayer)
 {
+    int currentValue = -14999+depth;
+    Move m;
+    MoveList list;
+    bool depthPhase, doDepthSearch;
     int value;
     int eval;
     MoveList list;
@@ -83,6 +118,9 @@ int minimax(Move &m, int depth, bool maximizingPlayer, int maxDepth)
             return value;
         }
     }
+
+    if (currentValue > 14900 || currentValue < -14900)
+        _stopSearch = true;
 }
 
 // register ourselve as a search strategy
