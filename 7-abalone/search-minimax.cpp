@@ -6,6 +6,7 @@
  * (c) 2006, Josef Weidendorfer
  */
 
+#include <stdlib.h>
 #include "search.h"
 #include "board.h"
 #include "eval.h"
@@ -43,7 +44,45 @@ private:
 
 void MinimaxStrategy::searchBestMove()
 {
-    // TODO
+    // TODO: call minimax
+    int maxDepth = 5;
+    Move m;
+}
+
+int minimax(Move &m, int depth, bool maximizingPlayer, int maxDepth)
+{
+    int value;
+    int eval;
+    MoveList list;
+
+    if (depth == 0 || depth == maxDepth) // TODO fix condition
+    {
+        playMove(m);
+        value = evaluate();
+
+        return value;
+    }
+
+    if (maximizingPlayer)
+    {
+        value = -15000;
+        generateMoves(list);
+
+        while (list.getNext(m))
+        {
+            value = std::max(value, minimax(m, depth - 1, false, maxDepth));
+            return value;
+        }
+    }
+    else
+    {
+        value = 15000;
+        while (list.getNext(m))
+        {
+            value = std::min(value, minimax(m, depth - 1, true, maxDepth));
+            return value;
+        }
+    }
 }
 
 // register ourselve as a search strategy
