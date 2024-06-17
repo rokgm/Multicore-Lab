@@ -5,6 +5,7 @@
  */
 
 #include <stdlib.h>
+#include <iostream>
 #include "search.h"
 #include "board.h"
 #include "eval.h"
@@ -29,7 +30,7 @@ class MinimaxStrategy : public SearchStrategy
 {
 public:
     // Defines the name of the strategy
-    MinimaxStrategy() : SearchStrategy("Minimax", 3) {}
+    MinimaxStrategy() : SearchStrategy("Minimax") {}
 
     // Factory method: just return a new instance of this class
     SearchStrategy *clone() { return new MinimaxStrategy(); }
@@ -38,62 +39,66 @@ private:
     /**
      * Implementation of the strategy.
      */
-    Move _currentBestMove;
-    int _maxDepth;
+    // Move _currentBestMove;
+    int _currDepth;
     void searchBestMove();
-    int minimax(Move m, int depth, bool maximizingPlayer);
+    int minimax(int depth);
 };
 
 void MinimaxStrategy::searchBestMove()
 {
-    Move m;
-
-    int value = minimax(m, _maxDepth, true);
+    int bestEvaluation = minEvaluation();
+    int evaluation;
+    _currDepth = 0;
+    setMaxDepth(3); // TODO: Where to do this?
+    evaluation = minimax(_currDepth);
+    std::cout << "Evaluation: " << evaluation << std::endl;
 }
 
-int MinimaxStrategy::minimax(Move m, int depth, bool maximizingPlayer)
+int MinimaxStrategy::minimax(int depth)
 {
-    int currentValue = -14999 + depth, value;
-    int value;
-    int eval;
+    // Check is finished searching
+    // TODO: add check to see if game over?
+    if (depth >= _maxDepth)
+    {
+        return evaluate();
+    }
+
+    int max = -15000;
+    int min = 15000;
+    Move m;
     MoveList list;
+    // Generate all possible moves from current position
+    generateMoves(list);
 
-    if (depth == 0) // TODO fix condition: add || game over
+    // Evaluate all moves in move list and recursively traverse until max depth
+    while (list.getNext(m))
     {
-        _board->playMove(m);
-        value = evaluate();
-        if (value > currentValue)
+        int evaluation;
+        playMove(m);
+
+        if (depth + 1 < _maxDepth)
         {
-            currentValue = value;
-            _sc->foundBestMove(0, m, value); // wtf
-            _currentBestMove = m;
+            evaluation = -minimax(depth + 1);
+        }
+        else
+        {
+            evaluation = evaluate();
         }
 
-        return value;
-    }
+        // Reset the board
+        takeBack();
 
-    if (maximizingPlayer)
-    {
-        value = -15000;
-        generateMoves(list);
-
-        while (list.getNext(m))
+        if (evaluation > max)
         {
-            value = std::max(value, minimax(m, depth - 1, false));
-            return value;
+            // Found best move so far
+            max = evaluation;
+            foundBestMove(depth, m, evaluation);
         }
     }
-    else
-    {
-        value = 15000;
-        generateMoves(list);
 
-        while (list.getNext(m))
-        {
-            value = std::min(value, minimax(m, depth - 1, true));
-            return value;
-        }
-    }
+    finishedNode(depth, 0);
+    return max;
 }
 
 // register ourselves as a search strategy
