@@ -37,22 +37,21 @@ int NegamaxStrategy::negamax(int depth)
     // Add depth to find shortest win
     int bestEvaluation = minEvaluation() + depth;
 
+    // Check for a losing position, return negative minimum because opponents move was last.
+    if (!_board->isValid())
+        return bestEvaluation;
+
+    // Evaluation is done from opponents perspective, so negate it.
+    if (depth >= _maxDepth)
+        return -evaluate();
+
     Move m;
     MoveList list;
     _board->generateMoves(list);
 
     while (list.getNext(m)) {
-        int evaluation;
-	    playMove(m);
-        // check for a win position first
-        if (!_board->isValid())
-            evaluation = maxEvaluation() - depth;
-        else{
-            if (depth + 1 < _maxDepth)
-                evaluation = -negamax(depth + 1);
-            else
-                evaluation = evaluate();
-        }
+        playMove(m);
+        int evaluation = -negamax(depth + 1);
         takeBack();
 
         if (evaluation > bestEvaluation) {
@@ -70,4 +69,4 @@ int NegamaxStrategy::negamax(int depth)
 }
 
 // register ourselves as a search strategy
-NegamaxStrategy negamaxtrategy;
+NegamaxStrategy negamaxStrategy;

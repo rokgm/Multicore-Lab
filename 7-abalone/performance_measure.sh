@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Number of games to be played
-NUM_GAMES=1
+NUM_GAMES=4
 # Strategy level for players
 STRATEGY_X=3
 STRATEGY_O=3
@@ -22,10 +22,10 @@ run_game() {
   PLAYER_O_PID=$!
 
   # Run the game and capture the output
-  # GAME_OUTPUT=$(./referee -p 3000 -p 4000 -t 30)
+  GAME_OUTPUT=$(./referee -p 3000 -p 4000 -t 15)
   # Comment above and uncomment below line to see the game output, game statistics
   # are not correct then.
-  ./referee -p 3000 -p 4000 -t 30
+  # ./referee -p 3000 -p 4000 -t 30
 
   # Wait for the players to finish
   wait $PLAYER_X_PID
