@@ -50,7 +50,6 @@ void MinimaxStrategy::searchBestMove()
     int bestEvaluation = minEvaluation();
     int evaluation;
     _currDepth = 0;
-    setMaxDepth(3); // TODO: Where to do this?
     evaluation = minimax(_currDepth);
     std::cout << "Evaluation: " << evaluation << std::endl;
 }
