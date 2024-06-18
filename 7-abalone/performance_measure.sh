@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Number of games to be played
-NUM_GAMES=4
+NUM_GAMES=1
 # Strategy level for players
 STRATEGY_X=3
 STRATEGY_O=3
@@ -15,17 +15,25 @@ draws=0
 
 # Function to run a single game
 run_game() {
-  # Start both players in the background
-  ./player -p 3000 -s $STRATEGY_X $DEPTH_X X > /dev/null 2>&1 &
-  PLAYER_X_PID=$!
-  ./player -p 4000 -s $STRATEGY_O $DEPTH_O O > /dev/null 2>&1 &
-  PLAYER_O_PID=$!
 
-  # Run the game and capture the output
-  GAME_OUTPUT=$(./referee -p 3000 -p 4000 -t 15)
-  # Comment above and uncomment below line to see the game output, game statistics
-  # are not correct then.
+  # Chagne args here
+  #########################################################################
+
+  # ./player -p 3000 -s $STRATEGY_X $DEPTH_X X > /dev/null 2>&1 &
+  # ./player -p 4000 -s $STRATEGY_O $DEPTH_O O > /dev/null 2>&1 &
+  #  GAME_OUTPUT=$(./referee -p 3000 -p 4000 -t 15)
+
+  # For measurments
+  ./player -p 3000 -v -n -1 -s $STRATEGY_X $DEPTH_X X > ./evals_midgame2_d=3_X.txt &
+  PLAYER_X_PID=$!
+  ./player -p 4000 -v -n -1 -s $STRATEGY_O $DEPTH_O O > ./evals_midgame2_d=3_O.txt &
+  PLAYER_O_PID=$!
+  GAME_OUTPUT=$(./referee -p 3000 -p 4000 position-midgame2)
+
+  # If running like this output is not captured and statiscitcs aren't correct.
   # ./referee -p 3000 -p 4000 -t 30
+
+  #########################################################################
 
   # Wait for the players to finish
   wait $PLAYER_X_PID

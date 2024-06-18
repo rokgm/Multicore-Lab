@@ -28,8 +28,7 @@ private:
 
 void NegamaxStrategy::searchBestMove()
 {
-    int evaluation = negamax(0);
-    std::cout << "Evaluation: " << evaluation << std::endl;
+    negamax(0);
 }
 
 int NegamaxStrategy::negamax(int depth)

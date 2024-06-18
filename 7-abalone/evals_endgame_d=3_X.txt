@@ -1,0 +1,50 @@
+Using strategy 'Negamax' (depth 3) ...
+NetworkDomain::startListening: Port 3000 in use
+NetworkDomain::startListening: Using Port 3001
+Connection::start: localhost:3004
+Connection::sendString: Cannot connect to localhost:3004
+Connection::start: localhost:3003
+Connection::sendString: Cannot connect to localhost:3003
+Connection::start: localhost:3002
+Connection::sendString: Cannot connect to localhost:3002
+Connection::start: localhost:3000
+NetworkDomain::newConnection: localhost:3000, now 1 active connections
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+ Search started ...
+ EvalRate 1500 k/s (6000 evals, 4 msecs)
+ Search finished after 0.110 secs
+  Found move 'I7/LeftUp/Push'
+  Leaves visited: 128197 (1165 k/s) 
+  Nodes visited: 3126 (41 leaves per node)
+X draws 'I7/LeftUp/Push' (after 0.110 secs)...
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X X . /
+      \ . . . . X /
+       -----------
+
+Terminating because given number of moves drawn.
