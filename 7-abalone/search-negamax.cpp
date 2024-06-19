@@ -23,7 +23,6 @@ private:
      */
     void searchBestMove() override;
     int negamax(int depth);
-    int negamaxEvaluate();
 };
 
 void NegamaxStrategy::searchBestMove()
@@ -54,14 +53,13 @@ int NegamaxStrategy::negamax(int depth)
 
         if (evaluation > bestEvaluation) {
             bestEvaluation = evaluation;
-            foundBestMove(depth, m, evaluation);
+            if (depth == 0)
+                _bestMove = m;
         }
 
         if (_stopSearch)
             break;
     }
-    
-    finishedNode(depth, 0);
 
     return bestEvaluation;
 }
