@@ -26,6 +26,16 @@
  * - Use _maxDepth for strength level (maximal level searched in tree)
  */
 
+/** 
+ * Running with this strategy, e.g.:
+ * ./player -s 2 -2 -v O 2 & ./player -s 2 -2 -v X 2 & ./start
+ * -s 2: minimax
+ * -2: play 2 moves
+ * O 2: player O, search depth 2
+ * -v: verbose, get evals/s
+*/
+
+
 class MinimaxStrategy : public SearchStrategy
 {
 public:
@@ -39,7 +49,6 @@ private:
     /**
      * Implementation of the strategy.
      */
-    // Move _currentBestMove;
     int _currDepth;
     void searchBestMove();
     int minimax(int depth);
@@ -50,15 +59,16 @@ void MinimaxStrategy::searchBestMove()
     int bestEvaluation = minEvaluation();
     int evaluation;
     _currDepth = 0;
-    setMaxDepth(3); // TODO: Where to do this?
+    // Call minimax 
     evaluation = minimax(_currDepth);
     std::cout << "Evaluation: " << evaluation << std::endl;
 }
 
 int MinimaxStrategy::minimax(int depth)
 {
-    // Check is finished searching
-    // TODO: add check to see if game over?
+    // Check if finished searching
+    // We finish when reaching max depth
+    // TODO: Should we also check for game over or is this enough?
     if (depth >= _maxDepth)
     {
         return evaluate();
@@ -79,10 +89,13 @@ int MinimaxStrategy::minimax(int depth)
 
         if (depth + 1 < _maxDepth)
         {
+            // Recursively call minimax
+            // This is using the fact that max(a, b) = -min(-a, -b)
             evaluation = -minimax(depth + 1);
         }
         else
         {
+            // At max depth 
             evaluation = evaluate();
         }
 
