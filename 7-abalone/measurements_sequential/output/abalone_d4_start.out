@@ -1,0 +1,122 @@
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'Negamax' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Using Port 23413
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 1 active connections
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 2 active connections
+ Reg of localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 2 active connections
+ Reg of remote connection localhost:23412
+NetworkDomain::addConnection: localhost:23412 already existing
+
+
+==========================================
+
+#0 O - O: 14, X: 14
+       -----------
+      / O O O O O \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . . . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+ Search started ...
+ EvalRate 750 k/s (6000 evals, 8 msecs)
+ EvalRate 712 k/s (156000 evals, 219 msecs)
+ EvalRate 700 k/s (306000 evals, 437 msecs)
+ EvalRate 694 k/s (456000 evals, 657 msecs)
+ EvalRate 698 k/s (606000 evals, 867 msecs)
+ EvalRate 699 k/s (756000 evals, 1081 msecs)
+ EvalRate 696 k/s (906000 evals, 1300 msecs)
+ EvalRate 697 k/s (1056000 evals, 1513 msecs)
+ EvalRate 698 k/s (1206000 evals, 1726 msecs)
+ EvalRate 700 k/s (1356000 evals, 1937 msecs)
+ EvalRate 699 k/s (1506000 evals, 2152 msecs)
+ EvalRate 701 k/s (1656000 evals, 2360 msecs)
+ EvalRate 701 k/s (1806000 evals, 2574 msecs)
+ EvalRate 702 k/s (1956000 evals, 2783 msecs)
+ EvalRate 704 k/s (2106000 evals, 2991 msecs)
+ EvalRate 705 k/s (2256000 evals, 3196 msecs)
+ EvalRate 707 k/s (2406000 evals, 3402 msecs)
+ EvalRate 706 k/s (2556000 evals, 3620 msecs)
+ EvalRate 705 k/s (2706000 evals, 3833 msecs)
+ EvalRate 706 k/s (2856000 evals, 4041 msecs)
+ EvalRate 705 k/s (3006000 evals, 4258 msecs)
+ EvalRate 705 k/s (3156000 evals, 4471 msecs)
+ EvalRate 706 k/s (3306000 evals, 4679 msecs)
+ EvalRate 707 k/s (3456000 evals, 4887 msecs)
+ EvalRate 707 k/s (3606000 evals, 5096 msecs)
+ EvalRate 707 k/s (3756000 evals, 5306 msecs)
+ EvalRate 708 k/s (3906000 evals, 5515 msecs)
+ EvalRate 708 k/s (4056000 evals, 5728 msecs)
+ EvalRate 708 k/s (4206000 evals, 5936 msecs)
+ EvalRate 708 k/s (4356000 evals, 6147 msecs)
+ EvalRate 708 k/s (4506000 evals, 6357 msecs)
+ EvalRate 709 k/s (4656000 evals, 6566 msecs)
+ EvalRate 709 k/s (4806000 evals, 6774 msecs)
+ EvalRate 709 k/s (4956000 evals, 6983 msecs)
+ Search finished after 7.107 secs
+  Found move 'A1/RightDown'
+  Leaves visited: 5045110 (709 k/s) 
+  Nodes visited: 100893 (50 leaves per node)
+O draws 'A1/RightDown' (after 7.107 secs)...
+
+#1 X - O: 14, X: 14
+       -----------
+      / . O O O O \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . O . . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+Terminating because given number of moves drawn.
+
+#0 O - O: 14, X: 14
+       -----------
+      / O O O O O \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . . . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+O about to move...
+O draws move 'A1/RightDown'...
+
+#1 X - O: 14, X: 14
+       -----------
+      / . O O O O \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . O . . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+X about to move...

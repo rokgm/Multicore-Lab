@@ -1,0 +1,205 @@
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'Negamax' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Port 23413 in use
+NetworkDomain::startListening: Using Port 23414
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23413
+Connection::sendString: Cannot connect to localhost:23413
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 1 active connections
+
+
+==========================================
+
+#120 O - O: 14, X: 12
+       -----------
+      / . . . . . \
+     / O O O O O . \
+    / . O O X O . . \
+   / . O X O O . . . \
+  | . O O X X X . . . |
+   \ . . O X X X . . /
+    \ . . X . X . . /
+     \ . X . X . . /
+      \ . . . . . /
+       -----------
+
+ Search started ...
+ EvalRate 666 k/s (6000 evals, 9 msecs)
+ EvalRate 682 k/s (139200 evals, 204 msecs)
+ EvalRate 680 k/s (275600 evals, 405 msecs)
+ EvalRate 688 k/s (412000 evals, 598 msecs)
+ EvalRate 687 k/s (549600 evals, 800 msecs)
+ EvalRate 682 k/s (687200 evals, 1007 msecs)
+ EvalRate 678 k/s (824800 evals, 1215 msecs)
+ EvalRate 679 k/s (962400 evals, 1417 msecs)
+ EvalRate 679 k/s (1100000 evals, 1620 msecs)
+ EvalRate 680 k/s (1237600 evals, 1820 msecs)
+ EvalRate 680 k/s (1375200 evals, 2022 msecs)
+ EvalRate 679 k/s (1512800 evals, 2226 msecs)
+ EvalRate 680 k/s (1650400 evals, 2427 msecs)
+ EvalRate 680 k/s (1788000 evals, 2628 msecs)
+ EvalRate 680 k/s (1925600 evals, 2829 msecs)
+ EvalRate 680 k/s (2063200 evals, 3031 msecs)
+ EvalRate 680 k/s (2200800 evals, 3232 msecs)
+ EvalRate 681 k/s (2338400 evals, 3432 msecs)
+ EvalRate 681 k/s (2476000 evals, 3632 msecs)
+ EvalRate 681 k/s (2613600 evals, 3835 msecs)
+ EvalRate 680 k/s (2751200 evals, 4041 msecs)
+ EvalRate 680 k/s (2888800 evals, 4247 msecs)
+ EvalRate 679 k/s (3026400 evals, 4455 msecs)
+ EvalRate 679 k/s (3164000 evals, 4659 msecs)
+ EvalRate 678 k/s (3301600 evals, 4865 msecs)
+ EvalRate 679 k/s (3439200 evals, 5065 msecs)
+ EvalRate 678 k/s (3576800 evals, 5268 msecs)
+ EvalRate 679 k/s (3714400 evals, 5466 msecs)
+ EvalRate 679 k/s (3852000 evals, 5668 msecs)
+ EvalRate 679 k/s (3989600 evals, 5872 msecs)
+ EvalRate 679 k/s (4127200 evals, 6076 msecs)
+ EvalRate 679 k/s (4264800 evals, 6281 msecs)
+ EvalRate 679 k/s (4402400 evals, 6482 msecs)
+ EvalRate 679 k/s (4540000 evals, 6683 msecs)
+ EvalRate 679 k/s (4677600 evals, 6886 msecs)
+ EvalRate 679 k/s (4815200 evals, 7084 msecs)
+ EvalRate 679 k/s (4952800 evals, 7285 msecs)
+ EvalRate 679 k/s (5090400 evals, 7491 msecs)
+ EvalRate 679 k/s (5228000 evals, 7693 msecs)
+ EvalRate 679 k/s (5365600 evals, 7895 msecs)
+ EvalRate 679 k/s (5503200 evals, 8096 msecs)
+ EvalRate 679 k/s (5640800 evals, 8300 msecs)
+ EvalRate 679 k/s (5778400 evals, 8505 msecs)
+ EvalRate 678 k/s (5916000 evals, 8714 msecs)
+ EvalRate 678 k/s (6053600 evals, 8920 msecs)
+ EvalRate 679 k/s (6191200 evals, 9115 msecs)
+ EvalRate 679 k/s (6328800 evals, 9314 msecs)
+ EvalRate 679 k/s (6466400 evals, 9517 msecs)
+ EvalRate 679 k/s (6604000 evals, 9720 msecs)
+ EvalRate 679 k/s (6741600 evals, 9924 msecs)
+ EvalRate 679 k/s (6879200 evals, 10123 msecs)
+ EvalRate 679 k/s (7016800 evals, 10324 msecs)
+ EvalRate 679 k/s (7154400 evals, 10526 msecs)
+ EvalRate 679 k/s (7292000 evals, 10728 msecs)
+ EvalRate 679 k/s (7429600 evals, 10932 msecs)
+ EvalRate 678 k/s (7567200 evals, 11145 msecs)
+ EvalRate 678 k/s (7704800 evals, 11357 msecs)
+ EvalRate 678 k/s (7842400 evals, 11554 msecs)
+ EvalRate 679 k/s (7980000 evals, 11752 msecs)
+ EvalRate 679 k/s (8117600 evals, 11950 msecs)
+ EvalRate 679 k/s (8255200 evals, 12151 msecs)
+ EvalRate 679 k/s (8392800 evals, 12354 msecs)
+ EvalRate 679 k/s (8530400 evals, 12557 msecs)
+ EvalRate 679 k/s (8668000 evals, 12762 msecs)
+ EvalRate 679 k/s (8805600 evals, 12967 msecs)
+ EvalRate 678 k/s (8943200 evals, 13172 msecs)
+ EvalRate 679 k/s (9080800 evals, 13372 msecs)
+ EvalRate 679 k/s (9218400 evals, 13570 msecs)
+ EvalRate 679 k/s (9356000 evals, 13769 msecs)
+ EvalRate 679 k/s (9493600 evals, 13971 msecs)
+ EvalRate 679 k/s (9631200 evals, 14174 msecs)
+ EvalRate 679 k/s (9768800 evals, 14376 msecs)
+ EvalRate 679 k/s (9906400 evals, 14577 msecs)
+ EvalRate 679 k/s (10044000 evals, 14780 msecs)
+ EvalRate 679 k/s (10181600 evals, 14986 msecs)
+ EvalRate 679 k/s (10319200 evals, 15193 msecs)
+ EvalRate 679 k/s (10456800 evals, 15396 msecs)
+ EvalRate 679 k/s (10594400 evals, 15598 msecs)
+ EvalRate 679 k/s (10732000 evals, 15797 msecs)
+ EvalRate 679 k/s (10869600 evals, 15998 msecs)
+ EvalRate 679 k/s (11007200 evals, 16200 msecs)
+ EvalRate 679 k/s (11144800 evals, 16401 msecs)
+ EvalRate 679 k/s (11282400 evals, 16603 msecs)
+ EvalRate 679 k/s (11420000 evals, 16800 msecs)
+ EvalRate 679 k/s (11557600 evals, 16997 msecs)
+ EvalRate 680 k/s (11695200 evals, 17197 msecs)
+ EvalRate 679 k/s (11832800 evals, 17402 msecs)
+ EvalRate 679 k/s (11970400 evals, 17604 msecs)
+ EvalRate 679 k/s (12108000 evals, 17807 msecs)
+ EvalRate 679 k/s (12245600 evals, 18012 msecs)
+ EvalRate 679 k/s (12383200 evals, 18217 msecs)
+ EvalRate 679 k/s (12520800 evals, 18422 msecs)
+ EvalRate 679 k/s (12658400 evals, 18626 msecs)
+ EvalRate 679 k/s (12796000 evals, 18835 msecs)
+ EvalRate 679 k/s (12933600 evals, 19037 msecs)
+ EvalRate 679 k/s (13071200 evals, 19240 msecs)
+ EvalRate 679 k/s (13208800 evals, 19444 msecs)
+ EvalRate 679 k/s (13346400 evals, 19647 msecs)
+ EvalRate 679 k/s (13484000 evals, 19848 msecs)
+ EvalRate 679 k/s (13621600 evals, 20047 msecs)
+ EvalRate 679 k/s (13759200 evals, 20247 msecs)
+ EvalRate 679 k/s (13896800 evals, 20446 msecs)
+ EvalRate 679 k/s (14034400 evals, 20646 msecs)
+ EvalRate 679 k/s (14172000 evals, 20848 msecs)
+ EvalRate 679 k/s (14309600 evals, 21049 msecs)
+ EvalRate 679 k/s (14447200 evals, 21255 msecs)
+ EvalRate 679 k/s (14584800 evals, 21459 msecs)
+ EvalRate 679 k/s (14722400 evals, 21662 msecs)
+ EvalRate 679 k/s (14860000 evals, 21865 msecs)
+ EvalRate 679 k/s (14997600 evals, 22064 msecs)
+ EvalRate 679 k/s (15135200 evals, 22264 msecs)
+ EvalRate 679 k/s (15272800 evals, 22465 msecs)
+ EvalRate 679 k/s (15410400 evals, 22666 msecs)
+ EvalRate 679 k/s (15548000 evals, 22869 msecs)
+ EvalRate 679 k/s (15685600 evals, 23068 msecs)
+ EvalRate 679 k/s (15823200 evals, 23270 msecs)
+ EvalRate 679 k/s (15960800 evals, 23472 msecs)
+ EvalRate 679 k/s (16098400 evals, 23676 msecs)
+ EvalRate 679 k/s (16236000 evals, 23881 msecs)
+ Search finished after 23.913 secs
+  Found move 'B1/LeftDown'
+  Leaves visited: 16256864 (679 k/s) 
+  Nodes visited: 268076 (60 leaves per node)
+O draws 'B1/LeftDown' (after 23.913 secs)...
+
+#121 X - O: 14, X: 12
+       -----------
+      / . . . . . \
+     / . O O O O . \
+    / O O O X O . . \
+   / . O X O O . . . \
+  | . O O X X X . . . |
+   \ . . O X X X . . /
+    \ . . X . X . . /
+     \ . X . X . . /
+      \ . . . . . /
+       -----------
+
+Terminating because given number of moves drawn.
+
+#120 O - O: 14, X: 12
+       -----------
+      / . . . . . \
+     / O O O O O . \
+    / . O O X O . . \
+   / . O X O O . . . \
+  | . O O X X X . . . |
+   \ . . O X X X . . /
+    \ . . X . X . . /
+     \ . X . X . . /
+      \ . . . . . /
+       -----------
+
+O about to move...
+O draws move 'B1/LeftDown'...
+
+#121 X - O: 14, X: 12
+       -----------
+      / . . . . . \
+     / . O O O O . \
+    / O O O X O . . \
+   / . O X O O . . . \
+  | . O O X X X . . . |
+   \ . . O X X X . . /
+    \ . . X . X . . /
+     \ . X . X . . /
+      \ . . . . . /
+       -----------
+
+X about to move...
