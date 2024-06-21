@@ -3,7 +3,9 @@
  */
 
 #include <stdlib.h>
-#include <iostream>
+#include <iostream> 
+#include <vector>   // TODO remove after debug
+
 #include "search.h"
 #include "board.h"
 #include "eval.h"
@@ -23,42 +25,54 @@ private:
      */
     void searchBestMove() override;
     int negamax(int depth, Board& board);
+
+    // We need to evaluate on copies of the board not _board.
+    int evaluate_parallel(Board& board);
 };
+
+int NegamaxParallelStrategy::evaluate_parallel(Board& board)
+{
+    int v = _ev->calcEvaluation(&board); 
+    if (_sc) _stopSearch = _sc->afterEval();
+
+    return v;
+}
 
 void NegamaxParallelStrategy::searchBestMove()
 {
     int bestEvaluation = minEvaluation();
-    Move bestMove;
     MoveList list;
     _board->generateMoves(list);
 
     #pragma omp parallel
     {
-    #pragma omp single
+    #pragma omp single nowait
     {
-
+    
     Move m;
     while (list.getNext(m))
     {
-        Board boardCopy = *_board;
-        #pragma omp task shared(bestEvaluation, bestMove) firstprivate(m, boardCopy)
+        #pragma omp task firstprivate(m)
         {
+            // Must copy as firstprivate would just copy the pointer.
+            Board boardCopy = *_board;
+
             boardCopy.playMove(m);
-            int evaluation = -negamax(0, boardCopy);
+            int evaluation = -negamax(1, boardCopy);
             boardCopy.takeBack();
 
-            #pragma omp critical
+            #pragma omp critical (searchBestMove)
             {
                 if (evaluation > bestEvaluation) {
                     bestEvaluation = evaluation;
-                    bestMove = m;
+                    _bestMove = m;
                 }
             }
         }
     }
 
-    }
-    }
+    } // omp single
+    } // omp parallel
 }
 
 int NegamaxParallelStrategy::negamax(int depth, Board& board)
@@ -70,7 +84,7 @@ int NegamaxParallelStrategy::negamax(int depth, Board& board)
 
     // Evaluation is done from opponents perspective, so negate it.
     if (depth >= _maxDepth)
-        return -_ev->calcEvaluation(&board);
+        return -evaluate_parallel(board);
 
     int bestEvaluation = minEvaluation();
     Move m;
@@ -84,16 +98,13 @@ int NegamaxParallelStrategy::negamax(int depth, Board& board)
 
         if (evaluation > bestEvaluation) {
             bestEvaluation = evaluation;
-
-            // No need to update best move, searchBestMove will do that
-            // #pragma omp critical
-            // {
-            //     _bestMove = m;
-            // }
         }
 
-        if (_stopSearch)
-            break;
+        // WARNING FOR LATER!
+        // Evaluate can stop search if search callbacks are true.
+        // Also for PV, call foundBestMove and finishedNode to store whole principal variation.
+        // if (_stopSearch)
+        //     break;
     }
 
     return bestEvaluation;

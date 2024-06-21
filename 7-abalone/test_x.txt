@@ -1,0 +1,71 @@
+Using strategy 'NegamaxParallel' (depth 3) ...
+NetworkDomain::startListening: Using Port 3000
+Connection::start: localhost:3004
+Connection::sendString: Cannot connect to localhost:3004
+Connection::start: localhost:3003
+Connection::sendString: Cannot connect to localhost:3003
+Connection::start: localhost:3002
+Connection::sendString: Cannot connect to localhost:3002
+Connection::start: localhost:3001
+Connection::sendString: Cannot connect to localhost:3001
+ Reg of localhost:3001
+NetworkDomain::newConnection: localhost:3001, now 1 active connections
+
+
+==========================================
+
+#0 O - O: 14, X: 14
+       -----------
+      / O O O O O \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . . . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+
+
+==========================================
+
+#1 X - O: 14, X: 14
+       -----------
+      / O O O O O \
+     / O O O O O O \
+    / . . . . . . . \
+   / . . . O O O . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+ Search started ...
+ EvalRate 201 k/s (6454 evals, 32 msecs)
+ EvalRate 844 k/s (54070 evals, 64 msecs)
+ EvalRate 844 k/s (54070 evals, 64 msecs)
+ Search finished after 0.135 secs
+  Found move 'G5-G7/RightUp'
+  Leaves visited: 137924 (1021 k/s) 
+  Nodes visited: 1 (137924 leaves per node)
+X draws 'G5-G7/RightUp' (after 0.135 secs)...
+
+#2 O - O: 14, X: 14
+       -----------
+      / O O O O O \
+     / O O O O O O \
+    / . . . . . . . \
+   / . . . O O O . . \
+  | . . . . . . . . . |
+   \ . . . X X X . . /
+    \ . . . . . . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+Connection::sendString: Cannot connect to localhost:3001
+Terminating because given number of moves drawn.
