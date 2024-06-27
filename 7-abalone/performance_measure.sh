@@ -3,12 +3,15 @@
 # Number of games to be played
 NUM_GAMES=1
 # Strategy level for players
-STRATEGY_X=4
-STRATEGY_O=4
-DEPTH_X=3
-DEPTH_O=3
+STRATEGY_X=3
+STRATEGY_O=3
+DEPTH_X=4
+DEPTH_O=4
 
-export OMP_NUM_THREADS=48
+############################################################################ 
+# Set the number of threads for OpenMP
+############################################################################
+export OMP_NUM_THREADS=8
 
 # Counters for results
 wins_X=0
@@ -17,7 +20,7 @@ draws=0
 
 # Function to run a single game
 run_game() {
-
+  #########################################################################
   # Change args here
   #########################################################################
 
@@ -28,9 +31,9 @@ run_game() {
   # ./referee -p 3000 -p 4000 -t 30
 
   # For measurements
-  ./player -p 3000 -v -n -1 -s $STRATEGY_X $DEPTH_X X > ./test_x.txt &
+  ./player -p 3000 -v -n -1 -s $STRATEGY_X $DEPTH_X X > ./evals_d4_x.txt &
   PLAYER_X_PID=$!
-  ./player -p 4000 -v -n -1 -s $STRATEGY_O $DEPTH_O O > ./test_o.txt &
+  ./player -p 4000 -v -n -1 -s $STRATEGY_O $DEPTH_O O > ./evals_d4_o.txt &
   PLAYER_O_PID=$!
   GAME_OUTPUT=$(./referee -p 3000 -p 4000)
 

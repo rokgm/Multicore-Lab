@@ -53,13 +53,13 @@ int NegamaxStrategy::negamax(int depth)
 
         if (evaluation > bestEvaluation) {
             bestEvaluation = evaluation;
-            if (depth == 0)
-                _bestMove = m;
+            foundBestMove(depth, m, evaluation);
         }
 
         if (_stopSearch)
             break;
     }
+    finishedNode(depth, nullptr);
 
     return bestEvaluation;
 }
