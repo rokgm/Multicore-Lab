@@ -83,18 +83,18 @@ double relax_jacobi( double **u1, double **utmp1,
     #pragma omp parallel reduction(+: sum)
     {
 
-    #pragma omp master // TODO try omp single nowait
+    #pragma omp master // TODO try omp single nowait (tried: went overtime)
     {
         exchange_boundaries(u, param, local_process_info, requests);
     }
     // TODO Try different static chunk sizes.
-    // Iterate over the inner part that isn't affected by communication.
+    // Iterate over the inner part  that isn't affected by communication.
     #pragma omp for nowait
     for(int i = 2; i <= param->local_size_y - 1; i++ ) {
         int ii = i * param->local_allocated_x;
         int iim1 = (i - 1) * param->local_allocated_x;
         int iip1 = (i + 1) * param->local_allocated_x;
-        #pragma ivdep // TODO Try omp simd
+        #pragma ivdep// TODO Try omp simd (tried: went overtime)
         for(int j = 2; j <= param->local_size_x - 1; j++ ){
             double unew = 0.25 * (u[ii + (j-1)]+
                             u[ii + (j+1)]+
@@ -106,7 +106,7 @@ double relax_jacobi( double **u1, double **utmp1,
         }
     }
 
-    #pragma omp master // TODO try omp single nowait
+    #pragma omp master // TODO try omp single nowait (tried: error)
     {
         // Wait for the communication to be over.
         MPI_Waitall(8, requests, MPI_STATUSES_IGNORE);
@@ -122,44 +122,43 @@ double relax_jacobi( double **u1, double **utmp1,
         }
     }
 
-    // TODO This 4 for loops below could be combined into 2 for loops.
+    // TODO This 4 for loops below could be combined into 2 for loops. (done: gave slight speedup in 2000)
 
-    // Upper row
-    int i = 1;
-    int ii = i * param->local_allocated_x;
-    int iim1 = (i - 1) * param->local_allocated_x;
-    int iip1 = (i + 1) * param->local_allocated_x;
+    // upper and lower row
+    int i_up = 1;
+    int i_low = param->local_size_y;
+    int ii_up = i_up * param->local_allocated_x;
+    int ii_low = i_low * param->local_allocated_x;
+    int iim1_up = (i_up - 1) * param->local_allocated_x;
+    int iim1_low = (i_low - 1) * param->local_allocated_x;
+    int iip1_up = (i_up + 1) * param->local_allocated_x;
+    int iip1_low = (i_low + 1) * param->local_allocated_x;
     #pragma omp for simd
     for(int j = 1; j <= param->local_size_x; j++ ){
-        double unew = 0.25 * (u[ii + (j-1)]+
-                        u[ii + (j+1)]+
-                        u[iim1 + j]+
-                        u[iip1 + j]);
-        double diff = unew - u[ii + j];
-        utmp[ii + j] = unew;
+        // Upper row
+        double unew = 0.25 * (u[ii_up + (j-1)]+
+                        u[ii_up + (j+1)]+
+                        u[iim1_up + j]+
+                        u[iip1_up + j]);
+        double diff = unew - u[ii_up + j];
+        utmp[ii_up + j] = unew;
         sum += diff * diff;
-    }
 
-    // Lower row
-    i = param->local_size_y;
-    ii = i * param->local_allocated_x;
-    iim1 = (i - 1) * param->local_allocated_x;
-    iip1 = (i + 1) * param->local_allocated_x;
-    #pragma omp for simd
-    for(int j = 1; j <= param->local_size_x; j++ ){
-        double unew = 0.25 * (u[ii + (j-1)]+
-                        u[ii + (j+1)]+
-                        u[iim1 + j]+
-                        u[iip1 + j]);
-        double diff = unew - u[ii + j];
-        utmp[ii + j] = unew;
+        // Lower row
+        unew = 0.25 * (u[ii_low + (j-1)]+
+                        u[ii_low + (j+1)]+
+                        u[iim1_low + j]+
+                        u[iip1_low + j]);
+        diff = unew - u[ii_low + j];
+        utmp[ii_low + j] = unew;
         sum += diff * diff;
     }
 
     // For columns the corners should not be computed again.
-    // Left column
+    // Left column and Right column
     #pragma omp for simd
     for(int i = 2; i <= param->local_size_y - 1; i++ ) {
+        // Left column
         int ii = i * param->local_allocated_x;
         int iim1 = (i - 1) * param->local_allocated_x;
         int iip1 = (i + 1) * param->local_allocated_x;
@@ -172,25 +171,21 @@ double relax_jacobi( double **u1, double **utmp1,
         double diff = unew - u[ii + j];
         utmp[ii + j] = unew;
         sum += diff * diff;
-	}
 
-    // Right column
-    #pragma omp for simd
-    for(int i = 2; i <= param->local_size_y - 1; i++ ) {
-        int ii = i * param->local_allocated_x;
-        int iim1 = (i - 1) * param->local_allocated_x;
-        int iip1 = (i + 1) * param->local_allocated_x;
+        // Right column
+        ii = i * param->local_allocated_x;
+        iim1 = (i - 1) * param->local_allocated_x;
+        iip1 = (i + 1) * param->local_allocated_x;
 
-        int j = param->local_size_x;
-        double unew = 0.25 * (u[ii + (j-1)]+
+        j = param->local_size_x;
+        unew = 0.25 * (u[ii + (j-1)]+
                         u[ii + (j+1)]+
                         u[iim1 + j]+
                         u[iip1 + j]);
-        double diff = unew - u[ii + j];
+        diff = unew - u[ii + j];
         utmp[ii + j] = unew;
         sum += diff * diff;
 	}
-
     } // # pragma omp parallel
 
 	*u1 = utmp;
