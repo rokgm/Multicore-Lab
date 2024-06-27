@@ -83,18 +83,18 @@ double relax_jacobi( double **u1, double **utmp1,
     #pragma omp parallel reduction(+: sum)
     {
 
-    #pragma omp master
+    #pragma omp master // TODO try omp single nowait
     {
         exchange_boundaries(u, param, local_process_info, requests);
     }
-
+    // TODO Try different static chunk sizes.
     // Iterate over the inner part that isn't affected by communication.
     #pragma omp for nowait
     for(int i = 2; i <= param->local_size_y - 1; i++ ) {
         int ii = i * param->local_allocated_x;
         int iim1 = (i - 1) * param->local_allocated_x;
         int iip1 = (i + 1) * param->local_allocated_x;
-        #pragma ivdep
+        #pragma ivdep // TODO Try omp simd
         for(int j = 2; j <= param->local_size_x - 1; j++ ){
             double unew = 0.25 * (u[ii + (j-1)]+
                             u[ii + (j+1)]+
@@ -106,7 +106,7 @@ double relax_jacobi( double **u1, double **utmp1,
         }
     }
 
-    #pragma omp master
+    #pragma omp master // TODO try omp single nowait
     {
         // Wait for the communication to be over.
         MPI_Waitall(8, requests, MPI_STATUSES_IGNORE);
@@ -120,7 +120,9 @@ double relax_jacobi( double **u1, double **utmp1,
             int column = param->local_size_x + 1;
             copy_from_recv_buff_y(u, param->recv_buff_y_right, param, column);
         }
-    } // omp single implicit barrier
+    }
+
+    // TODO This 4 for loops below could be combined into 2 for loops.
 
     // Upper row
     int i = 1;
