@@ -1,4 +1,4 @@
-Using strategy 'NegamaxParallel' (depth 3) ...
+Using strategy 'NegamaxParallel' (depth 4) ...
 NetworkDomain::startListening: Using Port 4000
 Connection::start: localhost:4004
 Connection::sendString: Cannot connect to localhost:4004
@@ -28,24 +28,27 @@ NetworkDomain::newConnection: localhost:4001, now 1 active connections
        -----------
 
  Search started ...
- EvalRate 51 k/s (7033 evals, 136 msecs)
- EvalRate 51 k/s (7033 evals, 136 msecs)
- EvalRate 51 k/s (7033 evals, 136 msecs)
- EvalRate 132 k/s (19211 evals, 145 msecs)
- EvalRate 132 k/s (19213 evals, 145 msecs)
- EvalRate 310 k/s (51223 evals, 165 msecs)
- Search finished after 0.213 secs
-  Found move 'C3-C5/RightDown'
-  Leaves visited: 85940 (403 k/s) 
-  Nodes visited: 1 (85940 leaves per node)
-O draws 'C3-C5/RightDown' (after 0.213 secs)...
+ EvalRate 753 k/s (6027 evals, 8 msecs)
+ EvalRate 753 k/s (6027 evals, 8 msecs)
+ EvalRate 2795 k/s (156527 evals, 56 msecs)
+ EvalRate 3238 k/s (715689 evals, 221 msecs)
+ EvalRate 3303 k/s (1364318 evals, 413 msecs)
+ EvalRate 3369 k/s (2025085 evals, 601 msecs)
+ EvalRate 3402 k/s (2701216 evals, 794 msecs)
+ EvalRate 3427 k/s (3382584 evals, 987 msecs)
+ EvalRate 3439 k/s (4069111 evals, 1183 msecs)
+ Search finished after 1.355 secs
+  Found move 'A5/LeftDown'
+  Leaves visited: 4498629 (3320 k/s) 
+  Nodes visited: 99487 (45 leaves per node)
+O draws 'A5/LeftDown' (after 1.355 secs)...
 
 #1 X - O: 14, X: 14
        -----------
-      / O O O O O \
+      / O O O O . \
      / O O O O O O \
-    / . . . . . . . \
-   / . . . O O O . . \
+    / . . O O O . . \
+   / . . . . O . . . \
   | . . . . . . . . . |
    \ . . . . . . . . /
     \ . . X X X . . /
@@ -54,3 +57,4 @@ O draws 'C3-C5/RightDown' (after 0.213 secs)...
        -----------
 
 Terminating because given number of moves drawn.
+Connection::sendString: Cannot connect to localhost:4001

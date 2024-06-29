@@ -1,0 +1,69 @@
+Using strategy 'Negamax' (depth 4) ...
+NetworkDomain::startListening: Port 4000 in use
+NetworkDomain::startListening: Using Port 4001
+Connection::start: localhost:4004
+Connection::sendString: Cannot connect to localhost:4004
+Connection::start: localhost:4003
+Connection::sendString: Cannot connect to localhost:4003
+Connection::start: localhost:4002
+Connection::sendString: Cannot connect to localhost:4002
+Connection::start: localhost:4000
+NetworkDomain::newConnection: localhost:4000, now 1 active connections
+
+
+==========================================
+
+#0 O - O: 14, X: 14
+       -----------
+      / O O O O O \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . . . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+ Search started ...
+ EvalRate 857 k/s (6000 evals, 7 msecs)
+ EvalRate 1198 k/s (177400 evals, 148 msecs)
+ EvalRate 1248 k/s (417000 evals, 334 msecs)
+ EvalRate 1286 k/s (666600 evals, 518 msecs)
+ EvalRate 1293 k/s (923800 evals, 714 msecs)
+ EvalRate 1309 k/s (1182400 evals, 903 msecs)
+ EvalRate 1306 k/s (1444200 evals, 1105 msecs)
+ EvalRate 1321 k/s (1706000 evals, 1291 msecs)
+ EvalRate 1294 k/s (1970200 evals, 1522 msecs)
+ EvalRate 1287 k/s (2234400 evals, 1736 msecs)
+ EvalRate 1288 k/s (2498600 evals, 1939 msecs)
+ EvalRate 1288 k/s (2762800 evals, 2145 msecs)
+ EvalRate 1291 k/s (3027000 evals, 2343 msecs)
+ EvalRate 1282 k/s (3291200 evals, 2567 msecs)
+ EvalRate 1279 k/s (3555400 evals, 2778 msecs)
+ EvalRate 1271 k/s (3819600 evals, 3003 msecs)
+ EvalRate 1263 k/s (4083800 evals, 3231 msecs)
+ EvalRate 1262 k/s (4348000 evals, 3444 msecs)
+ EvalRate 1259 k/s (4612200 evals, 3663 msecs)
+ EvalRate 1259 k/s (4876400 evals, 3871 msecs)
+ Search finished after 3.991 secs
+  Found move 'A1/RightDown'
+  Leaves visited: 5045110 (1264 k/s) 
+  Nodes visited: 100893 (50 leaves per node)
+O draws 'A1/RightDown' (after 3.991 secs)...
+
+#1 X - O: 14, X: 14
+       -----------
+      / . O O O O \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . O . . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+Terminating because given number of moves drawn.

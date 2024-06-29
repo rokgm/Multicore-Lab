@@ -3,8 +3,8 @@
  */
 
 #include <stdlib.h>
-#include <iostream> 
-#include <vector>   // TODO remove after debug
+#include <iostream>
+#include <omp.h>
 
 #include "search.h"
 #include "board.h"
@@ -65,7 +65,7 @@ void NegamaxParallelStrategy::searchBestMove()
             {
                 if (evaluation > bestEvaluation) {
                     bestEvaluation = evaluation;
-                    _bestMove = m;
+                    foundBestMove(0, m, evaluation);
                 }
             }
         }
@@ -73,6 +73,7 @@ void NegamaxParallelStrategy::searchBestMove()
 
     } // omp single
     } // omp parallel
+    finishedNode(0, nullptr);
 }
 
 int NegamaxParallelStrategy::negamax(int depth, Board& board)
@@ -98,6 +99,7 @@ int NegamaxParallelStrategy::negamax(int depth, Board& board)
 
         if (evaluation > bestEvaluation) {
             bestEvaluation = evaluation;
+            foundBestMove(depth, m, evaluation);
         }
 
         // WARNING FOR LATER!
@@ -106,6 +108,7 @@ int NegamaxParallelStrategy::negamax(int depth, Board& board)
         // if (_stopSearch)
         //     break;
     }
+    finishedNode(depth, nullptr);
 
     return bestEvaluation;
 }

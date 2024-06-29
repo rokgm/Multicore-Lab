@@ -1,0 +1,99 @@
+Using strategy 'NegamaxParallel' (depth 4) ...
+NetworkDomain::startListening: Port 3000 in use
+NetworkDomain::startListening: Using Port 3001
+Connection::start: localhost:3004
+Connection::sendString: Cannot connect to localhost:3004
+Connection::start: localhost:3003
+Connection::sendString: Cannot connect to localhost:3003
+Connection::start: localhost:3002
+Connection::sendString: Cannot connect to localhost:3002
+Connection::start: localhost:3000
+NetworkDomain::newConnection: localhost:3000, now 1 active connections
+ Reg of localhost:3000
+NetworkDomain::newConnection: localhost:3000, now 1 active connections
+
+
+==========================================
+
+#0 O - O: 14, X: 14
+       -----------
+      / O O O O O \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . . . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+
+
+==========================================
+
+#0 O - O: 14, X: 14
+       -----------
+      / O O O O O \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . . . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+
+
+==========================================
+
+#1 X - O: 14, X: 14
+       -----------
+      / O O O O . \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . O . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+ Search started ...
+ EvalRate 352 k/s (5995 evals, 17 msecs)
+ EvalRate 1905 k/s (76201 evals, 40 msecs)
+ EvalRate 2821 k/s (457107 evals, 162 msecs)
+ EvalRate 2942 k/s (1029986 evals, 350 msecs)
+ EvalRate 2942 k/s (1029986 evals, 350 msecs)
+ EvalRate 2942 k/s (1029986 evals, 350 msecs)
+ EvalRate 3031 k/s (1618729 evals, 534 msecs)
+ EvalRate 3090 k/s (2225194 evals, 720 msecs)
+ EvalRate 3127 k/s (2843187 evals, 909 msecs)
+ EvalRate 3159 k/s (3469497 evals, 1098 msecs)
+ EvalRate 3181 k/s (4101432 evals, 1289 msecs)
+ EvalRate 3205 k/s (4738100 evals, 1478 msecs)
+ EvalRate 3205 k/s (5378989 evals, 1678 msecs)
+ Search finished after 1.810 secs
+  Found move 'I9/LeftUp'
+  Leaves visited: 5658631 (3126 k/s) 
+  Nodes visited: 115460 (49 leaves per node)
+X draws 'I9/LeftUp' (after 1.810 secs)...
+
+#2 O - O: 14, X: 14
+       -----------
+      / O O O O . \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . O . . . \
+  | . . . . . . . . . |
+   \ . . . . X . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X . /
+       -----------
+
+Connection::sendString: Cannot connect to localhost:3000
+Terminating because given number of moves drawn.
