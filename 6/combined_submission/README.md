@@ -21,7 +21,7 @@ make all VARIANT=NON_BLOCKING
 ```
 - For hybrid version:
 ```shell
-make VARIANT=HYBRID
+make all VARIANT=HYBRID
 ```
 
 ## Running the code
@@ -30,6 +30,7 @@ make VARIANT=HYBRID
 mpiexec -n <number of processes> <options> ./heat test.dat heat.ppm <number of processes in x> <number of processes in y>
 ```
 `<number of processes>` = `<number of processes in x>` $\times$ `<number of processes in y>`
+
 Example usage:
 ```shell
 mpiexec -n 6 -genv I_MPI_DEBUG=5 ./heat test.dat heat.ppm 2 3
