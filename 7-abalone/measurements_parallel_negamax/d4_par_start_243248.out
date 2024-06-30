@@ -1,0 +1,496 @@
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'NegamaxParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Using Port 23413
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 1 active connections
+Connection::start: localhost:23412
+Connection::sendString: Cannot connect to localhost:23412
+ Reg of localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 1 active connections
+ Reg of localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 2 active connections
+
+
+==========================================
+
+#0 O - O: 14, X: 14
+       -----------
+      / O O O O O \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . . . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+ Search started ...
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+ EvalRate 392 k/s (6668 evals, 17 msecs)
+ EvalRate 392 k/s (6670 evals, 17 msecs)
+ EvalRate 1434 k/s (93257 evals, 65 msecs)
+ EvalRate 2031 k/s (402280 evals, 198 msecs)
+ EvalRate 2232 k/s (839371 evals, 376 msecs)
+ EvalRate 2306 k/s (1319327 evals, 572 msecs)
+ EvalRate 2347 k/s (1814500 evals, 773 msecs)
+ EvalRate 2369 k/s (2317842 evals, 978 msecs)
+ EvalRate 2369 k/s (2317843 evals, 978 msecs)
+ EvalRate 2389 k/s (2824704 evals, 1182 msecs)
+ EvalRate 2400 k/s (3334352 evals, 1389 msecs)
+ EvalRate 2409 k/s (3845897 evals, 1596 msecs)
+ EvalRate 2409 k/s (3845897 evals, 1596 msecs)
+ Search finished after 1.718 secs
+  Found move 'A5/LeftDown'
+  Leaves visited: 4094688 (2383 k/s) 
+  Nodes visited: 99735 (41 leaves per node)
+O draws 'A5/LeftDown' (after 1.718 secs)...
+
+#1 X - O: 14, X: 14
+       -----------
+      / O O O O . \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . O . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+Terminating because given number of moves drawn.
+
+#0 O - O: 14, X: 14
+       -----------
+      / O O O O O \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . . . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+O about to move...
+O draws move 'A5/LeftDown'...
+
+#1 X - O: 14, X: 14
+       -----------
+      / O O O O . \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . O . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+X about to move...
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'NegamaxParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Port 23413 in use
+NetworkDomain::startListening: Using Port 23414
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 1 active connections
+Connection::start: localhost:23412
+Connection::sendString: Cannot connect to localhost:23412
+ Reg of localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 1 active connections
+ Reg of localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 2 active connections
+
+
+==========================================
+
+#0 O - O: 14, X: 14
+       -----------
+      / O O O O O \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . . . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+
+
+==========================================
+
+#1 X - O: 14, X: 14
+       -----------
+      / O O O O . \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . O . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+ Search started ...
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+ EvalRate 391 k/s (6655 evals, 17 msecs)
+ EvalRate 1666 k/s (93309 evals, 56 msecs)
+ EvalRate 2177 k/s (459351 evals, 211 msecs)
+ EvalRate 2274 k/s (936954 evals, 412 msecs)
+ EvalRate 2309 k/s (1436307 evals, 622 msecs)
+ EvalRate 2326 k/s (1943011 evals, 835 msecs)
+ EvalRate 2339 k/s (2453721 evals, 1049 msecs)
+ EvalRate 2346 k/s (2968115 evals, 1265 msecs)
+ EvalRate 2353 k/s (3480987 evals, 1479 msecs)
+ EvalRate 2360 k/s (3991669 evals, 1691 msecs)
+ EvalRate 2364 k/s (4501732 evals, 1904 msecs)
+ EvalRate 2367 k/s (5012124 evals, 2117 msecs)
+ Search finished after 2.260 secs
+  Found move 'I9/LeftUp'
+  Leaves visited: 5276650 (2334 k/s) 
+  Nodes visited: 115242 (45 leaves per node)
+X draws 'I9/LeftUp' (after 2.260 secs)...
+
+#2 O - O: 14, X: 14
+       -----------
+      / O O O O . \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . O . . . \
+  | . . . . . . . . . |
+   \ . . . . X . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X . /
+       -----------
+
+Terminating because given number of moves drawn.
+
+#0 O - O: 14, X: 14
+       -----------
+      / O O O O O \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . . . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+O about to move...
+WARNING: Got a board which is not reachable via a valid move !?
+
+#2 O - O: 14, X: 14
+       -----------
+      / O O O O . \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . O . . . \
+  | . . . . . . . . . |
+   \ . . . . X . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X . /
+       -----------
+
+O about to move...
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'NegamaxParallel' (depth 4) ...
+NetworkDomain::startListening: Using Port 23412
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 1 active connections
+Connection::start: localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 2 active connections
+ Reg of localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 2 active connections
+
+
+==========================================
+
+#0 O - O: 14, X: 14
+       -----------
+      / O O O O O \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . . . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+
+
+==========================================
+
+#0 O - O: 14, X: 14
+       -----------
+      / O O O O O \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . . . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+ Reg of remote connection localhost:23414
+NetworkDomain::addConnection: localhost:23414 already existing
+
+
+==========================================
+
+#2 O - O: 14, X: 14
+       -----------
+      / O O O O . \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . O . . . \
+  | . . . . . . . . . |
+   \ . . . . X . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X . /
+       -----------
+
+Connection::sendString: Cannot connect to localhost:23414
+Connection::sendString: Cannot connect to localhost:23413
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection timed out
+Error in connect in Connection::sendString: Connection timed out
+Using strategy 'NegamaxParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Port 23413 in use
+NetworkDomain::startListening: Using Port 23414
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+NetworkDomain::newConnection: localhost:23415, now 1 active connections
+Connection::start: localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 2 active connections
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 3 active connections
+ Reg of localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 3 active connections
+
+
+==========================================
+
+#0 O - O: 14, X: 14
+       -----------
+      / O O O O O \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . . . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+ Search started ...
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+ EvalRate 353 k/s (7769 evals, 22 msecs)
+ EvalRate 1089 k/s (98025 evals, 90 msecs)
+ EvalRate 1346 k/s (375788 evals, 279 msecs)
+ EvalRate 1346 k/s (375789 evals, 279 msecs)
+ EvalRate 1400 k/s (718624 evals, 513 msecs)
+ EvalRate 1400 k/s (718625 evals, 513 msecs)
+ EvalRate 1422 k/s (1079362 evals, 759 msecs)
+ EvalRate 1422 k/s (1079362 evals, 759 msecs)
+ EvalRate 1422 k/s (1079362 evals, 759 msecs)
+ EvalRate 1434 k/s (1442860 evals, 1006 msecs)
+ EvalRate 1434 k/s (1442860 evals, 1006 msecs)
+ EvalRate 1441 k/s (1808834 evals, 1255 msecs)
+ EvalRate 1446 k/s (2175250 evals, 1504 msecs)
+ EvalRate 1449 k/s (2543037 evals, 1754 msecs)
+ EvalRate 1449 k/s (2543037 evals, 1754 msecs)
+ EvalRate 1452 k/s (2912316 evals, 2005 msecs)
+ EvalRate 1455 k/s (3281475 evals, 2255 msecs)
+ EvalRate 1458 k/s (3645720 evals, 2500 msecs)
+ EvalRate 1458 k/s (4004174 evals, 2746 msecs)
+ EvalRate 1458 k/s (4004172 evals, 2746 msecs)
+ EvalRate 1458 k/s (4004173 evals, 2746 msecs)
+ Search finished after 3.029 secs
+  Found move 'A1/RightDown'
+  Leaves visited: 4302823 (1420 k/s) 
+  Nodes visited: 99067 (43 leaves per node)
+O draws 'A1/RightDown' (after 3.029 secs)...
+
+#1 X - O: 14, X: 14
+       -----------
+      / . O O O O \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . O . . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+Connection::sendString: Cannot connect to localhost:23415
+Terminating because given number of moves drawn.
+
+#0 O - O: 14, X: 14
+       -----------
+      / O O O O O \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . . . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+O about to move...
+O draws move 'A1/RightDown'...
+
+#1 X - O: 14, X: 14
+       -----------
+      / . O O O O \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . O . . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+X about to move...

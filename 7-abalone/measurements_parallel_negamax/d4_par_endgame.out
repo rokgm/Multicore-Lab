@@ -1,0 +1,2590 @@
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'NegamaxParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Using Port 23413
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 1 active connections
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 2 active connections
+ Reg of localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 2 active connections
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+ Search started ...
+OMP NUMBER OF THREADS 1
+ EvalRate 333 k/s (6000 evals, 18 msecs)
+ EvalRate 595 k/s (72600 evals, 122 msecs)
+ EvalRate 624 k/s (191600 evals, 307 msecs)
+ EvalRate 634 k/s (316400 evals, 499 msecs)
+ EvalRate 642 k/s (443200 evals, 690 msecs)
+ EvalRate 642 k/s (571600 evals, 889 msecs)
+ EvalRate 641 k/s (700000 evals, 1091 msecs)
+ EvalRate 641 k/s (828400 evals, 1292 msecs)
+ EvalRate 640 k/s (956800 evals, 1495 msecs)
+ EvalRate 640 k/s (1085200 evals, 1694 msecs)
+ EvalRate 640 k/s (1213600 evals, 1895 msecs)
+ EvalRate 640 k/s (1342000 evals, 2094 msecs)
+ EvalRate 640 k/s (1470400 evals, 2294 msecs)
+ EvalRate 642 k/s (1598800 evals, 2489 msecs)
+ EvalRate 643 k/s (1727200 evals, 2685 msecs)
+ EvalRate 643 k/s (1855800 evals, 2886 msecs)
+ EvalRate 642 k/s (1984400 evals, 3090 msecs)
+ EvalRate 641 k/s (2113000 evals, 3292 msecs)
+ EvalRate 641 k/s (2241600 evals, 3492 msecs)
+ EvalRate 641 k/s (2370200 evals, 3692 msecs)
+ EvalRate 641 k/s (2498800 evals, 3895 msecs)
+ EvalRate 641 k/s (2627400 evals, 4097 msecs)
+ EvalRate 640 k/s (2756000 evals, 4300 msecs)
+ EvalRate 640 k/s (2884600 evals, 4502 msecs)
+ EvalRate 640 k/s (3013200 evals, 4708 msecs)
+ EvalRate 640 k/s (3141800 evals, 4905 msecs)
+ EvalRate 640 k/s (3270400 evals, 5104 msecs)
+ EvalRate 641 k/s (3399000 evals, 5302 msecs)
+ EvalRate 641 k/s (3527600 evals, 5502 msecs)
+ EvalRate 641 k/s (3656200 evals, 5701 msecs)
+ EvalRate 641 k/s (3784800 evals, 5900 msecs)
+ EvalRate 641 k/s (3913400 evals, 6100 msecs)
+ EvalRate 641 k/s (4042000 evals, 6300 msecs)
+ EvalRate 641 k/s (4170600 evals, 6502 msecs)
+ EvalRate 641 k/s (4299200 evals, 6700 msecs)
+ EvalRate 642 k/s (4427800 evals, 6893 msecs)
+ EvalRate 642 k/s (4556400 evals, 7090 msecs)
+ EvalRate 642 k/s (4685000 evals, 7291 msecs)
+ EvalRate 642 k/s (4813600 evals, 7487 msecs)
+ EvalRate 643 k/s (4942200 evals, 7684 msecs)
+ EvalRate 643 k/s (5070800 evals, 7882 msecs)
+ EvalRate 643 k/s (5199400 evals, 8080 msecs)
+ EvalRate 643 k/s (5328000 evals, 8279 msecs)
+ EvalRate 643 k/s (5456600 evals, 8478 msecs)
+ EvalRate 643 k/s (5585200 evals, 8679 msecs)
+ EvalRate 643 k/s (5713800 evals, 8880 msecs)
+ EvalRate 643 k/s (5842400 evals, 9083 msecs)
+ EvalRate 643 k/s (5971000 evals, 9283 msecs)
+ EvalRate 643 k/s (6099600 evals, 9484 msecs)
+ EvalRate 643 k/s (6228200 evals, 9685 msecs)
+ EvalRate 643 k/s (6356800 evals, 9886 msecs)
+ EvalRate 643 k/s (6485400 evals, 10086 msecs)
+ EvalRate 643 k/s (6614000 evals, 10286 msecs)
+ EvalRate 642 k/s (6742600 evals, 10489 msecs)
+ EvalRate 642 k/s (6871200 evals, 10695 msecs)
+ EvalRate 642 k/s (6999800 evals, 10898 msecs)
+ EvalRate 642 k/s (7128400 evals, 11103 msecs)
+ EvalRate 641 k/s (7257000 evals, 11306 msecs)
+ EvalRate 641 k/s (7385600 evals, 11512 msecs)
+ EvalRate 641 k/s (7514200 evals, 11710 msecs)
+ EvalRate 641 k/s (7642800 evals, 11911 msecs)
+ EvalRate 641 k/s (7771400 evals, 12116 msecs)
+ EvalRate 641 k/s (7900000 evals, 12319 msecs)
+ EvalRate 641 k/s (8028600 evals, 12523 msecs)
+ EvalRate 640 k/s (8157200 evals, 12727 msecs)
+ EvalRate 640 k/s (8285800 evals, 12934 msecs)
+ EvalRate 640 k/s (8414400 evals, 13135 msecs)
+ EvalRate 640 k/s (8543000 evals, 13338 msecs)
+ EvalRate 640 k/s (8671600 evals, 13537 msecs)
+ EvalRate 640 k/s (8800200 evals, 13740 msecs)
+ EvalRate 640 k/s (8928800 evals, 13942 msecs)
+ EvalRate 640 k/s (9057400 evals, 14147 msecs)
+ EvalRate 640 k/s (9186000 evals, 14352 msecs)
+ EvalRate 639 k/s (9314600 evals, 14556 msecs)
+ EvalRate 639 k/s (9443200 evals, 14763 msecs)
+ EvalRate 639 k/s (9571800 evals, 14968 msecs)
+ EvalRate 639 k/s (9700400 evals, 15172 msecs)
+ EvalRate 639 k/s (9829000 evals, 15375 msecs)
+ EvalRate 639 k/s (9957600 evals, 15579 msecs)
+ Search finished after 15.627 secs
+  Found move 'I7/LeftUp/Push'
+  Leaves visited: 9987824 (639 k/s) 
+  Nodes visited: 131323 (76 leaves per node)
+X draws 'I7/LeftUp/Push' (after 15.627 secs)...
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X X . /
+      \ . . . . X /
+       -----------
+
+Terminating because given number of moves drawn.
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+X about to move...
+X draws move 'I7/LeftUp/Push'...
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X X . /
+      \ . . . . X /
+       -----------
+
+O about to move...
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+X about to move...
+WARNING: Got a board which is not reachable via a valid move !?
+
+#71 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . . . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ X . . . X /
+       -----------
+
+X about to move...
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'NegamaxParallel' (depth 4) ...
+NetworkDomain::startListening: Using Port 23412
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 1 active connections
+Connection::start: localhost:23413
+Connection::sendString: Cannot connect to localhost:23413
+ Reg of localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 2 active connections
+ Reg of localhost:23415
+NetworkDomain::newConnection: localhost:23415, now 3 active connections
+
+
+==========================================
+
+#71 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . . . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ X . . . X /
+       -----------
+
+ Search started ...
+OMP NUMBER OF THREADS 2
+OMP NUMBER OF THREADS 2
+ EvalRate 381 k/s (6096 evals, 16 msecs)
+ EvalRate 799 k/s (83187 evals, 104 msecs)
+ EvalRate 844 k/s (244807 evals, 290 msecs)
+ EvalRate 849 k/s (415638 evals, 489 msecs)
+ EvalRate 855 k/s (587427 evals, 687 msecs)
+ EvalRate 859 k/s (760528 evals, 885 msecs)
+ EvalRate 861 k/s (934339 evals, 1084 msecs)
+ EvalRate 863 k/s (1108699 evals, 1284 msecs)
+ EvalRate 864 k/s (1283389 evals, 1484 msecs)
+ EvalRate 864 k/s (1458227 evals, 1687 msecs)
+ EvalRate 864 k/s (1633150 evals, 1889 msecs)
+ EvalRate 865 k/s (1807941 evals, 2088 msecs)
+ EvalRate 865 k/s (1982975 evals, 2291 msecs)
+ EvalRate 866 k/s (2158151 evals, 2492 msecs)
+ EvalRate 866 k/s (2333516 evals, 2693 msecs)
+ EvalRate 866 k/s (2508881 evals, 2895 msecs)
+ EvalRate 866 k/s (2508880 evals, 2895 msecs)
+ EvalRate 867 k/s (2684215 evals, 3095 msecs)
+ EvalRate 867 k/s (2859787 evals, 3295 msecs)
+ EvalRate 867 k/s (3035287 evals, 3497 msecs)
+ EvalRate 867 k/s (3210913 evals, 3701 msecs)
+ EvalRate 867 k/s (3386358 evals, 3904 msecs)
+ EvalRate 867 k/s (3561720 evals, 4108 msecs)
+ EvalRate 866 k/s (3737178 evals, 4312 msecs)
+ EvalRate 867 k/s (3912700 evals, 4511 msecs)
+ EvalRate 867 k/s (4088305 evals, 4712 msecs)
+ EvalRate 867 k/s (4263807 evals, 4915 msecs)
+ EvalRate 867 k/s (4439339 evals, 5118 msecs)
+ EvalRate 867 k/s (4614745 evals, 5319 msecs)
+ EvalRate 867 k/s (4790063 evals, 5521 msecs)
+ EvalRate 867 k/s (4965522 evals, 5723 msecs)
+ EvalRate 867 k/s (5141044 evals, 5924 msecs)
+ EvalRate 867 k/s (5316635 evals, 6127 msecs)
+ EvalRate 867 k/s (5492258 evals, 6329 msecs)
+ EvalRate 867 k/s (5667753 evals, 6531 msecs)
+ EvalRate 867 k/s (5843351 evals, 6736 msecs)
+ EvalRate 867 k/s (6018849 evals, 6940 msecs)
+ EvalRate 867 k/s (6194412 evals, 7144 msecs)
+ EvalRate 866 k/s (6369891 evals, 7349 msecs)
+ EvalRate 866 k/s (6545190 evals, 7551 msecs)
+ EvalRate 867 k/s (6720688 evals, 7748 msecs)
+ EvalRate 867 k/s (6896110 evals, 7948 msecs)
+ EvalRate 867 k/s (7071587 evals, 8147 msecs)
+ EvalRate 868 k/s (7247146 evals, 8348 msecs)
+ EvalRate 868 k/s (7422838 evals, 8549 msecs)
+ EvalRate 868 k/s (7598579 evals, 8750 msecs)
+ EvalRate 868 k/s (7774212 evals, 8951 msecs)
+ EvalRate 868 k/s (7949886 evals, 9152 msecs)
+ EvalRate 868 k/s (8125567 evals, 9355 msecs)
+ EvalRate 868 k/s (8301319 evals, 9556 msecs)
+ EvalRate 868 k/s (8476946 evals, 9757 msecs)
+ EvalRate 868 k/s (8652631 evals, 9958 msecs)
+ EvalRate 869 k/s (8828228 evals, 10159 msecs)
+ EvalRate 869 k/s (9004223 evals, 10360 msecs)
+ EvalRate 869 k/s (9180189 evals, 10560 msecs)
+ EvalRate 869 k/s (9356134 evals, 10761 msecs)
+ EvalRate 869 k/s (9532040 evals, 10963 msecs)
+ EvalRate 869 k/s (9708035 evals, 11164 msecs)
+ EvalRate 869 k/s (9884080 evals, 11365 msecs)
+ EvalRate 869 k/s (10060117 evals, 11566 msecs)
+ EvalRate 869 k/s (10236095 evals, 11766 msecs)
+ EvalRate 870 k/s (10412002 evals, 11966 msecs)
+ EvalRate 870 k/s (10588204 evals, 12167 msecs)
+ EvalRate 870 k/s (10764287 evals, 12369 msecs)
+ EvalRate 870 k/s (10764287 evals, 12369 msecs)
+ EvalRate 870 k/s (10940372 evals, 12571 msecs)
+ EvalRate 870 k/s (11116414 evals, 12775 msecs)
+ EvalRate 870 k/s (11292570 evals, 12977 msecs)
+ EvalRate 870 k/s (11468709 evals, 13177 msecs)
+ EvalRate 867 k/s (11643584 evals, 13420 msecs)
+ Search finished after 13.450 secs
+  Found move 'F3/RightUp/Push'
+  Leaves visited: 11662529 (867 k/s) 
+  Nodes visited: 149949 (77 leaves per node)
+X draws 'F3/RightUp/Push' (after 13.450 secs)...
+
+#72 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X O O O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ X . . . X /
+       -----------
+
+Terminating because given number of moves drawn.
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'NegamaxParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Port 23413 in use
+NetworkDomain::startListening: Using Port 23414
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 1 active connections
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 2 active connections
+ Reg of localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 2 active connections
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+ Reg of localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 2 active connections
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+ Reg of remote connection localhost:23413
+NetworkDomain::addConnection: localhost:23413 already existing
+
+
+==========================================
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X X . /
+      \ . . . . X /
+       -----------
+
+ Search started ...
+OMP NUMBER OF THREADS 1
+ EvalRate 272 k/s (6000 evals, 22 msecs)
+ EvalRate 656 k/s (60400 evals, 92 msecs)
+ EvalRate 720 k/s (191600 evals, 266 msecs)
+ EvalRate 715 k/s (335600 evals, 469 msecs)
+ EvalRate 717 k/s (479600 evals, 668 msecs)
+ EvalRate 718 k/s (623600 evals, 868 msecs)
+ EvalRate 720 k/s (767600 evals, 1065 msecs)
+ EvalRate 722 k/s (911600 evals, 1261 msecs)
+ EvalRate 725 k/s (1056000 evals, 1455 msecs)
+ EvalRate 728 k/s (1201000 evals, 1649 msecs)
+ EvalRate 728 k/s (1346600 evals, 1849 msecs)
+ EvalRate 732 k/s (1492200 evals, 2038 msecs)
+ EvalRate 732 k/s (1638600 evals, 2237 msecs)
+ EvalRate 733 k/s (1785000 evals, 2433 msecs)
+ EvalRate 734 k/s (1931600 evals, 2629 msecs)
+ EvalRate 735 k/s (2078400 evals, 2824 msecs)
+ EvalRate 735 k/s (2225400 evals, 3025 msecs)
+ EvalRate 734 k/s (2372400 evals, 3230 msecs)
+ EvalRate 733 k/s (2519400 evals, 3436 msecs)
+ EvalRate 732 k/s (2666400 evals, 3641 msecs)
+ EvalRate 731 k/s (2813400 evals, 3844 msecs)
+ EvalRate 732 k/s (2960400 evals, 4042 msecs)
+ EvalRate 732 k/s (3107400 evals, 4243 msecs)
+ EvalRate 730 k/s (3254400 evals, 4453 msecs)
+ EvalRate 730 k/s (3401400 evals, 4655 msecs)
+ EvalRate 731 k/s (3548400 evals, 4850 msecs)
+ EvalRate 731 k/s (3695400 evals, 5052 msecs)
+ EvalRate 732 k/s (3842400 evals, 5248 msecs)
+ EvalRate 732 k/s (3989400 evals, 5449 msecs)
+ EvalRate 731 k/s (4136400 evals, 5652 msecs)
+ EvalRate 731 k/s (4283400 evals, 5858 msecs)
+ EvalRate 731 k/s (4430400 evals, 6053 msecs)
+ EvalRate 732 k/s (4577400 evals, 6247 msecs)
+ EvalRate 733 k/s (4724400 evals, 6443 msecs)
+ EvalRate 733 k/s (4871400 evals, 6641 msecs)
+ EvalRate 733 k/s (5018400 evals, 6840 msecs)
+ EvalRate 734 k/s (5165400 evals, 7036 msecs)
+ EvalRate 734 k/s (5312400 evals, 7233 msecs)
+ EvalRate 734 k/s (5459400 evals, 7433 msecs)
+ EvalRate 734 k/s (5606400 evals, 7636 msecs)
+ EvalRate 734 k/s (5753400 evals, 7833 msecs)
+ EvalRate 734 k/s (5900400 evals, 8037 msecs)
+ EvalRate 734 k/s (6047400 evals, 8237 msecs)
+ EvalRate 734 k/s (6194400 evals, 8435 msecs)
+ EvalRate 734 k/s (6341400 evals, 8634 msecs)
+ EvalRate 734 k/s (6488400 evals, 8837 msecs)
+ EvalRate 733 k/s (6635400 evals, 9041 msecs)
+ EvalRate 733 k/s (6782400 evals, 9249 msecs)
+ EvalRate 733 k/s (6929400 evals, 9449 msecs)
+ EvalRate 732 k/s (7076400 evals, 9659 msecs)
+ EvalRate 732 k/s (7223400 evals, 9865 msecs)
+ EvalRate 732 k/s (7370400 evals, 10064 msecs)
+ EvalRate 731 k/s (7517400 evals, 10270 msecs)
+ EvalRate 731 k/s (7664400 evals, 10473 msecs)
+ EvalRate 731 k/s (7811400 evals, 10681 msecs)
+ EvalRate 731 k/s (7958400 evals, 10887 msecs)
+ EvalRate 730 k/s (8105400 evals, 11089 msecs)
+ EvalRate 731 k/s (8252400 evals, 11288 msecs)
+ EvalRate 731 k/s (8399400 evals, 11489 msecs)
+ EvalRate 730 k/s (8546400 evals, 11694 msecs)
+ EvalRate 730 k/s (8693400 evals, 11897 msecs)
+ EvalRate 730 k/s (8840400 evals, 12095 msecs)
+ EvalRate 730 k/s (8987400 evals, 12295 msecs)
+ EvalRate 730 k/s (9134400 evals, 12497 msecs)
+ EvalRate 730 k/s (9281400 evals, 12699 msecs)
+ EvalRate 730 k/s (9428400 evals, 12902 msecs)
+ EvalRate 730 k/s (9575400 evals, 13106 msecs)
+ EvalRate 730 k/s (9722400 evals, 13305 msecs)
+ EvalRate 730 k/s (9869400 evals, 13503 msecs)
+ EvalRate 730 k/s (10016400 evals, 13708 msecs)
+ EvalRate 730 k/s (10163400 evals, 13915 msecs)
+ EvalRate 730 k/s (10310400 evals, 14121 msecs)
+ EvalRate 729 k/s (10457400 evals, 14326 msecs)
+ EvalRate 729 k/s (10604400 evals, 14530 msecs)
+ EvalRate 729 k/s (10751400 evals, 14731 msecs)
+ EvalRate 729 k/s (10898400 evals, 14932 msecs)
+ Search finished after 14.962 secs
+  Found move 'D5/LeftDown/Push'
+  Leaves visited: 10919955 (729 k/s) 
+  Nodes visited: 248658 (43 leaves per node)
+O draws 'D5/LeftDown/Push' (after 14.962 secs)...
+
+#71 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . . . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ X . . . X /
+       -----------
+
+Terminating because given number of moves drawn.
+Connection::sendString: Cannot connect to localhost:23412
+Error in connect in Connection::sendString: Connection timed out
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'NegamaxParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Port 23413 in use
+NetworkDomain::startListening: Port 23414 in use
+NetworkDomain::startListening: Using Port 23415
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 1 active connections
+Connection::start: localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 2 active connections
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 3 active connections
+ Reg of localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 3 active connections
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+ Reg of remote connection localhost:23414
+NetworkDomain::addConnection: localhost:23414 already existing
+ Reg of remote connection localhost:23413
+NetworkDomain::addConnection: localhost:23413 already existing
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+ Reg of remote connection localhost:23412
+NetworkDomain::addConnection: localhost:23412 already existing
+UnReg of 127.0.0.1:23413
+ Reg of 127.0.0.1:23413
+NetworkDomain::newConnection: 127.0.0.1:23413, now 3 active connections
+ Reg of localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 3 active connections
+ Reg of localhost:23416
+NetworkDomain::newConnection: localhost:23416, now 4 active connections
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+
+
+==========================================
+
+#72 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X O O O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ X . . . X /
+       -----------
+
+ Search started ...
+OMP NUMBER OF THREADS 2
+OMP NUMBER OF THREADS 2
+ EvalRate 402 k/s (6041 evals, 15 msecs)
+ EvalRate 869 k/s (86931 evals, 100 msecs)
+ EvalRate 928 k/s (261790 evals, 282 msecs)
+ EvalRate 936 k/s (448607 evals, 479 msecs)
+ EvalRate 935 k/s (637005 evals, 681 msecs)
+ EvalRate 933 k/s (825418 evals, 884 msecs)
+ EvalRate 934 k/s (1013640 evals, 1085 msecs)
+ EvalRate 934 k/s (1201879 evals, 1286 msecs)
+ EvalRate 934 k/s (1390197 evals, 1487 msecs)
+ EvalRate 935 k/s (1578480 evals, 1687 msecs)
+ EvalRate 936 k/s (1766781 evals, 1886 msecs)
+ EvalRate 935 k/s (1955186 evals, 2089 msecs)
+ EvalRate 935 k/s (2143437 evals, 2290 msecs)
+ EvalRate 936 k/s (2331757 evals, 2490 msecs)
+ EvalRate 937 k/s (2520015 evals, 2689 msecs)
+ EvalRate 936 k/s (2708470 evals, 2892 msecs)
+ EvalRate 935 k/s (2896888 evals, 3095 msecs)
+ EvalRate 935 k/s (3085279 evals, 3298 msecs)
+ EvalRate 935 k/s (3273741 evals, 3499 msecs)
+ EvalRate 935 k/s (3462229 evals, 3699 msecs)
+ EvalRate 936 k/s (3650607 evals, 3900 msecs)
+ EvalRate 935 k/s (3838968 evals, 4103 msecs)
+ EvalRate 935 k/s (4027417 evals, 4304 msecs)
+ EvalRate 935 k/s (4215773 evals, 4505 msecs)
+ EvalRate 935 k/s (4215773 evals, 4505 msecs)
+ EvalRate 935 k/s (4404155 evals, 4706 msecs)
+ EvalRate 935 k/s (4592584 evals, 4907 msecs)
+ EvalRate 935 k/s (4781081 evals, 5110 msecs)
+ EvalRate 935 k/s (4969539 evals, 5311 msecs)
+ EvalRate 936 k/s (5158120 evals, 5510 msecs)
+ EvalRate 936 k/s (5346700 evals, 5709 msecs)
+ EvalRate 936 k/s (5535207 evals, 5912 msecs)
+ EvalRate 935 k/s (5723610 evals, 6115 msecs)
+ EvalRate 936 k/s (5912217 evals, 6314 msecs)
+ EvalRate 936 k/s (6100721 evals, 6515 msecs)
+ EvalRate 936 k/s (6289137 evals, 6715 msecs)
+ EvalRate 936 k/s (6477655 evals, 6916 msecs)
+ EvalRate 936 k/s (6477656 evals, 6916 msecs)
+ EvalRate 936 k/s (6666126 evals, 7115 msecs)
+ EvalRate 937 k/s (6854487 evals, 7314 msecs)
+ EvalRate 937 k/s (7042885 evals, 7514 msecs)
+ EvalRate 937 k/s (7231257 evals, 7713 msecs)
+ EvalRate 938 k/s (7419684 evals, 7910 msecs)
+ EvalRate 938 k/s (7608416 evals, 8109 msecs)
+ EvalRate 938 k/s (7797080 evals, 8307 msecs)
+ EvalRate 938 k/s (7985751 evals, 8507 msecs)
+ EvalRate 938 k/s (8174489 evals, 8708 msecs)
+ EvalRate 938 k/s (8363233 evals, 8911 msecs)
+ EvalRate 938 k/s (8551969 evals, 9113 msecs)
+ EvalRate 938 k/s (8740667 evals, 9313 msecs)
+ EvalRate 938 k/s (8929355 evals, 9510 msecs)
+ EvalRate 939 k/s (9118014 evals, 9709 msecs)
+ EvalRate 939 k/s (9307004 evals, 9909 msecs)
+ EvalRate 939 k/s (9495921 evals, 10109 msecs)
+ EvalRate 939 k/s (9684767 evals, 10311 msecs)
+ EvalRate 939 k/s (9873576 evals, 10513 msecs)
+ EvalRate 939 k/s (10062461 evals, 10715 msecs)
+ EvalRate 939 k/s (10251465 evals, 10914 msecs)
+ EvalRate 939 k/s (10440379 evals, 11113 msecs)
+ EvalRate 939 k/s (10629292 evals, 11314 msecs)
+ EvalRate 939 k/s (10818144 evals, 11515 msecs)
+ EvalRate 939 k/s (11007038 evals, 11714 msecs)
+ EvalRate 939 k/s (11195862 evals, 11915 msecs)
+ EvalRate 939 k/s (11384644 evals, 12119 msecs)
+ EvalRate 939 k/s (11573359 evals, 12319 msecs)
+ EvalRate 939 k/s (11762212 evals, 12520 msecs)
+ EvalRate 939 k/s (11951154 evals, 12720 msecs)
+ EvalRate 939 k/s (11951154 evals, 12720 msecs)
+ EvalRate 939 k/s (12140156 evals, 12922 msecs)
+ EvalRate 939 k/s (12329115 evals, 13122 msecs)
+ EvalRate 939 k/s (12518014 evals, 13322 msecs)
+ Search finished after 13.420 secs
+  Found move 'E5/LeftDown/Out'
+  Leaves visited: 12595547 (938 k/s) 
+  Nodes visited: 289383 (43 leaves per node)
+O draws 'E5/LeftDown/Out' (after 13.420 secs)...
+
+#73 X - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X O . O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . O X X X . /
+      \ X . . . X /
+       -----------
+
+Connection::sendString: Cannot connect to 127.0.0.1:23413
+Connection::sendString: Cannot connect to localhost:23412
+Terminating because given number of moves drawn.
+Error in connect in Connection::sendString: Connection timed out
+Error in connect in Connection::sendString: Connection timed out
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'NegamaxParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Port 23413 in use
+NetworkDomain::startListening: Using Port 23414
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+NetworkDomain::newConnection: localhost:23415, now 1 active connections
+Connection::start: localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 2 active connections
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 3 active connections
+ Reg of remote connection 127.0.0.1:23413
+Connection::start: 127.0.0.1:23413
+NetworkDomain::newConnection: 127.0.0.1:23413, now 3 active connections
+ Reg of remote connection localhost:23412
+NetworkDomain::addConnection: localhost:23412 already existing
+ Reg of remote connection localhost:23415
+NetworkDomain::addConnection: localhost:23415 already existing
+ Reg of remote connection localhost:23412
+NetworkDomain::addConnection: localhost:23412 already existing
+ Reg of remote connection localhost:23415
+NetworkDomain::addConnection: localhost:23415 already existing
+ Reg of remote connection localhost:23412
+NetworkDomain::addConnection: localhost:23412 already existing
+ Reg of localhost:23416
+NetworkDomain::newConnection: localhost:23416, now 4 active connections
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+ Search started ...
+OMP NUMBER OF THREADS 4
+OMP NUMBER OF THREADS 4
+OMP NUMBER OF THREADS 4
+OMP NUMBER OF THREADS 4
+ EvalRate 446 k/s (6252 evals, 14 msecs)
+ EvalRate 1046 k/s (98395 evals, 94 msecs)
+ EvalRate 1111 k/s (314579 evals, 283 msecs)
+ EvalRate 1128 k/s (544151 evals, 482 msecs)
+ EvalRate 1131 k/s (777123 evals, 687 msecs)
+ EvalRate 1136 k/s (1010724 evals, 889 msecs)
+ EvalRate 1137 k/s (1244749 evals, 1094 msecs)
+ EvalRate 1137 k/s (1244749 evals, 1094 msecs)
+ EvalRate 1139 k/s (1479428 evals, 1298 msecs)
+ EvalRate 1139 k/s (1479428 evals, 1298 msecs)
+ EvalRate 1140 k/s (1714642 evals, 1503 msecs)
+ EvalRate 1142 k/s (1949784 evals, 1707 msecs)
+ EvalRate 1142 k/s (2185169 evals, 1912 msecs)
+ EvalRate 1142 k/s (2419926 evals, 2119 msecs)
+ EvalRate 1140 k/s (2654950 evals, 2328 msecs)
+ EvalRate 1142 k/s (2890640 evals, 2531 msecs)
+ EvalRate 1142 k/s (3125693 evals, 2735 msecs)
+ EvalRate 1142 k/s (3361206 evals, 2942 msecs)
+ EvalRate 1142 k/s (3596771 evals, 3147 msecs)
+ EvalRate 1144 k/s (3832585 evals, 3349 msecs)
+ EvalRate 1146 k/s (4068476 evals, 3549 msecs)
+ EvalRate 1147 k/s (4305189 evals, 3752 msecs)
+ EvalRate 1147 k/s (4541264 evals, 3959 msecs)
+ EvalRate 1147 k/s (4541264 evals, 3959 msecs)
+ EvalRate 1147 k/s (4777767 evals, 4165 msecs)
+ EvalRate 1146 k/s (5014213 evals, 4372 msecs)
+ EvalRate 1146 k/s (5250834 evals, 4580 msecs)
+ EvalRate 1147 k/s (5487479 evals, 4783 msecs)
+ EvalRate 1147 k/s (5487480 evals, 4783 msecs)
+ EvalRate 1148 k/s (5724061 evals, 4984 msecs)
+ EvalRate 1148 k/s (5960785 evals, 5188 msecs)
+ EvalRate 1149 k/s (6197274 evals, 5390 msecs)
+ EvalRate 1150 k/s (6434032 evals, 5593 msecs)
+ EvalRate 1150 k/s (6671615 evals, 5800 msecs)
+ EvalRate 1150 k/s (6908999 evals, 6006 msecs)
+ EvalRate 1150 k/s (7146072 evals, 6212 msecs)
+ EvalRate 1149 k/s (7383094 evals, 6422 msecs)
+ EvalRate 1149 k/s (7619850 evals, 6631 msecs)
+ EvalRate 1148 k/s (7855886 evals, 6841 msecs)
+ EvalRate 1147 k/s (8091900 evals, 7051 msecs)
+ EvalRate 1147 k/s (8327919 evals, 7259 msecs)
+ EvalRate 1146 k/s (8563915 evals, 7469 msecs)
+ EvalRate 1142 k/s (8797907 evals, 7698 msecs)
+ Search finished after 7.800 secs
+  Found move 'I7/LeftUp/Push'
+  Leaves visited: 8868174 (1136 k/s) 
+  Nodes visited: 130878 (67 leaves per node)
+X draws 'I7/LeftUp/Push' (after 7.801 secs)...
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X X . /
+      \ . . . . X /
+       -----------
+
+Connection::sendString: Cannot connect to localhost:23416
+Connection::sendString: Cannot connect to localhost:23415
+Connection::sendString: Cannot connect to localhost:23412
+Terminating because given number of moves drawn.
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'NegamaxParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Using Port 23413
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+NetworkDomain::newConnection: localhost:23415, now 1 active connections
+Connection::start: localhost:23414
+Connection::sendString: Cannot connect to localhost:23414
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 2 active connections
+ Reg of remote connection localhost:23414
+NetworkDomain::addConnection: localhost:23414 already existing
+ Reg of remote connection localhost:23412
+NetworkDomain::addConnection: localhost:23412 already existing
+ Reg of localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 3 active connections
+ Reg of localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 3 active connections
+ Reg of localhost:23416
+NetworkDomain::newConnection: localhost:23416, now 4 active connections
+Connection::sendString: Cannot connect to localhost:23416
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+UnReg of 127.0.0.1:23414
+
+
+==========================================
+
+#72 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X O O O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ X . . . X /
+       -----------
+
+ Search started ...
+OMP NUMBER OF THREADS 4
+OMP NUMBER OF THREADS 4
+OMP NUMBER OF THREADS 4
+OMP NUMBER OF THREADS 4
+ EvalRate 408 k/s (6129 evals, 15 msecs)
+ EvalRate 1092 k/s (89549 evals, 82 msecs)
+ EvalRate 1203 k/s (312853 evals, 260 msecs)
+ EvalRate 1203 k/s (312853 evals, 260 msecs)
+ EvalRate 1219 k/s (558546 evals, 458 msecs)
+ EvalRate 1227 k/s (807411 evals, 658 msecs)
+ EvalRate 1231 k/s (1057900 evals, 859 msecs)
+ EvalRate 1233 k/s (1309160 evals, 1061 msecs)
+ EvalRate 1236 k/s (1561056 evals, 1262 msecs)
+ EvalRate 1235 k/s (1813473 evals, 1468 msecs)
+ EvalRate 1235 k/s (2065689 evals, 1672 msecs)
+ EvalRate 1238 k/s (2317857 evals, 1872 msecs)
+ EvalRate 1237 k/s (2570657 evals, 2078 msecs)
+ EvalRate 1237 k/s (2823327 evals, 2282 msecs)
+ EvalRate 1235 k/s (3075987 evals, 2490 msecs)
+ EvalRate 1235 k/s (3075987 evals, 2490 msecs)
+ EvalRate 1236 k/s (3328798 evals, 2693 msecs)
+ EvalRate 1236 k/s (3581709 evals, 2896 msecs)
+ EvalRate 1235 k/s (3834751 evals, 3103 msecs)
+ EvalRate 1236 k/s (4087681 evals, 3307 msecs)
+ EvalRate 1236 k/s (4340200 evals, 3510 msecs)
+ EvalRate 1236 k/s (4340200 evals, 3510 msecs)
+ EvalRate 1237 k/s (4592827 evals, 3712 msecs)
+ EvalRate 1237 k/s (4592827 evals, 3712 msecs)
+ EvalRate 1237 k/s (4845207 evals, 3916 msecs)
+ EvalRate 1236 k/s (5097678 evals, 4122 msecs)
+ EvalRate 1236 k/s (5350546 evals, 4327 msecs)
+ EvalRate 1236 k/s (5602761 evals, 4532 msecs)
+ EvalRate 1236 k/s (5855640 evals, 4737 msecs)
+ EvalRate 1236 k/s (6108266 evals, 4941 msecs)
+ EvalRate 1236 k/s (6361009 evals, 5145 msecs)
+ EvalRate 1236 k/s (6613570 evals, 5347 msecs)
+ EvalRate 1236 k/s (6613570 evals, 5347 msecs)
+ EvalRate 1236 k/s (6866515 evals, 5552 msecs)
+ EvalRate 1236 k/s (7119364 evals, 5759 msecs)
+ EvalRate 1235 k/s (7372261 evals, 5966 msecs)
+ EvalRate 1235 k/s (7372261 evals, 5966 msecs)
+ EvalRate 1235 k/s (7624928 evals, 6170 msecs)
+ EvalRate 1235 k/s (7624928 evals, 6170 msecs)
+ EvalRate 1236 k/s (7877322 evals, 6371 msecs)
+ EvalRate 1236 k/s (7877322 evals, 6371 msecs)
+ EvalRate 1236 k/s (8129863 evals, 6573 msecs)
+ EvalRate 1237 k/s (8382381 evals, 6775 msecs)
+ EvalRate 1237 k/s (8382381 evals, 6775 msecs)
+ EvalRate 1237 k/s (8634863 evals, 6978 msecs)
+ EvalRate 1237 k/s (8887857 evals, 7180 msecs)
+ EvalRate 1237 k/s (8887857 evals, 7180 msecs)
+ EvalRate 1237 k/s (9140695 evals, 7384 msecs)
+ EvalRate 1237 k/s (9393340 evals, 7589 msecs)
+ EvalRate 1237 k/s (9393341 evals, 7589 msecs)
+ EvalRate 1237 k/s (9646060 evals, 7794 msecs)
+ EvalRate 1237 k/s (9898869 evals, 8000 msecs)
+ EvalRate 1237 k/s (10151937 evals, 8206 msecs)
+ EvalRate 1237 k/s (10404261 evals, 8409 msecs)
+ EvalRate 1237 k/s (10656904 evals, 8613 msecs)
+ EvalRate 1237 k/s (10909572 evals, 8815 msecs)
+ EvalRate 1236 k/s (11161237 evals, 9029 msecs)
+ Search finished after 9.225 secs
+  Found move 'E5/RightDown/Out'
+  Leaves visited: 11327519 (1227 k/s) 
+  Nodes visited: 287981 (39 leaves per node)
+O draws 'E5/RightDown/Out' (after 9.225 secs)...
+
+#73 X - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X O . O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X X O . /
+      \ X . . . X /
+       -----------
+
+Connection::sendString: Cannot connect to localhost:23415
+Connection::sendString: Cannot connect to localhost:23412
+Terminating because given number of moves drawn.
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+X about to move...
+WARNING: Got a board which is not reachable via a valid move !?
+
+#73 X - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X O . O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . O X X X . /
+      \ X . . . X /
+       -----------
+
+X about to move...
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'NegamaxParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Port 23413 in use
+NetworkDomain::startListening: Using Port 23414
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 1 active connections
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 2 active connections
+ Reg of localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 2 active connections
+ Reg of remote connection localhost:23412
+NetworkDomain::addConnection: localhost:23412 already existing
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+ Search started ...
+OMP NUMBER OF THREADS 8
+OMP NUMBER OF THREADS 8
+OMP NUMBER OF THREADS 8
+OMP NUMBER OF THREADS 8
+OMP NUMBER OF THREADS 8
+OMP NUMBER OF THREADS 8
+OMP NUMBER OF THREADS 8
+OMP NUMBER OF THREADS 8
+ EvalRate 457 k/s (6403 evals, 14 msecs)
+ EvalRate 1397 k/s (103384 evals, 74 msecs)
+ EvalRate 1677 k/s (395784 evals, 236 msecs)
+ EvalRate 1741 k/s (747178 evals, 429 msecs)
+ EvalRate 1741 k/s (747179 evals, 429 msecs)
+ EvalRate 1741 k/s (747178 evals, 429 msecs)
+ EvalRate 1777 k/s (1111206 evals, 625 msecs)
+ EvalRate 1795 k/s (1483317 evals, 826 msecs)
+ EvalRate 1807 k/s (1858381 evals, 1028 msecs)
+ EvalRate 1816 k/s (2235728 evals, 1231 msecs)
+ EvalRate 1816 k/s (2235728 evals, 1231 msecs)
+ EvalRate 1823 k/s (2614702 evals, 1434 msecs)
+ EvalRate 1827 k/s (2994926 evals, 1639 msecs)
+ EvalRate 1831 k/s (3376071 evals, 1843 msecs)
+ EvalRate 1834 k/s (3759018 evals, 2049 msecs)
+ EvalRate 1836 k/s (4142237 evals, 2255 msecs)
+ EvalRate 1838 k/s (4526092 evals, 2462 msecs)
+ EvalRate 1839 k/s (4910369 evals, 2670 msecs)
+ EvalRate 1841 k/s (5294215 evals, 2875 msecs)
+ EvalRate 1841 k/s (5294215 evals, 2875 msecs)
+ EvalRate 1843 k/s (5679115 evals, 3081 msecs)
+ EvalRate 1844 k/s (6063845 evals, 3288 msecs)
+ EvalRate 1845 k/s (6449564 evals, 3495 msecs)
+ EvalRate 1845 k/s (6834214 evals, 3704 msecs)
+ EvalRate 1845 k/s (7219146 evals, 3912 msecs)
+ EvalRate 1845 k/s (7219146 evals, 3912 msecs)
+ EvalRate 1846 k/s (7604029 evals, 4119 msecs)
+ EvalRate 1846 k/s (7988874 evals, 4326 msecs)
+ EvalRate 1846 k/s (7988875 evals, 4326 msecs)
+ EvalRate 1846 k/s (7988876 evals, 4326 msecs)
+ EvalRate 1811 k/s (8368368 evals, 4619 msecs)
+ Search finished after 4.809 secs
+  Found move 'I7/LeftUp/Push'
+  Leaves visited: 8492055 (1765 k/s) 
+  Nodes visited: 130737 (64 leaves per node)
+X draws 'I7/LeftUp/Push' (after 4.809 secs)...
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X X . /
+      \ . . . . X /
+       -----------
+
+Terminating because given number of moves drawn.
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+X about to move...
+X draws move 'I7/LeftUp/Push'...
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X X . /
+      \ . . . . X /
+       -----------
+
+O about to move...
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+X about to move...
+WARNING: Got a board which is not reachable via a valid move !?
+
+#71 X - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O . O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X O . /
+      \ . . . . X /
+       -----------
+
+X about to move...
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'NegamaxParallel' (depth 4) ...
+NetworkDomain::startListening: Using Port 23412
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23414
+Connection::sendString: Cannot connect to localhost:23414
+Connection::start: localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 1 active connections
+ Reg of localhost:23415
+NetworkDomain::newConnection: localhost:23415, now 2 active connections
+ Reg of localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 3 active connections
+
+
+==========================================
+
+#71 X - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O . O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X O . /
+      \ . . . . X /
+       -----------
+
+ Search started ...
+OMP NUMBER OF THREADS 12
+OMP NUMBER OF THREADS 12
+OMP NUMBER OF THREADS 12
+OMP NUMBER OF THREADS 12
+OMP NUMBER OF THREADS 12
+OMP NUMBER OF THREADS 12
+OMP NUMBER OF THREADS 12
+OMP NUMBER OF THREADS 12
+OMP NUMBER OF THREADS 12
+OMP NUMBER OF THREADS 12
+OMP NUMBER OF THREADS 12
+OMP NUMBER OF THREADS 12
+ EvalRate 473 k/s (6626 evals, 14 msecs)
+ EvalRate 1546 k/s (109784 evals, 71 msecs)
+ EvalRate 1546 k/s (109784 evals, 71 msecs)
+ EvalRate 1988 k/s (443448 evals, 223 msecs)
+ EvalRate 2103 k/s (872790 evals, 415 msecs)
+ EvalRate 2144 k/s (1327387 evals, 619 msecs)
+ EvalRate 2165 k/s (1790543 evals, 827 msecs)
+ EvalRate 2178 k/s (2257144 evals, 1036 msecs)
+ EvalRate 2191 k/s (2726277 evals, 1244 msecs)
+ EvalRate 2191 k/s (2726277 evals, 1244 msecs)
+ EvalRate 2196 k/s (3196623 evals, 1455 msecs)
+ EvalRate 2202 k/s (3669501 evals, 1666 msecs)
+ EvalRate 2207 k/s (4142787 evals, 1877 msecs)
+ EvalRate 2211 k/s (4616938 evals, 2088 msecs)
+ EvalRate 2211 k/s (4616938 evals, 2088 msecs)
+ EvalRate 2211 k/s (4616938 evals, 2088 msecs)
+ EvalRate 2215 k/s (5092767 evals, 2299 msecs)
+ EvalRate 2148 k/s (5558466 evals, 2587 msecs)
+ EvalRate 2084 k/s (6019391 evals, 2887 msecs)
+ EvalRate 2040 k/s (6479813 evals, 3175 msecs)
+ EvalRate 2007 k/s (6939385 evals, 3456 msecs)
+ EvalRate 1978 k/s (7418642 evals, 3749 msecs)
+ EvalRate 1939 k/s (7890844 evals, 4069 msecs)
+ EvalRate 1873 k/s (8337486 evals, 4451 msecs)
+ Search finished after 4.887 secs
+  Found move 'H6/Right/Push'
+  Leaves visited: 8689703 (1778 k/s) 
+  Nodes visited: 134100 (64 leaves per node)
+X draws 'H6/Right/Push' (after 4.887 secs)...
+
+#72 O - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O . O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X . X X O /
+      \ . . . . X /
+       -----------
+
+Terminating because given number of moves drawn.
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'NegamaxParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Using Port 23413
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 1 active connections
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 2 active connections
+ Reg of localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 2 active connections
+ Reg of remote connection localhost:23412
+NetworkDomain::addConnection: localhost:23412 already existing
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+
+
+==========================================
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X X . /
+      \ . . . . X /
+       -----------
+
+ Search started ...
+OMP NUMBER OF THREADS 8
+OMP NUMBER OF THREADS 8
+OMP NUMBER OF THREADS 8
+OMP NUMBER OF THREADS 8
+OMP NUMBER OF THREADS 8
+OMP NUMBER OF THREADS 8
+OMP NUMBER OF THREADS 8
+OMP NUMBER OF THREADS 8
+ EvalRate 334 k/s (6352 evals, 19 msecs)
+ EvalRate 1249 k/s (77468 evals, 62 msecs)
+ EvalRate 1659 k/s (340239 evals, 205 msecs)
+ EvalRate 1659 k/s (340239 evals, 205 msecs)
+ EvalRate 1749 k/s (689108 evals, 394 msecs)
+ EvalRate 1782 k/s (1057125 evals, 593 msecs)
+ EvalRate 1800 k/s (1432902 evals, 796 msecs)
+ EvalRate 1800 k/s (1432903 evals, 796 msecs)
+ EvalRate 1811 k/s (1813191 evals, 1001 msecs)
+ EvalRate 1811 k/s (1813191 evals, 1001 msecs)
+ EvalRate 1819 k/s (2196102 evals, 1207 msecs)
+ EvalRate 1825 k/s (2579973 evals, 1413 msecs)
+ EvalRate 1830 k/s (2964295 evals, 1619 msecs)
+ EvalRate 1835 k/s (3350144 evals, 1825 msecs)
+ EvalRate 1840 k/s (3737109 evals, 2031 msecs)
+ EvalRate 1840 k/s (3737109 evals, 2031 msecs)
+ EvalRate 1841 k/s (4124778 evals, 2240 msecs)
+ EvalRate 1841 k/s (4124778 evals, 2240 msecs)
+ EvalRate 1844 k/s (4512883 evals, 2447 msecs)
+ EvalRate 1844 k/s (4512883 evals, 2447 msecs)
+ EvalRate 1847 k/s (4901902 evals, 2653 msecs)
+ EvalRate 1850 k/s (5291934 evals, 2860 msecs)
+ EvalRate 1852 k/s (5681814 evals, 3067 msecs)
+ EvalRate 1856 k/s (6071386 evals, 3270 msecs)
+ EvalRate 1860 k/s (6462717 evals, 3474 msecs)
+ EvalRate 1864 k/s (6854244 evals, 3677 msecs)
+ EvalRate 1867 k/s (7246303 evals, 3881 msecs)
+ EvalRate 1870 k/s (7639407 evals, 4085 msecs)
+ EvalRate 1872 k/s (8032115 evals, 4290 msecs)
+ EvalRate 1874 k/s (8426859 evals, 4496 msecs)
+ EvalRate 1873 k/s (8820865 evals, 4707 msecs)
+ EvalRate 1873 k/s (8820865 evals, 4707 msecs)
+ Search finished after 4.945 secs
+  Found move 'E5/RightDown/Out'
+  Leaves visited: 9146170 (1849 k/s) 
+  Nodes visited: 246106 (37 leaves per node)
+O draws 'E5/RightDown/Out' (after 4.945 secs)...
+
+#71 X - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O . O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X O . /
+      \ . . . . X /
+       -----------
+
+Terminating because given number of moves drawn.
+Connection::sendString: Cannot connect to localhost:23412
+Error in connect in Connection::sendString: Connection timed out
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'NegamaxParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Port 23413 in use
+NetworkDomain::startListening: Using Port 23414
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+NetworkDomain::newConnection: localhost:23415, now 1 active connections
+Connection::start: localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 2 active connections
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 3 active connections
+ Reg of remote connection localhost:23413
+NetworkDomain::addConnection: localhost:23413 already existing
+ Reg of remote connection localhost:23412
+NetworkDomain::addConnection: localhost:23412 already existing
+ Reg of remote connection localhost:23415
+NetworkDomain::addConnection: localhost:23415 already existing
+ Reg of remote connection localhost:23412
+NetworkDomain::addConnection: localhost:23412 already existing
+ Reg of localhost:23416
+NetworkDomain::newConnection: localhost:23416, now 4 active connections
+Connection::sendString: Cannot connect to localhost:23416
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+UnReg of 127.0.0.1:23413
+
+
+==========================================
+
+#72 O - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O . O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X . X X O /
+      \ . . . . X /
+       -----------
+
+ Search started ...
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+ EvalRate 451 k/s (6766 evals, 15 msecs)
+ EvalRate 451 k/s (6767 evals, 15 msecs)
+ EvalRate 1475 k/s (107711 evals, 73 msecs)
+ EvalRate 2041 k/s (432875 evals, 212 msecs)
+ EvalRate 2214 k/s (881266 evals, 398 msecs)
+ EvalRate 2279 k/s (1367597 evals, 600 msecs)
+ EvalRate 2311 k/s (1869934 evals, 809 msecs)
+ EvalRate 2331 k/s (2380268 evals, 1021 msecs)
+ EvalRate 2344 k/s (2893652 evals, 1234 msecs)
+ EvalRate 2355 k/s (3412667 evals, 1449 msecs)
+ EvalRate 2355 k/s (3412667 evals, 1449 msecs)
+ EvalRate 2362 k/s (3933261 evals, 1665 msecs)
+ EvalRate 2367 k/s (4453832 evals, 1881 msecs)
+ EvalRate 2367 k/s (4453832 evals, 1881 msecs)
+ EvalRate 2372 k/s (4977669 evals, 2098 msecs)
+ EvalRate 2374 k/s (5499704 evals, 2316 msecs)
+ EvalRate 2374 k/s (5499705 evals, 2316 msecs)
+ EvalRate 2368 k/s (6016528 evals, 2540 msecs)
+ EvalRate 2368 k/s (6016528 evals, 2540 msecs)
+ Search finished after 2.809 secs
+  Found move 'E7/Left'
+  Leaves visited: 6500307 (2314 k/s) 
+  Nodes visited: 206371 (31 leaves per node)
+O draws 'E7/Left' (after 2.809 secs)...
+
+#73 X - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O . . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X . X X O /
+      \ . . . . X /
+       -----------
+
+Connection::sendString: Cannot connect to localhost:23412
+Terminating because given number of moves drawn.
+Error in connect in Connection::sendString: Connection timed out
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection timed out
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'NegamaxParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Port 23413 in use
+NetworkDomain::startListening: Port 23414 in use
+NetworkDomain::startListening: Using Port 23415
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23414
+Connection::sendString: Cannot connect to localhost:23414
+Connection::start: localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 1 active connections
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 2 active connections
+ Reg of remote connection localhost:23413
+NetworkDomain::addConnection: localhost:23413 already existing
+ Reg of localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 3 active connections
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+UnReg of 127.0.0.1:23414
+ Reg of localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 2 active connections
+ Reg of 127.0.0.1:23414
+NetworkDomain::newConnection: 127.0.0.1:23414, now 3 active connections
+ Reg of localhost:23416
+NetworkDomain::newConnection: localhost:23416, now 4 active connections
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+
+
+==========================================
+
+#72 O - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O . O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X . X X O /
+      \ . . . . X /
+       -----------
+
+ Search started ...
+OMP NUMBER OF THREADS 12
+OMP NUMBER OF THREADS 12
+OMP NUMBER OF THREADS 12
+OMP NUMBER OF THREADS 12
+OMP NUMBER OF THREADS 12
+OMP NUMBER OF THREADS 12
+OMP NUMBER OF THREADS 12
+OMP NUMBER OF THREADS 12
+OMP NUMBER OF THREADS 12
+OMP NUMBER OF THREADS 12
+OMP NUMBER OF THREADS 12
+OMP NUMBER OF THREADS 12
+ EvalRate 87 k/s (6448 evals, 74 msecs)
+ EvalRate 307 k/s (25221 evals, 82 msecs)
+ EvalRate 307 k/s (25221 evals, 82 msecs)
+ EvalRate 659 k/s (90322 evals, 137 msecs)
+ EvalRate 659 k/s (90324 evals, 137 msecs)
+ EvalRate 659 k/s (90323 evals, 137 msecs)
+ EvalRate 994 k/s (237721 evals, 239 msecs)
+ EvalRate 994 k/s (237722 evals, 239 msecs)
+ EvalRate 1228 k/s (444893 evals, 362 msecs)
+ EvalRate 1366 k/s (701049 evals, 513 msecs)
+ EvalRate 1454 k/s (984694 evals, 677 msecs)
+ EvalRate 1522 k/s (1284857 evals, 844 msecs)
+ EvalRate 1570 k/s (1599073 evals, 1018 msecs)
+ EvalRate 1605 k/s (1923139 evals, 1198 msecs)
+ EvalRate 1625 k/s (2255007 evals, 1387 msecs)
+ EvalRate 1607 k/s (2597145 evals, 1616 msecs)
+ EvalRate 1584 k/s (2951891 evals, 1863 msecs)
+ EvalRate 1584 k/s (2951891 evals, 1863 msecs)
+ EvalRate 1564 k/s (3336625 evals, 2133 msecs)
+ EvalRate 1577 k/s (3687507 evals, 2337 msecs)
+ EvalRate 1577 k/s (3687507 evals, 2337 msecs)
+ EvalRate 1623 k/s (4041565 evals, 2489 msecs)
+ EvalRate 1623 k/s (4041565 evals, 2489 msecs)
+ EvalRate 1623 k/s (4041565 evals, 2489 msecs)
+ EvalRate 1663 k/s (4394491 evals, 2641 msecs)
+ EvalRate 1663 k/s (4394493 evals, 2641 msecs)
+ EvalRate 1700 k/s (4755265 evals, 2797 msecs)
+ EvalRate 1700 k/s (4755265 evals, 2797 msecs)
+ EvalRate 1700 k/s (4755265 evals, 2797 msecs)
+ EvalRate 1733 k/s (5123467 evals, 2956 msecs)
+ EvalRate 1763 k/s (5497977 evals, 3118 msecs)
+ EvalRate 1763 k/s (5497977 evals, 3118 msecs)
+ EvalRate 1790 k/s (5880964 evals, 3284 msecs)
+ EvalRate 1815 k/s (6270049 evals, 3454 msecs)
+ EvalRate 1815 k/s (6270050 evals, 3454 msecs)
+ EvalRate 1815 k/s (6270050 evals, 3454 msecs)
+ EvalRate 1815 k/s (6270051 evals, 3454 msecs)
+ EvalRate 1810 k/s (6650771 evals, 3673 msecs)
+ Search finished after 3.682 secs
+  Found move 'E7/Left'
+  Leaves visited: 6658620 (1808 k/s) 
+  Nodes visited: 207176 (32 leaves per node)
+O draws 'E7/Left' (after 3.682 secs)...
+
+#73 X - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O . . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X . X X O /
+      \ . . . . X /
+       -----------
+
+Connection::sendString: Cannot connect to 127.0.0.1:23414
+Connection::sendString: Cannot connect to localhost:23416
+Connection::sendString: Cannot connect to localhost:23412
+Terminating because given number of moves drawn.
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+X about to move...
+X draws move 'H7/Left'...
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ X X X . X . /
+      \ . . X . X /
+       -----------
+
+O about to move...
+Using strategy 'NegamaxParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Using Port 23413
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+NetworkDomain::newConnection: localhost:23415, now 1 active connections
+Connection::start: localhost:23414
+Connection::sendString: Cannot connect to localhost:23414
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 2 active connections
+ Reg of remote connection localhost:23412
+NetworkDomain::addConnection: localhost:23412 already existing
+ Reg of localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 3 active connections
+ Reg of localhost:23416
+NetworkDomain::newConnection: localhost:23416, now 4 active connections
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+ Search started ...
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+OMP NUMBER OF THREADS 16
+ EvalRate 72 k/s (6560 evals, 91 msecs)
+ EvalRate 227 k/s (22276 evals, 98 msecs)
+ EvalRate 566 k/s (69738 evals, 123 msecs)
+ EvalRate 566 k/s (69738 evals, 123 msecs)
+ EvalRate 1038 k/s (188934 evals, 182 msecs)
+ EvalRate 1403 k/s (407157 evals, 290 msecs)
+ EvalRate 1607 k/s (702672 evals, 437 msecs)
+ EvalRate 1710 k/s (1039766 evals, 608 msecs)
+ EvalRate 1710 k/s (1039766 evals, 608 msecs)
+ EvalRate 1774 k/s (1400410 evals, 789 msecs)
+ EvalRate 1820 k/s (1773361 evals, 974 msecs)
+ EvalRate 1850 k/s (2185341 evals, 1181 msecs)
+ EvalRate 1873 k/s (2575643 evals, 1375 msecs)
+ EvalRate 1893 k/s (2970450 evals, 1569 msecs)
+ EvalRate 1904 k/s (3369852 evals, 1769 msecs)
+ EvalRate 1909 k/s (3791113 evals, 1985 msecs)
+ EvalRate 1902 k/s (4213858 evals, 2215 msecs)
+ EvalRate 1898 k/s (4632022 evals, 2440 msecs)
+ EvalRate 1898 k/s (4648211 evals, 2449 msecs)
+ EvalRate 1906 k/s (5069544 evals, 2659 msecs)
+ EvalRate 1907 k/s (5473155 evals, 2869 msecs)
+ EvalRate 1914 k/s (5909481 evals, 3087 msecs)
+ EvalRate 1921 k/s (6311766 evals, 3285 msecs)
+ EvalRate 1929 k/s (6715617 evals, 3480 msecs)
+ EvalRate 1929 k/s (6715617 evals, 3480 msecs)
+ EvalRate 1938 k/s (7153895 evals, 3691 msecs)
+ EvalRate 1942 k/s (7591774 evals, 3908 msecs)
+ EvalRate 1908 k/s (8014174 evals, 4199 msecs)
+ EvalRate 1781 k/s (8406743 evals, 4719 msecs)
+ Search finished after 4.852 secs
+  Found move 'H7/Left'
+  Leaves visited: 8441826 (1739 k/s) 
+  Nodes visited: 130639 (64 leaves per node)
+X draws 'H7/Left' (after 4.852 secs)...
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ X X X . X . /
+      \ . . X . X /
+       -----------
+
+Connection::sendString: Cannot connect to localhost:23414
+Connection::sendString: Cannot connect to localhost:23412
+Terminating because given number of moves drawn.
+Connection::sendString: Cannot connect to localhost:23415
+Connection::sendString: Cannot connect to localhost:23416
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'NegamaxParallel' (depth 4) ...
+NetworkDomain::startListening: Using Port 23412
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23414
+Connection::sendString: Cannot connect to localhost:23414
+Connection::start: localhost:23413
+Connection::sendString: Cannot connect to localhost:23413
+ Reg of localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 1 active connections
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+ Search started ...
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+ EvalRate 397 k/s (7148 evals, 18 msecs)
+ EvalRate 1375 k/s (100408 evals, 73 msecs)
+ EvalRate 1375 k/s (100409 evals, 73 msecs)
+ EvalRate 1948 k/s (411160 evals, 211 msecs)
+ EvalRate 1948 k/s (411163 evals, 211 msecs)
+ EvalRate 2131 k/s (850282 evals, 399 msecs)
+ EvalRate 2201 k/s (1332084 evals, 605 msecs)
+ EvalRate 2237 k/s (1827777 evals, 817 msecs)
+ EvalRate 2259 k/s (2331762 evals, 1032 msecs)
+ EvalRate 2273 k/s (2841866 evals, 1250 msecs)
+ EvalRate 2273 k/s (2841867 evals, 1250 msecs)
+ EvalRate 2281 k/s (3354274 evals, 1470 msecs)
+ EvalRate 2288 k/s (3866877 evals, 1690 msecs)
+ EvalRate 2288 k/s (3866877 evals, 1690 msecs)
+ EvalRate 2293 k/s (4383274 evals, 1911 msecs)
+ EvalRate 2298 k/s (4899657 evals, 2132 msecs)
+ EvalRate 2298 k/s (4899657 evals, 2132 msecs)
+ EvalRate 2302 k/s (5411552 evals, 2350 msecs)
+ EvalRate 2302 k/s (5411552 evals, 2350 msecs)
+ EvalRate 2304 k/s (5917176 evals, 2568 msecs)
+ EvalRate 2304 k/s (6420589 evals, 2786 msecs)
+ EvalRate 2304 k/s (6925637 evals, 3005 msecs)
+ EvalRate 2304 k/s (7428580 evals, 3224 msecs)
+ EvalRate 2304 k/s (7428581 evals, 3224 msecs)
+ EvalRate 2304 k/s (7428580 evals, 3224 msecs)
+ EvalRate 2300 k/s (7927377 evals, 3446 msecs)
+ Search finished after 3.577 secs
+  Found move 'I7/LeftUp/Push'
+  Leaves visited: 8178725 (2286 k/s) 
+  Nodes visited: 130152 (62 leaves per node)
+X draws 'I7/LeftUp/Push' (after 3.577 secs)...
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X X . /
+      \ . . . . X /
+       -----------
+
+Terminating because given number of moves drawn.
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+X about to move...
+X draws move 'I7/LeftUp/Push'...
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X X . /
+      \ . . . . X /
+       -----------
+
+O about to move...
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'NegamaxParallel' (depth 4) ...
+NetworkDomain::startListening: Using Port 23412
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23414
+Connection::sendString: Cannot connect to localhost:23414
+Connection::start: localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 1 active connections
+ Reg of localhost:23415
+NetworkDomain::newConnection: localhost:23415, now 2 active connections
+ Reg of localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 3 active connections
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+ Search started ...
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+ EvalRate 417 k/s (7936 evals, 19 msecs)
+ EvalRate 417 k/s (7936 evals, 19 msecs)
+ EvalRate 417 k/s (7936 evals, 19 msecs)
+ EvalRate 1115 k/s (117125 evals, 105 msecs)
+ EvalRate 1115 k/s (117126 evals, 105 msecs)
+ EvalRate 1276 k/s (407277 evals, 319 msecs)
+ EvalRate 1313 k/s (739386 evals, 563 msecs)
+ EvalRate 1313 k/s (739386 evals, 563 msecs)
+ EvalRate 1313 k/s (739386 evals, 563 msecs)
+ EvalRate 1325 k/s (1080238 evals, 815 msecs)
+ EvalRate 1333 k/s (1424612 evals, 1068 msecs)
+ EvalRate 1338 k/s (1772221 evals, 1324 msecs)
+ EvalRate 1342 k/s (2122091 evals, 1581 msecs)
+ EvalRate 1342 k/s (2122091 evals, 1581 msecs)
+ EvalRate 1342 k/s (2122091 evals, 1581 msecs)
+ EvalRate 1342 k/s (2122091 evals, 1581 msecs)
+ EvalRate 1342 k/s (2122088 evals, 1581 msecs)
+ EvalRate 1344 k/s (2471721 evals, 1839 msecs)
+ EvalRate 1345 k/s (2820701 evals, 2097 msecs)
+ EvalRate 1345 k/s (2820701 evals, 2097 msecs)
+ EvalRate 1345 k/s (2820701 evals, 2097 msecs)
+ EvalRate 1346 k/s (3170485 evals, 2355 msecs)
+ EvalRate 1347 k/s (3519841 evals, 2613 msecs)
+ EvalRate 1347 k/s (3519842 evals, 2613 msecs)
+ EvalRate 1347 k/s (3519842 evals, 2613 msecs)
+ EvalRate 1348 k/s (3870634 evals, 2871 msecs)
+ EvalRate 1348 k/s (3870634 evals, 2871 msecs)
+ EvalRate 1349 k/s (4221825 evals, 3128 msecs)
+ EvalRate 1350 k/s (4573014 evals, 3385 msecs)
+ EvalRate 1350 k/s (4573017 evals, 3385 msecs)
+ EvalRate 1352 k/s (4925811 evals, 3643 msecs)
+ EvalRate 1352 k/s (4925814 evals, 3643 msecs)
+ EvalRate 1352 k/s (4925811 evals, 3643 msecs)
+ EvalRate 1352 k/s (4925812 evals, 3643 msecs)
+ EvalRate 1353 k/s (5278854 evals, 3901 msecs)
+ EvalRate 1353 k/s (5278854 evals, 3901 msecs)
+ EvalRate 1353 k/s (5278855 evals, 3901 msecs)
+ EvalRate 1353 k/s (5278855 evals, 3901 msecs)
+ EvalRate 1353 k/s (5632082 evals, 4160 msecs)
+ EvalRate 1354 k/s (5984217 evals, 4417 msecs)
+ EvalRate 1354 k/s (5984220 evals, 4417 msecs)
+ EvalRate 1354 k/s (5984220 evals, 4417 msecs)
+ EvalRate 1355 k/s (6336323 evals, 4675 msecs)
+ EvalRate 1355 k/s (6688625 evals, 4933 msecs)
+ EvalRate 1355 k/s (7036486 evals, 5191 msecs)
+ EvalRate 1355 k/s (7036486 evals, 5191 msecs)
+ EvalRate 1354 k/s (7380897 evals, 5449 msecs)
+ EvalRate 1354 k/s (7380897 evals, 5449 msecs)
+ EvalRate 1352 k/s (7713731 evals, 5703 msecs)
+ EvalRate 1351 k/s (8023066 evals, 5936 msecs)
+ EvalRate 1351 k/s (8023066 evals, 5936 msecs)
+ EvalRate 1342 k/s (8304077 evals, 6184 msecs)
+ Search finished after 6.321 secs
+  Found move 'I7/LeftUp/Push'
+  Leaves visited: 8392082 (1327 k/s) 
+  Nodes visited: 129590 (64 leaves per node)
+X draws 'I7/LeftUp/Push' (after 6.321 secs)...
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X X . /
+      \ . . . . X /
+       -----------
+
+Terminating because given number of moves drawn.
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+X about to move...
+X draws move 'I7/LeftUp/Push'...
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X X . /
+      \ . . . . X /
+       -----------
+
+O about to move...
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection timed out
+Using strategy 'NegamaxParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Using Port 23413
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 1 active connections
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 2 active connections
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+ Reg of remote connection localhost:23412
+NetworkDomain::addConnection: localhost:23412 already existing
+UnReg of 127.0.0.1:23414
+ Reg of localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 1 active connections
+ Reg of localhost:23415
+NetworkDomain::newConnection: localhost:23415, now 2 active connections
+ Reg of 127.0.0.1:23414
+NetworkDomain::newConnection: 127.0.0.1:23414, now 3 active connections
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+
+
+==========================================
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X X . /
+      \ . . . . X /
+       -----------
+
+ Search started ...
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+OMP NUMBER OF THREADS 24
+ EvalRate 475 k/s (6658 evals, 14 msecs)
+ EvalRate 1336 k/s (110961 evals, 83 msecs)
+ EvalRate 1336 k/s (110961 evals, 83 msecs)
+ EvalRate 1573 k/s (401226 evals, 255 msecs)
+ EvalRate 1646 k/s (741126 evals, 450 msecs)
+ EvalRate 1656 k/s (775238 evals, 468 msecs)
+ EvalRate 1671 k/s (1166533 evals, 698 msecs)
+ EvalRate 1661 k/s (1527359 evals, 919 msecs)
+ EvalRate 1678 k/s (1906263 evals, 1136 msecs)
+ EvalRate 1690 k/s (2303818 evals, 1363 msecs)
+ EvalRate 1699 k/s (2684510 evals, 1580 msecs)
+ EvalRate 1729 k/s (3102423 evals, 1794 msecs)
+ EvalRate 1759 k/s (3511095 evals, 1996 msecs)
+ EvalRate 1787 k/s (3923408 evals, 2195 msecs)
+ EvalRate 1810 k/s (4307402 evals, 2379 msecs)
+ EvalRate 1810 k/s (4307402 evals, 2379 msecs)
+ EvalRate 1837 k/s (4734535 evals, 2577 msecs)
+ EvalRate 1837 k/s (4734536 evals, 2577 msecs)
+ EvalRate 1837 k/s (4734537 evals, 2577 msecs)
+ EvalRate 1837 k/s (4734537 evals, 2577 msecs)
+ EvalRate 1859 k/s (5169525 evals, 2780 msecs)
+ EvalRate 1862 k/s (5594557 evals, 3004 msecs)
+ EvalRate 1861 k/s (5994998 evals, 3220 msecs)
+ EvalRate 1868 k/s (6418931 evals, 3435 msecs)
+ EvalRate 1877 k/s (6819743 evals, 3632 msecs)
+ EvalRate 1890 k/s (7259447 evals, 3840 msecs)
+ EvalRate 1890 k/s (7259447 evals, 3840 msecs)
+ EvalRate 1903 k/s (7666965 evals, 4027 msecs)
+ EvalRate 1903 k/s (7666965 evals, 4027 msecs)
+ EvalRate 1914 k/s (8108949 evals, 4236 msecs)
+ EvalRate 1917 k/s (8510839 evals, 4439 msecs)
+ EvalRate 1909 k/s (8906792 evals, 4664 msecs)
+ EvalRate 1909 k/s (8906792 evals, 4664 msecs)
+ Search finished after 4.898 secs
+  Found move 'E5/RightDown/Out'
+  Leaves visited: 9145331 (1867 k/s) 
+  Nodes visited: 245637 (37 leaves per node)
+O draws 'E5/RightDown/Out' (after 4.898 secs)...
+
+#71 X - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O . O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X O . /
+      \ . . . . X /
+       -----------
+
+Connection::sendString: Cannot connect to 127.0.0.1:23414
+Terminating because given number of moves drawn.
+Error in connect in Connection::sendString: Connection timed out
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'NegamaxParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Port 23413 in use
+NetworkDomain::startListening: Using Port 23414
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+NetworkDomain::newConnection: localhost:23415, now 1 active connections
+Connection::start: localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 2 active connections
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 3 active connections
+ Reg of localhost:23415
+NetworkDomain::newConnection: localhost:23415, now 3 active connections
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+ Reg of remote connection localhost:23415
+NetworkDomain::addConnection: localhost:23415 already existing
+ Reg of remote connection localhost:23415
+NetworkDomain::addConnection: localhost:23415 already existing
+ Reg of remote connection localhost:23412
+NetworkDomain::addConnection: localhost:23412 already existing
+ Reg of remote connection localhost:23413
+NetworkDomain::addConnection: localhost:23413 already existing
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+ Reg of remote connection localhost:23413
+NetworkDomain::addConnection: localhost:23413 already existing
+ Reg of remote connection localhost:23412
+NetworkDomain::addConnection: localhost:23412 already existing
+
+
+==========================================
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X X . /
+      \ . . . . X /
+       -----------
+
+ Search started ...
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+ EvalRate 240 k/s (7709 evals, 32 msecs)
+ EvalRate 240 k/s (7710 evals, 32 msecs)
+ EvalRate 893 k/s (66982 evals, 75 msecs)
+ EvalRate 1190 k/s (248746 evals, 209 msecs)
+ EvalRate 1285 k/s (542547 evals, 422 msecs)
+ EvalRate 1285 k/s (542548 evals, 422 msecs)
+ EvalRate 1285 k/s (542548 evals, 422 msecs)
+ EvalRate 1326 k/s (856967 evals, 646 msecs)
+ EvalRate 1340 k/s (1226628 evals, 915 msecs)
+ EvalRate 1340 k/s (1226628 evals, 915 msecs)
+ EvalRate 1348 k/s (1580483 evals, 1172 msecs)
+ EvalRate 1353 k/s (1913418 evals, 1414 msecs)
+ EvalRate 1359 k/s (2317359 evals, 1705 msecs)
+ EvalRate 1359 k/s (2341353 evals, 1722 msecs)
+ EvalRate 1365 k/s (2709712 evals, 1984 msecs)
+ EvalRate 1371 k/s (3145694 evals, 2294 msecs)
+ EvalRate 1376 k/s (3531855 evals, 2566 msecs)
+ EvalRate 1376 k/s (3555737 evals, 2583 msecs)
+ EvalRate 1376 k/s (3555737 evals, 2583 msecs)
+ EvalRate 1379 k/s (3927253 evals, 2847 msecs)
+ EvalRate 1379 k/s (3927254 evals, 2847 msecs)
+ EvalRate 1379 k/s (4314670 evals, 3127 msecs)
+ EvalRate 1379 k/s (4314670 evals, 3127 msecs)
+ EvalRate 1381 k/s (4685216 evals, 3392 msecs)
+ EvalRate 1381 k/s (4685217 evals, 3392 msecs)
+ EvalRate 1383 k/s (5058396 evals, 3657 msecs)
+ EvalRate 1385 k/s (5471192 evals, 3949 msecs)
+ EvalRate 1385 k/s (5494605 evals, 3965 msecs)
+ EvalRate 1385 k/s (5494605 evals, 3965 msecs)
+ EvalRate 1385 k/s (5517392 evals, 3981 msecs)
+ EvalRate 1388 k/s (5914717 evals, 4260 msecs)
+ EvalRate 1388 k/s (5914717 evals, 4260 msecs)
+ EvalRate 1388 k/s (5914717 evals, 4260 msecs)
+ EvalRate 1390 k/s (6303816 evals, 4532 msecs)
+ EvalRate 1393 k/s (6709740 evals, 4815 msecs)
+ EvalRate 1394 k/s (7088562 evals, 5083 msecs)
+ EvalRate 1393 k/s (7433733 evals, 5333 msecs)
+ EvalRate 1393 k/s (7779554 evals, 5584 msecs)
+ EvalRate 1393 k/s (7779554 evals, 5584 msecs)
+ EvalRate 1393 k/s (7779554 evals, 5584 msecs)
+ EvalRate 1392 k/s (8124847 evals, 5834 msecs)
+ EvalRate 1391 k/s (8466880 evals, 6083 msecs)
+ EvalRate 1390 k/s (8784058 evals, 6316 msecs)
+ EvalRate 1390 k/s (8784058 evals, 6316 msecs)
+ EvalRate 1405 k/s (9092055 evals, 6469 msecs)
+ EvalRate 1405 k/s (9092055 evals, 6469 msecs)
+ EvalRate 1420 k/s (9389761 evals, 6610 msecs)
+ Search finished after 6.659 secs
+  Found move 'E4/RightDown/Push'
+  Leaves visited: 9439719 (1417 k/s) 
+  Nodes visited: 243764 (38 leaves per node)
+O draws 'E4/RightDown/Push' (after 6.659 secs)...
+
+#71 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X . O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X O X . /
+      \ . . . X X /
+       -----------
+
+Connection::sendString: Cannot connect to localhost:23413
+Terminating because given number of moves drawn.
+Connection::sendString: Cannot connect to localhost:23415
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'NegamaxParallel' (depth 4) ...
+NetworkDomain::startListening: Using Port 23412
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 1 active connections
+Connection::start: localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 2 active connections
+ Reg of localhost:23415
+NetworkDomain::newConnection: localhost:23415, now 3 active connections
+ Reg of localhost:23416
+NetworkDomain::newConnection: localhost:23416, now 4 active connections
+
+
+==========================================
+
+#71 X - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O . O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X O . /
+      \ . . . . X /
+       -----------
+
+ Search started ...
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+OMP NUMBER OF THREADS 48
+ EvalRate 318 k/s (8587 evals, 27 msecs)
+ EvalRate 928 k/s (98422 evals, 106 msecs)
+ EvalRate 928 k/s (98422 evals, 106 msecs)
+ EvalRate 928 k/s (98422 evals, 106 msecs)
+ EvalRate 928 k/s (98420 evals, 106 msecs)
+ EvalRate 1260 k/s (357962 evals, 284 msecs)
+ EvalRate 1352 k/s (710078 evals, 525 msecs)
+ EvalRate 1389 k/s (1089358 evals, 784 msecs)
+ EvalRate 1389 k/s (1089361 evals, 784 msecs)
+ EvalRate 1389 k/s (1089358 evals, 784 msecs)
+ EvalRate 1389 k/s (1089361 evals, 784 msecs)
+ EvalRate 1408 k/s (1479911 evals, 1051 msecs)
+ EvalRate 1408 k/s (1479909 evals, 1051 msecs)
+ EvalRate 1418 k/s (1878722 evals, 1324 msecs)
+ EvalRate 1418 k/s (1878723 evals, 1324 msecs)
+ EvalRate 1418 k/s (1878723 evals, 1324 msecs)
+ EvalRate 1418 k/s (1878724 evals, 1324 msecs)
+ EvalRate 1418 k/s (1878722 evals, 1324 msecs)
+ EvalRate 1425 k/s (2278516 evals, 1598 msecs)
+ EvalRate 1425 k/s (2278515 evals, 1598 msecs)
+ EvalRate 1430 k/s (2678883 evals, 1873 msecs)
+ EvalRate 1433 k/s (3082403 evals, 2150 msecs)
+ EvalRate 1433 k/s (3082404 evals, 2150 msecs)
+ EvalRate 1436 k/s (3485988 evals, 2426 msecs)
+ EvalRate 1436 k/s (3485990 evals, 2426 msecs)
+ EvalRate 1436 k/s (3485994 evals, 2426 msecs)
+ EvalRate 1436 k/s (3485988 evals, 2426 msecs)
+ EvalRate 1439 k/s (3891097 evals, 2703 msecs)
+ EvalRate 1439 k/s (3891097 evals, 2703 msecs)
+ EvalRate 1441 k/s (4298297 evals, 2982 msecs)
+ EvalRate 1442 k/s (4706969 evals, 3263 msecs)
+ EvalRate 1442 k/s (4706969 evals, 3263 msecs)
+ EvalRate 1443 k/s (5115299 evals, 3543 msecs)
+ EvalRate 1443 k/s (5115300 evals, 3543 msecs)
+ EvalRate 1444 k/s (5522568 evals, 3822 msecs)
+ EvalRate 1444 k/s (5522567 evals, 3822 msecs)
+ EvalRate 1444 k/s (5522570 evals, 3822 msecs)
+ EvalRate 1444 k/s (5522569 evals, 3822 msecs)
+ EvalRate 1444 k/s (5522568 evals, 3822 msecs)
+ EvalRate 1444 k/s (5522569 evals, 3822 msecs)
+ EvalRate 1444 k/s (5522569 evals, 3822 msecs)
+ EvalRate 1446 k/s (5928957 evals, 4100 msecs)
+ EvalRate 1446 k/s (5928959 evals, 4100 msecs)
+ EvalRate 1446 k/s (5928959 evals, 4100 msecs)
+ EvalRate 1446 k/s (6333345 evals, 4377 msecs)
+ EvalRate 1446 k/s (6333345 evals, 4377 msecs)
+ EvalRate 1447 k/s (6739135 evals, 4655 msecs)
+ EvalRate 1448 k/s (7142483 evals, 4932 msecs)
+ EvalRate 1447 k/s (7541377 evals, 5209 msecs)
+ EvalRate 1446 k/s (7923296 evals, 5478 msecs)
+ EvalRate 1452 k/s (8258493 evals, 5687 msecs)
+ Search finished after 5.819 secs
+  Found move 'H6/Right/Push'
+  Leaves visited: 8403063 (1444 k/s) 
+  Nodes visited: 132272 (63 leaves per node)
+X draws 'H6/Right/Push' (after 5.819 secs)...
+
+#72 O - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O . O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X . X X O /
+      \ . . . . X /
+       -----------
+
+Connection::sendString: Cannot connect to localhost:23415
+Connection::sendString: Cannot connect to localhost:23414
+Connection::sendString: Cannot connect to localhost:23413
+Terminating because given number of moves drawn.
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+X about to move...
+WARNING: Got a board which is not reachable via a valid move !?
+
+#72 O - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O . O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X . X X O /
+      \ . . . . X /
+       -----------
+
+O about to move...

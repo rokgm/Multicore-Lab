@@ -1,0 +1,142 @@
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'NegamaxParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Using Port 23413
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23414
+Connection::sendString: Cannot connect to localhost:23414
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 1 active connections
+ Reg of localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 1 active connections
+
+
+==========================================
+
+#0 O - O: 14, X: 14
+       -----------
+      / O O O O O \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . . . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+ Search started ...
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+ EvalRate 348 k/s (8004 evals, 23 msecs)
+ EvalRate 959 k/s (99809 evals, 104 msecs)
+ EvalRate 1240 k/s (347333 evals, 280 msecs)
+ EvalRate 1319 k/s (667878 evals, 506 msecs)
+ EvalRate 1319 k/s (667878 evals, 506 msecs)
+ EvalRate 1319 k/s (667880 evals, 506 msecs)
+ EvalRate 1348 k/s (1008866 evals, 748 msecs)
+ EvalRate 1348 k/s (1008866 evals, 748 msecs)
+ EvalRate 1366 k/s (1357291 evals, 993 msecs)
+ EvalRate 1378 k/s (1710136 evals, 1241 msecs)
+ EvalRate 1378 k/s (1710137 evals, 1241 msecs)
+ EvalRate 1384 k/s (2064822 evals, 1491 msecs)
+ EvalRate 1392 k/s (2422130 evals, 1740 msecs)
+ EvalRate 1392 k/s (2422130 evals, 1740 msecs)
+ EvalRate 1397 k/s (2780876 evals, 1990 msecs)
+ EvalRate 1397 k/s (2780878 evals, 1990 msecs)
+ EvalRate 1401 k/s (3140282 evals, 2240 msecs)
+ EvalRate 1402 k/s (3494897 evals, 2492 msecs)
+ EvalRate 1402 k/s (3494897 evals, 2492 msecs)
+ EvalRate 1395 k/s (3827094 evals, 2742 msecs)
+ EvalRate 1395 k/s (3827093 evals, 2742 msecs)
+ EvalRate 1395 k/s (3827095 evals, 2742 msecs)
+ EvalRate 1380 k/s (4133646 evals, 2995 msecs)
+ Search finished after 3.150 secs
+  Found move 'A5/LeftDown'
+  Leaves visited: 4294764 (1363 k/s) 
+  Nodes visited: 99363 (43 leaves per node)
+O draws 'A5/LeftDown' (after 3.150 secs)...
+
+#1 X - O: 14, X: 14
+       -----------
+      / O O O O . \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . O . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+Terminating because given number of moves drawn.
+
+#0 O - O: 14, X: 14
+       -----------
+      / O O O O O \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . . . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+O about to move...
+O draws move 'A5/LeftDown'...
+
+#1 X - O: 14, X: 14
+       -----------
+      / O O O O . \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . O . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+X about to move...

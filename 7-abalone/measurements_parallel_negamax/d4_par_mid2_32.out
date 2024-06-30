@@ -1,0 +1,193 @@
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'NegamaxParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Using Port 23413
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 1 active connections
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 2 active connections
+ Reg of localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 2 active connections
+
+
+==========================================
+
+#120 O - O: 14, X: 12
+       -----------
+      / . . . . . \
+     / O O O O O . \
+    / . O O X O . . \
+   / . O X O O . . . \
+  | . O O X X X . . . |
+   \ . . O X X X . . /
+    \ . . X . X . . /
+     \ . X . X . . /
+      \ . . . . . /
+       -----------
+
+ Search started ...
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+OMP NUMBER OF THREADS 32
+ EvalRate 350 k/s (8056 evals, 23 msecs)
+ EvalRate 350 k/s (8057 evals, 23 msecs)
+ EvalRate 350 k/s (8056 evals, 23 msecs)
+ EvalRate 987 k/s (100721 evals, 102 msecs)
+ EvalRate 1258 k/s (358600 evals, 285 msecs)
+ EvalRate 1326 k/s (687168 evals, 518 msecs)
+ EvalRate 1326 k/s (687166 evals, 518 msecs)
+ EvalRate 1326 k/s (687168 evals, 518 msecs)
+ EvalRate 1326 k/s (687168 evals, 518 msecs)
+ EvalRate 1353 k/s (1035087 evals, 765 msecs)
+ EvalRate 1365 k/s (1390328 evals, 1018 msecs)
+ EvalRate 1365 k/s (1390329 evals, 1018 msecs)
+ EvalRate 1365 k/s (1390328 evals, 1018 msecs)
+ EvalRate 1365 k/s (1390329 evals, 1018 msecs)
+ EvalRate 1365 k/s (1390329 evals, 1018 msecs)
+ EvalRate 1373 k/s (1748995 evals, 1273 msecs)
+ EvalRate 1373 k/s (1748994 evals, 1273 msecs)
+ EvalRate 1379 k/s (2109862 evals, 1529 msecs)
+ EvalRate 1379 k/s (2109862 evals, 1529 msecs)
+ EvalRate 1383 k/s (2471279 evals, 1786 msecs)
+ EvalRate 1383 k/s (2471281 evals, 1786 msecs)
+ EvalRate 1383 k/s (2471279 evals, 1786 msecs)
+ EvalRate 1386 k/s (2834069 evals, 2044 msecs)
+ EvalRate 1388 k/s (3198044 evals, 2303 msecs)
+ EvalRate 1388 k/s (3198044 evals, 2303 msecs)
+ EvalRate 1390 k/s (3562591 evals, 2563 msecs)
+ EvalRate 1390 k/s (3562590 evals, 2563 msecs)
+ EvalRate 1391 k/s (3926585 evals, 2821 msecs)
+ EvalRate 1391 k/s (3926585 evals, 2821 msecs)
+ EvalRate 1393 k/s (4290734 evals, 3079 msecs)
+ EvalRate 1393 k/s (4290734 evals, 3079 msecs)
+ EvalRate 1395 k/s (4655899 evals, 3337 msecs)
+ EvalRate 1395 k/s (4655900 evals, 3337 msecs)
+ EvalRate 1395 k/s (4655899 evals, 3337 msecs)
+ EvalRate 1395 k/s (4655899 evals, 3337 msecs)
+ EvalRate 1396 k/s (5021753 evals, 3596 msecs)
+ EvalRate 1396 k/s (5021756 evals, 3596 msecs)
+ EvalRate 1396 k/s (5021757 evals, 3596 msecs)
+ EvalRate 1396 k/s (5021755 evals, 3596 msecs)
+ EvalRate 1396 k/s (5022017 evals, 3596 msecs)
+ EvalRate 1397 k/s (5388902 evals, 3857 msecs)
+ EvalRate 1397 k/s (5388901 evals, 3857 msecs)
+ EvalRate 1398 k/s (5756036 evals, 4116 msecs)
+ EvalRate 1399 k/s (6122075 evals, 4375 msecs)
+ EvalRate 1400 k/s (6489252 evals, 4635 msecs)
+ EvalRate 1400 k/s (6489252 evals, 4635 msecs)
+ EvalRate 1400 k/s (6857076 evals, 4896 msecs)
+ EvalRate 1400 k/s (7225074 evals, 5158 msecs)
+ EvalRate 1401 k/s (7592611 evals, 5419 msecs)
+ EvalRate 1401 k/s (7961239 evals, 5681 msecs)
+ EvalRate 1401 k/s (8330216 evals, 5942 msecs)
+ EvalRate 1401 k/s (8330216 evals, 5942 msecs)
+ EvalRate 1402 k/s (8698485 evals, 6204 msecs)
+ EvalRate 1402 k/s (8698485 evals, 6204 msecs)
+ EvalRate 1402 k/s (9067540 evals, 6467 msecs)
+ EvalRate 1402 k/s (9436734 evals, 6730 msecs)
+ EvalRate 1402 k/s (9436736 evals, 6730 msecs)
+ EvalRate 1402 k/s (9436734 evals, 6730 msecs)
+ EvalRate 1402 k/s (9436736 evals, 6730 msecs)
+ EvalRate 1402 k/s (9436736 evals, 6730 msecs)
+ EvalRate 1402 k/s (9436737 evals, 6730 msecs)
+ EvalRate 1402 k/s (9802939 evals, 6988 msecs)
+ EvalRate 1404 k/s (10166547 evals, 7240 msecs)
+ EvalRate 1404 k/s (10166548 evals, 7240 msecs)
+ EvalRate 1405 k/s (10530717 evals, 7493 msecs)
+ EvalRate 1406 k/s (10895101 evals, 7747 msecs)
+ EvalRate 1407 k/s (11259230 evals, 8000 msecs)
+ EvalRate 1408 k/s (11621744 evals, 8254 msecs)
+ EvalRate 1408 k/s (11978683 evals, 8505 msecs)
+ EvalRate 1409 k/s (12304326 evals, 8727 msecs)
+ EvalRate 1424 k/s (12615995 evals, 8855 msecs)
+ EvalRate 1439 k/s (12930228 evals, 8983 msecs)
+ EvalRate 1453 k/s (13246605 evals, 9114 msecs)
+ EvalRate 1466 k/s (13564859 evals, 9248 msecs)
+ EvalRate 1466 k/s (13564858 evals, 9248 msecs)
+ Search finished after 9.336 secs
+  Found move 'C2/Left'
+  Leaves visited: 13741162 (1471 k/s) 
+  Nodes visited: 263631 (52 leaves per node)
+O draws 'C2/Left' (after 9.336 secs)...
+
+#121 X - O: 14, X: 12
+       -----------
+      / . . . . . \
+     / O O O O O . \
+    / O . O X O . . \
+   / . O X O O . . . \
+  | . O O X X X . . . |
+   \ . . O X X X . . /
+    \ . . X . X . . /
+     \ . X . X . . /
+      \ . . . . . /
+       -----------
+
+Terminating because given number of moves drawn.
+
+#120 O - O: 14, X: 12
+       -----------
+      / . . . . . \
+     / O O O O O . \
+    / . O O X O . . \
+   / . O X O O . . . \
+  | . O O X X X . . . |
+   \ . . O X X X . . /
+    \ . . X . X . . /
+     \ . X . X . . /
+      \ . . . . . /
+       -----------
+
+O about to move...
+O draws move 'C2/Left'...
+
+#121 X - O: 14, X: 12
+       -----------
+      / . . . . . \
+     / O O O O O . \
+    / O . O X O . . \
+   / . O X O O . . . \
+  | . O O X X X . . . |
+   \ . . O X X X . . /
+    \ . . X . X . . /
+     \ . X . X . . /
+      \ . . . . . /
+       -----------
+
+X about to move...
