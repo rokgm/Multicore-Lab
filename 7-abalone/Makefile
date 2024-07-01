@@ -14,11 +14,7 @@ CXX = icpc
 ### Options
 
 # Useful options for GCC
-# CXXFLAGS=-O3 -g -fno-omit-frame-pointer -fopenmp
-#LDFLAGS=
-
-# Useful options for Intel C++
-CXXFLAGS= -O3 -qopenmp -xhost
+CXXFLAGS=-O3 -g -fno-omit-frame-pointer -fopenmp
 LDFLAGS=
 
 
