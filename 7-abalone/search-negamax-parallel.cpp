@@ -24,15 +24,17 @@ private:
      * Implementation of the strategy.
      */
     void searchBestMove() override;
-    int negamax(int depth, Board& board);
+    int negamax(int depth, Board& board, Evaluator& ev);
 
     // We need to evaluate on copies of the board not _board.
-    int evaluate_parallel(Board& board);
+    int evaluateParallel(Board& board, Evaluator& ev);
 };
 
-int NegamaxParallelStrategy::evaluate_parallel(Board& board)
+int NegamaxParallelStrategy::evaluateParallel(Board& board, Evaluator& ev)
 {
-    int v = _ev->calcEvaluation(&board); 
+    int v = ev.calcEvaluation(&board);
+
+    // Remove this for competition no need to measure.
     if (_sc) _stopSearch = _sc->afterEval();
 
     return v;
@@ -40,43 +42,16 @@ int NegamaxParallelStrategy::evaluate_parallel(Board& board)
 
 void NegamaxParallelStrategy::searchBestMove()
 {
-    int bestEvaluation = minEvaluation();
-    MoveList list;
-    _board->generateMoves(list);
-
     #pragma omp parallel
     {
-    #pragma omp single nowait
-    {
-    
-    Move m;
-    while (list.getNext(m))
-    {
-        #pragma omp task firstprivate(m)
+        #pragma omp single
         {
-            // Must copy as firstprivate would just copy the pointer.
-            Board boardCopy = *_board;
-
-            boardCopy.playMove(m);
-            int evaluation = -negamax(1, boardCopy);
-            boardCopy.takeBack();
-
-            #pragma omp critical (searchBestMove)
-            {
-                if (evaluation > bestEvaluation) {
-                    bestEvaluation = evaluation;
-                    foundBestMove(0, m, evaluation);
-                }
-            }
+            negamax(0, *_board, *_ev);
         }
     }
-
-    } // omp single
-    } // omp parallel
-    finishedNode(0, nullptr);
 }
 
-int NegamaxParallelStrategy::negamax(int depth, Board& board)
+int NegamaxParallelStrategy::negamax(int depth, Board& board, Evaluator& evaluator)
 {
     // Check for a losing position, return negative minimum because
     // opponents move was last. Add depth to find shortest win.
@@ -85,29 +60,49 @@ int NegamaxParallelStrategy::negamax(int depth, Board& board)
 
     // Evaluation is done from opponents perspective, so negate it.
     if (depth >= _maxDepth)
-        return -evaluate_parallel(board);
+        return -evaluateParallel(board, evaluator);
 
     int bestEvaluation = minEvaluation();
     Move m;
     MoveList list;
     board.generateMoves(list);
 
-    while (list.getNext(m)) {
-        board.playMove(m);
-        int evaluation = -negamax(depth + 1, board);
-        board.takeBack();
-
-        if (evaluation > bestEvaluation) {
-            bestEvaluation = evaluation;
-            foundBestMove(depth, m, evaluation);
+    // Create tasks until desired depth away from leaves.
+    if (depth + 2 <= _maxDepth) {
+    // if (true) {
+        while (list.getNext(m)) {
+            // TODO firstprivate evaluate?
+            #pragma omp task firstprivate(m) shared(bestEvaluation)
+            {
+                // We pass by reference to negamax and copy here, for sequential reference is good.
+                Board boardCopy = board;
+                boardCopy.playMove(m);
+                int evaluation = -negamax(depth + 1, boardCopy, evaluator);
+                boardCopy.takeBack();
+                #pragma omp critical (negamax)
+                {
+                    if (evaluation > bestEvaluation) {
+                        bestEvaluation = evaluation;
+                        foundBestMove(depth, m, evaluation);
+                    }
+                }
+            }
         }
-
-        // WARNING FOR LATER!
-        // Evaluate can stop search if search callbacks are true.
-        // Also for PV, call foundBestMove and finishedNode to store whole principal variation.
-        // if (_stopSearch)
-        //     break;
     }
+    else {
+        while (list.getNext(m)) {
+            board.playMove(m);
+            int evaluation = -negamax(depth + 1, board, evaluator);
+            board.takeBack();
+            if (evaluation > bestEvaluation) {
+                bestEvaluation = evaluation;
+                foundBestMove(depth, m, evaluation);
+            }
+        }
+    }
+
+    #pragma omp taskwait
+
     finishedNode(depth, nullptr);
 
     return bestEvaluation;
