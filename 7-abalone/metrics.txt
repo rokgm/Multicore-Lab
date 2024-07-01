@@ -1,6 +1,0 @@
-1. max depth reached
-
-2. nodes
-
-3. decision time
-    not a measure of the quality of the decision
