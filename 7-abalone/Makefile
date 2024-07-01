@@ -24,7 +24,7 @@ LDFLAGS=
 
 LIB_OBJS = move.o board.o network.o search.o eval.o
 SEARCH_OBJS = $(LIB_OBJS) search-abid.o search-onelevel.o\
-	search-minimax.o search-negamax.o search-negamax-parallel.o
+	search-minimax.o search-negamax.o search-negamax-parallel.o search-ab-seq.o search-ab-parallel.o
 
 all: player start referee
 
@@ -56,3 +56,5 @@ search-abid.o: search.h board.h
 search-minimax.o: search.h board.h eval.h
 search-negamax.o: search.h board.h eval.h
 search-negamax-parallel.o: search.h board.h eval.h
+search-ab-seq.o: search.h board.h eval.h
+search-ab-parallel.o: search.h board.h eval.h
