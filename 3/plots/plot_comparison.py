@@ -22,8 +22,8 @@ perc_L3missratio = tuned_L3missratio / orig_L3missratio * 100
 
 perc_data = {
     'Runtime': np.round(perc_runtime, 2),
-    # 'L2 missratio': np.round(perc_L2missratio, 2),
-    # 'L3 missratio': np.round(perc_L3missratio, 2),
+    'L2 missratio': np.round(perc_L2missratio, 2),
+    'L3 missratio': np.round(perc_L3missratio, 2),
 }
 
 # fig, ax1 = plt.subplots(nrows=1, ncols=1, figsize=(7, 4))
@@ -36,9 +36,8 @@ width = 0.25  # the width of the bars
 multiplier = 0
 
 for attribute, measurement in perc_data.items():
-    # offset = width * multiplier
-    offset=0
-    rects = ax1.bar(x, measurement, width, label=attribute)
+    offset = width * multiplier
+    rects = ax1.bar(x + offset, measurement, width, label=attribute)
     ax1.bar_label(rects, padding=3)
     multiplier += 1
 
@@ -50,10 +49,9 @@ ax1.axhline(y = 100, color = 'r', linestyle = '-')
 
 ax1.set_xlabel("Resolution", fontsize=13)
 ax1.set_ylabel("Performance vs baseline [%]", fontsize=13)
-ax1.set_title("Performance of tuned code compared to baseline")
-ax1.set_xticks(x, bar_resolutions)
-# ax1.legend(loc='upper right', ncols=3)
-ax1.legend(loc='best')
+ax1.set_title("Group 2: Performance of tuned code compared to baseline")
+ax1.set_xticks(x + width, bar_resolutions)
+ax1.legend(loc='upper right', ncols=3)
 plt.tight_layout()
 plt.show()
 

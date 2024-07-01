@@ -2,7 +2,7 @@ Optimization
 ------------
 
 -O1       optimize for maximum speed, but disable some optimizations which
-          increase code size for a small speed benefit (e.g no loop unrolling)
+          increase code size for a small speed benefit
 -O2       optimize for maximum speed (DEFAULT)
 -O3       optimize for maximum speed and enable more aggressive optimizations
           that may not improve performance on some programs
