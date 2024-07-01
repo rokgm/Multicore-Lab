@@ -57,7 +57,7 @@ fig, ax1 = plt.subplots()
 
 ax1.set_xlabel("Number of threads", fontsize=13)
 ax1.set_ylabel("Speedup", fontsize=13)
-ax1.set_title("Group 2: Speedup using OpenMP, with changed KMP affinity settings")
+ax1.set_title("Speedup using OpenMP, with changed KMP affinity settings")
 ax1.set_xlim([0,49])
 ax1.set_ylim([0,30])
 

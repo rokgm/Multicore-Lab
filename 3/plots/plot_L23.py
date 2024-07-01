@@ -53,7 +53,7 @@ for attribute, measurement in perc_data.items():
 
 ax1.set_xlabel("Resolution", fontsize=13)
 ax1.set_ylabel("N", fontsize=13)
-ax1.set_title("Group 2: Performance of tuned code compared to baseline")
+ax1.set_title("Performance of tuned code compared to baseline")
 ax1.set_xticks(x + width, bar_resolutions)
 ax1.legend(loc='upper right')
 # ax1.legend(loc='upper right', ncols=3)
