@@ -10,37 +10,51 @@
 #include "search.h"
 #include "board.h"
 #include "eval.h"
-#include <omp.h>
+// #include <omp.h>
 
-class ABParStrategy : public SearchStrategy
+class ABStrategy_par : public SearchStrategy
 {
 public:
-	ABParStrategy() : SearchStrategy("AB parallel") {}
-	SearchStrategy *clone() { return new ABParStrategy(); }
+	ABStrategy_par() : SearchStrategy("AB par") {}
+	SearchStrategy *clone() { return new ABStrategy_par(); }
 
 	// Move &nextMove() { return _pv[1]; }
 
 private:
 	void searchBestMove();
 	/* recursive alpha/beta search */
-	int alphabeta(int depth, int alpha, int beta);
+	int alphabeta(int depth, int alpha, int beta, Board& board, Evaluator& ev);
+
+	// We need to evaluate on copies of the board not _board.
+    int evaluateParallel(Board& board, Evaluator& ev);
 
 	Move _currentBestMove;
 	int _currentMaxDepth;
-	float _perc_sequential;
 };
+
+
+int ABStrategy_par::evaluateParallel(Board& board, Evaluator& ev)
+{
+    int v = ev.calcEvaluation(&board);
+
+    // Remove this for competition no need to measure.
+    if (_sc) _stopSearch = _sc->afterEval();
+
+    return v;
+}
 
 /**
  * Entry point for search
  *
+ * Does iterative deepening and alpha/beta width handling, and
+ * calls alpha/beta search
  */
-void ABParStrategy::searchBestMove()
+void ABStrategy_par::searchBestMove()
 {
 
 	int alpha = -15000, beta = 15000;
 	int currentValue = 0;
 	_currentBestMove.type = Move::none;
-	_perc_sequential = 0.5;
 	// _currentMaxDepth = 1;
 
 	if (_sc && _sc->verbose())
@@ -50,135 +64,68 @@ void ABParStrategy::searchBestMove()
 		_sc->substart(tmp);
 	}
 
-#pragma omp parallel
-	{
-#pragma omp single
-		{
-			Move m;
-			MoveList list;
-			generateMoves(list);
-			int length = list.getLength();
-			int i = 0;
-			int curr_depth = 0;
-
-			list.getNext(m);
-
-			int value;
-			playMove(m);
-			if (curr_depth + 1 < _maxDepth)
-			{
-				value = -alphabeta(curr_depth + 1, -beta, -alpha);
-			}
-			else
-			{
-				value = evaluate();
-			}
-
-			takeBack();
-
-			if (value > currentValue)
-			{
-				currentValue = value;
-				foundBestMove(curr_depth, m, value);
-
-				if (curr_depth == 0)
-					_currentBestMove = m;
-			}
-
-			// alpha beta pruning
-			if (value > alpha)
-			{
-				alpha = value;
-			}
-
-			// if (beta <= alpha)
-			// {
-			// 	return alpha;
-			// }
-
-			finishedNode(curr_depth, 0);
-
-			// printf("Thread: %d\n", omp_get_thread_num());
-			currentValue = alphabeta(0, -beta, -alpha);
-			_bestMove = _currentBestMove;
-		}
-	}
+	currentValue = alphabeta(_currentMaxDepth, -16000, 16000, *_board, *_ev);
+	_bestMove = _currentBestMove;
 }
 
 /*
  * Alpha/Beta search
  *
  */
-int ABParStrategy::alphabeta(int curr_depth, int alpha, int beta)
+int ABStrategy_par::alphabeta(int curr_depth, int alpha, int beta, Board& board, Evaluator& ev)
 {
 
 	if (curr_depth >= _maxDepth)
 	{
 		// printf("Max depth reached\n");
-		return evaluate();
+		return -evaluateParallel(board, ev);
 	}
 
 	int currentValue = -15000;
 	Move m;
 	MoveList list;
-	generateMoves(list);
-	// int length = list.getLength();
-	int i = 0;
+	// generateMoves(list);
+	board.generateMoves(list);
 
 	while (list.getNext(m))
 	{
-#pragma omp task firstprivate(m, curr_depth, currentValue) // TODO missing board
+		// printf("Move: %d\n", m.type);
+		int value;
+		Board boardCopy = board;
+        boardCopy.playMove(m);
+        value = -alphabeta(curr_depth + 1, -beta, -alpha, boardCopy, ev);
+        boardCopy.takeBack();
+
+		if (value > currentValue)
 		{
-			// printf("Thread: %d, depth: %d\n", omp_get_thread_num(), curr_depth);
-			// printf("Move: %d\n", m.type);
-			int value;
-			playMove(m);
-			if (curr_depth + 1 < _maxDepth)
-			{
-				value = -alphabeta(curr_depth + 1, -beta, -alpha);
-			}
-			else
-			{
-				value = evaluate();
-			}
+			currentValue = value;
+			foundBestMove(curr_depth, m, value);
 
-			takeBack();
-
-			if (value > currentValue)
-			{
-				currentValue = value;
-				foundBestMove(curr_depth, m, value);
-
-				if (curr_depth == 0)
-					_currentBestMove = m;
-			}
-
-			// alpha beta pruning
-			if (value > alpha)
-			{
-				alpha = value;
-			}
-
-			if (beta <= alpha)
-			{
-				// return alpha;
-			}
-
-#pragma omp critical
-			{
-				finishedNode(curr_depth, 0);
-			}
+			if (curr_depth == 0)
+				_currentBestMove = m;
 		}
-#pragma omp taskwait
+
+		// alpha beta pruning
+		if (value > alpha)
+		{
+			alpha = value;
+		}
+
+		if (beta <= alpha)
+		{
+			break;
+		}
 	}
 
-	// if (_sc->verbose())
-	// {
-	// 	printf("Alpha: %d, beta: %d, value: %d\n", alpha, beta, currentValue);
-	// }
+	finishedNode(curr_depth, 0);
 
-	return alpha;
+	if (_sc->verbose())
+	{
+		// printf("Alpha: %d, beta: %d, value: %d\n", alpha, beta, currentValue);
+	}
+
+	return currentValue;
 }
 
 // register ourselves as a search strategy
-ABParStrategy abparStrategy;
+ABStrategy_par abStrategy_par;
