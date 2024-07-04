@@ -107,7 +107,7 @@ class SearchStrategy
     // see SearchCallbacks::finishedNode
     void finishedNode(int d, Move* bestList);
     // see Evaluator::calcEvaluation
-    int evaluate();
+    virtual int evaluate();
 
 
     int _maxDepth;

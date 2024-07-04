@@ -11,16 +11,19 @@ CXX = icpc
 #CXX = mpiCC
 
 
-### Options
-
 # Useful options for GCC
-CXXFLAGS=-O3 -g -fno-omit-frame-pointer -fopenmp
+# CXXFLAGS=-O3 -fno-omit-frame-pointer -fopenmp -march=native
+#LDFLAGS=
+
+# Useful options for Intel C++
+CXXFLAGS= -O3 -qopenmp -xhost
 LDFLAGS=
 
 
 LIB_OBJS = move.o board.o network.o search.o eval.o
 SEARCH_OBJS = $(LIB_OBJS) search-abid.o search-onelevel.o\
-	search-minimax.o search-negamax.o search-negamax-parallel.o search-ab-seq.o search-ab-parallel.o
+	search-minimax.o search-negamax.o search-negamax-parallel.o search-ab-seq.o search-ab-parallel.o\
+	timer.o
 
 all: player start referee
 
@@ -54,3 +57,5 @@ search-negamax.o: search.h board.h eval.h
 search-negamax-parallel.o: search.h board.h eval.h
 search-ab-seq.o: search.h board.h eval.h
 search-ab-parallel.o: search.h board.h eval.h
+
+timer.o: timer.h timer.cpp

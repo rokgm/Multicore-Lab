@@ -3,10 +3,10 @@
 # Number of games to be played
 NUM_GAMES=1
 # Strategy level for players
-STRATEGY_X=3
-STRATEGY_O=4
-DEPTH_X=2
-DEPTH_O=3
+STRATEGY_X=0
+STRATEGY_O=5
+DEPTH_X=4
+DEPTH_O=1000
 
 ############################################################################ 
 # Set the number of threads for OpenMP
@@ -24,18 +24,18 @@ run_game() {
   # Change args here
   #########################################################################
 
-  # ./player -v -p 3000 -s $STRATEGY_X $DEPTH_X X  > /dev/null 2>&1 &
-  # ./player -v -p 4000 -s $STRATEGY_O $DEPTH_O O  > /dev/null 2>&1 &
+  ./player -p 3000 -s $STRATEGY_X $DEPTH_X X  > ./logs/X_player.txt 2>&1 &
+  ./player -p 4000 -s $STRATEGY_O $DEPTH_O O  > ./logs/O_player.txt 2>&1 &
   #  GAME_OUTPUT=$(./referee -p 3000 -p 4000 -t 15)
   # # If running like this output is not captured and statistics aren't correct.
-  # ./referee -p 3000 -p 4000 -t 30
+  ./referee -p 3000 -p 4000 -t 60
 
   # For measurements
-  ./player -p 3000 -v -n -1 -s $STRATEGY_X $DEPTH_X X > ./startpos_parallel_d${DEPTH_X}_x.txt &
+  # ./player -p 3000 -v -n -1 -s $STRATEGY_X $DEPTH_X X > ./startpos_parallel_d${DEPTH_X}_x.txt &
   # PLAYER_X_PID=$!
-  ./player -p 4000 -v -n -1 -s $STRATEGY_O $DEPTH_O O > ./startpos_parallel_d${DEPTH_O}_o.txt &
+  # ./player -p 4000 -v -n -1 -s $STRATEGY_O $DEPTH_O O > ./startpos_parallel_d${DEPTH_O}_o.txt &
   # PLAYER_O_PID=$!
-  GAME_OUTPUT=$(./referee -p 3000 -p 4000)
+  # GAME_OUTPUT=$(./referee -p 3000 -p 4000)
 
   #########################################################################
 
