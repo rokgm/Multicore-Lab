@@ -56,7 +56,7 @@ private:
 	std::atomic<bool> _atomicStopSearch = false;
 
 	// TODO Change to 55000 for competition.
-	static constexpr std::chrono::milliseconds s_gameDuration{15000};
+	static constexpr std::chrono::milliseconds s_gameDuration{550000};
 	std::chrono::milliseconds _remainingTime{s_gameDuration};
 
 	int _currentIterativeDepth = 0;
@@ -114,13 +114,14 @@ void ABParallelStrategy::searchBestMove()
 	_atomicStopSearch = true;
     _timerThread.join();
 
-	// Subtract time used for search.
-	_remainingTime -= std::chrono::duration_cast<std::chrono::milliseconds>(
+	auto timeForMove = std::chrono::duration_cast<std::chrono::milliseconds>(
 		 std::chrono::high_resolution_clock::now() - start);
+	_remainingTime -= timeForMove;
 
 	_bestMove = iterativeBestMove;
 	_moveCounter++;
 
+	std::cout << "    Time for move: " << timeForMove.count() << "ms" << std::endl;
 	std::cout << "    Max depth searched: " << maxDepthSearched << std::endl;
 	std::cout << "    Remaining time: " << _remainingTime.count() << "ms" << std::endl;
 	// print when implemented "Number of transpositions: _countTranspositions
@@ -133,7 +134,7 @@ int ABParallelStrategy::alphabeta(int depth, int alpha, int beta, Board& board, 
 
     // Check for a losing position, return negative minimum because
     // opponents move was last. Add depth to find shortest win.
-    if (!_board->isValid())
+    if (!board.isValid())
         return minEvaluation() + depth;
 
     // Evaluation is done from opponents perspective, so negate it.
@@ -145,7 +146,7 @@ int ABParallelStrategy::alphabeta(int depth, int alpha, int beta, Board& board, 
     MoveList list;
 
 	// Moves are already order. See move.h.
-    _board->generateMoves(list);
+    board.generateMoves(list);
 
 	bool leftmostChildEvaluated = false;
 	// Need as we can't break out of omp task.
@@ -153,16 +154,18 @@ int ABParallelStrategy::alphabeta(int depth, int alpha, int beta, Board& board, 
 
     while (list.getNext(m)) {
 		// Don't create new task if there was a cut off.
-		#pragma omp atomic read 		// TODO is needed?
+		// TODO is needed?
+		// #pragma omp atomic
+		// bool localAlphaBetaCutoff = alphaBetaCutoff;
 		if (alphaBetaCutoff)
 			break;
 
 		// TODO try different depths away from leaves.
 		// Search sequentially when 2 move away from leaves to avoid task overhead.
 		if (!leftmostChildEvaluated || (depth + 2 >= _currentIterativeDepth)) {
-			playMove(m);
+			board.playMove(m);
 			int evaluation = -alphabeta(depth + 1, -beta, -alpha, board, evaluator);
-			takeBack();
+			board.takeBack();
 
 			// If search was stopped by timer, we can't use the result.
 			if (_atomicStopSearch)
@@ -193,8 +196,9 @@ int ABParallelStrategy::alphabeta(int depth, int alpha, int beta, Board& board, 
 		}
 		else {
 			// TODO try shared and critical alpha?
-			#pragma omp task firstprivate(m, alpha, beta) shared(bestEvaluation, alphaBetaCutoff)
+			#pragma omp task firstprivate(m, alpha, beta, depth) shared(bestEvaluation, alphaBetaCutoff)
             {	
+				// TODO copy evaluator?
 				Board boardCopy = board;
 				boardCopy.playMove(m);
 				int evaluation = -alphabeta(depth + 1, -beta, -alpha, boardCopy, evaluator);
@@ -202,24 +206,42 @@ int ABParallelStrategy::alphabeta(int depth, int alpha, int beta, Board& board, 
 
 				// If search was stopped by timer, we can't use the result.
 				if (!_atomicStopSearch) {
-					if (evaluation > bestEvaluation)
-						#pragma omp atomic write
-						bestEvaluation = evaluation;
+					#pragma omp critical (bestEvaluation)
+                    {
+                        if (evaluation > bestEvaluation) {
+                            bestEvaluation = evaluation;
+
+                            if (depth == 0) {
+                                _bestMove = m;
+                            }
+                        }
+
+                        if (bestEvaluation > alpha)
+                            alpha = bestEvaluation;
+
+                        if (alpha >= beta)
+                            alphaBetaCutoff = true;
+                    }
+					// if (evaluation > bestEvaluation) {
+					// 	#pragma omp atomic write
+					// 	bestEvaluation = evaluation;
+					// }
 						
-					if (depth == 0) {
-						#pragma omp critical (bestMove)
-						{
-							_bestMove = m;
-						}
-					}
+					// if (depth == 0) {
+					// 	#pragma omp critical (bestMove)
+					// 	{
+					// 		_bestMove = m;
+					// 	}
+					// }
 
-					// TODO if shared use atomic
-					if (bestEvaluation > alpha)
-						alpha = bestEvaluation;
+					// // TODO if shared use atomic
+					// if (bestEvaluation > alpha)
+					// 	alpha = bestEvaluation;
 
-					if (alpha >= beta)
-						#pragma omp atomic write
-						alphaBetaCutoff = true;
+					// if (alpha >= beta) {
+					// 	#pragma omp atomic write
+					// 	alphaBetaCutoff = true;
+					// }
 				}
 			}
 		}
@@ -238,7 +260,7 @@ void ABParallelStrategy::runTimer()
             return;
         }
 		// To avoid busy waiting
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        std::this_thread::sleep_for(std::chrono::milliseconds(50));
     }
 }
 

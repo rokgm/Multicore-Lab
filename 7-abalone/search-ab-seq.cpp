@@ -43,7 +43,7 @@ private:
 	std::atomic<bool> _atomicStopSearch = false;
 
 	// Change to 55000 for competition.
-	static constexpr std::chrono::milliseconds s_gameDuration{15000};
+	static constexpr std::chrono::milliseconds s_gameDuration{550000};
 	std::chrono::milliseconds _remainingTime{s_gameDuration};
 
 	int _currentIterativeDepth = 0;
@@ -59,10 +59,6 @@ int ABStrategy::evaluate()
 // store new evaluations into the transposition table.
 void ABStrategy::searchBestMove()
 {
-	// If you wan to seach to fixed depth given via command line
-	// comment out the following line. (For measurements etc.)
-	_maxDepth = 1000;
-
 	// Track remaining time. Subtract at the end of the search.
 	auto start = std::chrono::high_resolution_clock::now();
 
@@ -98,13 +94,14 @@ void ABStrategy::searchBestMove()
 	_atomicStopSearch = true;
     _timerThread.join();
 
-	// Subtract time used for search.
-	_remainingTime -= std::chrono::duration_cast<std::chrono::milliseconds>(
+	auto timeForMove = std::chrono::duration_cast<std::chrono::milliseconds>(
 		 std::chrono::high_resolution_clock::now() - start);
+	_remainingTime -= timeForMove;
 
 	_bestMove = iterativeBestMove;
 	_moveCounter++;
 
+	std::cout << "    Time for move: " << timeForMove.count() << "ms" << std::endl;
 	std::cout << "    Max depth searched: " << maxDepthSearched << std::endl;
 	std::cout << "    Remaining time: " << _remainingTime.count() << "ms" << std::endl;
 	// print when implemented "Number of transpositions: _countTranspositions
@@ -165,7 +162,7 @@ void ABStrategy::runTimer()
             return;
         }
 		// To avoid busy waiting
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        std::this_thread::sleep_for(std::chrono::milliseconds(50));
     }
 }
 

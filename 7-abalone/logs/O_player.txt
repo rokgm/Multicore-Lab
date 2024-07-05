@@ -1,0 +1,57 @@
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'ABParallel' (depth 5) ...
+NetworkDomain::startListening: Using Port 4000
+Connection::start: localhost:4004
+Connection::sendString: Cannot connect to localhost:4004
+Connection::start: localhost:4003
+Connection::sendString: Cannot connect to localhost:4003
+Connection::start: localhost:4002
+Connection::sendString: Cannot connect to localhost:4002
+Connection::start: localhost:4001
+NetworkDomain::newConnection: localhost:4001, now 1 active connections
+ Reg of localhost:4001
+NetworkDomain::newConnection: localhost:4001, now 1 active connections
+
+
+==========================================
+
+#0 O - O: 14, X: 14
+       -----------
+      / O O O O O \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . . . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+ Search started ...
+    Calculated time for move: 5500ms
+    Time for move: 5513ms
+    Max depth searched: 4
+    Remaining time: 544487ms
+ Search finished after 5.515 secs
+  Found move 'A5/LeftDown'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+O draws 'A5/LeftDown' (after 5.515 secs)...
+
+#1 X - O: 14, X: 14
+       -----------
+      / O O O O . \
+     / O O O O O O \
+    / . . O O O . . \
+   / . . . . O . . . \
+  | . . . . . . . . . |
+   \ . . . . . . . . /
+    \ . . X X X . . /
+     \ X X X X X X /
+      \ X X X X X /
+       -----------
+
+Terminating because given number of moves drawn.
