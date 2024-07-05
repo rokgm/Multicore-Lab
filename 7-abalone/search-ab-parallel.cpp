@@ -1,131 +1,257 @@
 /**
- * A real world, sequential strategy:
- * Alpha/Beta with Iterative Deepening (ABID)
- *
- * (c) 2005, Josef Weidendorfer
+ * Parallel negamax with alpha-beta pruning search strategy.
+ * 
+ * Two performance measurements strategies:
+ * 1. Fixed depth search: measure time.
+ * 2. Fixed time search: measure depth.
  */
-
-#include <stdio.h>
 
 #include "search.h"
 #include "board.h"
 #include "eval.h"
-// #include <omp.h>
+#include "timer.h"
 
-class ABStrategy_par : public SearchStrategy
-{
-public:
-	ABStrategy_par() : SearchStrategy("AB par") {}
-	SearchStrategy *clone() { return new ABStrategy_par(); }
-
-	// Move &nextMove() { return _pv[1]; }
-
-private:
-	void searchBestMove();
-	/* recursive alpha/beta search */
-	int alphabeta(int depth, int alpha, int beta, Board& board, Evaluator& ev);
-
-	// We need to evaluate on copies of the board not _board.
-    int evaluateParallel(Board& board, Evaluator& ev);
-
-	Move _currentBestMove;
-	int _currentMaxDepth;
-};
-
-
-int ABStrategy_par::evaluateParallel(Board& board, Evaluator& ev)
-{
-    int v = ev.calcEvaluation(&board);
-
-    // Remove this for competition no need to measure.
-    if (_sc) _stopSearch = _sc->afterEval();
-
-    return v;
-}
+#include <iostream>
+#include <chrono>
+#include <atomic>
+#include <thread>
+#include <cmath>
+#include <omp.h>
 
 /**
- * Entry point for search
- *
- * Does iterative deepening and alpha/beta width handling, and
- * calls alpha/beta search
+ * When using with time limit set max depth to a high number (e.g. 1000) via command line.
+ * Otherwise might be limit by depth and not time.
+ * 
  */
-void ABStrategy_par::searchBestMove()
+class ABParallelStrategy : public SearchStrategy
 {
+public:
+    // Defines the name of the strategy
+    ABParallelStrategy() : SearchStrategy("ABParallel") {}
 
-	int alpha = -15000, beta = 15000;
-	int currentValue = 0;
-	_currentBestMove.type = Move::none;
-	// _currentMaxDepth = 1;
+    // Factory method: just return a new instance of this class
+    SearchStrategy *clone() override { return new ABParallelStrategy(); }
 
-	if (_sc && _sc->verbose())
-	{
-		char tmp[100];
-		sprintf(tmp, "Alpha/Beta [%d;%d] with max depth %d", alpha, beta, _currentMaxDepth);
-		_sc->substart(tmp);
-	}
+private:
+    /**
+     * Implementation of the strategy.
+	 * 
+	 * Limited by time or max depth.
+     */
+    void searchBestMove() override;
+    int alphabeta(int depth, int alpha, int beta, Board& board, Evaluator& evaluator);
+	// Overload for parallel evaluation.
+	int evaluate(Board& board, Evaluator& ev);
 
-	currentValue = alphabeta(_currentMaxDepth, -16000, 16000, *_board, *_ev);
-	_bestMove = _currentBestMove;
+	/** Run timer on a separate thread that stops search when time is up. */
+	void runTimer();
+	/** Calculate time based on remaining time and number of moves left.
+	   For first 50 moves we use 1/2 of the time, for next 50 we use 1/4,1/8... */
+	std::chrono::milliseconds calcTimeForMove();
+
+private:
+	// Default time limit of 300 ms.
+	Timer _timer{std::chrono::milliseconds(300)};
+	std::thread _timerThread;
+	std::atomic<bool> _atomicStopSearch = false;
+
+	// TODO Change to 55000 for competition.
+	static constexpr std::chrono::milliseconds s_gameDuration{15000};
+	std::chrono::milliseconds _remainingTime{s_gameDuration};
+
+	int _currentIterativeDepth = 0;
+	int _moveCounter = 0;
+};
+
+int ABParallelStrategy::evaluate(Board& board, Evaluator& evaluator)
+{
+    return evaluator.calcEvaluation(&board);
 }
 
-/*
- * Alpha/Beta search
- *
- */
-int ABStrategy_par::alphabeta(int curr_depth, int alpha, int beta, Board& board, Evaluator& ev)
+// IDEA for later. When it is not our move we could still search and
+// store new evaluations into the transposition table.
+void ABParallelStrategy::searchBestMove()
 {
+	// Track remaining time. Subtract at the end of the search.
+	auto start = std::chrono::high_resolution_clock::now();
+	
+	_timer.resetStartTime(calcTimeForMove());	 
+	_atomicStopSearch = false;
+	_timerThread = std::thread(&ABParallelStrategy::runTimer, this);
 
-	if (curr_depth >= _maxDepth)
-	{
-		// printf("Max depth reached\n");
-		return -evaluateParallel(board, ev);
-	}
+	Move iterativeBestMove;
+	int maxDepthSearched = 0;
 
-	int currentValue = -15000;
-	Move m;
-	MoveList list;
-	// generateMoves(list);
-	board.generateMoves(list);
+	// Iterative deepening until reaches max depth or seach is stopped via timer.
+    for (int depth = 1; depth <= _maxDepth; depth++) {
+        _currentIterativeDepth = depth;
 
-	while (list.getNext(m))
-	{
-		// printf("Move: %d\n", m.type);
-		int value;
-		Board boardCopy = board;
-        boardCopy.playMove(m);
-        value = -alphabeta(curr_depth + 1, -beta, -alpha, boardCopy, ev);
-        boardCopy.takeBack();
-
-		if (value > currentValue)
+		#pragma omp parallel
 		{
-			currentValue = value;
-			foundBestMove(curr_depth, m, value);
-
-			if (curr_depth == 0)
-				_currentBestMove = m;
+			#pragma omp single
+			{
+				alphabeta(0, minEvaluation(), maxEvaluation(), *_board, *_ev);
+			}
 		}
 
-		// alpha beta pruning
-		if (value > alpha)
-		{
-			alpha = value;
-		}
+		// If search wasn't stopped by timer, we can update best move.
+		// If for given depth the search was canceled, we can't use it (the whole tree wasn't searched).
+		// We use iterativeBestMove to store best move from previous iteration.
+		// TODO: implement search first move first so no need to discard. (Needs trans tables)
+		if (_atomicStopSearch)
+            break;
 
-		if (beta <= alpha)
-		{
+		if (_bestMove.type == Move::none) {
+			std::cout << "Tried to update best move with move of type none." << std::endl;
 			break;
 		}
-	}
 
-	finishedNode(curr_depth, 0);
+		iterativeBestMove = _bestMove;
+		maxDepthSearched = depth;
+    }
 
-	if (_sc->verbose())
-	{
-		// printf("Alpha: %d, beta: %d, value: %d\n", alpha, beta, currentValue);
-	}
+	// Used to stop the timer thread.
+	_atomicStopSearch = true;
+    _timerThread.join();
 
-	return currentValue;
+	// Subtract time used for search.
+	_remainingTime -= std::chrono::duration_cast<std::chrono::milliseconds>(
+		 std::chrono::high_resolution_clock::now() - start);
+
+	_bestMove = iterativeBestMove;
+	_moveCounter++;
+
+	std::cout << "    Max depth searched: " << maxDepthSearched << std::endl;
+	std::cout << "    Remaining time: " << _remainingTime.count() << "ms" << std::endl;
+	// print when implemented "Number of transpositions: _countTranspositions
+}
+
+int ABParallelStrategy::alphabeta(int depth, int alpha, int beta, Board& board, Evaluator& evaluator)
+{	
+	if (_atomicStopSearch)
+		return minEvaluation();
+
+    // Check for a losing position, return negative minimum because
+    // opponents move was last. Add depth to find shortest win.
+    if (!_board->isValid())
+        return minEvaluation() + depth;
+
+    // Evaluation is done from opponents perspective, so negate it.
+    if (depth >= _currentIterativeDepth)
+        return -evaluate(board, evaluator);
+
+    int bestEvaluation = minEvaluation() + depth;
+    Move m;
+    MoveList list;
+
+	// Moves are already order. See move.h.
+    _board->generateMoves(list);
+
+	bool leftmostChildEvaluated = false;
+	// Need as we can't break out of omp task.
+	bool alphaBetaCutoff = false;
+
+    while (list.getNext(m)) {
+		// Don't create new task if there was a cut off.
+		#pragma omp atomic read 		// TODO is needed?
+		if (alphaBetaCutoff)
+			break;
+
+		// TODO try different depths away from leaves.
+		// Search sequentially when 2 move away from leaves to avoid task overhead.
+		if (!leftmostChildEvaluated || (depth + 2 >= _currentIterativeDepth)) {
+			playMove(m);
+			int evaluation = -alphabeta(depth + 1, -beta, -alpha, board, evaluator);
+			takeBack();
+
+			// If search was stopped by timer, we can't use the result.
+			if (_atomicStopSearch)
+				break;
+
+			if (evaluation > bestEvaluation) {
+				bestEvaluation = evaluation;
+				if (depth == 0) {
+					// TODO
+					// Probably not needed as for depth 0 we only get here only on
+					// most left node, before parallel tasks are created.
+					#pragma omp critical (bestMove)
+                	{
+						_bestMove = m;
+					}
+				}
+			}
+
+			if (bestEvaluation > alpha)
+				alpha = bestEvaluation;
+
+			if (alpha >= beta) {
+				alphaBetaCutoff = true;
+				break;
+			}
+
+			leftmostChildEvaluated = true;
+		}
+		else {
+			// TODO try shared and critical alpha?
+			#pragma omp task firstprivate(m, alpha, beta) shared(bestEvaluation, alphaBetaCutoff)
+            {	
+				Board boardCopy = board;
+				boardCopy.playMove(m);
+				int evaluation = -alphabeta(depth + 1, -beta, -alpha, boardCopy, evaluator);
+				boardCopy.takeBack();
+
+				// If search was stopped by timer, we can't use the result.
+				if (!_atomicStopSearch) {
+					if (evaluation > bestEvaluation)
+						#pragma omp atomic write
+						bestEvaluation = evaluation;
+						
+					if (depth == 0) {
+						#pragma omp critical (bestMove)
+						{
+							_bestMove = m;
+						}
+					}
+
+					// TODO if shared use atomic
+					if (bestEvaluation > alpha)
+						alpha = bestEvaluation;
+
+					if (alpha >= beta)
+						#pragma omp atomic write
+						alphaBetaCutoff = true;
+				}
+			}
+		}
+    }
+
+	#pragma omp taskwait
+    return bestEvaluation;
+}
+
+void ABParallelStrategy::runTimer()
+{
+    // Check in case it is modified elsewhere.
+    while (!_atomicStopSearch) {
+        if (_timer.timeUp()) {
+            _atomicStopSearch = true;
+            return;
+        }
+		// To avoid busy waiting
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    }
+}
+
+std::chrono::milliseconds ABParallelStrategy::calcTimeForMove()
+{
+	constexpr int numOfMovesForSplit = 50;
+	int k = _moveCounter / 50 + 1;
+	std::chrono::milliseconds timeForMove = std::chrono::duration_cast<std::chrono::milliseconds>(
+		 s_gameDuration * std::pow(0.5, k) / numOfMovesForSplit);		 
+	std::cout << "    Calculated time for move: " << timeForMove.count() << "ms" << std::endl;
+
+	return timeForMove;
 }
 
 // register ourselves as a search strategy
-ABStrategy_par abStrategy_par;
+ABParallelStrategy alphabetaParallelStrategy;

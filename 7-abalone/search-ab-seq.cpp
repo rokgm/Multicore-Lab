@@ -32,6 +32,9 @@ private:
 
 	/* Run timer on a separate thread that stops search when time is up. */
 	void runTimer();
+	/* Calculate time based on remaining time and number of moves left.
+	   For first 50 moves we use 1/2 of the time, for next 50 we use 1/4... */
+	std::chrono::milliseconds calcTimeForMove();
 
 private:
 	// Default time limit of 300 ms.
@@ -39,8 +42,8 @@ private:
 	std::thread _timerThread;
 	std::atomic<bool> _atomicStopSearch = false;
 
-	// Time for the whole game. Set to a bit less to account for messaging.
-	static constexpr std::chrono::milliseconds s_gameDuration{55000};
+	// Change to 55000 for competition.
+	static constexpr std::chrono::milliseconds s_gameDuration{15000};
 	std::chrono::milliseconds _remainingTime{s_gameDuration};
 
 	int _currentIterativeDepth = 0;
@@ -49,10 +52,7 @@ private:
 
 int ABStrategy::evaluate()
 {
-    int v = _ev->calcEvaluation(_board);
-    // Remove this for competition no need to measure.
-    // if (_sc) _stopSearch = _sc->afterEval();
-    return v;
+    return _ev->calcEvaluation(_board);
 }
 
 // IDEA for later. When it is not our move we could still search and
@@ -60,19 +60,13 @@ int ABStrategy::evaluate()
 void ABStrategy::searchBestMove()
 {
 	// If you wan to seach to fixed depth given via command line
-	// comment out the following line. (for measurements etc.)
+	// comment out the following line. (For measurements etc.)
 	_maxDepth = 1000;
 
 	// Track remaining time. Subtract at the end of the search.
 	auto start = std::chrono::high_resolution_clock::now();
 
-	// Calculate time based on remaining time and number of moves left.
-	// For first 50 moves we use 1/2 of the time, for next 50 we use 1/4...
-	constexpr int numOfMovesForSplit = 50;
-	int k = _moveCounter / 50 + 1;
-	std::chrono::milliseconds timeForMove = std::chrono::duration_cast<std::chrono::milliseconds>(
-		 s_gameDuration * std::pow(0.5, k) / numOfMovesForSplit);
-	_timer.resetStartTime(timeForMove);	 
+	_timer.resetStartTime(calcTimeForMove());	 
 	_atomicStopSearch = false;
 	_timerThread = std::thread(&ABStrategy::runTimer, this);
 
@@ -113,7 +107,6 @@ void ABStrategy::searchBestMove()
 
 	std::cout << "    Max depth searched: " << maxDepthSearched << std::endl;
 	std::cout << "    Remaining time: " << _remainingTime.count() << "ms" << std::endl;
-	std::cout << "    Time for move: " << timeForMove.count() << "ms" << std::endl;
 	// print when implemented "Number of transpositions: _countTranspositions
 }
 
@@ -134,6 +127,8 @@ int ABStrategy::alphabeta(int depth, int alpha, int beta)
     int bestEvaluation = minEvaluation() + depth;
     Move m;
     MoveList list;
+
+	// Moves are already order. See move.h.
     _board->generateMoves(list);
 
     while (list.getNext(m)) {
@@ -147,7 +142,8 @@ int ABStrategy::alphabeta(int depth, int alpha, int beta)
 
         if (evaluation > bestEvaluation) {
             bestEvaluation = evaluation;
-            foundBestMove(depth, m, evaluation);
+            if (depth == 0)
+				_bestMove = m;
         }
 
 		if (bestEvaluation > alpha)
@@ -156,7 +152,6 @@ int ABStrategy::alphabeta(int depth, int alpha, int beta)
         if (alpha >= beta)
             break;
     }
-    finishedNode(depth, nullptr);
 
     return bestEvaluation;
 }
@@ -173,6 +168,18 @@ void ABStrategy::runTimer()
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
 }
+
+std::chrono::milliseconds ABStrategy::calcTimeForMove()
+{
+	constexpr int numOfMovesForSplit = 50;
+	int k = _moveCounter / 50 + 1;
+	std::chrono::milliseconds timeForMove = std::chrono::duration_cast<std::chrono::milliseconds>(
+		 s_gameDuration * std::pow(0.5, k) / numOfMovesForSplit);		 
+	std::cout << "    Calculated time for move: " << timeForMove.count() << "ms" << std::endl;
+
+	return timeForMove;
+}
+
 
 // register ourselves as a search strategy
 ABStrategy alphabetaStrategy;

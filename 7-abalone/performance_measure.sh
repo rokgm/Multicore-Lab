@@ -6,12 +6,12 @@ NUM_GAMES=1
 STRATEGY_X=0
 STRATEGY_O=5
 DEPTH_X=3
-DEPTH_O=10000
+DEPTH_O=4
 
 ############################################################################ 
 # Set the number of threads for OpenMP
 ############################################################################
-export OMP_NUM_THREADS=48
+export OMP_NUM_THREADS=8
 
 # Counters for results
 wins_X=0

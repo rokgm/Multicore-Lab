@@ -2,27 +2,27 @@
 ### Chosen compiler has to be in path (use "module" to setup environment)
 
 # Use this for GCC (warning: GCC < 4.2.x does not support OpenMP)
-# CXX = g++
+CXX = g++
 
 # Use this for the Intel C++ compiler ("icc" is only the C version)
-CXX = icpc
+# CXX = icpc
 
 # Use this for MPI
 #CXX = mpiCC
 
 
 # Useful options for GCC
-# CXXFLAGS=-O3 -fno-omit-frame-pointer -fopenmp -march=native
+CXXFLAGS=-O3 -fno-omit-frame-pointer -fopenmp -march=native
 #LDFLAGS=
 
 # Useful options for Intel C++
-CXXFLAGS= -O3 -qopenmp -xhost
+# CXXFLAGS= -O3 -qopenmp -xhost
 LDFLAGS=
 
 
 LIB_OBJS = move.o board.o network.o search.o eval.o
 SEARCH_OBJS = $(LIB_OBJS) search-abid.o search-onelevel.o\
-	search-minimax.o search-negamax.o search-negamax-parallel.o search-ab-seq.o search-ab-parallel.o\
+	search-negamax.o search-negamax-parallel.o search-ab-seq.o search-ab-parallel.o\
 	timer.o
 
 all: player start referee
@@ -52,7 +52,6 @@ start.o: start.cpp board.cpp move.cpp
 referee.o: referee.cpp board.cpp move.cpp
 search-onelevel.o: search.h board.h eval.h
 search-abid.o: search.h board.h
-search-minimax.o: search.h board.h eval.h
 search-negamax.o: search.h board.h eval.h
 search-negamax-parallel.o: search.h board.h eval.h
 search-ab-seq.o: search.h board.h eval.h
