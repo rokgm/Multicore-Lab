@@ -153,10 +153,6 @@ int ABParallelStrategy::alphabeta(int depth, int alpha, int beta, Board& board, 
 	bool alphaBetaCutoff = false;
 
     while (list.getNext(m)) {
-		// Don't create new task if there was a cut off.
-		// TODO is needed?
-		// #pragma omp atomic
-		// bool localAlphaBetaCutoff = alphaBetaCutoff;
 		if (alphaBetaCutoff)
 			break;
 
@@ -174,13 +170,9 @@ int ABParallelStrategy::alphabeta(int depth, int alpha, int beta, Board& board, 
 			if (evaluation > bestEvaluation) {
 				bestEvaluation = evaluation;
 				if (depth == 0) {
-					// TODO
-					// Probably not needed as for depth 0 we only get here only on
+					// Critical not needed as for depth 0 we only get here only on
 					// most left node, before parallel tasks are created.
-					#pragma omp critical (bestMove)
-                	{
-						_bestMove = m;
-					}
+					_bestMove = m;
 				}
 			}
 
