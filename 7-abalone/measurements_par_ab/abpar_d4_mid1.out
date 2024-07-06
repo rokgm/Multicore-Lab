@@ -1,0 +1,514 @@
+!!!!!!!!!!!!!!!!!!!omp num threads: 1
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'ABParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Using Port 23413
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23414
+Connection::sendString: Cannot connect to localhost:23414
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 1 active connections
+
+
+==========================================
+
+#29 X - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . O O O O . \
+    / . O O . O . . \
+   / . . O O O . . . \
+  | . . O O O . . . . |
+   \ . X O X X X . . /
+    \ . X X X X X . /
+     \ X X X X X . /
+      \ . . . . . /
+       -----------
+
+ Search started ...
+    Time for move: 351ms
+    Max depth searched: 4
+    Remaining time: 99999649ms
+ Search finished after 0.352 secs
+  Found move 'G4/LeftUp'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+X draws 'G4/LeftUp' (after 0.352 secs)...
+
+#30 O - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . O O O O . \
+    / . O O . O . . \
+   / . . O O O . . . \
+  | . X O O O . . . . |
+   \ . X O X X X . . /
+    \ . . X X X X . /
+     \ X X X X X . /
+      \ . . . . . /
+       -----------
+
+Terminating because given number of moves drawn.
+
+#29 X - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . O O O O . \
+    / . O O . O . . \
+   / . . O O O . . . \
+  | . . O O O . . . . |
+   \ . X O X X X . . /
+    \ . X X X X X . /
+     \ X X X X X . /
+      \ . . . . . /
+       -----------
+
+X about to move...
+X draws move 'G4/LeftUp'...
+
+#30 O - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . O O O O . \
+    / . O O . O . . \
+   / . . O O O . . . \
+  | . X O O O . . . . |
+   \ . X O X X X . . /
+    \ . . X X X X . /
+     \ X X X X X . /
+      \ . . . . . /
+       -----------
+
+O about to move...
+!!!!!!!!!!!!!!!!!!!omp num threads: 2
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'ABParallel' (depth 4) ...
+NetworkDomain::startListening: Using Port 23412
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 1 active connections
+Connection::start: localhost:23413
+Connection::sendString: Cannot connect to localhost:23413
+ Reg of remote connection localhost:23413
+NetworkDomain::addConnection: localhost:23413 already existing
+ Reg of localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 2 active connections
+ Reg of localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 2 active connections
+ Reg of localhost:23415
+NetworkDomain::newConnection: localhost:23415, now 3 active connections
+
+
+==========================================
+
+#29 X - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . O O O O . \
+    / . O O . O . . \
+   / . . O O O . . . \
+  | . . O O O . . . . |
+   \ . X O X X X . . /
+    \ . X X X X X . /
+     \ X X X X X . /
+      \ . . . . . /
+       -----------
+
+ Search started ...
+    Time for move: 250ms
+    Max depth searched: 4
+    Remaining time: 99999750ms
+ Search finished after 0.252 secs
+  Found move 'G4/LeftUp'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+X draws 'G4/LeftUp' (after 0.252 secs)...
+
+#30 O - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . O O O O . \
+    / . O O . O . . \
+   / . . O O O . . . \
+  | . X O O O . . . . |
+   \ . X O X X X . . /
+    \ . . X X X X . /
+     \ X X X X X . /
+      \ . . . . . /
+       -----------
+
+Terminating because given number of moves drawn.
+
+#29 X - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . O O O O . \
+    / . O O . O . . \
+   / . . O O O . . . \
+  | . . O O O . . . . |
+   \ . X O X X X . . /
+    \ . X X X X X . /
+     \ X X X X X . /
+      \ . . . . . /
+       -----------
+
+X about to move...
+X draws move 'G4/LeftUp'...
+
+#30 O - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . O O O O . \
+    / . O O . O . . \
+   / . . O O O . . . \
+  | . X O O O . . . . |
+   \ . X O X X X . . /
+    \ . . X X X X . /
+     \ X X X X X . /
+      \ . . . . . /
+       -----------
+
+O about to move...
+!!!!!!!!!!!!!!!!!!!omp num threads: 4
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'ABParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Using Port 23413
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 1 active connections
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 2 active connections
+ Reg of remote connection 127.0.0.1:23412
+Connection::start: 127.0.0.1:23412
+NetworkDomain::newConnection: 127.0.0.1:23412, now 2 active connections
+ Reg of remote connection localhost:23414
+NetworkDomain::addConnection: localhost:23414 already existing
+ Reg of remote connection localhost:23414
+NetworkDomain::addConnection: localhost:23414 already existing
+ Reg of localhost:23415
+NetworkDomain::newConnection: localhost:23415, now 3 active connections
+
+
+==========================================
+
+#29 X - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . O O O O . \
+    / . O O . O . . \
+   / . . O O O . . . \
+  | . . O O O . . . . |
+   \ . X O X X X . . /
+    \ . X X X X X . /
+     \ X X X X X . /
+      \ . . . . . /
+       -----------
+
+
+
+==========================================
+
+#30 O - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . O O O O . \
+    / . O O . O . . \
+   / . . O O O . . . \
+  | . X O O O . . . . |
+   \ . X O X X X . . /
+    \ . . X X X X . /
+     \ X X X X X . /
+      \ . . . . . /
+       -----------
+
+ Search started ...
+    Time for move: 601ms
+    Max depth searched: 4
+    Remaining time: 99999399ms
+Using strategy 'ABParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Port 23413 in use
+NetworkDomain::startListening: Using Port 23414
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 1 active connections
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 2 active connections
+
+
+==========================================
+
+#29 X - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . O O O O . \
+    / . O O . O . . \
+   / . . O O O . . . \
+  | . . O O O . . . . |
+   \ . X O X X X . . /
+    \ . X X X X X . /
+     \ X X X X X . /
+      \ . . . . . /
+       -----------
+
+ Reg of remote connection localhost:23413
+NetworkDomain::addConnection: localhost:23413 already existing
+UnReg of 127.0.0.1:23412
+ Reg of 127.0.0.1:23412
+NetworkDomain::newConnection: 127.0.0.1:23412, now 2 active connections
+ Reg of localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 2 active connections
+ Reg of localhost:23415
+NetworkDomain::newConnection: localhost:23415, now 3 active connections
+
+
+==========================================
+
+#29 X - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . O O O O . \
+    / . O O . O . . \
+   / . . O O O . . . \
+  | . . O O O . . . . |
+   \ . X O X X X . . /
+    \ . X X X X X . /
+     \ X X X X X . /
+      \ . . . . . /
+       -----------
+
+
+
+==========================================
+
+#30 O - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . O O O O . \
+    / . O O . O . . \
+   / . . O O O . . . \
+  | . X O O O . . . . |
+   \ . X O X X X . . /
+    \ . . X X X X . /
+     \ X X X X X . /
+      \ . . . . . /
+       -----------
+
+ Search started ...
+    Time for move: 752ms
+    Max depth searched: 4
+    Remaining time: 99999248ms
+Using strategy 'ABParallel' (depth 4) ...
+NetworkDomain::startListening: Using Port 23412
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+NetworkDomain::newConnection: localhost:23415, now 1 active connections
+Connection::start: localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 2 active connections
+Connection::start: localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 3 active connections
+ Reg of localhost:23415
+NetworkDomain::newConnection: localhost:23415, now 3 active connections
+ Reg of remote connection localhost:23414
+NetworkDomain::addConnection: localhost:23414 already existing
+ Reg of remote connection localhost:23413
+NetworkDomain::addConnection: localhost:23413 already existing
+ Reg of localhost:23416
+NetworkDomain::newConnection: localhost:23416, now 4 active connections
+
+
+==========================================
+
+#31 X - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . . O O O . \
+    / . O O . O . . \
+   / . O O O O . . . \
+  | . X O O O . . . . |
+   \ . X O X X X . . /
+    \ . . X X X X . /
+     \ X X X X X . /
+      \ . . . . . /
+       -----------
+
+ Search started ...
+    Time for move: 150ms
+    Max depth searched: 4
+    Remaining time: 99999850ms
+Error in connect in Connection::sendString: Connection timed out
+ Search finished after 0.603 secs
+  Found move 'B2/LeftDown'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+O draws 'B2/LeftDown' (after 0.603 secs)...
+
+#31 X - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . . O O O . \
+    / . O O . O . . \
+   / . O O O O . . . \
+  | . X O O O . . . . |
+   \ . X O X X X . . /
+    \ . . X X X X . /
+     \ X X X X X . /
+      \ . . . . . /
+       -----------
+
+Connection::sendString: Cannot connect to localhost:23414
+Terminating because given number of moves drawn.
+Error in connect in Connection::sendString: Connection timed out
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection timed out
+Error in connect in Connection::sendString: Connection refused
+ Search finished after 0.754 secs
+  Found move 'B2/LeftDown'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+O draws 'B2/LeftDown' (after 0.754 secs)...
+
+#31 X - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . . O O O . \
+    / . O O . O . . \
+   / . O O O O . . . \
+  | . X O O O . . . . |
+   \ . X O X X X . . /
+    \ . . X X X X . /
+     \ X X X X X . /
+      \ . . . . . /
+       -----------
+
+Connection::sendString: Cannot connect to localhost:23413
+Terminating because given number of moves drawn.
+Connection::sendString: Cannot connect to localhost:23415
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+ Search finished after 0.152 secs
+  Found move 'H4/RightUp'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+X draws 'H4/RightUp' (after 0.152 secs)...
+
+#32 O - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . . O O O . \
+    / . O O . O . . \
+   / . O O O O . . . \
+  | . X O O O . . . . |
+   \ . X O X X X . . /
+    \ . X X X X X . /
+     \ . X X X X . /
+      \ . . . . . /
+       -----------
+
+Connection::sendString: Cannot connect to localhost:23416
+Connection::sendString: Cannot connect to localhost:23415
+Connection::sendString: Cannot connect to localhost:23414
+Connection::sendString: Cannot connect to localhost:23413
+Terminating because given number of moves drawn.
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'ABParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Port 23413 in use
+NetworkDomain::startListening: Port 23414 in use
+NetworkDomain::startListening: Using Port 23415
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 1 active connections
+Connection::start: localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 2 active connections
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 3 active connections
+ Reg of localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 3 active connections
+ Reg of remote connection localhost:23414
+NetworkDomain::addConnection: localhost:23414 already existing
+ Reg of remote connection localhost:23413
+NetworkDomain::addConnection: localhost:23413 already existing
+ Reg of localhost:23416
+NetworkDomain::newConnection: localhost:23416, now 4 active connections
+
+
+==========================================
+
+#29 X - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . O O O O . \
+    / . O O . O . . \
+   / . . O O O . . . \
+  | . . O O O . . . . |
+   \ . X O X X X . . /
+    \ . X X X X X . /
+     \ X X X X X . /
+      \ . . . . . /
+       -----------
+
+
+
+==========================================
+
+#31 X - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . . O O O . \
+    / . O O . O . . \
+   / . O O O O . . . \
+  | . X O O O . . . . |
+   \ . X O X X X . . /
+    \ . . X X X X . /
+     \ X X X X X . /
+      \ . . . . . /
+       -----------
+
+
+
+==========================================
+
+#31 X - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . . O O O . \
+    / . O O . O . . \
+   / . O O O O . . . \
+  | . X O O O . . . . |
+   \ . X O X X X . . /
+    \ . . X X X X . /
+     \ X X X X X . /
+      \ . . . . . /
+       -----------
+
+Connection::sendString: Cannot connect to localhost:23414
+Connection::sendString: Cannot connect to localhost:23413
+Connection::sendString: Cannot connect to localhost:23412
+slurmstepd: error: *** JOB 3442749 ON i01r01c01s03 CANCELLED AT 2024-07-06T13:31:19 DUE TO TIME LIMIT ***

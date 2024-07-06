@@ -1,0 +1,1374 @@
+!!!!!!!!!!!!!!!!!!!omp num threads: 1
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'ABParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Using Port 23413
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 1 active connections
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 2 active connections
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+ Search started ...
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: 99999950ms
+Using strategy 'ABParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Port 23413 in use
+NetworkDomain::startListening: Using Port 23414
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23413
+Connection::sendString: Cannot connect to localhost:23413
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 1 active connections
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+ Reg of localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 2 active connections
+
+
+==========================================
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X X . /
+      \ . . . . X /
+       -----------
+
+ Search started ...
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: 99999950ms
+ Search finished after 0.052 secs
+  Found move 'I7/LeftUp/Push'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+X draws 'I7/LeftUp/Push' (after 0.052 secs)...
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X X . /
+      \ . . . . X /
+       -----------
+
+ Reg of remote connection localhost:23414
+NetworkDomain::addConnection: localhost:23414 already existing
+ Reg of remote connection localhost:23412
+NetworkDomain::addConnection: localhost:23412 already existing
+
+
+==========================================
+
+#71 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . . . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ X . . . X /
+       -----------
+
+ Search started ...
+    Time for move: 21ms
+    Max depth searched: 4
+    Remaining time: 99999929ms
+ Search finished after 0.021 secs
+  Found move 'F3/RightUp/Push'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+X draws 'F3/RightUp/Push' (after 0.021 secs)...
+
+#72 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X O O O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ X . . . X /
+       -----------
+
+Terminating because given number of moves drawn.
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+X about to move...
+X draws move 'I7/LeftUp/Push'...
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X X . /
+      \ . . . . X /
+       -----------
+
+O about to move...
+O draws move 'D5/LeftDown/Push'...
+
+#71 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . . . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ X . . . X /
+       -----------
+
+X about to move...
+X draws move 'F3/RightUp/Push'...
+
+#72 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X O O O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ X . . . X /
+       -----------
+
+O about to move...
+!!!!!!!!!!!!!!!!!!!omp num threads: 2
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+ Search finished after 0.052 secs
+  Found move 'D5/LeftDown/Push'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+O draws 'D5/LeftDown/Push' (after 0.052 secs)...
+
+#71 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . . . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ X . . . X /
+       -----------
+
+
+
+==========================================
+
+#72 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X O O O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ X . . . X /
+       -----------
+
+ Search started ...
+    Time for move: 79ms
+    Max depth searched: 4
+    Remaining time: 99999871ms
+Using strategy 'ABParallel' (depth 4) ...
+NetworkDomain::startListening: Using Port 23412
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 1 active connections
+Connection::start: localhost:23413
+Connection::sendString: Cannot connect to localhost:23413
+ Reg of localhost:23415
+NetworkDomain::newConnection: localhost:23415, now 2 active connections
+ Reg of localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 3 active connections
+
+
+==========================================
+
+#73 X - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X O . O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X X O . /
+      \ X . . . X /
+       -----------
+
+ Search started ...
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: 99999950ms
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'ABParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Port 23413 in use
+NetworkDomain::startListening: Port 23414 in use
+NetworkDomain::startListening: Using Port 23415
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 1 active connections
+Connection::start: localhost:23413
+Connection::sendString: Cannot connect to localhost:23413
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 2 active connections
+ Reg of remote connection localhost:23414
+NetworkDomain::addConnection: localhost:23414 already existing
+ Reg of localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 3 active connections
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+
+
+==========================================
+
+#74 O - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X O . O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X X O X /
+      \ X . . . . /
+       -----------
+
+ Search started ...
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: 99999950ms
+Error in connect in Connection::sendString: Connection refused
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+X about to move...
+WARNING: Got a board which is not reachable via a valid move !?
+
+#73 X - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X O . O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X X O . /
+      \ X . . . X /
+       -----------
+
+X about to move...
+!!!!!!!!!!!!!!!!!!!omp num threads: 4
+Error in connect in Connection::sendString: Connection refused
+ Search finished after 0.079 secs
+  Found move 'E5/RightDown/Out'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+O draws 'E5/RightDown/Out' (after 0.079 secs)...
+
+#73 X - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X O . O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X X O . /
+      \ X . . . X /
+       -----------
+
+Terminating because given number of moves drawn.
+Connection::sendString: Cannot connect to localhost:23413
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'ABParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Using Port 23413
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+NetworkDomain::newConnection: localhost:23415, now 1 active connections
+Connection::start: localhost:23414
+Connection::sendString: Cannot connect to localhost:23414
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 2 active connections
+ Reg of localhost:23416
+NetworkDomain::newConnection: localhost:23416, now 3 active connections
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+ Search started ...
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: 99999950ms
+Error in connect in Connection::sendString: Connection refused
+ Search finished after 0.051 secs
+  Found move 'E4/RightDown/Push'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+O draws 'E4/RightDown/Push' (after 0.051 secs)...
+
+#75 X - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X . . O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X O O X /
+      \ X . . X . /
+       -----------
+
+Connection::sendString: Cannot connect to localhost:23414
+Connection::sendString: Cannot connect to localhost:23412
+UnReg of 127.0.0.1:23413
+ Reg of 127.0.0.1:23413
+NetworkDomain::newConnection: 127.0.0.1:23413, now 1 active connections
+ Reg of localhost:23416
+NetworkDomain::newConnection: localhost:23416, now 2 active connections
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+ Reg of localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 3 active connections
+
+
+==========================================
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X X . /
+      \ . . . . X /
+       -----------
+
+ Search started ...
+    Time for move: 65ms
+    Max depth searched: 4
+    Remaining time: 99999885ms
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+ Search finished after 0.051 secs
+  Found move 'I7/LeftUp/Push'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+X draws 'I7/LeftUp/Push' (after 0.051 secs)...
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X X . /
+      \ . . . . X /
+       -----------
+
+Connection::sendString: Cannot connect to localhost:23412
+ Reg of localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 3 active connections
+
+
+==========================================
+
+#74 O - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X O . O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X X O X /
+      \ X . . . . /
+       -----------
+
+
+
+==========================================
+
+#75 X - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X . . O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X O O X /
+      \ X . . X . /
+       -----------
+
+ Search started ...
+    Time for move: 10ms
+    Max depth searched: 4
+    Remaining time: 99999940ms
+Error in connect in Connection::sendString: Connection refused
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+X about to move...
+X draws move 'I7/LeftUp/Push'...
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X X . /
+      \ . . . . X /
+       -----------
+
+O about to move...
+WARNING: Got a board which is not reachable via a valid move !?
+
+#75 X - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X . . O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X O O X /
+      \ X . . X . /
+       -----------
+
+X about to move...
+X draws move 'E3/RightUp/Push'...
+
+#76 O - O: 14, X: 9
+       -----------
+      / . . O . . \
+     / . O X . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X . . . O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X O O X /
+      \ X . . X . /
+       -----------
+
+O about to move...
+!!!!!!!!!!!!!!!!!!!omp num threads: 8
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'ABParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Port 23413 in use
+NetworkDomain::startListening: Using Port 23414
+Connection::start: localhost:23416
+NetworkDomain::newConnection: localhost:23416, now 1 active connections
+Connection::start: localhost:23415
+NetworkDomain::newConnection: localhost:23415, now 2 active connections
+Connection::start: localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 3 active connections
+Connection::start: localhost:23412
+Connection::sendString: Cannot connect to localhost:23412
+ Reg of remote connection 127.0.0.1:23413
+Connection::start: 127.0.0.1:23413
+NetworkDomain::newConnection: 127.0.0.1:23413, now 3 active connections
+ Reg of remote connection localhost:23416
+NetworkDomain::addConnection: localhost:23416 already existing
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+ Reg of remote connection localhost:23415
+NetworkDomain::addConnection: localhost:23415 already existing
+ Reg of remote connection localhost:23413
+Connection::start: localhost:23413
+Connection::sendString: Cannot connect to localhost:23413
+ Reg of remote connection localhost:23412
+NetworkDomain::addConnection: localhost:23412 already existing
+
+
+==========================================
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X X . /
+      \ . . . . X /
+       -----------
+
+ Search started ...
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: 99999950ms
+ Search finished after 0.051 secs
+  Found move 'I9/RightUp'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+X draws 'I9/RightUp' (after 0.051 secs)...
+
+#74 O - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X O . O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X X O X /
+      \ X . . . . /
+       -----------
+
+Connection::sendString: Cannot connect to localhost:23414
+Error in connect in Connection::sendString: Connection timed out
+Error in connect in Connection::sendString: Connection timed out
+Error in connect in Connection::sendString: Connection timed out
+ Search finished after 0.065 secs
+  Found move 'D5/LeftDown/Push'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+O draws 'D5/LeftDown/Push' (after 0.065 secs)...
+
+#71 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . . . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ X . . . X /
+       -----------
+
+Connection::sendString: Cannot connect to localhost:23414
+Terminating because given number of moves drawn.
+Error in connect in Connection::sendString: Connection timed out
+ Search finished after 0.010 secs
+  Found move 'E3/RightUp/Push'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+X draws 'E3/RightUp/Push' (after 0.010 secs)...
+
+#76 O - O: 14, X: 9
+       -----------
+      / . . O . . \
+     / . O X . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X . . . O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X O O X /
+      \ X . . X . /
+       -----------
+
+Terminating because given number of moves drawn.
+Connection::sendString: Cannot connect to localhost:23414
+Error in connect in Connection::sendString: Connection timed out
+ Search finished after 0.051 secs
+  Found move 'D5/LeftDown/Push'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+O draws 'D5/LeftDown/Push' (after 0.051 secs)...
+
+#71 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . . . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ X . . . X /
+       -----------
+
+Connection::sendString: Cannot connect to localhost:23415
+ Reg of remote connection localhost:23416
+NetworkDomain::addConnection: localhost:23416 already existing
+ Reg of remote connection localhost:23415
+NetworkDomain::addConnection: localhost:23415 already existing
+
+
+==========================================
+
+#76 O - O: 14, X: 9
+       -----------
+      / . . O . . \
+     / . O X . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X . . . O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X O O X /
+      \ X . . X . /
+       -----------
+
+ Search started ...
+    Time for move: 59ms
+    Max depth searched: 4
+    Remaining time: 99999891ms
+Error in connect in Connection::sendString: Connection refused
+ Search finished after 0.059 secs
+  Found move 'F5/RightDown/Out'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+O draws 'F5/RightDown/Out' (after 0.059 secs)...
+
+#77 X - O: 14, X: 8
+       -----------
+      / . . O . . \
+     / . O X . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X . . . O O . . |
+   \ . . O . O O . . /
+    \ . O O O O . . /
+     \ . X X O O X /
+      \ X . . O . /
+       -----------
+
+Connection::sendString: Cannot connect to localhost:23415
+O wins the game!
+Terminating because given number of moves drawn.
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+X about to move...
+!!!!!!!!!!!!!!!!!!!omp num threads: 12
+Using strategy 'ABParallel' (depth 4) ...
+NetworkDomain::startListening: Using Port 23412
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23414
+Connection::sendString: Cannot connect to localhost:23414
+Connection::start: localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 1 active connections
+ Reg of localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 1 active connections
+
+
+==========================================
+
+#71 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . . . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ X . . . X /
+       -----------
+
+ Search started ...
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: 99999950ms
+ Search finished after 0.051 secs
+  Found move 'F3/RightUp/Push'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+X draws 'F3/RightUp/Push' (after 0.051 secs)...
+
+#72 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X O O O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ X . . . X /
+       -----------
+
+
+
+==========================================
+
+#77 X - O: 14, X: 8
+       -----------
+      / . . O . . \
+     / . O X . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X . . . O O . . |
+   \ . . O . O O . . /
+    \ . O O O O . . /
+     \ . X X O O X /
+      \ X . . O . /
+       -----------
+
+O wins the game!
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'ABParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Port 23413 in use
+NetworkDomain::startListening: Port 23414 in use
+NetworkDomain::startListening: Port 23415 in use
+NetworkDomain::startListening: Using Port 23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23414
+Connection::sendString: Cannot connect to localhost:23414
+Connection::start: localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 1 active connections
+Connection::start: localhost:23412
+Connection::sendString: Cannot connect to localhost:23412
+
+
+==========================================
+
+#71 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . . . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ X . . . X /
+       -----------
+
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'ABParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Using Port 23413
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+NetworkDomain::newConnection: localhost:23415, now 1 active connections
+Connection::start: localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 2 active connections
+Connection::start: localhost:23412
+Connection::sendString: Cannot connect to localhost:23412
+
+
+==========================================
+
+#72 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X O O O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ X . . . X /
+       -----------
+
+UnReg of 127.0.0.1:23412
+UnReg of 127.0.0.1:23416
+ Reg of localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 2 active connections
+ Reg of localhost:23415
+NetworkDomain::newConnection: localhost:23415, now 2 active connections
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+ Search started ...
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: 99999950ms
+Using strategy 'ABParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Port 23413 in use
+NetworkDomain::startListening: Port 23414 in use
+NetworkDomain::startListening: Using Port 23415
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 1 active connections
+Connection::start: localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 2 active connections
+Connection::start: localhost:23412
+Connection::sendString: Cannot connect to localhost:23412
+ Reg of localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 2 active connections
+ Reg of localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 2 active connections
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+ Reg of remote connection localhost:23413
+NetworkDomain::addConnection: localhost:23413 already existing
+ Reg of remote connection localhost:23414
+NetworkDomain::addConnection: localhost:23414 already existing
+
+
+==========================================
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X X . /
+      \ . . . . X /
+       -----------
+
+ Search started ...
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: 99999950ms
+ Search finished after 0.052 secs
+  Found move 'I7/LeftUp/Push'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+X draws 'I7/LeftUp/Push' (after 0.052 secs)...
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X X . /
+      \ . . . . X /
+       -----------
+
+ Reg of remote connection localhost:23414
+NetworkDomain::addConnection: localhost:23414 already existing
+
+
+==========================================
+
+#71 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . . . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ X . . . X /
+       -----------
+
+ Search started ...
+    Time for move: 70ms
+    Max depth searched: 4
+    Remaining time: 99999880ms
+ Search finished after 0.052 secs
+  Found move 'D5/LeftDown/Push'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+O draws 'D5/LeftDown/Push' (after 0.052 secs)...
+
+#71 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . . . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ X . . . X /
+       -----------
+
+
+
+==========================================
+
+#72 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X O O O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ X . . . X /
+       -----------
+
+ Search started ...
+    Time for move: 69ms
+    Max depth searched: 4
+    Remaining time: 99999881ms
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+X about to move...
+X draws move 'I7/LeftUp/Push'...
+
+#70 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O X O O . . /
+     \ . X X X X . /
+      \ . . . . X /
+       -----------
+
+O about to move...
+O draws move 'D5/LeftDown/Push'...
+
+#71 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . . . . . \
+  | . X X O O O O . . |
+   \ . X O O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ X . . . X /
+       -----------
+
+X about to move...
+X draws move 'F3/RightUp/Push'...
+
+#72 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X O O O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ X . . . X /
+       -----------
+
+O about to move...
+!!!!!!!!!!!!!!!!!!!omp num threads: 16
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+ Search finished after 0.071 secs
+  Found move 'F3/RightUp/Push'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+X draws 'F3/RightUp/Push' (after 0.071 secs)...
+
+#72 O - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X O O O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ X . . . X /
+       -----------
+
+Terminating because given number of moves drawn.
+Error in connect in Connection::sendString: Connection timed out
+ Search finished after 0.070 secs
+  Found move 'E5/RightDown/Out'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+O draws 'E5/RightDown/Out' (after 0.070 secs)...
+
+#73 X - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X O . O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X X O . /
+      \ X . . . X /
+       -----------
+
+Terminating because given number of moves drawn.
+Connection::sendString: Cannot connect to localhost:23414
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'ABParallel' (depth 4) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Using Port 23413
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+NetworkDomain::newConnection: localhost:23415, now 1 active connections
+Connection::start: localhost:23414
+Connection::sendString: Cannot connect to localhost:23414
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 2 active connections
+ Reg of remote connection localhost:23415
+NetworkDomain::addConnection: localhost:23415 already existing
+ Reg of localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 3 active connections
+
+
+==========================================
+
+#73 X - O: 14, X: 9
+       -----------
+      / . . . . . \
+     / . O O . . . \
+    / . . X . . . . \
+   / . . X . . . . . \
+  | . X X O . O O . . |
+   \ . . O O O O . . /
+    \ . O O O O . . /
+     \ . X X X O . /
+      \ X . . . X /
+       -----------
+
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+Connection::sendString: Cannot connect to localhost:23415
+Using strategy 'ABParallel' (depth 4) ...
+NetworkDomain::startListening: Using Port 23412
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+NetworkDomain::newConnection: localhost:23415, now 1 active connections
+Connection::start: localhost:23414
+Connection::sendString: Cannot connect to localhost:23414
+Connection::start: localhost:23413
+Connection::sendString: Cannot connect to localhost:23413
+ Reg of localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 2 active connections
+ Reg of localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 3 active connections
+
+
+==========================================
+
+#69 X - O: 14, X: 10
+       -----------
+      / . . . . . \
+     / . O . . . . \
+    / . . O . . . . \
+   / . . X . O . . . \
+  | . X X O O O O . . |
+   \ . X . O O O . . /
+    \ . O O O O . . /
+     \ . X X X X . /
+      \ . . X . X /
+       -----------
+
+ Search started ...
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: 99999950ms
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+slurmstepd: error: *** JOB 3442763 ON i01r01c01s05 CANCELLED AT 2024-07-06T13:47:37 DUE TO TIME LIMIT ***

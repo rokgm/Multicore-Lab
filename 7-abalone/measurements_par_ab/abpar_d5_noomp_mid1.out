@@ -1,0 +1,260 @@
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Error in connect in Connection::sendString: Connection refused
+Using strategy 'ABParallel' (depth 5) ...
+NetworkDomain::startListening: Using Port 23412
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23414
+Connection::sendString: Cannot connect to localhost:23414
+Connection::start: localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 1 active connections
+ Reg of localhost:23413
+NetworkDomain::newConnection: localhost:23413, now 1 active connections
+ Reg of localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 2 active connections
+
+
+==========================================
+
+#29 X - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . O O O O . \
+    / . O O . O . . \
+   / . . O O O . . . \
+  | . . O O O . . . . |
+   \ . X O X X X . . /
+    \ . X X X X X . /
+     \ X X X X X . /
+      \ . . . . . /
+       -----------
+
+ Search started ...
+    Calculated time for move: 1000000ms
+    Time for move: 2104ms
+    Max depth searched: 5
+    Remaining time: 99997896ms
+Using strategy 'ABParallel' (depth 5) ...
+NetworkDomain::startListening: Port 23412 in use
+NetworkDomain::startListening: Using Port 23413
+Connection::start: localhost:23416
+Connection::sendString: Cannot connect to localhost:23416
+Connection::start: localhost:23415
+Connection::sendString: Cannot connect to localhost:23415
+Connection::start: localhost:23414
+Connection::sendString: Cannot connect to localhost:23414
+Connection::start: localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 1 active connections
+ Reg of localhost:23412
+NetworkDomain::newConnection: localhost:23412, now 1 active connections
+ Reg of localhost:23414
+NetworkDomain::newConnection: localhost:23414, now 2 active connections
+
+
+==========================================
+
+#29 X - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . O O O O . \
+    / . O O . O . . \
+   / . . O O O . . . \
+  | . . O O O . . . . |
+   \ . X O X X X . . /
+    \ . X X X X X . /
+     \ X X X X X . /
+      \ . . . . . /
+       -----------
+
+
+
+==========================================
+
+#30 O - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . O O O O . \
+    / . O O . O . . \
+   / . . O O O . . . \
+  | . . O O O . . . . |
+   \ . X O X X X . . /
+    \ . X X X X X . /
+     \ . X X X X . /
+      \ X . . . . /
+       -----------
+
+ Search started ...
+    Calculated time for move: 1000000ms
+    Time for move: 4760ms
+    Max depth searched: 5
+    Remaining time: 99995240ms
+ Search finished after 2.107 secs
+  Found move 'H4/RightDown'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+X draws 'H4/RightDown' (after 2.107 secs)...
+
+#30 O - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . O O O O . \
+    / . O O . O . . \
+   / . . O O O . . . \
+  | . . O O O . . . . |
+   \ . X O X X X . . /
+    \ . X X X X X . /
+     \ . X X X X . /
+      \ X . . . . /
+       -----------
+
+
+
+==========================================
+
+#31 X - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . . O O O . \
+    / . O O . O . . \
+   / . O O O O . . . \
+  | . . O O O . . . . |
+   \ . X O X X X . . /
+    \ . X X X X X . /
+     \ . X X X X . /
+      \ X . . . . /
+       -----------
+
+ Search started ...
+    Calculated time for move: 1000000ms
+    Time for move: 1482ms
+    Max depth searched: 5
+    Remaining time: 99996414ms
+ Search finished after 4.762 secs
+  Found move 'B2/LeftDown'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+O draws 'B2/LeftDown' (after 4.762 secs)...
+
+#31 X - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . . O O O . \
+    / . O O . O . . \
+   / . O O O O . . . \
+  | . . O O O . . . . |
+   \ . X O X X X . . /
+    \ . X X X X X . /
+     \ . X X X X . /
+      \ X . . . . /
+       -----------
+
+
+
+==========================================
+
+#32 O - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . . O O O . \
+    / . O O . O . . \
+   / . O O O O . . . \
+  | . . O O O X . . . |
+   \ . X O X X X . . /
+    \ . X X X X X . /
+     \ . X . X X . /
+      \ X . . . . /
+       -----------
+
+ Search started ...
+    Calculated time for move: 1000000ms
+
+#29 X - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . O O O O . \
+    / . O O . O . . \
+   / . . O O O . . . \
+  | . . O O O . . . . |
+   \ . X O X X X . . /
+    \ . X X X X X . /
+     \ X X X X X . /
+      \ . . . . . /
+       -----------
+
+X about to move...
+X draws move 'H4/RightDown'...
+
+#30 O - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . O O O O . \
+    / . O O . O . . \
+   / . . O O O . . . \
+  | . . O O O . . . . |
+   \ . X O X X X . . /
+    \ . X X X X X . /
+     \ . X X X X . /
+      \ X . . . . /
+       -----------
+
+O about to move...
+O draws move 'B2/LeftDown'...
+
+#31 X - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . . O O O . \
+    / . O O . O . . \
+   / . O O O O . . . \
+  | . . O O O . . . . |
+   \ . X O X X X . . /
+    \ . X X X X X . /
+     \ . X X X X . /
+      \ X . . . . /
+       -----------
+
+X about to move...
+X draws move 'H6/RightUp'...
+
+#32 O - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . . O O O . \
+    / . O O . O . . \
+   / . O O O O . . . \
+  | . . O O O X . . . |
+   \ . X O X X X . . /
+    \ . X X X X X . /
+     \ . X . X X . /
+      \ X . . . . /
+       -----------
+
+O about to move...
+Error in connect in Connection::sendString: Connection reset by peer
+ Search finished after 1.482 secs
+  Found move 'H6/RightUp'
+  Leaves visited: 0 (0 k/s) 
+  Nodes visited: 1 (0 leaves per node)
+X draws 'H6/RightUp' (after 1.482 secs)...
+
+#32 O - O: 14, X: 14
+       -----------
+      / . . . . . \
+     / . . O O O . \
+    / . O O . O . . \
+   / . O O O O . . . \
+  | . . O O O X . . . |
+   \ . X O X X X . . /
+    \ . X X X X X . /
+     \ . X . X X . /
+      \ X . . . . /
+       -----------
+
+Terminating because given number of moves drawn.
+Connection::sendString: Cannot connect to localhost:23414
