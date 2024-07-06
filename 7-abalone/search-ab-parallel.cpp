@@ -56,7 +56,7 @@ private:
 	std::atomic<bool> _atomicStopSearch = false;
 
 	// TODO Change to 55000 for competition.
-	static constexpr std::chrono::milliseconds s_gameDuration{550000};
+	static constexpr std::chrono::milliseconds s_gameDuration{10000};
 	std::chrono::milliseconds _remainingTime{s_gameDuration};
 
 	int _currentIterativeDepth = 0;
@@ -68,8 +68,9 @@ int ABParallelStrategy::evaluate(Board& board, Evaluator& evaluator)
     return evaluator.calcEvaluation(&board);
 }
 
-// IDEA for later. When it is not our move we could still search and
-// store new evaluations into the transposition table.
+/* IDEA for later. When it is not our move we could still search and
+ * store new evaluations into the transposition table.
+ */
 void ABParallelStrategy::searchBestMove()
 {
 	// Track remaining time. Subtract at the end of the search.
@@ -145,20 +146,21 @@ int ABParallelStrategy::alphabeta(int depth, int alpha, int beta, Board& board, 
     Move m;
     MoveList list;
 
-	// Moves are already order. See move.h.
+	// Moves are already ordered. See move.h.
     board.generateMoves(list);
 
 	bool leftmostChildEvaluated = false;
 	// Need as we can't break out of omp task.
 	bool alphaBetaCutoff = false;
 
+	// TODO maybe try search first 2 left children sequentially...
     while (list.getNext(m)) {
 		if (alphaBetaCutoff)
 			break;
 
-		// TODO try different depths away from leaves.
-		// Search sequentially when 2 move away from leaves to avoid task overhead.
-		if (!leftmostChildEvaluated || (depth + 2 >= _currentIterativeDepth)) {
+		// TODO try different depths away from leaves, 3 was best for me on laptop.
+		// Search sequentially when 3 move away from leaves to avoid task overhead.
+		if (!leftmostChildEvaluated || (depth + 3 >= _currentIterativeDepth)) {
 			board.playMove(m);
 			int evaluation = -alphabeta(depth + 1, -beta, -alpha, board, evaluator);
 			board.takeBack();
@@ -187,10 +189,9 @@ int ABParallelStrategy::alphabeta(int depth, int alpha, int beta, Board& board, 
 			leftmostChildEvaluated = true;
 		}
 		else {
-			// TODO try shared and critical alpha?
-			#pragma omp task firstprivate(m, alpha, beta, depth) shared(bestEvaluation, alphaBetaCutoff)
+			#pragma omp task firstprivate(m, beta, depth)\
+				shared(bestEvaluation, alphaBetaCutoff, alpha)
             {	
-				// TODO copy evaluator?
 				Board boardCopy = board;
 				boardCopy.playMove(m);
 				int evaluation = -alphabeta(depth + 1, -beta, -alpha, boardCopy, evaluator);
@@ -214,26 +215,6 @@ int ABParallelStrategy::alphabeta(int depth, int alpha, int beta, Board& board, 
                         if (alpha >= beta)
                             alphaBetaCutoff = true;
                     }
-					// if (evaluation > bestEvaluation) {
-					// 	#pragma omp atomic write
-					// 	bestEvaluation = evaluation;
-					// }
-						
-					// if (depth == 0) {
-					// 	#pragma omp critical (bestMove)
-					// 	{
-					// 		_bestMove = m;
-					// 	}
-					// }
-
-					// // TODO if shared use atomic
-					// if (bestEvaluation > alpha)
-					// 	alpha = bestEvaluation;
-
-					// if (alpha >= beta) {
-					// 	#pragma omp atomic write
-					// 	alphaBetaCutoff = true;
-					// }
 				}
 			}
 		}

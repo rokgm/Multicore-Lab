@@ -43,7 +43,7 @@ private:
 	std::atomic<bool> _atomicStopSearch = false;
 
 	// Change to 55000 for competition.
-	static constexpr std::chrono::milliseconds s_gameDuration{550000};
+	static constexpr std::chrono::milliseconds s_gameDuration{10000};
 	std::chrono::milliseconds _remainingTime{s_gameDuration};
 
 	int _currentIterativeDepth = 0;

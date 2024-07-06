@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Number of games to be played
-NUM_GAMES=1
+NUM_GAMES=5
 # Strategy level for players
-STRATEGY_X=5
+STRATEGY_X=4
 STRATEGY_O=5
-DEPTH_X=5
-DEPTH_O=5
+DEPTH_X=1000
+DEPTH_O=1000
 
 ############################################################################ 
 # Set the number of threads for OpenMP
@@ -24,26 +24,28 @@ run_game() {
   # Change args here
   #########################################################################
 
-  # ./player -p 3000 -s $STRATEGY_X $DEPTH_X X  > ./logs/X_player.txt 2>&1 &
-  # PLAYER_X_PID=$!
-  # ./player -p 4000 -s $STRATEGY_O $DEPTH_O O  > ./logs/O_player.txt 2>&1 &
-  # PLAYER_O_PID=$!
-  # # GAME_OUTPUT=$(./referee -p 3000 -p 4000 -t 15)
+  ./player -p 3000 -s $STRATEGY_X $DEPTH_X X  > ./logs/X_player.txt 2>&1 &
+  PLAYER_X_PID=$!
+  ./player -p 4000 -s $STRATEGY_O $DEPTH_O O  > ./logs/O_player.txt 2>&1 &
+  PLAYER_O_PID=$!
+  GAME_OUTPUT=$(./referee -p 3000 -p 4000 -t 15)
   # # If running like this output is not captured and statistics aren't correct.
-  # ./referee -p 3000 -p 4000 -t 30
+  # ./referee -p 3000 -p 4000 -t 15
 
   # For measurements
-  ./player -p 3000 -v -n -1 -s $STRATEGY_X $DEPTH_X X > ./logs/X_player.txt 2>&1 &
-  PLAYER_X_PID=$!
-  ./player -p 4000 -v -n -1 -s $STRATEGY_O $DEPTH_O O > ./logs/O_player.txt 2>&1 &
-  PLAYER_O_PID=$!
-  ./referee -p 3000 -p 4000
+  # ./player -p 3000 -v -n -1 -s $STRATEGY_X $DEPTH_X X > ./logs/X_player.txt 2>&1 &
+  # PLAYER_X_PID=$!
+  # ./player -p 4000 -v -n -1 -s $STRATEGY_O $DEPTH_O O > ./logs/O_player.txt 2>&1 &
+  # PLAYER_O_PID=$!
+  # ./referee -p 3000 -p 4000 position-endgame
 
   #########################################################################
 
   # Wait for the players to finish
   wait $PLAYER_X_PID
   wait $PLAYER_O_PID
+
+  echo $GAME_OUTPUT > ./logs/game_output.txt
 
   # Process the game output
   if [[ "$GAME_OUTPUT" == *"O wins the game!"* ]]; then
