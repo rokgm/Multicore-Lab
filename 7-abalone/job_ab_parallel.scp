@@ -1,0 +1,29 @@
+#!/bin/bash
+
+#SBATCH -J abalone
+
+#SBATCH -o output/abpar_d5_end.out
+#SBATCH -e output/abpar_d5_end.out
+
+#SBATCH --time=00:10:00
+#SBATCH --account=h039v
+#SBATCH --partition=test
+
+
+#export OMP_NUM_THREADS=24
+export KMP_AFFINITY=granularity=fine,compact
+DEPTH=5
+
+#./player -v -n -1 -s 6 $DEPTH X & ./player -v -n -1 -s 6 $DEPTH O & ./start
+
+#for DEPTH in 2 3 4 5 6; do
+#    ./player -v -n -1 -s 5 $DEPTH X & ./player -v -n -1 -s 5 $DEPTH O & ./start position-endgame
+#done
+
+
+for thread in 1 2 4 8 12 16 24 32 48; do
+    export OMP_NUM_THREADS=$thread
+    echo "!!!!!!!!!!!!!!!!!!!omp num threads: $OMP_NUM_THREADS"
+    ./player -v -n -2 -s 6 $DEPTH X & ./player -v -n -2 -s 6 $DEPTH O & ./start position-endgame
+done
+
