@@ -1,632 +1,1262 @@
 Using strategy 'ABParallel' (depth 1000) ...
     Calculated time for move: 100ms
+Tried to update best move with move of type none.
     Time for move: 100ms
     Max depth searched: 4
     Remaining time: 9900ms
-    Number of transpositions: 3604
-O draws 'A1/RightDown' (after 0.101 secs)...
+    Number of transpositions: 994
+O draws 'A1/RightDown' (after 0.100 secs)...
     Calculated time for move: 100ms
     Time for move: 100ms
-    Max depth searched: 4
+    Max depth searched: 5
     Remaining time: 9800ms
-    Number of transpositions: 9966
-O draws 'A2/RightDown' (after 0.101 secs)...
+    Number of transpositions: 6682
+O draws 'A3/LeftDown' (after 0.101 secs)...
     Calculated time for move: 100ms
     Time for move: 100ms
-    Max depth searched: 3
+    Max depth searched: 5
     Remaining time: 9700ms
-    Number of transpositions: 12928
-O draws 'B5/LeftDown' (after 0.101 secs)...
+    Number of transpositions: 11213
+O draws 'A5/LeftDown' (after 0.101 secs)...
     Calculated time for move: 100ms
+    Time for move: 141ms
+    Max depth searched: 4
+    Remaining time: 9559ms
+    Number of transpositions: 11779
+O draws 'A2/LeftDown' (after 0.141 secs)...
+    Calculated time for move: 100ms
+Tried to update best move with move of type none.
     Time for move: 100ms
-    Max depth searched: 3
-    Remaining time: 9600ms
-    Number of transpositions: 14883
-O draws 'A3/RightDown' (after 0.101 secs)...
-    Calculated time for move: 100ms
-    Time for move: 102ms
-    Max depth searched: 3
-    Remaining time: 9498ms
-    Number of transpositions: 14982
-O draws 'A5-B6/LeftDown' (after 0.103 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 3
-    Remaining time: 9398ms
-    Number of transpositions: 15207
-O draws 'C6/LeftDown' (after 0.101 secs)...
+    Max depth searched: 4
+    Remaining time: 9459ms
+    Number of transpositions: 14436
+O draws 'B1/RightDown' (after 0.100 secs)...
     Calculated time for move: 100ms
     Time for move: 100ms
     Max depth searched: 4
-    Remaining time: 9298ms
-    Number of transpositions: 17258
-O draws 'C4/RightDown/Push' (after 0.101 secs)...
+    Remaining time: 9359ms
+    Number of transpositions: 16012
+O draws 'B3/LeftDown' (after 0.100 secs)...
+    Calculated time for move: 100ms
+Tried to update best move with move of type none.
+    Time for move: 100ms
+    Max depth searched: 4
+    Remaining time: 9259ms
+    Number of transpositions: 18714
+O draws 'B6/Left' (after 0.101 secs)...
+    Calculated time for move: 100ms
+    Time for move: 120ms
+    Max depth searched: 4
+    Remaining time: 9139ms
+    Number of transpositions: 21073
+O draws 'B3/RightDown/Push' (after 0.121 secs)...
+    Calculated time for move: 100ms
+    Time for move: 106ms
+    Max depth searched: 5
+    Remaining time: 9033ms
+    Number of transpositions: 23777
+O draws 'E3/RightUp' (after 0.107 secs)...
     Calculated time for move: 100ms
     Time for move: 100ms
-    Max depth searched: 3
-    Remaining time: 9198ms
-    Number of transpositions: 18786
+    Max depth searched: 4
+    Remaining time: 8933ms
+    Number of transpositions: 26016
+O draws 'B4/Left' (after 0.101 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 5
+    Remaining time: 8833ms
+    Number of transpositions: 29165
 O draws 'A4/LeftDown' (after 0.101 secs)...
     Calculated time for move: 100ms
+Tried to update best move with move of type none.
     Time for move: 100ms
-    Max depth searched: 3
-    Remaining time: 9098ms
-    Number of transpositions: 19250
-O draws 'B4/RightDown' (after 0.101 secs)...
+    Max depth searched: 4
+    Remaining time: 8733ms
+    Number of transpositions: 31687
+O draws 'B4/LeftDown/Push' (after 0.100 secs)...
+    Calculated time for move: 100ms
+    Time for move: 104ms
+    Max depth searched: 5
+    Remaining time: 8629ms
+    Number of transpositions: 36563
+O draws 'C2/RightDown/Push' (after 0.105 secs)...
+    Calculated time for move: 100ms
+Tried to update best move with move of type none.
+    Time for move: 100ms
+    Max depth searched: 4
+    Remaining time: 8529ms
+    Number of transpositions: 39161
+O draws 'B1/Right' (after 0.101 secs)...
+    Calculated time for move: 100ms
+Tried to update best move with move of type none.
+    Time for move: 100ms
+    Max depth searched: 4
+    Remaining time: 8429ms
+    Number of transpositions: 41363
+O draws 'E3/LeftUp' (after 0.101 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 5
+    Remaining time: 8329ms
+    Number of transpositions: 45251
+O draws 'F5/RightDown' (after 0.101 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 5
+    Remaining time: 8229ms
+    Number of transpositions: 48503
+O draws 'G6/LeftUp' (after 0.101 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 5
+    Remaining time: 8129ms
+    Number of transpositions: 51476
+O draws 'E2/RightUp' (after 0.101 secs)...
     Calculated time for move: 100ms
     Time for move: 100ms
     Max depth searched: 4
-    Remaining time: 8998ms
-    Number of transpositions: 21977
-O draws 'D6/Left/Push' (after 0.101 secs)...
-    Calculated time for move: 100ms
-    Time for move: 108ms
-    Max depth searched: 4
-    Remaining time: 8890ms
-    Number of transpositions: 23245
-O draws 'E7/Left/Push' (after 0.109 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 3
-    Remaining time: 8790ms
-    Number of transpositions: 24442
-O draws 'B4/RightDown' (after 0.101 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 3
-    Remaining time: 8690ms
-    Number of transpositions: 25889
-O draws 'A3-B3/Right' (after 0.101 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 3
-    Remaining time: 8590ms
-    Number of transpositions: 26125
-O draws 'A4/RightDown' (after 0.100 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 3
-    Remaining time: 8490ms
-    Number of transpositions: 26340
-O draws 'B2/Right' (after 0.101 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 3
-    Remaining time: 8390ms
-    Number of transpositions: 27891
-O draws 'B1/RightDown' (after 0.101 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 3
-    Remaining time: 8290ms
-    Number of transpositions: 28539
-O draws 'C3/LeftUp' (after 0.101 secs)...
-    Calculated time for move: 100ms
-    Time for move: 113ms
-    Max depth searched: 3
-    Remaining time: 8177ms
-    Number of transpositions: 29237
-O draws 'D6/Left/Push' (after 0.113 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 3
-    Remaining time: 8077ms
-    Number of transpositions: 30419
-O draws 'D7/Left' (after 0.101 secs)...
-    Calculated time for move: 100ms
-    Time for move: 101ms
-    Max depth searched: 3
-    Remaining time: 7976ms
-    Number of transpositions: 31591
-O draws 'C4/Right' (after 0.103 secs)...
-    Calculated time for move: 100ms
-    Time for move: 107ms
-    Max depth searched: 3
-    Remaining time: 7869ms
-    Number of transpositions: 33919
-O draws 'C7/Left' (after 0.108 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 4
-    Remaining time: 7769ms
-    Number of transpositions: 35371
-O draws 'C4/LeftDown/Push' (after 0.101 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 3
-    Remaining time: 7669ms
-    Number of transpositions: 36203
-O draws 'B3/RightDown' (after 0.101 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 4
-    Remaining time: 7569ms
-    Number of transpositions: 37847
-O draws 'B2/Right' (after 0.101 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 4
-    Remaining time: 7469ms
-    Number of transpositions: 40704
-O draws 'C4/RightDown/Push' (after 0.101 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 3
-    Remaining time: 7369ms
-    Number of transpositions: 42244
-O draws 'F4/RightUp' (after 0.101 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 4
-    Remaining time: 7269ms
-    Number of transpositions: 44880
-O draws 'C4/RightDown/Push' (after 0.101 secs)...
-    Calculated time for move: 100ms
-    Time for move: 103ms
-    Max depth searched: 2
-    Remaining time: 7166ms
-    Number of transpositions: 44883
-O draws 'B3/RightDown' (after 0.105 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 4
-    Remaining time: 7066ms
-    Number of transpositions: 46971
-O draws 'B5/LeftDown/Push' (after 0.101 secs)...
-    Calculated time for move: 100ms
-    Time for move: 109ms
-    Max depth searched: 3
-    Remaining time: 6957ms
-    Number of transpositions: 47975
-O draws 'C2/LeftDown' (after 0.110 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 3
-    Remaining time: 6857ms
-    Number of transpositions: 49905
-O draws 'E7-F8/RightUp' (after 0.101 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 4
-    Remaining time: 6757ms
-    Number of transpositions: 54092
-O draws 'E8/LeftUp' (after 0.101 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 4
-    Remaining time: 6657ms
-    Number of transpositions: 58229
-O draws 'C4/Left/Push' (after 0.101 secs)...
-    Calculated time for move: 100ms
-    Time for move: 102ms
-    Max depth searched: 4
-    Remaining time: 6555ms
-    Number of transpositions: 61270
-O draws 'C3/Left/Out' (after 0.103 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 3
-    Remaining time: 6455ms
-    Number of transpositions: 63711
-O draws 'C1/Right' (after 0.101 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 4
-    Remaining time: 6355ms
-    Number of transpositions: 66081
-O draws 'B2-C3/Right' (after 0.101 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 4
-    Remaining time: 6255ms
-    Number of transpositions: 68337
-O draws 'C4/RightDown/Push' (after 0.101 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 3
-    Remaining time: 6155ms
-    Number of transpositions: 68544
+    Remaining time: 8029ms
+    Number of transpositions: 54176
 O draws 'C6/LeftDown' (after 0.101 secs)...
     Calculated time for move: 100ms
+Tried to update best move with move of type none.
     Time for move: 100ms
     Max depth searched: 4
-    Remaining time: 6055ms
-    Number of transpositions: 71017
-O draws 'D6/LeftDown/Push' (after 0.101 secs)...
+    Remaining time: 7929ms
+    Number of transpositions: 56419
+O draws 'D2/LeftUp' (after 0.101 secs)...
     Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 5
+    Remaining time: 7829ms
+    Number of transpositions: 59424
+O draws 'D3/LeftDown' (after 0.101 secs)...
+    Calculated time for move: 100ms
+Tried to update best move with move of type none.
     Time for move: 100ms
     Max depth searched: 4
-    Remaining time: 5955ms
-    Number of transpositions: 73042
-O draws 'F6/RightDown' (after 0.100 secs)...
+    Remaining time: 7729ms
+    Number of transpositions: 62406
+O draws 'C2/RightDown' (after 0.101 secs)...
     Calculated time for move: 100ms
+    Time for move: 101ms
+    Max depth searched: 5
+    Remaining time: 7628ms
+    Number of transpositions: 68189
+O draws 'B3/LeftDown/Push' (after 0.102 secs)...
+    Calculated time for move: 100ms
+    Time for move: 125ms
+    Max depth searched: 5
+    Remaining time: 7503ms
+    Number of transpositions: 70948
+O draws 'D5/Left/Push' (after 0.126 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 5
+    Remaining time: 7403ms
+    Number of transpositions: 73862
+O draws 'D3/LeftDown/Push' (after 0.100 secs)...
+    Calculated time for move: 100ms
+    Time for move: 101ms
+    Max depth searched: 5
+    Remaining time: 7302ms
+    Number of transpositions: 77251
+O draws 'C1/RightDown/Push' (after 0.102 secs)...
+    Calculated time for move: 100ms
+    Time for move: 107ms
+    Max depth searched: 5
+    Remaining time: 7195ms
+    Number of transpositions: 81218
+O draws 'D2/RightDown/Push' (after 0.108 secs)...
+    Calculated time for move: 100ms
+Tried to update best move with move of type none.
     Time for move: 100ms
     Max depth searched: 4
-    Remaining time: 5855ms
-    Number of transpositions: 76349
-O draws 'D7/LeftDown' (after 0.101 secs)...
+    Remaining time: 7095ms
+    Number of transpositions: 85174
+O draws 'E3/LeftDown/Out' (after 0.101 secs)...
     Calculated time for move: 100ms
     Time for move: 100ms
+    Max depth searched: 5
+    Remaining time: 6995ms
+    Number of transpositions: 88285
+O draws 'F3/Right/Push' (after 0.100 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 5
+    Remaining time: 6895ms
+    Number of transpositions: 91783
+O draws 'F4/LeftUp' (after 0.100 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 5
+    Remaining time: 6795ms
+    Number of transpositions: 96929
+O draws 'E2-E3/RightDown' (after 0.101 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 5
+    Remaining time: 6695ms
+    Number of transpositions: 100029
+O draws 'G3/RightUp' (after 0.100 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 5
+    Remaining time: 6595ms
+    Number of transpositions: 102814
+O draws 'B3/LeftDown' (after 0.101 secs)...
+    Calculated time for move: 100ms
+    Time for move: 119ms
+    Max depth searched: 5
+    Remaining time: 6476ms
+    Number of transpositions: 106367
+O draws 'D4/Left/Push' (after 0.119 secs)...
+    Calculated time for move: 100ms
+    Time for move: 101ms
+    Max depth searched: 5
+    Remaining time: 6375ms
+    Number of transpositions: 108576
+O draws 'D2/Right' (after 0.102 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 5
+    Remaining time: 6275ms
+    Number of transpositions: 111513
+O draws 'D4/Left/Push' (after 0.101 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 5
+    Remaining time: 6175ms
+    Number of transpositions: 113538
+O draws 'B4/RightDown/Push' (after 0.101 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 5
+    Remaining time: 6075ms
+    Number of transpositions: 116792
+O draws 'B2/RightDown' (after 0.101 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 5
+    Remaining time: 5975ms
+    Number of transpositions: 119514
+O draws 'D6/LeftUp' (after 0.101 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 5
+    Remaining time: 5875ms
+    Number of transpositions: 122435
+O draws 'D7/Left' (after 0.101 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 5
+    Remaining time: 5775ms
+    Number of transpositions: 125502
+O draws 'C3/Left' (after 0.101 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 5
+    Remaining time: 5675ms
+    Number of transpositions: 129922
+O draws 'C2/LeftDown/Push' (after 0.101 secs)...
+    Calculated time for move: 100ms
+    Time for move: 109ms
+    Max depth searched: 6
+    Remaining time: 5566ms
+    Number of transpositions: 135535
+O draws 'E1/RightUp' (after 0.110 secs)...
+    Calculated time for move: 100ms
+    Time for move: 106ms
     Max depth searched: 4
-    Remaining time: 5755ms
-    Number of transpositions: 79127
-O draws 'C2/Right' (after 0.101 secs)...
+    Remaining time: 5460ms
+    Number of transpositions: 136921
+O draws 'F5/Left/Out' (after 0.107 secs)...
     Calculated time for move: 100ms
     Time for move: 100ms
-    Max depth searched: 4
-    Remaining time: 5655ms
-    Number of transpositions: 81457
-O draws 'F7/LeftDown/Push' (after 0.101 secs)...
+    Max depth searched: 5
+    Remaining time: 5360ms
+    Number of transpositions: 139561
+O draws 'F2/Right' (after 0.101 secs)...
     Calculated time for move: 100ms
     Time for move: 100ms
-    Max depth searched: 4
-    Remaining time: 5555ms
-    Number of transpositions: 85870
-O draws 'H7/RightUp' (after 0.100 secs)...
+    Max depth searched: 5
+    Remaining time: 5260ms
+    Number of transpositions: 143182
+O draws 'B4/RightDown/Push' (after 0.101 secs)...
+    Calculated time for move: 100ms
+    Time for move: 108ms
+    Max depth searched: 5
+    Remaining time: 5152ms
+    Number of transpositions: 146176
+O draws 'D4/LeftDown/Push' (after 0.108 secs)...
     Calculated time for move: 100ms
     Time for move: 100ms
-    Max depth searched: 3
-    Remaining time: 5455ms
-    Number of transpositions: 88456
-O draws 'E6/RightDown' (after 0.109 secs)...
+    Max depth searched: 5
+    Remaining time: 5052ms
+    Number of transpositions: 149478
+O draws 'D1/Right' (after 0.101 secs)...
     Calculated time for move: 100ms
     Time for move: 100ms
-    Max depth searched: 4
-    Remaining time: 5355ms
-    Number of transpositions: 90964
-O draws 'D2/Right' (after 0.100 secs)...
+    Max depth searched: 5
+    Remaining time: 4952ms
+    Number of transpositions: 153124
+O draws 'G4/LeftUp/Push' (after 0.101 secs)...
     Calculated time for move: 100ms
     Time for move: 100ms
-    Max depth searched: 4
-    Remaining time: 5255ms
-    Number of transpositions: 93713
-O draws 'H8/RightUp' (after 0.101 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 3
-    Remaining time: 5155ms
-    Number of transpositions: 95194
-O draws 'D6-F8/RightUp' (after 0.101 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 3
-    Remaining time: 5055ms
-    Number of transpositions: 95999
-O draws 'E4/Left' (after 0.101 secs)...
-    Calculated time for move: 100ms
-    Time for move: 100ms
-    Max depth searched: 3
-    Remaining time: 4955ms
-    Number of transpositions: 96362
-O draws 'B3/RightDown/Push' (after 0.101 secs)...
+    Max depth searched: 5
+    Remaining time: 4852ms
+    Number of transpositions: 156796
+O draws 'D3-D4/LeftUp' (after 0.101 secs)...
     Calculated time for move: 50ms
-    Time for move: 51ms
-    Max depth searched: 3
-    Remaining time: 4904ms
-    Number of transpositions: 96485
-O draws 'E3/RightUp' (after 0.052 secs)...
-    Calculated time for move: 50ms
-    Time for move: 57ms
-    Max depth searched: 3
-    Remaining time: 4847ms
-    Number of transpositions: 96890
-O draws 'G7/RightDown' (after 0.058 secs)...
-    Calculated time for move: 50ms
-    Time for move: 90ms
-    Max depth searched: 3
-    Remaining time: 4757ms
-    Number of transpositions: 96941
-O draws 'D7-F9/Left' (after 0.091 secs)...
-    Calculated time for move: 50ms
-    Time for move: 58ms
-    Max depth searched: 3
-    Remaining time: 4699ms
-    Number of transpositions: 96944
-O draws 'B6-C6/RightDown' (after 0.059 secs)...
-    Calculated time for move: 50ms
-    Time for move: 65ms
-    Max depth searched: 4
-    Remaining time: 4634ms
-    Number of transpositions: 98511
-O draws 'C3-D3/LeftUp' (after 0.066 secs)...
-    Calculated time for move: 50ms
-    Time for move: 50ms
-    Max depth searched: 3
-    Remaining time: 4584ms
-    Number of transpositions: 98523
-O draws 'C7/Left' (after 0.051 secs)...
-    Calculated time for move: 50ms
-    Time for move: 50ms
-    Max depth searched: 3
-    Remaining time: 4534ms
-    Number of transpositions: 98843
-O draws 'G9/LeftDown' (after 0.051 secs)...
-    Calculated time for move: 50ms
-    Time for move: 50ms
-    Max depth searched: 3
-    Remaining time: 4484ms
-    Number of transpositions: 99218
-O draws 'F8/Right' (after 0.050 secs)...
-    Calculated time for move: 50ms
-    Time for move: 50ms
-    Max depth searched: 3
-    Remaining time: 4434ms
-    Number of transpositions: 99921
-O draws 'C2/Right' (after 0.051 secs)...
-    Calculated time for move: 50ms
-    Time for move: 51ms
-    Max depth searched: 4
-    Remaining time: 4383ms
-    Number of transpositions: 101687
-O draws 'B2/RightDown/Push' (after 0.052 secs)...
-    Calculated time for move: 50ms
-    Time for move: 61ms
-    Max depth searched: 3
-    Remaining time: 4322ms
-    Number of transpositions: 103189
-O draws 'B4/LeftDown/Push' (after 0.063 secs)...
-    Calculated time for move: 50ms
-    Time for move: 50ms
-    Max depth searched: 3
-    Remaining time: 4272ms
-    Number of transpositions: 103540
-O draws 'B5/LeftDown/Push' (after 0.051 secs)...
-    Calculated time for move: 50ms
-    Time for move: 50ms
-    Max depth searched: 3
-    Remaining time: 4222ms
-    Number of transpositions: 103576
-O draws 'D7-F9/RightUp' (after 0.050 secs)...
-    Calculated time for move: 50ms
-    Time for move: 50ms
-    Max depth searched: 4
-    Remaining time: 4172ms
-    Number of transpositions: 104772
-O draws 'D8-E9/LeftDown' (after 0.051 secs)...
-    Calculated time for move: 50ms
-    Time for move: 65ms
-    Max depth searched: 3
-    Remaining time: 4107ms
-    Number of transpositions: 105641
-O draws 'F9/Left' (after 0.065 secs)...
+    Time for move: 68ms
+    Max depth searched: 5
+    Remaining time: 4784ms
+    Number of transpositions: 159923
+O draws 'D2/Right' (after 0.069 secs)...
     Calculated time for move: 50ms
     Time for move: 69ms
-    Max depth searched: 3
-    Remaining time: 4038ms
-    Number of transpositions: 105938
-O draws 'G9/LeftDown' (after 0.070 secs)...
+    Max depth searched: 5
+    Remaining time: 4715ms
+    Number of transpositions: 162184
+O draws 'C2/RightDown/Push' (after 0.069 secs)...
     Calculated time for move: 50ms
-    Time for move: 50ms
-    Max depth searched: 3
-    Remaining time: 3988ms
-    Number of transpositions: 106093
-O draws 'B3/RightDown' (after 0.051 secs)...
-    Calculated time for move: 50ms
+Tried to update best move with move of type none.
     Time for move: 50ms
     Max depth searched: 4
-    Remaining time: 3938ms
-    Number of transpositions: 109021
-O draws 'C7/LeftUp' (after 0.051 secs)...
-    Calculated time for move: 50ms
-    Time for move: 50ms
-    Max depth searched: 3
-    Remaining time: 3888ms
-    Number of transpositions: 110273
-O draws 'E4/LeftUp' (after 0.051 secs)...
-    Calculated time for move: 50ms
-    Time for move: 65ms
-    Max depth searched: 3
-    Remaining time: 3823ms
-    Number of transpositions: 110974
-O draws 'E6/Left' (after 0.066 secs)...
-    Calculated time for move: 50ms
-    Time for move: 55ms
-    Max depth searched: 3
-    Remaining time: 3768ms
-    Number of transpositions: 111162
-O draws 'C5/Left' (after 0.056 secs)...
-    Calculated time for move: 50ms
-    Time for move: 50ms
-    Max depth searched: 4
-    Remaining time: 3718ms
-    Number of transpositions: 114747
-O draws 'C2/RightDown/Push' (after 0.051 secs)...
-    Calculated time for move: 50ms
-    Time for move: 50ms
-    Max depth searched: 4
-    Remaining time: 3668ms
-    Number of transpositions: 116999
-O draws 'D3/RightDown/Push' (after 0.051 secs)...
-    Calculated time for move: 50ms
-    Time for move: 59ms
-    Max depth searched: 3
-    Remaining time: 3609ms
-    Number of transpositions: 117483
-O draws 'B6-C6/Left' (after 0.060 secs)...
-    Calculated time for move: 50ms
-    Time for move: 67ms
-    Max depth searched: 3
-    Remaining time: 3542ms
-    Number of transpositions: 117663
-O draws 'G6/LeftUp' (after 0.068 secs)...
-    Calculated time for move: 50ms
-    Time for move: 50ms
-    Max depth searched: 3
-    Remaining time: 3492ms
-    Number of transpositions: 117906
-O draws 'D5/LeftUp' (after 0.050 secs)...
-    Calculated time for move: 50ms
-    Time for move: 56ms
-    Max depth searched: 3
-    Remaining time: 3436ms
-    Number of transpositions: 118609
-O draws 'B5/LeftDown' (after 0.057 secs)...
-    Calculated time for move: 50ms
-    Time for move: 61ms
-    Max depth searched: 2
-    Remaining time: 3375ms
-    Number of transpositions: 118611
-O draws 'E2/RightDown' (after 0.062 secs)...
-    Calculated time for move: 50ms
-    Time for move: 51ms
-    Max depth searched: 3
-    Remaining time: 3324ms
-    Number of transpositions: 118614
-O draws 'D5/Left' (after 0.051 secs)...
-    Calculated time for move: 50ms
-    Time for move: 50ms
-    Max depth searched: 3
-    Remaining time: 3274ms
-    Number of transpositions: 118630
-O draws 'D2/RightDown/Push' (after 0.051 secs)...
-    Calculated time for move: 50ms
-    Time for move: 57ms
-    Max depth searched: 3
-    Remaining time: 3217ms
-    Number of transpositions: 118988
-O draws 'C5/LeftDown' (after 0.058 secs)...
-    Calculated time for move: 50ms
-    Time for move: 68ms
-    Max depth searched: 3
-    Remaining time: 3149ms
-    Number of transpositions: 119101
-O draws 'E3-F3/LeftUp' (after 0.069 secs)...
+    Remaining time: 4665ms
+    Number of transpositions: 163404
+O draws 'B5/Left' (after 0.050 secs)...
     Calculated time for move: 50ms
     Time for move: 54ms
-    Max depth searched: 2
-    Remaining time: 3095ms
-    Number of transpositions: 119106
-O draws 'F4-G5/Left' (after 0.055 secs)...
+    Max depth searched: 5
+    Remaining time: 4611ms
+    Number of transpositions: 165507
+O draws 'F4/Right/Push' (after 0.054 secs)...
     Calculated time for move: 50ms
     Time for move: 50ms
-    Max depth searched: 2
-    Remaining time: 3045ms
-    Number of transpositions: 119109
-O draws 'D6/LeftUp' (after 0.051 secs)...
+    Max depth searched: 5
+    Remaining time: 4561ms
+    Number of transpositions: 168227
+O draws 'F7/Left' (after 0.051 secs)...
     Calculated time for move: 50ms
-    Time for move: 50ms
-    Max depth searched: 3
-    Remaining time: 2995ms
-    Number of transpositions: 119164
-O draws 'C3/Right' (after 0.051 secs)...
-    Calculated time for move: 50ms
-    Time for move: 56ms
-    Max depth searched: 3
-    Remaining time: 2939ms
-    Number of transpositions: 119331
-O draws 'C4-C6/RightUp' (after 0.057 secs)...
-    Calculated time for move: 50ms
-    Time for move: 50ms
-    Max depth searched: 3
-    Remaining time: 2889ms
-    Number of transpositions: 119455
-O draws 'G4/RightDown' (after 0.050 secs)...
-    Calculated time for move: 50ms
-    Time for move: 50ms
-    Max depth searched: 3
-    Remaining time: 2839ms
-    Number of transpositions: 119912
-O draws 'A4/RightDown' (after 0.051 secs)...
-    Calculated time for move: 50ms
-    Time for move: 63ms
-    Max depth searched: 3
-    Remaining time: 2776ms
-    Number of transpositions: 120171
-O draws 'F3/Left' (after 0.064 secs)...
-    Calculated time for move: 50ms
-    Time for move: 54ms
-    Max depth searched: 1
-    Remaining time: 2722ms
-    Number of transpositions: 120174
-O draws 'B3/LeftDown' (after 0.056 secs)...
-    Calculated time for move: 50ms
-    Time for move: 65ms
-    Max depth searched: 3
-    Remaining time: 2657ms
-    Number of transpositions: 120409
-O draws 'B6-C6/RightDown' (after 0.066 secs)...
-    Calculated time for move: 50ms
-    Time for move: 54ms
-    Max depth searched: 3
-    Remaining time: 2603ms
-    Number of transpositions: 120659
-O draws 'E1/RightUp' (after 0.055 secs)...
-    Calculated time for move: 50ms
-    Time for move: 63ms
-    Max depth searched: 3
-    Remaining time: 2540ms
-    Number of transpositions: 120967
-O draws 'D1/Right' (after 0.064 secs)...
-    Calculated time for move: 50ms
-    Time for move: 62ms
-    Max depth searched: 3
-    Remaining time: 2478ms
-    Number of transpositions: 121259
-O draws 'I5/Right' (after 0.064 secs)...
-    Calculated time for move: 50ms
-    Time for move: 50ms
-    Max depth searched: 3
-    Remaining time: 2428ms
-    Number of transpositions: 121714
-O draws 'F2/RightUp' (after 0.051 secs)...
-    Calculated time for move: 50ms
-    Time for move: 50ms
-    Max depth searched: 3
-    Remaining time: 2378ms
-    Number of transpositions: 121746
-O draws 'E2/Right' (after 0.051 secs)...
-    Calculated time for move: 50ms
-    Time for move: 51ms
-    Max depth searched: 3
-    Remaining time: 2327ms
-    Number of transpositions: 121839
-O draws 'E3/RightDown' (after 0.052 secs)...
-    Calculated time for move: 50ms
-    Time for move: 58ms
+Tried to update best move with move of type none.
+    Time for move: 82ms
     Max depth searched: 4
-    Remaining time: 2269ms
-    Number of transpositions: 122059
-O draws 'B1/Right' (after 0.059 secs)...
+    Remaining time: 4479ms
+    Number of transpositions: 170460
+O draws 'G5/LeftUp/Push' (after 0.083 secs)...
     Calculated time for move: 50ms
-    Time for move: 50ms
-    Max depth searched: 3
-    Remaining time: 2219ms
-    Number of transpositions: 122124
-O draws 'B3/LeftDown/Push' (after 0.051 secs)...
-    Calculated time for move: 50ms
-    Time for move: 62ms
-    Max depth searched: 3
-    Remaining time: 2157ms
-    Number of transpositions: 122469
-O draws 'C7/Left' (after 0.063 secs)...
-    Calculated time for move: 25ms
-    Time for move: 59ms
-    Max depth searched: 3
-    Remaining time: 2098ms
-    Number of transpositions: 122662
-O draws 'F3/LeftUp' (after 0.059 secs)...
-    Calculated time for move: 25ms
-    Time for move: 68ms
-    Max depth searched: 3
-    Remaining time: 2030ms
-    Number of transpositions: 122787
-O draws 'A1/Right' (after 0.068 secs)...
-    Calculated time for move: 25ms
-    Time for move: 50ms
-    Max depth searched: 3
-    Remaining time: 1980ms
-    Number of transpositions: 123260
-O draws 'A2-B2/Left' (after 0.050 secs)...
-    Calculated time for move: 25ms
     Time for move: 65ms
     Max depth searched: 5
-    Remaining time: 1915ms
-    Number of transpositions: 127193
-O draws 'C1/LeftDown' (after 0.066 secs)...
-    Calculated time for move: 25ms
+    Remaining time: 4414ms
+    Number of transpositions: 171721
+O draws 'B4/LeftDown' (after 0.066 secs)...
+    Calculated time for move: 50ms
+    Time for move: 71ms
+    Max depth searched: 4
+    Remaining time: 4343ms
+    Number of transpositions: 173003
+O draws 'F3/Right/Push' (after 0.072 secs)...
+    Calculated time for move: 50ms
+Tried to update best move with move of type none.
+    Time for move: 64ms
+    Max depth searched: 4
+    Remaining time: 4279ms
+    Number of transpositions: 174491
+O draws 'C3/RightDown' (after 0.064 secs)...
+    Calculated time for move: 50ms
+    Time for move: 59ms
+    Max depth searched: 5
+    Remaining time: 4220ms
+    Number of transpositions: 177538
+O draws 'D4/Left/Push' (after 0.061 secs)...
+    Calculated time for move: 50ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: 4170ms
+    Number of transpositions: 180115
+O draws 'D3/Left/Out' (after 0.050 secs)...
+    Calculated time for move: 50ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: 4120ms
+    Number of transpositions: 183110
+O draws 'D1/Right' (after 0.051 secs)...
+    Calculated time for move: 50ms
+    Time for move: 54ms
+    Max depth searched: 5
+    Remaining time: 4066ms
+    Number of transpositions: 185502
+O draws 'D3/LeftDown' (after 0.055 secs)...
+    Calculated time for move: 50ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: 4016ms
+    Number of transpositions: 187890
+O draws 'E7/LeftUp/Push' (after 0.051 secs)...
+    Calculated time for move: 50ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: 3966ms
+    Number of transpositions: 191197
+O draws 'D6/LeftUp/Push' (after 0.051 secs)...
+    Calculated time for move: 50ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: 3916ms
+    Number of transpositions: 194621
+O draws 'C5/Right' (after 0.050 secs)...
+    Calculated time for move: 50ms
+Tried to update best move with move of type none.
+    Time for move: 66ms
+    Max depth searched: 4
+    Remaining time: 3850ms
+    Number of transpositions: 197334
+O draws 'C6/Left' (after 0.066 secs)...
+    Calculated time for move: 50ms
     Time for move: 53ms
     Max depth searched: 5
-    Remaining time: 1862ms
-    Number of transpositions: 130384
-O draws 'B5/RightDown' (after 0.053 secs)...
+    Remaining time: 3797ms
+    Number of transpositions: 198524
+O draws 'C5/Right' (after 0.054 secs)...
+    Calculated time for move: 50ms
+    Time for move: 70ms
+    Max depth searched: 5
+    Remaining time: 3727ms
+    Number of transpositions: 199285
+O draws 'C6/Left' (after 0.070 secs)...
+    Calculated time for move: 50ms
+Tried to update best move with move of type none.
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: 3677ms
+    Number of transpositions: 201280
+O draws 'F3/Right' (after 0.051 secs)...
+    Calculated time for move: 50ms
+    Time for move: 58ms
+    Max depth searched: 5
+    Remaining time: 3619ms
+    Number of transpositions: 203198
+O draws 'A2/LeftDown' (after 0.059 secs)...
+    Calculated time for move: 50ms
+Tried to update best move with move of type none.
+    Time for move: 51ms
+    Max depth searched: 4
+    Remaining time: 3568ms
+    Number of transpositions: 204571
+O draws 'G6/RightUp' (after 0.061 secs)...
+    Calculated time for move: 50ms
+    Time for move: 50ms
+    Max depth searched: 2
+    Remaining time: 3518ms
+    Number of transpositions: 204573
+O draws 'B2/LeftDown' (after 0.051 secs)...
+    Calculated time for move: 50ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: 3468ms
+    Number of transpositions: 207221
+O draws 'B1/LeftDown' (after 0.050 secs)...
+    Calculated time for move: 50ms
+    Time for move: 69ms
+    Max depth searched: 5
+    Remaining time: 3399ms
+    Number of transpositions: 209562
+O draws 'E5/LeftUp/Push' (after 0.069 secs)...
+    Calculated time for move: 50ms
+    Time for move: 68ms
+    Max depth searched: 5
+    Remaining time: 3331ms
+    Number of transpositions: 211800
+O draws 'D4/LeftUp/Push' (after 0.068 secs)...
+    Calculated time for move: 50ms
+    Time for move: 68ms
+    Max depth searched: 5
+    Remaining time: 3263ms
+    Number of transpositions: 214946
+O draws 'B2-C3/Right' (after 0.068 secs)...
+    Calculated time for move: 50ms
+    Time for move: 58ms
+    Max depth searched: 5
+    Remaining time: 3205ms
+    Number of transpositions: 216174
+O draws 'B5/Left/Push' (after 0.059 secs)...
+    Calculated time for move: 50ms
+    Time for move: 53ms
+    Max depth searched: 3
+    Remaining time: 3152ms
+    Number of transpositions: 216190
+O draws 'B4/Left/Out' (after 0.054 secs)...
+    Calculated time for move: 50ms
+Tried to update best move with move of type none.
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: 3102ms
+    Number of transpositions: 217983
+O draws 'D1/RightDown' (after 0.051 secs)...
+    Calculated time for move: 50ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: 3052ms
+    Number of transpositions: 219955
+O draws 'D2/Right' (after 0.050 secs)...
+    Calculated time for move: 50ms
+    Time for move: 67ms
+    Max depth searched: 5
+    Remaining time: 2985ms
+    Number of transpositions: 223012
+O draws 'E2/RightDown/Push' (after 0.068 secs)...
+    Calculated time for move: 50ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: 2935ms
+    Number of transpositions: 225626
+O draws 'F4/Right' (after 0.051 secs)...
+    Calculated time for move: 50ms
+    Time for move: 64ms
+    Max depth searched: 5
+    Remaining time: 2871ms
+    Number of transpositions: 227365
+O draws 'F3-G4/Right' (after 0.064 secs)...
+    Calculated time for move: 50ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: 2821ms
+    Number of transpositions: 228813
+O draws 'B3/LeftDown' (after 0.050 secs)...
+    Calculated time for move: 50ms
+Tried to update best move with move of type none.
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: 2771ms
+    Number of transpositions: 229371
+O draws 'C6/LeftDown' (after 0.050 secs)...
+    Calculated time for move: 50ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: 2721ms
+    Number of transpositions: 231477
+O draws 'E7/LeftUp/Push' (after 0.051 secs)...
+    Calculated time for move: 50ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: 2671ms
+    Number of transpositions: 233416
+O draws 'B1/Right/Push' (after 0.051 secs)...
+    Calculated time for move: 50ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: 2621ms
+    Number of transpositions: 235345
+O draws 'B4/RightDown' (after 0.050 secs)...
+    Calculated time for move: 50ms
+    Time for move: 51ms
+    Max depth searched: 5
+    Remaining time: 2570ms
+    Number of transpositions: 236527
+O draws 'E7/Left' (after 0.052 secs)...
+    Calculated time for move: 50ms
+Tried to update best move with move of type none.
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: 2520ms
+    Number of transpositions: 238255
+O draws 'B3/LeftDown' (after 0.051 secs)...
+    Calculated time for move: 50ms
+    Time for move: 60ms
+    Max depth searched: 5
+    Remaining time: 2460ms
+    Number of transpositions: 240451
+O draws 'G4/RightUp/Push' (after 0.061 secs)...
+    Calculated time for move: 50ms
+Tried to update best move with move of type none.
+    Time for move: 59ms
+    Max depth searched: 4
+    Remaining time: 2401ms
+    Number of transpositions: 242070
+O draws 'F5/LeftUp/Push' (after 0.060 secs)...
+    Calculated time for move: 50ms
+    Time for move: 69ms
+    Max depth searched: 5
+    Remaining time: 2332ms
+    Number of transpositions: 245208
+O draws 'H5/LeftUp' (after 0.069 secs)...
+    Calculated time for move: 50ms
+    Time for move: 63ms
+    Max depth searched: 5
+    Remaining time: 2269ms
+    Number of transpositions: 248277
+O draws 'F4/RightUp/Push' (after 0.064 secs)...
+    Calculated time for move: 50ms
+Tried to update best move with move of type none.
+    Time for move: 59ms
+    Max depth searched: 4
+    Remaining time: 2210ms
+    Number of transpositions: 249878
+O draws 'C1/RightDown' (after 0.060 secs)...
+    Calculated time for move: 50ms
+    Time for move: 78ms
+    Max depth searched: 5
+    Remaining time: 2132ms
+    Number of transpositions: 253024
+O draws 'G9/LeftUp' (after 0.078 secs)...
+    Calculated time for move: 50ms
+    Time for move: 60ms
+    Max depth searched: 5
+    Remaining time: 2072ms
+    Number of transpositions: 255009
+O draws 'D2/RightDown' (after 0.062 secs)...
+    Calculated time for move: 50ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: 2022ms
+    Number of transpositions: 257089
+O draws 'C5/LeftDown' (after 0.051 secs)...
+    Calculated time for move: 50ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: 1972ms
+    Number of transpositions: 259162
+O draws 'F5/RightDown' (after 0.051 secs)...
+    Calculated time for move: 25ms
+Tried to update best move with move of type none.
+    Time for move: 60ms
+    Max depth searched: 4
+    Remaining time: 1912ms
+    Number of transpositions: 260369
+O draws 'D6/Left' (after 0.060 secs)...
+    Calculated time for move: 25ms
+    Time for move: 70ms
+    Max depth searched: 2
+    Remaining time: 1842ms
+    Number of transpositions: 260371
+O draws 'G4/LeftUp' (after 0.070 secs)...
+    Calculated time for move: 25ms
+    Time for move: 78ms
+    Max depth searched: 5
+    Remaining time: 1764ms
+    Number of transpositions: 261158
+O draws 'F8/LeftUp' (after 0.080 secs)...
+    Calculated time for move: 25ms
+    Time for move: 52ms
+    Max depth searched: 4
+    Remaining time: 1712ms
+    Number of transpositions: 261334
+O draws 'H7/Left' (after 0.053 secs)...
+    Calculated time for move: 25ms
+Tried to update best move with move of type none.
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: 1662ms
+    Number of transpositions: 263344
+O draws 'F4/RightUp' (after 0.051 secs)...
+    Calculated time for move: 25ms
+    Time for move: 52ms
+    Max depth searched: 3
+    Remaining time: 1610ms
+    Number of transpositions: 263346
+O draws 'F3/RightUp/Push' (after 0.053 secs)...
+    Calculated time for move: 25ms
+    Time for move: 69ms
+    Max depth searched: 5
+    Remaining time: 1541ms
+    Number of transpositions: 266186
+O draws 'I6/LeftUp' (after 0.070 secs)...
+    Calculated time for move: 25ms
+    Time for move: 68ms
+    Max depth searched: 5
+    Remaining time: 1473ms
+    Number of transpositions: 268651
+O draws 'E3/RightUp/Push' (after 0.068 secs)...
+    Calculated time for move: 25ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: 1423ms
+    Number of transpositions: 270807
+O draws 'A1/LeftDown' (after 0.051 secs)...
+    Calculated time for move: 25ms
+Tried to update best move with move of type none.
+    Time for move: 59ms
+    Max depth searched: 4
+    Remaining time: 1364ms
+    Number of transpositions: 271914
+O draws 'E4/RightUp/Push' (after 0.059 secs)...
+    Calculated time for move: 25ms
+    Time for move: 78ms
+    Max depth searched: 2
+    Remaining time: 1286ms
+    Number of transpositions: 271916
+O draws 'C4/LeftDown/Push' (after 0.079 secs)...
+    Calculated time for move: 25ms
+    Time for move: 67ms
+    Max depth searched: 5
+    Remaining time: 1219ms
+    Number of transpositions: 273770
+O draws 'C1/Right/Push' (after 0.069 secs)...
+    Calculated time for move: 25ms
+    Time for move: 59ms
+    Max depth searched: 5
+    Remaining time: 1160ms
+    Number of transpositions: 276023
+O draws 'D4/LeftUp/Push' (after 0.060 secs)...
+    Calculated time for move: 25ms
+    Time for move: 59ms
+    Max depth searched: 5
+    Remaining time: 1101ms
+    Number of transpositions: 277708
+O draws 'E7-F7/LeftUp' (after 0.060 secs)...
+    Calculated time for move: 25ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: 1051ms
+    Number of transpositions: 279345
+O draws 'C2/RightUp/Out' (after 0.050 secs)...
+    Calculated time for move: 25ms
+    Time for move: 69ms
+    Max depth searched: 5
+    Remaining time: 982ms
+    Number of transpositions: 281819
+O draws 'B2/LeftDown' (after 0.069 secs)...
+    Calculated time for move: 25ms
+    Time for move: 69ms
+    Max depth searched: 5
+    Remaining time: 913ms
+    Number of transpositions: 284078
+O draws 'C1/RightDown' (after 0.069 secs)...
+    Calculated time for move: 25ms
+    Time for move: 70ms
+    Max depth searched: 5
+    Remaining time: 843ms
+    Number of transpositions: 286576
+O draws 'A2-B3/Right' (after 0.071 secs)...
+    Calculated time for move: 25ms
+    Time for move: 77ms
+    Max depth searched: 4
+    Remaining time: 766ms
+    Number of transpositions: 288908
+O draws 'A3/LeftDown' (after 0.078 secs)...
+    Calculated time for move: 25ms
+    Time for move: 50ms
+    Max depth searched: 3
+    Remaining time: 716ms
+    Number of transpositions: 288925
+O draws 'H5/RightUp/Push' (after 0.050 secs)...
+    Calculated time for move: 25ms
+    Time for move: 69ms
+    Max depth searched: 5
+    Remaining time: 647ms
+    Number of transpositions: 291420
+O draws 'G5/RightUp' (after 0.069 secs)...
+    Calculated time for move: 25ms
+    Time for move: 74ms
+    Max depth searched: 5
+    Remaining time: 573ms
+    Number of transpositions: 293729
+O draws 'F6/Left/Push' (after 0.075 secs)...
+    Calculated time for move: 25ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: 523ms
+    Number of transpositions: 295785
+O draws 'E2/LeftUp' (after 0.050 secs)...
+    Calculated time for move: 25ms
+    Time for move: 58ms
+    Max depth searched: 5
+    Remaining time: 465ms
+    Number of transpositions: 297839
+O draws 'B3/LeftDown' (after 0.058 secs)...
+    Calculated time for move: 25ms
+    Time for move: 59ms
+    Max depth searched: 5
+    Remaining time: 406ms
+    Number of transpositions: 299750
+O draws 'B4/RightDown' (after 0.060 secs)...
+    Calculated time for move: 25ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: 356ms
+    Number of transpositions: 301673
+O draws 'D1/RightDown' (after 0.050 secs)...
+    Calculated time for move: 25ms
+    Time for move: 54ms
+    Max depth searched: 3
+    Remaining time: 302ms
+    Number of transpositions: 301675
+O draws 'E2/RightUp/Push' (after 0.055 secs)...
+    Calculated time for move: 25ms
+    Time for move: 52ms
+    Max depth searched: 4
+    Remaining time: 250ms
+    Number of transpositions: 303102
+O draws 'G4/Right' (after 0.053 secs)...
+    Calculated time for move: 25ms
+    Time for move: 70ms
+    Max depth searched: 5
+    Remaining time: 180ms
+    Number of transpositions: 304019
+O draws 'D3/RightUp/Push' (after 0.071 secs)...
+    Calculated time for move: 25ms
+    Time for move: 59ms
+    Max depth searched: 4
+    Remaining time: 121ms
+    Number of transpositions: 304108
+O draws 'E7/LeftUp' (after 0.060 secs)...
+    Calculated time for move: 25ms
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: 71ms
+    Number of transpositions: 305184
+O draws 'B3/LeftDown/Push' (after 0.050 secs)...
+    Calculated time for move: 25ms
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: 21ms
+    Number of transpositions: 305330
+O draws 'B1/RightDown/Push' (after 0.051 secs)...
+    Calculated time for move: 25ms
+    Time for move: 67ms
+    Max depth searched: 5
+    Remaining time: -46ms
+    Number of transpositions: 307475
+O draws 'D5/LeftUp' (after 0.068 secs)...
+    Calculated time for move: 25ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: -96ms
+    Number of transpositions: 310484
+O draws 'D2/Right/Push' (after 0.051 secs)...
+    Calculated time for move: 25ms
+    Time for move: 79ms
+    Max depth searched: 5
+    Remaining time: -175ms
+    Number of transpositions: 313024
+O draws 'I7/RightUp' (after 0.079 secs)...
+    Calculated time for move: 25ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: -225ms
+    Number of transpositions: 315237
+O draws 'B4/LeftDown/Push' (after 0.050 secs)...
+    Calculated time for move: 25ms
+Tried to update best move with move of type none.
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: -275ms
+    Number of transpositions: 316648
+O draws 'D4/LeftDown/Push' (after 0.050 secs)...
+    Calculated time for move: 25ms
+    Time for move: 65ms
+    Max depth searched: 4
+    Remaining time: -340ms
+    Number of transpositions: 317729
+O draws 'H7/RightUp' (after 0.066 secs)...
+    Calculated time for move: 25ms
+    Time for move: 59ms
+    Max depth searched: 5
+    Remaining time: -399ms
+    Number of transpositions: 319422
+O draws 'C2/RightDown' (after 0.060 secs)...
+    Calculated time for move: 25ms
+    Time for move: 85ms
+    Max depth searched: 5
+    Remaining time: -484ms
+    Number of transpositions: 321029
+O draws 'G7/Left' (after 0.086 secs)...
+    Calculated time for move: 25ms
+    Time for move: 71ms
+    Max depth searched: 5
+    Remaining time: -555ms
+    Number of transpositions: 323405
+O draws 'G6/Left' (after 0.072 secs)...
+    Calculated time for move: 25ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: -605ms
+    Number of transpositions: 325606
+O draws 'C3/LeftDown' (after 0.051 secs)...
+    Calculated time for move: 25ms
+Tried to update best move with move of type none.
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: -655ms
+    Number of transpositions: 327049
+O draws 'C4/Right/Push' (after 0.050 secs)...
+    Calculated time for move: 25ms
+Tried to update best move with move of type none.
+    Time for move: 53ms
+    Max depth searched: 4
+    Remaining time: -708ms
+    Number of transpositions: 328619
+O draws 'E2/RightDown/Push' (after 0.054 secs)...
+    Calculated time for move: 25ms
+    Time for move: 100ms
+    Max depth searched: 3
+    Remaining time: -808ms
+    Number of transpositions: 328621
+O draws 'F8/Left' (after 0.100 secs)...
+    Calculated time for move: 25ms
+    Time for move: 59ms
+    Max depth searched: 2
+    Remaining time: -867ms
+    Number of transpositions: 328624
+O draws 'C6/Left' (after 0.060 secs)...
+    Calculated time for move: 25ms
+Tried to update best move with move of type none.
+    Time for move: 66ms
+    Max depth searched: 4
+    Remaining time: -933ms
+    Number of transpositions: 329785
+O draws 'B6/LeftDown' (after 0.066 secs)...
+    Calculated time for move: 25ms
+    Time for move: 58ms
+    Max depth searched: 4
+    Remaining time: -991ms
+    Number of transpositions: 331483
+O draws 'D3-E3/Left' (after 0.060 secs)...
+    Calculated time for move: 25ms
+Tried to update best move with move of type none.
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: -1041ms
+    Number of transpositions: 333454
+O draws 'D2/RightDown' (after 0.051 secs)...
+    Calculated time for move: 25ms
+    Time for move: 59ms
+    Max depth searched: 5
+    Remaining time: -1100ms
+    Number of transpositions: 335835
+O draws 'G4/Right' (after 0.060 secs)...
+    Calculated time for move: 12ms
+    Time for move: 89ms
+    Max depth searched: 5
+    Remaining time: -1189ms
+    Number of transpositions: 338760
+O draws 'G5/LeftUp/Push' (after 0.089 secs)...
+    Calculated time for move: 12ms
+Tried to update best move with move of type none.
+    Time for move: 78ms
+    Max depth searched: 4
+    Remaining time: -1267ms
+    Number of transpositions: 339867
+O draws 'F7/Left' (after 0.079 secs)...
+    Calculated time for move: 12ms
+    Time for move: 65ms
+    Max depth searched: 4
+    Remaining time: -1332ms
+    Number of transpositions: 340032
+O draws 'F3/RightUp/Push' (after 0.066 secs)...
+    Calculated time for move: 12ms
+    Time for move: 56ms
+    Max depth searched: 5
+    Remaining time: -1388ms
+    Number of transpositions: 342987
+O draws 'E1/Right/Push' (after 0.057 secs)...
+    Calculated time for move: 12ms
+    Time for move: 54ms
+    Max depth searched: 3
+    Remaining time: -1442ms
+    Number of transpositions: 342989
+O draws 'C6-C7/LeftDown' (after 0.054 secs)...
+    Calculated time for move: 12ms
+    Time for move: 66ms
+    Max depth searched: 4
+    Remaining time: -1508ms
+    Number of transpositions: 345001
+O draws 'G6/Left' (after 0.066 secs)...
+    Calculated time for move: 12ms
+    Time for move: 50ms
+    Max depth searched: 3
+    Remaining time: -1558ms
+    Number of transpositions: 345037
+O draws 'F6/Left' (after 0.050 secs)...
+    Calculated time for move: 12ms
+    Time for move: 53ms
+    Max depth searched: 4
+    Remaining time: -1611ms
+    Number of transpositions: 347033
+O draws 'G5/Left' (after 0.055 secs)...
+    Calculated time for move: 12ms
+    Time for move: 52ms
+    Max depth searched: 5
+    Remaining time: -1663ms
+    Number of transpositions: 348769
+O draws 'F3/Right/Push' (after 0.053 secs)...
+    Calculated time for move: 12ms
+Tried to update best move with move of type none.
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: -1713ms
+    Number of transpositions: 350737
+O draws 'C7/Left' (after 0.050 secs)...
+    Calculated time for move: 12ms
+Tried to update best move with move of type none.
+    Time for move: 50ms
+    Max depth searched: 3
+    Remaining time: -1763ms
+    Number of transpositions: 350929
+O draws 'C7/RightDown' (after 0.051 secs)...
+    Calculated time for move: 12ms
+Tried to update best move with move of type none.
+    Time for move: 66ms
+    Max depth searched: 4
+    Remaining time: -1829ms
+    Number of transpositions: 352399
+O draws 'F6/Left' (after 0.067 secs)...
+    Calculated time for move: 12ms
+    Time for move: 60ms
+    Max depth searched: 4
+    Remaining time: -1889ms
+    Number of transpositions: 352402
+O draws 'F3/Right/Push' (after 0.061 secs)...
+    Calculated time for move: 12ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: -1939ms
+    Number of transpositions: 355750
+O draws 'D8/LeftUp' (after 0.051 secs)...
+    Calculated time for move: 12ms
+    Time for move: 51ms
+    Max depth searched: 5
+    Remaining time: -1990ms
+    Number of transpositions: 358455
+O draws 'C7/RightDown' (after 0.052 secs)...
+    Calculated time for move: 12ms
+Tried to update best move with move of type none.
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: -2040ms
+    Number of transpositions: 361026
+O draws 'D8/LeftDown' (after 0.051 secs)...
+    Calculated time for move: 12ms
+    Time for move: 29ms
+    Max depth searched: 4
+    Remaining time: -2069ms
+    Number of transpositions: 361099
+O draws 'B3/LeftDown' (after 0.029 secs)...
+    Calculated time for move: 12ms
+Tried to update best move with move of type none.
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: -2119ms
+    Number of transpositions: 363908
+O draws 'E8/LeftDown' (after 0.051 secs)...
+    Calculated time for move: 12ms
+Tried to update best move with move of type none.
+    Time for move: 50ms
+    Max depth searched: 3
+    Remaining time: -2169ms
+    Number of transpositions: 364050
+O draws 'G4/RightUp' (after 0.050 secs)...
+    Calculated time for move: 12ms
+    Time for move: 69ms
+    Max depth searched: 4
+    Remaining time: -2238ms
+    Number of transpositions: 365458
+O draws 'E2/RightUp' (after 0.070 secs)...
+    Calculated time for move: 12ms
+    Time for move: 84ms
+    Max depth searched: 5
+    Remaining time: -2322ms
+    Number of transpositions: 366429
+O draws 'F8/LeftDown' (after 0.085 secs)...
+    Calculated time for move: 12ms
+    Time for move: 68ms
+    Max depth searched: 5
+    Remaining time: -2390ms
+    Number of transpositions: 368836
+O draws 'G8-H8/Left' (after 0.069 secs)...
+    Calculated time for move: 12ms
+    Time for move: 69ms
+    Max depth searched: 3
+    Remaining time: -2459ms
+    Number of transpositions: 368838
+O draws 'H7/RightUp/Push' (after 0.070 secs)...
+    Calculated time for move: 12ms
+    Time for move: 23ms
+    Max depth searched: 2
+    Remaining time: -2482ms
+    Number of transpositions: 368841
+O draws 'G6-G8/LeftDown' (after 0.024 secs)...
+    Calculated time for move: 12ms
+    Time for move: 64ms
+    Max depth searched: 4
+    Remaining time: -2546ms
+    Number of transpositions: 368987
+O draws 'E2/RightUp' (after 0.065 secs)...
+    Calculated time for move: 12ms
+Tried to update best move with move of type none.
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: -2596ms
+    Number of transpositions: 370322
+O draws 'D2/RightUp' (after 0.050 secs)...
+    Calculated time for move: 12ms
+    Time for move: 60ms
+    Max depth searched: 2
+    Remaining time: -2656ms
+    Number of transpositions: 370324
+O draws 'B1-C2/LeftDown' (after 0.061 secs)...
+    Calculated time for move: 12ms
+    Time for move: 68ms
+    Max depth searched: 3
+    Remaining time: -2724ms
+    Number of transpositions: 370329
+O draws 'C1-D2/Right' (after 0.068 secs)...
+    Calculated time for move: 12ms
+    Time for move: 51ms
+    Max depth searched: 2
+    Remaining time: -2775ms
+    Number of transpositions: 370353
+O draws 'I8/RightUp' (after 0.053 secs)...
+    Calculated time for move: 12ms
+    Time for move: 56ms
+    Max depth searched: 2
+    Remaining time: -2831ms
+    Number of transpositions: 370355
+O draws 'C2/RightDown' (after 0.057 secs)...
+    Calculated time for move: 12ms
+    Time for move: 57ms
+    Max depth searched: 2
+    Remaining time: -2888ms
+    Number of transpositions: 370357
+O draws 'F4-H6/Left' (after 0.058 secs)...
+    Calculated time for move: 12ms
+    Time for move: 47ms
+    Max depth searched: 2
+    Remaining time: -2935ms
+    Number of transpositions: 370357
+O draws 'B2/RightDown' (after 0.047 secs)...
+    Calculated time for move: 12ms
+    Time for move: 52ms
+    Max depth searched: 4
+    Remaining time: -2987ms
+    Number of transpositions: 373162
+O draws 'E3/LeftUp' (after 0.053 secs)...
+    Calculated time for move: 12ms
+Tried to update best move with move of type none.
+    Time for move: 69ms
+    Max depth searched: 4
+    Remaining time: -3056ms
+    Number of transpositions: 374879
+O draws 'F3-H5/RightUp' (after 0.069 secs)...
+    Calculated time for move: 12ms
+    Time for move: 58ms
+    Max depth searched: 5
+    Remaining time: -3114ms
+    Number of transpositions: 377352
+O draws 'D2/Right' (after 0.058 secs)...
+    Calculated time for move: 12ms
+    Time for move: 81ms
+    Max depth searched: 5
+    Remaining time: -3195ms
+    Number of transpositions: 379824
+O draws 'G5/LeftUp' (after 0.083 secs)...
+    Calculated time for move: 12ms
+    Time for move: 30ms
+    Max depth searched: 2
+    Remaining time: -3225ms
+    Number of transpositions: 379826
+O draws 'D5/LeftDown/Push' (after 0.031 secs)...
+    Calculated time for move: 12ms
+    Time for move: 55ms
+    Max depth searched: 2
+    Remaining time: -3280ms
+    Number of transpositions: 379829
+O draws 'B1/RightDown' (after 0.056 secs)...
+    Calculated time for move: 12ms
+    Time for move: 70ms
+    Max depth searched: 4
+    Remaining time: -3350ms
+    Number of transpositions: 381005
+O draws 'D2/RightUp' (after 0.071 secs)...
+    Calculated time for move: 12ms
+Tried to update best move with move of type none.
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: -3400ms
+    Number of transpositions: 382877
+O draws 'G6/Left' (after 0.051 secs)...
+    Calculated time for move: 12ms
+    Time for move: 60ms
+    Max depth searched: 4
+    Remaining time: -3460ms
+    Number of transpositions: 383260
+O draws 'D5/LeftUp' (after 0.062 secs)...
+    Calculated time for move: 12ms
+    Time for move: 17ms
+    Max depth searched: 4
+    Remaining time: -3477ms
+    Number of transpositions: 383415
+O draws 'E2/RightUp' (after 0.018 secs)...
+    Calculated time for move: 12ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: -3527ms
+    Number of transpositions: 386716
+O draws 'B2/RightDown/Push' (after 0.051 secs)...
+    Calculated time for move: 12ms
+Tried to update best move with move of type none.
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: -3577ms
+    Number of transpositions: 387160
+O draws 'B1/Right' (after 0.051 secs)...
+    Calculated time for move: 12ms
+Tried to update best move with move of type none.
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: -3627ms
+    Number of transpositions: 389475
+O draws 'B2/LeftDown/Push' (after 0.050 secs)...
+    Calculated time for move: 12ms
+Tried to update best move with move of type none.
+    Time for move: 18ms
+    Max depth searched: 4
+    Remaining time: -3645ms
+    Number of transpositions: 389519
+O draws 'D2/RightUp' (after 0.019 secs)...
+    Calculated time for move: 12ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: -3695ms
+    Number of transpositions: 390992
+O draws 'C4/LeftDown/Push' (after 0.050 secs)...
+    Calculated time for move: 12ms
+Tried to update best move with move of type none.
+    Time for move: 56ms
+    Max depth searched: 5
+    Remaining time: -3751ms
+    Number of transpositions: 391992
+O draws 'G3/Right' (after 0.056 secs)...
+    Calculated time for move: 12ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: -3801ms
+    Number of transpositions: 394036
+O draws 'C1/Right' (after 0.051 secs)...
+    Calculated time for move: 12ms
+    Time for move: 50ms
+    Max depth searched: 5
+    Remaining time: -3851ms
+    Number of transpositions: 398226
+O draws 'C2/RightDown' (after 0.051 secs)...
+    Calculated time for move: 6ms
+    Time for move: 59ms
+    Max depth searched: 4
+    Remaining time: -3910ms
+    Number of transpositions: 398229
+O draws 'I5/LeftUp' (after 0.059 secs)...
+    Calculated time for move: 6ms
+    Time for move: 18ms
+    Max depth searched: 1
+    Remaining time: -3928ms
+    Number of transpositions: 398230
+O draws 'B2/RightDown' (after 0.019 secs)...
+    Calculated time for move: 6ms
+    Time for move: 61ms
+    Max depth searched: 7
+    Remaining time: -3989ms
+    Number of transpositions: 400811
+O draws 'E6/Left/Push' (after 0.062 secs)...
 X wins the game!

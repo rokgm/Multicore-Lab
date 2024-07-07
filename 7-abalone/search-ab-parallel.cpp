@@ -64,7 +64,6 @@ private:
 	int _moveCounter = 0;
 
 	TranspositionTable _transpositionTable;
-	// TODO remove after
 	int _countTranspositions = 0;
 };
 
@@ -91,6 +90,10 @@ void ABParallelStrategy::searchBestMove()
 	// TODO off time searching
 	// Iterative deepening until reaches max depth or seach is stopped via timer.
     for (int depth = 1; depth <= _maxDepth; depth++) {
+
+		if (_atomicStopSearch)
+            break;
+
         _currentIterativeDepth = depth;
 
 		#pragma omp parallel
@@ -101,17 +104,17 @@ void ABParallelStrategy::searchBestMove()
 			}
 		}
 
-		// If search wasn't stopped by timer, we can update best move.
-		// If for given depth the search was canceled, we can't use it (the whole tree wasn't searched).
-		// We use iterativeBestMove to store best move from previous iteration.
-		// TODO: implement search first move first so no need to discard. (Needs trans tables)
-		if (_atomicStopSearch)
-            break;
+		// We can update even if searched was stopped by timer because we search best move from previous
+		// iteration first (ordered by hash move).
 
 		if (_bestMove.type == Move::none) {
 			std::cout << "Tried to update best move with move of type none." << std::endl;
 			break;
 		}
+
+		// From first iteration, null move can be returned.
+		if (_bestMove == Move())
+			break;
 
 		iterativeBestMove = _bestMove;
 		maxDepthSearched = depth;
@@ -144,21 +147,26 @@ int ABParallelStrategy::alphabeta(const int depth, int alpha, int beta, Board& b
 
 	auto tableEval = _transpositionTable.getEntry(board.getZobristKey());
 
-	if (tableEval != std::nullopt && tableEval->depth >= _currentIterativeDepth - depth) {
+	std::optional<Move> hashMove = std::nullopt;
+
+	if (tableEval != std::nullopt){
 		_countTranspositions++;
-		if (tableEval->typeOfNode == TranspositionTable::TypeOfNode::exact) {
-			if (depth == 0)
-				_bestMove = tableEval->bestMove;
-			return tableEval->evaluation;
+		hashMove = tableEval->bestMove;
+		if (tableEval->depth >= _currentIterativeDepth - depth) {
+			if (tableEval->typeOfNode == TranspositionTable::TypeOfNode::exact) {
+				if (depth == 0)
+					_bestMove = tableEval->bestMove;
+				return tableEval->evaluation;
+			}
+			else if (tableEval->typeOfNode == TranspositionTable::TypeOfNode::lower) {
+				alpha = std::max(alpha, tableEval->evaluation);
+			}
+			else if (tableEval->typeOfNode == TranspositionTable::TypeOfNode::upper) {
+				beta = std::min(beta, tableEval->evaluation);
+			}
+			else
+				std::cout << "ERROR: Evaluation in transposition table with node type none." << std::endl;
 		}
-		else if (tableEval->typeOfNode == TranspositionTable::TypeOfNode::lower) {
-			alpha = std::max(alpha, tableEval->evaluation);
-		}
-		else if (tableEval->typeOfNode == TranspositionTable::TypeOfNode::upper) {
-			beta = std::min(beta, tableEval->evaluation);
-		}
-		else
-			std::cout << "ERROR: Evaluation in transposition table with node type none." << std::endl;
 	}
 
 	// We can cut with evaluation from transposition table.
@@ -187,7 +195,16 @@ int ABParallelStrategy::alphabeta(const int depth, int alpha, int beta, Board& b
 	// Need as we can't break out of omp task.
 	bool alphaBetaCutoff = false;
 
-    while (list.getNext(m)) {
+	// Search hash move first. Will be searched twice but in parallel so no big deal.
+	// TODO Could be improved by checking if it is in the list...
+	if (hashMove != std::nullopt)
+		m = hashMove.value();
+	else {
+		if (!list.getNext(m))
+			return bestEvaluation;
+	}
+
+    do {
 		if (alphaBetaCutoff)
 			break;
 
@@ -235,10 +252,6 @@ int ABParallelStrategy::alphabeta(const int depth, int alpha, int beta, Board& b
 				int evaluation = -alphabeta(depth + 1, -beta, -alpha, boardCopy, evaluator);
 				boardCopy.takeBack();
 
-				// TODO
-				if (zobristKey != board.getZobristKey())
-					std::cout << "ERROR: Zobrist key changed." << std::endl;
-
 				// If search was stopped by timer, we can't use the result.
 				if (!_atomicStopSearch) {
 					// TODO fix this critical section. To be function scoped.
@@ -259,7 +272,7 @@ int ABParallelStrategy::alphabeta(const int depth, int alpha, int beta, Board& b
 				}
 			}
 		}
-    }
+    } while (list.getNext(m));
 
 	#pragma omp taskwait
 

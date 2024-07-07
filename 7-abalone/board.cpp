@@ -698,7 +698,6 @@ void Board::playMove(const Move& m, int msecs)
 
 }
 
-// TODO store zobrist key and just take it back
 bool Board::takeBack()
 {
   int f, dir, dir2;
