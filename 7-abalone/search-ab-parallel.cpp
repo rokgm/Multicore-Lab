@@ -56,7 +56,7 @@ private:
 	std::atomic<bool> _atomicStopSearch = false;
 
 	// TODO Change to 55000 for competition.
-	static constexpr std::chrono::milliseconds s_gameDuration{10000};
+	static constexpr std::chrono::milliseconds s_gameDuration{10000000};
 	std::chrono::milliseconds _remainingTime{s_gameDuration};
 
 	int _currentIterativeDepth = 0;
@@ -193,9 +193,18 @@ int ABParallelStrategy::alphabeta(int depth, int alpha, int beta, Board& board, 
 				shared(bestEvaluation, alphaBetaCutoff, alpha)
             {	
 				Board boardCopy = board;
+				// TODO
+				uint64_t zobristKey = boardCopy.getZobristKey();
+
 				boardCopy.playMove(m);
 				int evaluation = -alphabeta(depth + 1, -beta, -alpha, boardCopy, evaluator);
 				boardCopy.takeBack();
+
+				if (boardCopy.getZobristKey() != zobristKey) {
+					std::cout << "ZOBRIST KEY IS WRONGLY UPDATED, move: ";
+					m.print();
+					std::cout << std::endl;
+				}
 
 				// If search was stopped by timer, we can't use the result.
 				if (!_atomicStopSearch) {

@@ -11,6 +11,8 @@
 
 #include "move.h"
 
+#include <cstdint>
+
 class SearchStrategy;
 class Evaluator;
 
@@ -174,6 +176,9 @@ class Board
 
   static int fieldDiffOfDir(int d) { return direction[d]; }
 
+  // Get color via index for inner ring.
+  int getColor(int numberOfField) const;
+
  private:
   void setFieldValues();
 
@@ -200,12 +205,18 @@ class Board
 
   /* constant arrays */
   static int startBoard[AllFields];
+  static int allFieldToOrder[AllFields];
   static int order[RealFields];
   static int direction[8];
+
+  uint64_t zobristKey = 0;
 
  public:
   /* for fast evaluation */
   int* fieldArray() { return field; }
+
+  uint64_t getZobristKey() const { return zobristKey; }
+
 };
 
 

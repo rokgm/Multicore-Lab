@@ -8,22 +8,22 @@
 CXX = icpc
 
 # Use this for MPI
-#CXX = mpiCC
+# CXX = mpiCC
 
 
 # Useful options for GCC
-# CXXFLAGS=-O3 -fno-omit-frame-pointer -fopenmp -march=native
+# CXXFLAGS=-O3 -fno-omit-frame-pointer -fopenmp -march=native -std=c++17
 #LDFLAGS=
 
 # Useful options for Intel C++
-CXXFLAGS= -O3 -qopenmp -xhost
+CXXFLAGS= -O3 -qopenmp -xhost -std=c++17
 LDFLAGS=
 
 
-LIB_OBJS = move.o board.o network.o search.o eval.o
+LIB_OBJS = move.o board.o network.o search.o eval.o zobristHash.o
 SEARCH_OBJS = $(LIB_OBJS) search-abid.o search-onelevel.o\
 	search-negamax.o search-negamax-parallel.o search-ab-seq.o search-ab-parallel.o\
-	timer.o
+	timer.o transpositionTable.o 
 
 all: player start referee
 
@@ -58,3 +58,5 @@ search-ab-seq.o: search.h board.h eval.h
 search-ab-parallel.o: search.h board.h eval.h
 
 timer.o: timer.h timer.cpp
+transpositionTable.o: transpositionTable.h transpositionTable.cpp
+zobristHash.o: zobristHash.h zobristHash.cpp
