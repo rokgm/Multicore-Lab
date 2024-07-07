@@ -10,6 +10,7 @@
 #include "board.h"
 #include "eval.h"
 #include "timer.h"
+#include "transpositionTable.h"
 
 #include <iostream>
 #include <chrono>
@@ -56,11 +57,15 @@ private:
 	std::atomic<bool> _atomicStopSearch = false;
 
 	// TODO Change to 50000 for competition.
-	static constexpr std::chrono::milliseconds s_gameDuration{50000};
+	static constexpr std::chrono::milliseconds s_gameDuration{10000};
 	std::chrono::milliseconds _remainingTime{s_gameDuration};
 
 	int _currentIterativeDepth = 0;
 	int _moveCounter = 0;
+
+	TranspositionTable _transpositionTable;
+	// TODO remove after
+	int _countTranspositions = 0;
 };
 
 int ABParallelStrategy::evaluate(Board& board, Evaluator& evaluator)
@@ -83,6 +88,7 @@ void ABParallelStrategy::searchBestMove()
 	Move iterativeBestMove;
 	int maxDepthSearched = 0;
 
+	// TODO off time searching
 	// Iterative deepening until reaches max depth or seach is stopped via timer.
     for (int depth = 1; depth <= _maxDepth; depth++) {
         _currentIterativeDepth = depth;
@@ -125,15 +131,41 @@ void ABParallelStrategy::searchBestMove()
 	std::cout << "    Time for move: " << timeForMove.count() << "ms" << std::endl;
 	std::cout << "    Max depth searched: " << maxDepthSearched << std::endl;
 	std::cout << "    Remaining time: " << _remainingTime.count() << "ms" << std::endl;
-	// print when implemented "Number of transpositions: _countTranspositions
+	std::cout << "    Number of transpositions: " << _countTranspositions << std::endl;
 }
 
-int ABParallelStrategy::alphabeta(int depth, int alpha, int beta, Board& board, Evaluator& evaluator)
+int ABParallelStrategy::alphabeta(const int depth, int alpha, int beta, Board& board, Evaluator& evaluator)
 {	
 	if (_atomicStopSearch)
 		return minEvaluation();
 
-    // Check for a losing position, return negative minimum because
+	// Needed by transpositions.
+	int previousAlpha = alpha;
+
+	auto tableEval = _transpositionTable.getEntry(board.getZobristKey());
+
+	if (tableEval != std::nullopt && tableEval->depth >= _currentIterativeDepth - depth) {
+		_countTranspositions++;
+		if (tableEval->typeOfNode == TranspositionTable::TypeOfNode::exact) {
+			if (depth == 0)
+				_bestMove = tableEval->bestMove;
+			return tableEval->evaluation;
+		}
+		else if (tableEval->typeOfNode == TranspositionTable::TypeOfNode::lower) {
+			alpha = std::max(alpha, tableEval->evaluation);
+		}
+		else if (tableEval->typeOfNode == TranspositionTable::TypeOfNode::upper) {
+			beta = std::min(beta, tableEval->evaluation);
+		}
+		else
+			std::cout << "ERROR: Evaluation in transposition table with node type none." << std::endl;
+	}
+
+	// We can cut with evaluation from transposition table.
+    if (alpha >= beta)
+        return tableEval->evaluation;
+
+	// Check for a losing position, return negative minimum because
     // opponents move was last. Add depth to find shortest win.
     if (!board.isValid())
         return minEvaluation() + depth;
@@ -146,6 +178,8 @@ int ABParallelStrategy::alphabeta(int depth, int alpha, int beta, Board& board, 
     Move m;
     MoveList list;
 
+	Move localBestMove;
+
 	// Moves are already ordered. See move.h.
     board.generateMoves(list);
 
@@ -153,17 +187,21 @@ int ABParallelStrategy::alphabeta(int depth, int alpha, int beta, Board& board, 
 	// Need as we can't break out of omp task.
 	bool alphaBetaCutoff = false;
 
-	// TODO maybe try search first 2 left children sequentially...
     while (list.getNext(m)) {
 		if (alphaBetaCutoff)
 			break;
 
-		// TODO try different depths away from leaves, 3 was best for me on laptop.
 		// Search sequentially when 3 move away from leaves to avoid task overhead.
-		if (!leftmostChildEvaluated || (depth + 3 >= _currentIterativeDepth)) {				
+		if (!leftmostChildEvaluated || (depth + 3 >= _currentIterativeDepth)) {		
+
+			auto zobristKey = board.getZobristKey();
+
 			board.playMove(m);
 			int evaluation = -alphabeta(depth + 1, -beta, -alpha, board, evaluator);
 			board.takeBack();
+
+			if (zobristKey != board.getZobristKey())
+				std::cout << "ERROR: Zobrist key changed." << std::endl;
 
 			// If search was stopped by timer, we can't use the result.
 			if (_atomicStopSearch)
@@ -171,11 +209,8 @@ int ABParallelStrategy::alphabeta(int depth, int alpha, int beta, Board& board, 
 
 			if (evaluation > bestEvaluation) {
 				bestEvaluation = evaluation;
-				if (depth == 0) {
-					// Critical not needed as for depth 0 we only get here only on
-					// most left node, before parallel tasks are created.
-					_bestMove = m;
-				}
+
+				localBestMove = m;
 			}
 
 			if (bestEvaluation > alpha)
@@ -190,24 +225,29 @@ int ABParallelStrategy::alphabeta(int depth, int alpha, int beta, Board& board, 
 		}
 		else {
 			#pragma omp task firstprivate(m, beta, depth)\
-				shared(bestEvaluation, alphaBetaCutoff, alpha)
+				shared(bestEvaluation, alphaBetaCutoff, alpha, localBestMove)
             {	
 				Board boardCopy = board;
+
+				auto zobristKey = boardCopy.getZobristKey();
 
 				boardCopy.playMove(m);
 				int evaluation = -alphabeta(depth + 1, -beta, -alpha, boardCopy, evaluator);
 				boardCopy.takeBack();
 
+				// TODO
+				if (zobristKey != board.getZobristKey())
+					std::cout << "ERROR: Zobrist key changed." << std::endl;
+
 				// If search was stopped by timer, we can't use the result.
 				if (!_atomicStopSearch) {
+					// TODO fix this critical section. To be function scoped.
 					#pragma omp critical (bestEvaluation)
                     {
                         if (evaluation > bestEvaluation) {
                             bestEvaluation = evaluation;
 
-                            if (depth == 0) {
-                                _bestMove = m;
-                            }
+							localBestMove = m;
                         }
 
                         if (bestEvaluation > alpha)
@@ -222,6 +262,21 @@ int ABParallelStrategy::alphabeta(int depth, int alpha, int beta, Board& board, 
     }
 
 	#pragma omp taskwait
+
+	if (depth == 0) {
+		_bestMove = localBestMove;
+	}
+
+	// Only store if leaf nodes were reached (search wasn't stopped before).
+    if (!_atomicStopSearch && !(localBestMove == Move())) {
+        auto nodeType = TranspositionTable::TypeOfNode::exact;
+        if (bestEvaluation <= previousAlpha)
+            nodeType = TranspositionTable::TypeOfNode::upper;
+        else if (bestEvaluation >= beta)
+            nodeType = TranspositionTable::TypeOfNode::lower;
+        _transpositionTable.store(board.getZobristKey(), bestEvaluation, _currentIterativeDepth - depth, nodeType, localBestMove);
+    }
+
     return bestEvaluation;
 }
 

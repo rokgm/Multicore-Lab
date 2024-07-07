@@ -12,6 +12,7 @@
 #include "move.h"
 
 #include <cstdint>
+#include <vector>
 
 class SearchStrategy;
 class Evaluator;
@@ -210,6 +211,7 @@ class Board
   static int direction[8];
 
   uint64_t zobristKey = 0;
+  std::vector<uint64_t> zobristKeys;
 
  public:
   /* for fast evaluation */

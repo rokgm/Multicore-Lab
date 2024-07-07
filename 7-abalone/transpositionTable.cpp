@@ -24,16 +24,20 @@ TranspositionTable::TranspositionTable()
 void TranspositionTable::store(uint64_t zobristHash, int evaluation, unsigned int depth,
                                TypeOfNode typeOfNode, Move bestMove)
 {
-    m_table->at(hashFunction(zobristHash)) =
-        std::move(Entry(zobristHash, evaluation, depth, typeOfNode, bestMove));
+    std::lock_guard<std::mutex> lock(_mutex);
+
+        m_table->at(hashFunction(zobristHash)) =
+            std::move(Entry(zobristHash, evaluation, depth, typeOfNode, bestMove));
 }
 
-const TranspositionTable::Entry* TranspositionTable::getEntry(uint64_t zobristHash)
-{
-    auto entry = &m_table->at(hashFunction(zobristHash));
-    if (entry->key == zobristHash)
+std::optional<TranspositionTable::Entry> TranspositionTable::getEntry(uint64_t zobristHash) const
+{   
+    std::lock_guard<std::mutex> lock(_mutex);
+
+    auto entry = m_table->at(hashFunction(zobristHash));
+    if (entry.key == zobristHash)
         return entry;
-    return nullptr;
+    return {};
 }
 
 void TranspositionTable::clear()

@@ -1,20 +1,527 @@
-Using strategy 'ABParallel' (depth 5) ...
-    Calculated time for move: 500ms
-    Time for move: 501ms
+Using strategy 'AB' (depth 1000) ...
+    Calculated time for move: 100ms
+    Time for move: 116ms
     Max depth searched: 4
-    Remaining time: 49499ms
-X draws 'I5/RightUp' (after 0.502 secs)...
-    Calculated time for move: 500ms
-    Time for move: 514ms
+    Remaining time: 9884ms
+X draws 'I9/LeftUp' (after 0.117 secs)...
+    Calculated time for move: 100ms
+    Time for move: 115ms
+    Max depth searched: 3
+    Remaining time: 9769ms
+X draws 'I8/LeftUp' (after 0.116 secs)...
+    Calculated time for move: 100ms
+    Time for move: 112ms
+    Max depth searched: 3
+    Remaining time: 9657ms
+X draws 'I7/LeftUp' (after 0.113 secs)...
+    Calculated time for move: 100ms
+    Time for move: 114ms
+    Max depth searched: 3
+    Remaining time: 9543ms
+X draws 'I6/LeftUp' (after 0.115 secs)...
+    Calculated time for move: 100ms
+    Time for move: 106ms
+    Max depth searched: 3
+    Remaining time: 9437ms
+X draws 'H4/RightUp' (after 0.107 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 3
+    Remaining time: 9337ms
+X draws 'H6/RightUp/Push' (after 0.101 secs)...
+    Calculated time for move: 100ms
+    Time for move: 115ms
     Max depth searched: 4
-    Remaining time: 48985ms
-X draws 'I7/LeftUp' (after 0.515 secs)...
-    Calculated time for move: 500ms
-    Time for move: 531ms
+    Remaining time: 9222ms
+X draws 'H9/Left' (after 0.116 secs)...
+    Calculated time for move: 100ms
+    Time for move: 115ms
+    Max depth searched: 3
+    Remaining time: 9107ms
+X draws 'I5/Right' (after 0.116 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
     Max depth searched: 4
-    Remaining time: 48454ms
-X draws 'I9/LeftUp' (after 0.532 secs)...
-    Calculated time for move: 500ms
-    Time for move: 529ms
+    Remaining time: 9007ms
+X draws 'G4/RightUp/Push' (after 0.101 secs)...
+    Calculated time for move: 100ms
+    Time for move: 109ms
     Max depth searched: 4
-    Remaining time: 47925ms
+    Remaining time: 8898ms
+X draws 'I6/LeftUp' (after 0.110 secs)...
+    Calculated time for move: 100ms
+    Time for move: 109ms
+    Max depth searched: 3
+    Remaining time: 8789ms
+X draws 'G4/LeftUp' (after 0.110 secs)...
+    Calculated time for move: 100ms
+    Time for move: 116ms
+    Max depth searched: 4
+    Remaining time: 8673ms
+X draws 'F3/RightUp/Push' (after 0.117 secs)...
+    Calculated time for move: 100ms
+    Time for move: 116ms
+    Max depth searched: 3
+    Remaining time: 8557ms
+X draws 'E3/LeftDown' (after 0.117 secs)...
+    Calculated time for move: 100ms
+    Time for move: 116ms
+    Max depth searched: 3
+    Remaining time: 8441ms
+X draws 'F3/RightDown' (after 0.116 secs)...
+    Calculated time for move: 100ms
+    Time for move: 102ms
+    Max depth searched: 4
+    Remaining time: 8339ms
+X draws 'C3/LeftDown' (after 0.103 secs)...
+    Calculated time for move: 100ms
+    Time for move: 116ms
+    Max depth searched: 4
+    Remaining time: 8223ms
+X draws 'H8/LeftUp/Push' (after 0.117 secs)...
+    Calculated time for move: 100ms
+    Time for move: 115ms
+    Max depth searched: 3
+    Remaining time: 8108ms
+X draws 'E3/RightUp' (after 0.115 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 3
+    Remaining time: 8008ms
+X draws 'D2/RightDown' (after 0.100 secs)...
+    Calculated time for move: 100ms
+    Time for move: 117ms
+    Max depth searched: 3
+    Remaining time: 7891ms
+X draws 'H5/Right' (after 0.118 secs)...
+    Calculated time for move: 100ms
+    Time for move: 108ms
+    Max depth searched: 3
+    Remaining time: 7783ms
+X draws 'H8/Left' (after 0.109 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 3
+    Remaining time: 7683ms
+X draws 'H5/LeftUp' (after 0.101 secs)...
+    Calculated time for move: 100ms
+    Time for move: 106ms
+    Max depth searched: 3
+    Remaining time: 7577ms
+X draws 'H4/Right' (after 0.107 secs)...
+    Calculated time for move: 100ms
+    Time for move: 118ms
+    Max depth searched: 3
+    Remaining time: 7459ms
+X draws 'F3/RightDown' (after 0.119 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 4
+    Remaining time: 7359ms
+X draws 'I6/Right' (after 0.100 secs)...
+    Calculated time for move: 100ms
+    Time for move: 115ms
+    Max depth searched: 4
+    Remaining time: 7244ms
+X draws 'I7/RightUp/Push' (after 0.116 secs)...
+    Calculated time for move: 100ms
+    Time for move: 112ms
+    Max depth searched: 3
+    Remaining time: 7132ms
+X draws 'H5/Right' (after 0.113 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 4
+    Remaining time: 7032ms
+X draws 'F5/Right/Push' (after 0.101 secs)...
+    Calculated time for move: 100ms
+    Time for move: 101ms
+    Max depth searched: 4
+    Remaining time: 6931ms
+X draws 'G5/RightUp' (after 0.102 secs)...
+    Calculated time for move: 100ms
+    Time for move: 113ms
+    Max depth searched: 4
+    Remaining time: 6818ms
+X draws 'G4/RightDown' (after 0.114 secs)...
+    Calculated time for move: 100ms
+    Time for move: 109ms
+    Max depth searched: 4
+    Remaining time: 6709ms
+X draws 'C3/LeftUp' (after 0.110 secs)...
+    Calculated time for move: 100ms
+    Time for move: 118ms
+    Max depth searched: 4
+    Remaining time: 6591ms
+X draws 'H8/LeftUp/Push' (after 0.119 secs)...
+    Calculated time for move: 100ms
+    Time for move: 104ms
+    Max depth searched: 3
+    Remaining time: 6487ms
+X draws 'B2/LeftDown' (after 0.105 secs)...
+    Calculated time for move: 100ms
+    Time for move: 111ms
+    Max depth searched: 4
+    Remaining time: 6376ms
+X draws 'G7/LeftUp/Push' (after 0.112 secs)...
+    Calculated time for move: 100ms
+    Time for move: 115ms
+    Max depth searched: 4
+    Remaining time: 6261ms
+X draws 'F7/Left' (after 0.116 secs)...
+    Calculated time for move: 100ms
+    Time for move: 114ms
+    Max depth searched: 4
+    Remaining time: 6147ms
+X draws 'H9/LeftUp' (after 0.115 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 3
+    Remaining time: 6047ms
+X draws 'F6/LeftUp' (after 0.101 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 4
+    Remaining time: 5947ms
+X draws 'G8-H9/Left' (after 0.101 secs)...
+    Calculated time for move: 100ms
+    Time for move: 114ms
+    Max depth searched: 4
+    Remaining time: 5833ms
+X draws 'G7/Left' (after 0.114 secs)...
+    Calculated time for move: 100ms
+    Time for move: 115ms
+    Max depth searched: 4
+    Remaining time: 5718ms
+X draws 'I6/LeftUp' (after 0.115 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 4
+    Remaining time: 5618ms
+X draws 'C3/RightDown' (after 0.100 secs)...
+    Calculated time for move: 100ms
+    Time for move: 115ms
+    Max depth searched: 4
+    Remaining time: 5503ms
+X draws 'F3/RightUp/Push' (after 0.116 secs)...
+    Calculated time for move: 100ms
+    Time for move: 113ms
+    Max depth searched: 4
+    Remaining time: 5390ms
+X draws 'D3/Right/Push' (after 0.114 secs)...
+    Calculated time for move: 100ms
+    Time for move: 115ms
+    Max depth searched: 4
+    Remaining time: 5275ms
+X draws 'I7/Left' (after 0.116 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 3
+    Remaining time: 5175ms
+X draws 'I6/LeftUp' (after 0.100 secs)...
+    Calculated time for move: 100ms
+    Time for move: 100ms
+    Max depth searched: 4
+    Remaining time: 5075ms
+X draws 'H8/Left' (after 0.100 secs)...
+    Calculated time for move: 100ms
+    Time for move: 107ms
+    Max depth searched: 4
+    Remaining time: 4968ms
+X draws 'D4/RightDown/Push' (after 0.108 secs)...
+    Calculated time for move: 100ms
+    Time for move: 118ms
+    Max depth searched: 4
+    Remaining time: 4850ms
+X draws 'F4/Right/Push' (after 0.118 secs)...
+    Calculated time for move: 100ms
+    Time for move: 114ms
+    Max depth searched: 4
+    Remaining time: 4736ms
+X draws 'E3/RightDown' (after 0.115 secs)...
+    Calculated time for move: 100ms
+    Time for move: 115ms
+    Max depth searched: 4
+    Remaining time: 4621ms
+X draws 'G7/LeftUp' (after 0.116 secs)...
+    Calculated time for move: 100ms
+    Time for move: 114ms
+    Max depth searched: 4
+    Remaining time: 4507ms
+X draws 'G4/Right/Push' (after 0.114 secs)...
+    Calculated time for move: 50ms
+    Time for move: 64ms
+    Max depth searched: 3
+    Remaining time: 4443ms
+X draws 'F3/RightDown' (after 0.065 secs)...
+    Calculated time for move: 50ms
+    Time for move: 63ms
+    Max depth searched: 3
+    Remaining time: 4380ms
+X draws 'G4/RightUp' (after 0.064 secs)...
+    Calculated time for move: 50ms
+    Time for move: 54ms
+    Max depth searched: 3
+    Remaining time: 4326ms
+X draws 'G6/RightUp/Push' (after 0.055 secs)...
+    Calculated time for move: 50ms
+    Time for move: 55ms
+    Max depth searched: 4
+    Remaining time: 4271ms
+X draws 'H6-H7/RightUp' (after 0.056 secs)...
+    Calculated time for move: 50ms
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: 4221ms
+X draws 'E5/Right/Push' (after 0.051 secs)...
+    Calculated time for move: 50ms
+    Time for move: 65ms
+    Max depth searched: 4
+    Remaining time: 4156ms
+X draws 'G5/Right/Push' (after 0.066 secs)...
+    Calculated time for move: 50ms
+    Time for move: 56ms
+    Max depth searched: 4
+    Remaining time: 4100ms
+X draws 'E6/RightDown/Out' (after 0.057 secs)...
+    Calculated time for move: 50ms
+    Time for move: 53ms
+    Max depth searched: 4
+    Remaining time: 4047ms
+X draws 'F6/RightDown/Push' (after 0.053 secs)...
+    Calculated time for move: 50ms
+    Time for move: 65ms
+    Max depth searched: 4
+    Remaining time: 3982ms
+X draws 'G7/RightDown/Out' (after 0.066 secs)...
+    Calculated time for move: 50ms
+    Time for move: 56ms
+    Max depth searched: 3
+    Remaining time: 3926ms
+X draws 'H9/LeftUp' (after 0.057 secs)...
+    Calculated time for move: 50ms
+    Time for move: 64ms
+    Max depth searched: 4
+    Remaining time: 3862ms
+X draws 'F4/Right' (after 0.065 secs)...
+    Calculated time for move: 50ms
+    Time for move: 63ms
+    Max depth searched: 4
+    Remaining time: 3799ms
+X draws 'I9/LeftUp' (after 0.064 secs)...
+    Calculated time for move: 50ms
+    Time for move: 57ms
+    Max depth searched: 3
+    Remaining time: 3742ms
+X draws 'F7/RightUp' (after 0.058 secs)...
+    Calculated time for move: 50ms
+    Time for move: 59ms
+    Max depth searched: 4
+    Remaining time: 3683ms
+X draws 'E6/Right/Push' (after 0.059 secs)...
+    Calculated time for move: 50ms
+    Time for move: 63ms
+    Max depth searched: 4
+    Remaining time: 3620ms
+X draws 'D6/RightDown/Push' (after 0.063 secs)...
+    Calculated time for move: 50ms
+    Time for move: 55ms
+    Max depth searched: 4
+    Remaining time: 3565ms
+X draws 'E7/Right/Out' (after 0.056 secs)...
+    Calculated time for move: 50ms
+    Time for move: 62ms
+    Max depth searched: 3
+    Remaining time: 3503ms
+X draws 'E8-F8/Left' (after 0.062 secs)...
+    Calculated time for move: 50ms
+    Time for move: 64ms
+    Max depth searched: 4
+    Remaining time: 3439ms
+X draws 'E7/LeftUp' (after 0.065 secs)...
+    Calculated time for move: 50ms
+    Time for move: 67ms
+    Max depth searched: 4
+    Remaining time: 3372ms
+X draws 'E9/LeftUp' (after 0.067 secs)...
+    Calculated time for move: 50ms
+    Time for move: 64ms
+    Max depth searched: 4
+    Remaining time: 3308ms
+X draws 'F7/RightDown/Out' (after 0.065 secs)...
+    Calculated time for move: 50ms
+    Time for move: 66ms
+    Max depth searched: 4
+    Remaining time: 3242ms
+X draws 'D6-D8/LeftDown' (after 0.066 secs)...
+    Calculated time for move: 50ms
+    Time for move: 66ms
+    Max depth searched: 4
+    Remaining time: 3176ms
+X draws 'E8/Left/Push' (after 0.068 secs)...
+    Calculated time for move: 50ms
+    Time for move: 69ms
+    Max depth searched: 4
+    Remaining time: 3107ms
+X draws 'H7/RightUp' (after 0.070 secs)...
+    Calculated time for move: 50ms
+    Time for move: 65ms
+    Max depth searched: 4
+    Remaining time: 3042ms
+X draws 'I8/RightUp' (after 0.066 secs)...
+    Calculated time for move: 50ms
+    Time for move: 64ms
+    Max depth searched: 4
+    Remaining time: 2978ms
+X draws 'G4/Right' (after 0.065 secs)...
+    Calculated time for move: 50ms
+    Time for move: 65ms
+    Max depth searched: 4
+    Remaining time: 2913ms
+X draws 'F8/Left/Push' (after 0.066 secs)...
+    Calculated time for move: 50ms
+    Time for move: 65ms
+    Max depth searched: 4
+    Remaining time: 2848ms
+X draws 'E7/Left/Push' (after 0.066 secs)...
+    Calculated time for move: 50ms
+    Time for move: 64ms
+    Max depth searched: 4
+    Remaining time: 2784ms
+X draws 'H9/Left' (after 0.065 secs)...
+    Calculated time for move: 50ms
+    Time for move: 65ms
+    Max depth searched: 4
+    Remaining time: 2719ms
+X draws 'G6/LeftUp/Push' (after 0.066 secs)...
+    Calculated time for move: 50ms
+    Time for move: 64ms
+    Max depth searched: 4
+    Remaining time: 2655ms
+X draws 'H6/RightUp' (after 0.065 secs)...
+    Calculated time for move: 50ms
+    Time for move: 68ms
+    Max depth searched: 4
+    Remaining time: 2587ms
+X draws 'G7/LeftUp/Push' (after 0.069 secs)...
+    Calculated time for move: 50ms
+    Time for move: 53ms
+    Max depth searched: 4
+    Remaining time: 2534ms
+X draws 'D3/Right/Push' (after 0.054 secs)...
+    Calculated time for move: 50ms
+    Time for move: 50ms
+    Max depth searched: 3
+    Remaining time: 2484ms
+X draws 'H5/RightUp' (after 0.051 secs)...
+    Calculated time for move: 50ms
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: 2434ms
+X draws 'F7/Left' (after 0.050 secs)...
+    Calculated time for move: 50ms
+    Time for move: 50ms
+    Max depth searched: 3
+    Remaining time: 2384ms
+X draws 'G8-H8/LeftUp' (after 0.050 secs)...
+    Calculated time for move: 50ms
+    Time for move: 59ms
+    Max depth searched: 3
+    Remaining time: 2325ms
+X draws 'F7/LeftUp' (after 0.060 secs)...
+    Calculated time for move: 50ms
+    Time for move: 53ms
+    Max depth searched: 3
+    Remaining time: 2272ms
+X draws 'E4/RightUp/Push' (after 0.054 secs)...
+    Calculated time for move: 50ms
+    Time for move: 61ms
+    Max depth searched: 3
+    Remaining time: 2211ms
+X draws 'H7/RightUp' (after 0.062 secs)...
+    Calculated time for move: 50ms
+    Time for move: 65ms
+    Max depth searched: 3
+    Remaining time: 2146ms
+X draws 'F4/LeftUp' (after 0.065 secs)...
+    Calculated time for move: 50ms
+    Time for move: 50ms
+    Max depth searched: 3
+    Remaining time: 2096ms
+X draws 'B4/LeftDown' (after 0.051 secs)...
+    Calculated time for move: 50ms
+    Time for move: 66ms
+    Max depth searched: 3
+    Remaining time: 2030ms
+X draws 'E5/Left/Push' (after 0.067 secs)...
+    Calculated time for move: 50ms
+    Time for move: 68ms
+    Max depth searched: 3
+    Remaining time: 1962ms
+X draws 'E3-E4/LeftDown' (after 0.068 secs)...
+    Calculated time for move: 50ms
+    Time for move: 67ms
+    Max depth searched: 3
+    Remaining time: 1895ms
+X draws 'F5/LeftDown/Push' (after 0.067 secs)...
+    Calculated time for move: 50ms
+    Time for move: 54ms
+    Max depth searched: 3
+    Remaining time: 1841ms
+X draws 'E2/RightDown' (after 0.055 secs)...
+    Calculated time for move: 50ms
+    Time for move: 62ms
+    Max depth searched: 3
+    Remaining time: 1779ms
+X draws 'F3/RightDown/Out' (after 0.063 secs)...
+    Calculated time for move: 50ms
+    Time for move: 50ms
+    Max depth searched: 3
+    Remaining time: 1729ms
+X draws 'F4-G5/RightUp' (after 0.050 secs)...
+    Calculated time for move: 50ms
+    Time for move: 53ms
+    Max depth searched: 3
+    Remaining time: 1676ms
+X draws 'G6/LeftUp/Push' (after 0.053 secs)...
+    Calculated time for move: 50ms
+    Time for move: 59ms
+    Max depth searched: 4
+    Remaining time: 1617ms
+X draws 'F7/Left/Push' (after 0.059 secs)...
+    Calculated time for move: 50ms
+    Time for move: 65ms
+    Max depth searched: 3
+    Remaining time: 1552ms
+X draws 'G7/LeftUp' (after 0.065 secs)...
+    Calculated time for move: 50ms
+    Time for move: 59ms
+    Max depth searched: 3
+    Remaining time: 1493ms
+X draws 'G4-H5/Right' (after 0.059 secs)...
+    Calculated time for move: 25ms
+    Time for move: 50ms
+    Max depth searched: 4
+    Remaining time: 1443ms
+X draws 'F6/LeftUp/Push' (after 0.050 secs)...
+    Calculated time for move: 25ms
+    Time for move: 55ms
+    Max depth searched: 4
+    Remaining time: 1388ms
+X draws 'I6/RightUp' (after 0.056 secs)...
+    Calculated time for move: 25ms
+    Time for move: 65ms
+    Max depth searched: 4
+    Remaining time: 1323ms
+X draws 'G5/LeftUp/Push' (after 0.066 secs)...
+    Calculated time for move: 25ms
+    Time for move: 65ms
+    Max depth searched: 4
+    Remaining time: 1258ms
+X draws 'E5/Left/Push' (after 0.065 secs)...
+    Calculated time for move: 25ms
+    Time for move: 69ms
+    Max depth searched: 4
+    Remaining time: 1189ms
+X draws 'E4/Left/Out' (after 0.070 secs)...
+X wins the game!

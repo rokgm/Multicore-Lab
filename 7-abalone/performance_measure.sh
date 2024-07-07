@@ -3,10 +3,10 @@
 # Number of games to be played
 NUM_GAMES=1
 # Strategy level for players
-STRATEGY_X=5
+STRATEGY_X=4
 STRATEGY_O=5
-DEPTH_X=5
-DEPTH_O=5
+DEPTH_X=1000
+DEPTH_O=1000
 
 ############################################################################ 
 # Set the number of threads for OpenMP

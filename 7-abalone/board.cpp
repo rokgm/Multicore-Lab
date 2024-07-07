@@ -118,6 +118,8 @@ void Board::begin(int startColor)
 
   // Init zobrist key, should also be reset when board state is reset.
   zobristKey = ZobristHash::calculateZobristKey(*this);
+  zobristKeys.reserve(200);
+  zobristKeys.push_back(zobristKey);
 }
 
 void Board::clear()
@@ -129,6 +131,9 @@ void Board::clear()
   storedFirst = storedLast = 0;
   color1Count = color2Count = 0;
   _msecsToPlay[color1] = _msecsToPlay[color2] = 0;
+
+  zobristKeys.clear();
+  zobristKeys.reserve(200);
 }
 
 /** countFrom
@@ -687,6 +692,7 @@ void Board::playMove(const Move& m, int msecs)
 	/* change actual color */
 	color = opponent;
         ZobristHash::updateZobristSideToMove(zobristKey);
+  zobristKeys.push_back(zobristKey);
 
 	CHECK( isConsistent() );
 
@@ -705,9 +711,6 @@ bool Board::takeBack()
 
   /* change actual color */
   color = (color == color1) ? color2:color1;
-  
-  // Update zobrist side to move (color).
-  ZobristHash::updateZobristSideToMove(zobristKey);
 
   if (m.isOutMove()) {
     if (color == color1)
@@ -721,7 +724,10 @@ bool Board::takeBack()
   field[f] = color;
   dir = direction[m.direction];
 
-  ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f], color);
+  if (!zobristKeys.empty()) {
+    zobristKeys.pop_back();
+    zobristKey = zobristKeys.back();
+  }
 
   switch(m.type) {
   case Move::out2:        /* (. c c c o |) => (c c c o o |) */
@@ -731,8 +737,8 @@ bool Board::takeBack()
     CHECK( field[f + 4*dir] == opponent );
     CHECK( field[f + 5*dir] == out );
     field[f + 3*dir] = opponent;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f + 3*dir], color);
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f + 3*dir], opponent);
+    
+    
     break;
   case Move::out1with3:   /* (. c c c |) => (c c c o |) */
     CHECK( field[f + dir] == color );
@@ -740,29 +746,29 @@ bool Board::takeBack()
     CHECK( field[f + 3*dir] == color );
     CHECK( field[f + 4*dir] == out );
     field[f + 3*dir] = opponent;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f + 3*dir], color);
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f + 3*dir], opponent);
+    
+    
     break;
   case Move::move3:       /* (. c c c) => (c c c .)     */
     CHECK( field[f + dir] == color );
     CHECK( field[f + 2*dir] == color );
     CHECK( field[f + 3*dir] == color );
     field[f + 3*dir] = free;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f + 3*dir], color);
+    
     break;
   case Move::out1with2:   /* (. c c | ) => (c c o |)     */
     CHECK( field[f + dir] == color );
     CHECK( field[f + 2*dir] == color );
     CHECK( field[f + 3*dir] == out );
     field[f + 2*dir] = opponent;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f + 2*dir], color);
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f + 2*dir], opponent);
+    
+    
     break;
   case Move::move2:       /* (. c c) => (c c .)       */
     CHECK( field[f + dir] == color );
     CHECK( field[f + 2*dir] == color );
     field[f + 2*dir] = free;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f + 2*dir], color);
+    
     break;
   case Move::push2:       /* (. c c c o o) => (c c c o o .) */
     CHECK( field[f + dir] == color );
@@ -771,10 +777,10 @@ bool Board::takeBack()
     CHECK( field[f + 4*dir] == opponent );
     CHECK( field[f + 5*dir] == opponent );
     field[f + 3*dir] = opponent;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f + 3*dir], color);
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f + 3*dir], opponent);
+    
+    
     field[f + 5*dir] = free;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f + 5*dir], opponent);
+    
     break;
   case Move::left3:
     dir2 = direction[m.direction-1];
@@ -784,15 +790,15 @@ bool Board::takeBack()
     CHECK( field[f + dir+dir2] == color );
     CHECK( field[f + 2*dir+dir2] == color );
     field[f+dir2] = free;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f + dir2], color);
+    
     field[f+=dir] = color;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f], color);
+    
     field[f+dir2] = free;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f + dir2], color);
+    
     field[f+=dir] = color;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f], color);
+    
     field[f+dir2] = free;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f + dir2], color);
+    
     break;
   case Move::right3:
     dir2 = direction[m.direction+1];
@@ -802,15 +808,15 @@ bool Board::takeBack()
     CHECK( field[f + dir+dir2] == color );
     CHECK( field[f + 2*dir+dir2] == color );
     field[f+dir2] = free;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f + dir2], color);
+    
     field[f+=dir] = color;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f], color);
+    
     field[f+dir2] = free;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f + dir2], color);
+    
     field[f+=dir] = color;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f], color);
+    
     field[f+dir2] = free;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f + dir2], color);
+    
     break;
   case Move::push1with3:   /* (. c c c o) => (c c c o .) */
     CHECK( field[f + dir] == color );
@@ -818,20 +824,20 @@ bool Board::takeBack()
     CHECK( field[f + 3*dir] == color );
     CHECK( field[f + 4*dir] == opponent );
     field[f + 3*dir] = opponent;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f + 3*dir], color);
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f + 3*dir], opponent);
+    
+    
     field[f + 4*dir] = free;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f + 4*dir], opponent);
+    
     break;
   case Move::push1with2:   /* (. c c o) => (c c o .) */
     CHECK( field[f + dir] == color );
     CHECK( field[f + 2*dir] == color );
     CHECK( field[f + 3*dir] == opponent );
     field[f + 2*dir] = opponent;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f + 2*dir], color);
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f + 2*dir], opponent);
+    
+    
     field[f + 3*dir] = free;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f + 3*dir], opponent);
+    
     break;
   case Move::left2:
     dir2 = direction[m.direction-1];
@@ -839,11 +845,11 @@ bool Board::takeBack()
     CHECK( field[f + dir2] == color );
     CHECK( field[f + dir+dir2] == color );
     field[f+dir2] = free;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f+dir2], color);
+    
     field[f+=dir] = color;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f], color);
+    
     field[f+dir2] = free;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f+dir2], color);
+    
     break;
   case Move::right2:
     dir2 = direction[m.direction+1];
@@ -851,16 +857,16 @@ bool Board::takeBack()
     CHECK( field[f + dir2] == color );
     CHECK( field[f + dir+dir2] == color );
     field[f+dir2] = free;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f+dir2], color);
+    
     field[f+=dir] = color;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f], color);
+    
     field[f+dir2] = free;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f+dir2], color);
+    
     break;
   case Move::move1:       /* (. c) => (c .) */
     CHECK( field[f + dir] == color );
     field[f + dir] = free;
-    ZobristHash::updateZobristKeyField(zobristKey, allFieldToOrder[f + dir], color);
+    
     break;
   default:
     break;
@@ -1181,6 +1187,8 @@ bool Board::setState(char* s)
       color = ((_moveNo%2)==0) ? color1 : color2; // assume O started game
 
     zobristKey = ZobristHash::calculateZobristKey(*this);
+    zobristKeys.reserve(200);
+    zobristKeys.push_back(zobristKey);
 
   return true;
 }

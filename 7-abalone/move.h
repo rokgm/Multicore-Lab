@@ -62,6 +62,9 @@ class Move
   short field;
   unsigned char direction;
   MoveType type;
+
+  bool operator==(const Move& m) const
+    { return (field == m.field) && (direction == m.direction) && (type == m.type); }
 };
 
 
