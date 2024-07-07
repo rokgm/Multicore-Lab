@@ -55,8 +55,8 @@ private:
 	std::thread _timerThread;
 	std::atomic<bool> _atomicStopSearch = false;
 
-	// TODO Change to 55000 for competition.
-	static constexpr std::chrono::milliseconds s_gameDuration{10000};
+	// TODO Change to 50000 for competition.
+	static constexpr std::chrono::milliseconds s_gameDuration{50000};
 	std::chrono::milliseconds _remainingTime{s_gameDuration};
 
 	int _currentIterativeDepth = 0;
