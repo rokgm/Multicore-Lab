@@ -106,12 +106,6 @@ void ABParallelStrategy::searchBestMove()
 
 		// We can update even if searched was stopped by timer because we search best move from previous
 		// iteration first (ordered by hash move).
-
-		if (_bestMove.type == Move::none) {
-			std::cout << "Tried to update best move with move of type none." << std::endl;
-			break;
-		}
-
 		// From first iteration, null move can be returned.
 		if (_bestMove == Move())
 			break;
@@ -152,6 +146,7 @@ int ABParallelStrategy::alphabeta(const int depth, int alpha, int beta, Board& b
 	if (tableEval != std::nullopt){
 		_countTranspositions++;
 		hashMove = tableEval->bestMove;
+
 		if (tableEval->depth >= _currentIterativeDepth - depth) {
 			if (tableEval->typeOfNode == TranspositionTable::TypeOfNode::exact) {
 				if (depth == 0)
@@ -182,7 +177,8 @@ int ABParallelStrategy::alphabeta(const int depth, int alpha, int beta, Board& b
     if (depth >= _currentIterativeDepth)
         return -evaluate(board, evaluator);
 
-    int bestEvaluation = minEvaluation() + depth;
+	omp_lock_t bestEvalLock;
+	int bestEvaluation = minEvaluation() + depth;
     Move m;
     MoveList list;
 
@@ -254,7 +250,6 @@ int ABParallelStrategy::alphabeta(const int depth, int alpha, int beta, Board& b
 
 				// If search was stopped by timer, we can't use the result.
 				if (!_atomicStopSearch) {
-					// TODO fix this critical section. To be function scoped.
 					#pragma omp critical (bestEvaluation)
                     {
                         if (evaluation > bestEvaluation) {

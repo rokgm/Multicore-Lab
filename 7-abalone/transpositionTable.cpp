@@ -26,8 +26,8 @@ void TranspositionTable::store(uint64_t zobristHash, int evaluation, unsigned in
 {
     std::lock_guard<std::mutex> lock(_mutex);
 
-        m_table->at(hashFunction(zobristHash)) =
-            std::move(Entry(zobristHash, evaluation, depth, typeOfNode, bestMove));
+    m_table->at(hashFunction(zobristHash)) =
+        std::move(Entry(zobristHash, evaluation, depth, typeOfNode, bestMove));
 }
 
 std::optional<TranspositionTable::Entry> TranspositionTable::getEntry(uint64_t zobristHash) const
