@@ -1,0 +1,20 @@
+Using strategy 'ABParallel' (depth 5) ...
+    Calculated time for move: 500ms
+    Time for move: 501ms
+    Max depth searched: 4
+    Remaining time: 49499ms
+X draws 'I5/RightUp' (after 0.502 secs)...
+    Calculated time for move: 500ms
+    Time for move: 514ms
+    Max depth searched: 4
+    Remaining time: 48985ms
+X draws 'I7/LeftUp' (after 0.515 secs)...
+    Calculated time for move: 500ms
+    Time for move: 531ms
+    Max depth searched: 4
+    Remaining time: 48454ms
+X draws 'I9/LeftUp' (after 0.532 secs)...
+    Calculated time for move: 500ms
+    Time for move: 529ms
+    Max depth searched: 4
+    Remaining time: 47925ms

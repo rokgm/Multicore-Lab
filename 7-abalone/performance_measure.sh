@@ -5,13 +5,13 @@ NUM_GAMES=1
 # Strategy level for players
 STRATEGY_X=5
 STRATEGY_O=5
-DEPTH_X=4
-DEPTH_O=4
+DEPTH_X=5
+DEPTH_O=5
 
 ############################################################################ 
 # Set the number of threads for OpenMP
 ############################################################################
-export OMP_NUM_THREADS=24
+export OMP_NUM_THREADS=8
 
 # Counters for results
 wins_X=0
@@ -63,6 +63,7 @@ for ((i=1; i<=NUM_GAMES; i++)); do
 
     # Kill previous instances of the player
     pkill -P $$
+    pkill player
 
     run_game
     echo "Intermidiate results after $NUM_GAMES games with strategies X: $STRATEGY_X, O: $STRATEGY_O:"

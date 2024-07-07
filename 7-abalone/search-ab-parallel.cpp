@@ -160,7 +160,7 @@ int ABParallelStrategy::alphabeta(int depth, int alpha, int beta, Board& board, 
 
 		// TODO try different depths away from leaves, 3 was best for me on laptop.
 		// Search sequentially when 3 move away from leaves to avoid task overhead.
-		if (!leftmostChildEvaluated || (depth + 3 >= _currentIterativeDepth)) {
+		if (!leftmostChildEvaluated || (depth + 3 >= _currentIterativeDepth)) {				
 			board.playMove(m);
 			int evaluation = -alphabeta(depth + 1, -beta, -alpha, board, evaluator);
 			board.takeBack();
@@ -193,18 +193,10 @@ int ABParallelStrategy::alphabeta(int depth, int alpha, int beta, Board& board, 
 				shared(bestEvaluation, alphaBetaCutoff, alpha)
             {	
 				Board boardCopy = board;
-				// TODO
-				uint64_t zobristKey = boardCopy.getZobristKey();
 
 				boardCopy.playMove(m);
 				int evaluation = -alphabeta(depth + 1, -beta, -alpha, boardCopy, evaluator);
 				boardCopy.takeBack();
-
-				if (boardCopy.getZobristKey() != zobristKey) {
-					std::cout << "ZOBRIST KEY IS WRONGLY UPDATED, move: ";
-					m.print();
-					std::cout << std::endl;
-				}
 
 				// If search was stopped by timer, we can't use the result.
 				if (!_atomicStopSearch) {

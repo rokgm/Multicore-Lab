@@ -71,7 +71,6 @@ int NegamaxParallelStrategy::negamax(int depth, Board& board, Evaluator& evaluat
     if (depth + 2 <= _maxDepth) {
     // if (true) {
         while (list.getNext(m)) {
-            // TODO firstprivate evaluate?
             #pragma omp task firstprivate(m) shared(bestEvaluation)
             {
                 // We pass by reference to negamax and copy here, for sequential reference is good.

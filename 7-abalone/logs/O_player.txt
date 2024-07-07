@@ -1,0 +1,25 @@
+Using strategy 'ABParallel' (depth 5) ...
+    Calculated time for move: 500ms
+    Time for move: 454ms
+    Max depth searched: 5
+    Remaining time: 49546ms
+O draws 'A3/LeftDown' (after 0.455 secs)...
+    Calculated time for move: 500ms
+    Time for move: 462ms
+    Max depth searched: 5
+    Remaining time: 49084ms
+O draws 'A5/LeftDown' (after 0.462 secs)...
+    Calculated time for move: 500ms
+    Time for move: 543ms
+    Max depth searched: 4
+    Remaining time: 48541ms
+O draws 'A4/LeftDown' (after 0.543 secs)...
+    Calculated time for move: 500ms
+    Time for move: 527ms
+    Max depth searched: 4
+    Remaining time: 48014ms
+O draws 'A2/LeftDown' (after 0.528 secs)...
+    Calculated time for move: 500ms
+    Time for move: 524ms
+    Max depth searched: 4
+    Remaining time: 47490ms
